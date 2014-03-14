@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 @class Test;
 @interface PostTestViewController : UIViewController
+{
+    IBOutlet UILabel *titleLabel;
+}
 - (IBAction)endButtonPressed;
 @property (nonatomic) Test *test;
 @end

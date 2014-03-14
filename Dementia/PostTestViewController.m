@@ -28,7 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Set my own title
+    NSString *title = [(UIViewController *)[test testViewController] title];
+    [titleLabel setText:title];
 }
 
 - (void)didReceiveMemoryWarning

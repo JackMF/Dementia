@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostTestViewController">
             <connections>
+                <outlet property="titleLabel" destination="get-NZ-mSb" id="Gbf-Na-72i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,23 +15,47 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJU-eX-7KO">
-                    <rect key="frame" x="368" y="478" width="30" height="30"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="get-NZ-mSb">
+                    <rect key="frame" x="53" y="100" width="663" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="End">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="endButtonPressed" destination="-1" eventType="touchUpInside" id="dJj-UV-FDR"/>
-                    </connections>
-                </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post-Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjv-bF-8oL">
-                    <rect key="frame" x="352" y="92" width="73" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Kk-vVD">
+                    <rect key="frame" x="316" y="150" width="130" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-jF-cE1">
+                    <rect key="frame" x="359" y="938" width="50" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="endButtonPressed" destination="-1" eventType="touchUpInside" id="HvQ-qS-q8P"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdc-3H-nu6">
+                    <rect key="frame" x="53" y="187" width="663" height="711"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum tortor eget augue feugiat ornare. Integer placerat lacus in tellus pharetra blandit. Vestibulum porttitor auctor condimentum. Ut velit risus, ullamcorper rutrum metus nec, tincidunt dapibus sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse molestie sem ac enim vulputate commodo. Suspendisse potenti. In ultricies odio risus, sed pharetra ligula pharetra ut. Vivamus volutpat justo at auctor hendrerit. Nullam iaculis elit sit amet quam elementum iaculis. Ut vehicula lectus odio, vitae vulputate felis sodales vel. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a dolor quis felis commodo auctor sit amet non ante.
+
+Curabitur tellus sapien, venenatis eget aliquam quis, euismod id ante. Phasellus vel convallis augue. Praesent convallis, mi nec luctus porta, turpis lectus imperdiet nisi, quis ultricies ante metus in ante. Maecenas adipiscing est a fringilla vehicula. Etiam auctor suscipit nunc. Aliquam accumsan sagittis nisl, eu auctor justo tincidunt vel. Ut scelerisque lacinia elit, et aliquet nulla eleifend at. Nunc et velit a nisi posuere varius. Donec in libero felis. Donec et massa odio. Nulla pharetra fringilla nulla eget mattis. Pellentesque convallis blandit risus, id bibendum nunc scelerisque vitae. Phasellus ut diam pharetra, dignissim est eget, egestas ante. Etiam non tortor enim. Cras nisi lacus, vulputate non blandit sit amet, pharetra non tortor. Morbi vel tellus dolor.
+
+Nullam ante eros, gravida in orci vel, pellentesque rhoncus ipsum. Fusce luctus nunc sit amet urna dignissim, id rutrum purus vehicula. In volutpat, mi a adipiscing suscipit, velit augue laoreet mauris, eu ornare ipsum magna ac erat. Nulla consequat, sapien eu viverra ullamcorper, ligula erat interdum est, sit amet eleifend nibh purus ut ante. Sed eget augue ac tortor blandit laoreet sollicitudin eu metus. Sed tincidunt elit et augue eleifend tincidunt. Mauris blandit, tellus ut adipiscing pretium, ante purus tincidunt libero, a dictum ante turpis vel nisl. Proin sagittis, mauris in blandit dapibus, nunc augue consequat mauris, non tincidunt justo erat in massa. Duis ultrices est at ullamcorper dapibus. Nam lobortis commodo purus, nec gravida arcu eleifend a. Aliquam tincidunt diam libero, vitae iaculis leo consequat nec. Mauris venenatis cursus nisl, ac vehicula justo tincidunt non. Vivamus volutpat eros et lacus ornare, sed auctor diam luctus. In eget orci sem. Cras vel suscipit sapien, ut placerat nisi. In hac habitasse platea dictumst.
+
+Quisque sit amet nibh nec tortor posuere adipiscing id a sem. Praesent dignissim aliquam nisl sed dapibus. Duis tortor augue, luctus ut felis facilisis, ullamcorper commodo dui. Nulla aliquam sapien nec semper consequat. Proin in dui nec lorem mollis cursus ut in nibh. Duis ut risus tincidunt nisl dictum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor laoreet risus, ut laoreet sem rutrum vitae. Nullam eget elementum neque, ut vehicula metus. Maecenas aliquam ut enim ac fringilla.
+
+Duis at leo dictum, mollis augue sit amet, consectetur tortor. Nullam ac dolor vitae odio hendrerit ullamcorper. Aliquam at pellentesque mauris. Vivamus semper congue sapien, id iaculis eros interdum quis. Cras in sem vitae ligula tincidunt malesuada. Sed nisi purus, malesuada non urna at, tempor porta arcu. Ut ut euismod eros, vel vestibulum odio. Nullam sed consequat arcu. Donec scelerisque nibh id enim feugiat molestie. Duis quis velit eu magna tempor luctus. Maecenas luctus massa at sem cursus, sed luctus dui fermentum. Integer pulvinar, nulla eget elementum semper, lectus neque vehicula tortor, non iaculis diam nibh ut lacus. Donec imperdiet molestie erat, sit amet imperdiet lorem consectetur sit amet. Sed ultricies nisl ac dignissim feugiat.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
