@@ -12,17 +12,20 @@
 {
     // memory_keyword, IBThing, Class, pointer name
     __weak IBOutlet UIImageView *inputImageView;
+    __weak IBOutlet UIView *controlPanel;
     __weak IBOutlet UIButton *yesButton;
     __weak IBOutlet UIButton *noButton;
     __weak IBOutlet UIButton *confirmButton;
     NSArray *imagesDicts;
     NSDictionary *currentImage;
-    NSMutableArray *images;
     BOOL isCorrect;
     int score;
     int order;
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
+- (IBAction)showControlsButtonPressed:(id)sender;
+-(void)showControls;
+-(void)hideControls;
 
 @end

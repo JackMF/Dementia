@@ -8,6 +8,8 @@
 
 #import "LanguageNamingViewController.h"
 #import "LanguageComprehensionViewController.h"
+#define kImageViewAnimationDuration 0.2
+#define kControlPanelAnimationDuration 0.5
 
 @interface LanguageNamingViewController ()
 
@@ -19,27 +21,46 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         score = 0;
-        order = 0;
-        images = [[NSMutableArray alloc] init];
+        order = 0;        
         NSString *imagesPlistPath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
+        // Load image database from file
         imagesDicts = [NSArray arrayWithContentsOfFile:imagesPlistPath];
-        // Creating a sorting descriptor
-        NSSortDescriptor *orderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES];
-        // Sort the close stops
-        imagesDicts = [imagesDicts sortedArrayUsingDescriptors:[NSArray arrayWithObjects:orderDescriptor, nil]];
-
+        // Sort them by 'order'
+        imagesDicts = [imagesDicts sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES]]];
     }
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self loadNextImage];
 }
 
 -(void)loadNextImage
 {
     if (order < [imagesDicts count]) {
         NSDictionary *imageDict = [imagesDicts objectAtIndex:order];
-        UIImage *image = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-        [inputImageView setImage:image];
+        UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
+        
+        CGRect originalFrame = inputImageView.frame;
+        CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
+        CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
+
+        [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
+            inputImageView.frame = leftFrame;
+        }
+         completion:^(BOOL finished) {
+             // Set the new image
+             [inputImageView setImage:newImage];
+             // Animate the inputImageView in from the right
+             inputImageView.frame = rightFrame;
+             [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
+                 inputImageView.frame = originalFrame;
+             }];
+         }];
+        // Ensure we load a new image next time
         order++;
     } else {
         [self showFinished];
@@ -52,16 +73,37 @@
     [[self navigationController] pushViewController:languageComprehensionViewController animated:YES];
 }
 
-- (void)viewDidLoad
+
+-(void)showControls
 {
-    [super viewDidLoad];
-    [self loadNextImage];
-    
-    //    [objectName methodNameWithArgument:argument andArgumentTwo:argument2]; == objectName.methodNameWithArguments(argument, argument2)
+    CGRect currentFrame = controlPanel.frame;
+    double newY = currentFrame.origin.y - currentFrame.size.height;
+    CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:kControlPanelAnimationDuration];
+    [UIView setAnimationDelay:0.0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    controlPanel.frame = newFrame;
+    [UIView commitAnimations];
+}
+
+-(void)hideControls
+{
+    CGRect currentFrame = controlPanel.frame;
+    double newY = currentFrame.origin.y + currentFrame.size.height;
+    CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:kControlPanelAnimationDuration];
+    [UIView setAnimationDelay:0.0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    controlPanel.frame = newFrame;
+    [UIView commitAnimations];
 }
 
 - (IBAction)decisionButtonPressed:(id)sender
 {
+    [yesButton setBackgroundColor:[UIColor clearColor]];
+    [noButton setBackgroundColor:[UIColor clearColor]];
     if (sender==yesButton) {
         isCorrect = YES;
         [yesButton setBackgroundColor:[UIColor redColor]];
@@ -74,29 +116,30 @@
 
 - (IBAction)confirmButtonPressed:(id)sender {
     // If we're correct, update the score for this test
-    if (isCorrect) {
-        score++;
-    }
-    
+    if (isCorrect) score++;
     NSLog(@"Score: %i", score);
+    
     [yesButton setBackgroundColor:[UIColor clearColor]];
     [noButton setBackgroundColor:[UIColor clearColor]];
 
     [self loadNextImage];
     [confirmButton setHidden:YES];
+    [self hideControls];
     // Load the next image
+}
+
+- (IBAction)showControlsButtonPressed:(id)sender {
+    [self showControls];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    NSLog(@"LanguageNamingViewController: viewWillAppear");
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"LanguageNamingViewController: viewDidAppear");
 }
 
 - (void)didReceiveMemoryWarning

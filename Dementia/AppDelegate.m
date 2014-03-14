@@ -22,7 +22,8 @@
     LanguageComprehensionViewController *languageComprehensionViewController = [[LanguageComprehensionViewController alloc] initWithNibName:@"LanguageComprehensionViewController" bundle:nil];
     
     // Instatiate a navigation controller
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:languageComprehensionViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:languageNamingViewController];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:languageComprehensionViewController];
 
     // Set the root view controller of our window to the first view controller
     [self.window setRootViewController:navController];
