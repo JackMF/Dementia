@@ -28,5 +28,4 @@
 - (IBAction)showControlsButtonPressed:(id)sender;
 -(void)showControlPanel;
 -(void)hideControlPanel;
--(NSArray *)getTestImages;
 @end

@@ -53,7 +53,7 @@ Nullam ante eros, gravida in orci vel, pellentesque rhoncus ipsum. Fusce luctus 
 Quisque sit amet nibh nec tortor posuere adipiscing id a sem. Praesent dignissim aliquam nisl sed dapibus. Duis tortor augue, luctus ut felis facilisis, ullamcorper commodo dui. Nulla aliquam sapien nec semper consequat. Proin in dui nec lorem mollis cursus ut in nibh. Duis ut risus tincidunt nisl dictum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor laoreet risus, ut laoreet sem rutrum vitae. Nullam eget elementum neque, ut vehicula metus. Maecenas aliquam ut enim ac fringilla.
 
 Duis at leo dictum, mollis augue sit amet, consectetur tortor. Nullam ac dolor vitae odio hendrerit ullamcorper. Aliquam at pellentesque mauris. Vivamus semper congue sapien, id iaculis eros interdum quis. Cras in sem vitae ligula tincidunt malesuada. Sed nisi purus, malesuada non urna at, tempor porta arcu. Ut ut euismod eros, vel vestibulum odio. Nullam sed consequat arcu. Donec scelerisque nibh id enim feugiat molestie. Duis quis velit eu magna tempor luctus. Maecenas luctus massa at sem cursus, sed luctus dui fermentum. Integer pulvinar, nulla eget elementum semper, lectus neque vehicula tortor, non iaculis diam nibh ut lacus. Donec imperdiet molestie erat, sit amet imperdiet lorem consectetur sit amet. Sed ultricies nisl ac dignissim feugiat.</mutableString>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>

@@ -7,6 +7,7 @@
 //
 
 #import "LanguageComprehensionViewController.h"
+#import "ImageLoader.h"
 
 @interface LanguageComprehensionViewController ()
 
@@ -19,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Language - Comprehension";
+        imagesDicts = [[ImageLoader sharedInstance] getTestImages]; // Load images for the test
     }
     return self;
 }

@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "Test.h"
+#import "ImageLoader.h"
 
 @interface TestViewController ()
 @end

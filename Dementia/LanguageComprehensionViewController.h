@@ -10,4 +10,7 @@
 #import "TestViewController.h"
 
 @interface LanguageComprehensionViewController : TestViewController
+{
+    NSArray *imagesDicts;
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LanguageNamingViewController.h"
+#import "ImageLoader.h"
 
 #define kImageViewAnimationDuration 0.3
 #define kControlPanelAnimationDuration 0.2
@@ -22,19 +23,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Language - Naming";
-        imagesDicts = [self getTestImages]; // Load images for the test
+        imagesDicts = [[ImageLoader sharedInstance] getTestImages]; // Load images for the test
     }
     return self;
-}
-
-// Loads the test image details from the plist file
--(NSArray *)getTestImages
-{
-    NSString *imagesPlistPath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
-    // Load image database from file
-    imagesDicts = [NSArray arrayWithContentsOfFile:imagesPlistPath];
-    // Sort them by 'order'
-    return [imagesDicts sortedArrayUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES]]];
 }
 
 -(void)viewWillAppear:(BOOL)animated

@@ -65,6 +65,7 @@
     Test *test = [tests objectAtIndex:[indexPath row]];
     NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", [indexPath row]+1, [test getTestName]];
     [cell.textLabel setText:cellText];
+    [cell.textLabel setFont:[UIFont boldSystemFontOfSize:24.0]];
     return cell;
 }
 
