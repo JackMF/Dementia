@@ -7,7 +7,7 @@
 //
 
 #import "LanguageNamingViewController.h"
-#import "LanguageComprehensionViewController.h"
+
 #define kImageViewAnimationDuration 0.2
 #define kControlPanelAnimationDuration 0.5
 
@@ -17,10 +17,12 @@
 
 @implementation LanguageNamingViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.title = @"Language - Naming";
         score = 0;
         order = 0;        
         NSString *imagesPlistPath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
@@ -63,16 +65,9 @@
         // Ensure we load a new image next time
         order++;
     } else {
-        [self showFinished];
+        [super hasFinished];
     }
 }
-
--(void)showFinished
-{
-    LanguageComprehensionViewController *languageComprehensionViewController = [[LanguageComprehensionViewController alloc] initWithNibName:@"LanguageComprehensionViewController" bundle:nil];
-    [[self navigationController] pushViewController:languageComprehensionViewController animated:YES];
-}
-
 
 -(void)showControls
 {

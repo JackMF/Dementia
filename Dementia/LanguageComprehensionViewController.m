@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"Language - Comprehension";
     }
     return self;
 }
@@ -38,10 +38,10 @@
     return 1;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+-(UICollectionViewCell *)collectionView:(UICollectionView *)theCollectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    UICollectionViewCell *cell = (UICollectionViewCell *)[theCollectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     int rndValue = 0 + arc4random() % (5 - 0);
 
     cell.backgroundColor = [@[[UIColor redColor], [UIColor magentaColor], [UIColor blueColor], [UIColor greenColor], [UIColor yellowColor]] objectAtIndex:rndValue];

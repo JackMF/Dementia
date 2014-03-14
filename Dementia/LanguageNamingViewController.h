@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestViewController.h"
 
-@interface LanguageNamingViewController : UIViewController
+@interface LanguageNamingViewController : TestViewController
 {
     // memory_keyword, IBThing, Class, pointer name
     __weak IBOutlet UIImageView *inputImageView;
@@ -27,5 +28,4 @@
 - (IBAction)showControlsButtonPressed:(id)sender;
 -(void)showControls;
 -(void)hideControls;
-
 @end

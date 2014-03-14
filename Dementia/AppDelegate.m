@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LanguageNamingViewController.h"
-#import "LanguageComprehensionViewController.h"
+#import "DebugViewController.h"
 
 @implementation AppDelegate
 
@@ -17,13 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Instantiate our first view controller
-    LanguageNamingViewController *languageNamingViewController = [[LanguageNamingViewController alloc] initWithNibName:@"LanguageNamingViewController" bundle:nil];
-    LanguageComprehensionViewController *languageComprehensionViewController = [[LanguageComprehensionViewController alloc] initWithNibName:@"LanguageComprehensionViewController" bundle:nil];
-    
+    // Instantiate our debug view controller
+    DebugViewController *debug = [[DebugViewController alloc] initWithNibName:@"DebugViewController" bundle:nil];
     // Instatiate a navigation controller
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:languageNamingViewController];
-//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:languageComprehensionViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:debug];
 
     // Set the root view controller of our window to the first view controller
     [self.window setRootViewController:navController];

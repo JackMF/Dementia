@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestViewController.h"
 
-@interface LanguageComprehensionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface LanguageComprehensionViewController : TestViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     
     __weak IBOutlet UICollectionView *collectionView;
