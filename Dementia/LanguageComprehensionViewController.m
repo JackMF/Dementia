@@ -26,33 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 200;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 2;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)theCollectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UICollectionViewCell *cell = (UICollectionViewCell *)[theCollectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    int rndValue = 0 + arc4random() % (5 - 0);
-
-    cell.backgroundColor = [@[[UIColor redColor], [UIColor magentaColor], [UIColor blueColor], [UIColor greenColor], [UIColor yellowColor]] objectAtIndex:rndValue];
-
-    return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"%@", indexPath);
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
