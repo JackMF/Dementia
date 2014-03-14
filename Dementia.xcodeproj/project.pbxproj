@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF318D34CB200226AB4 /* accordion.jpg */; };
+		8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF418D34CB200226AB4 /* airoplane.jpg */; };
+		8353CC1918D34CB300226AB4 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF518D34CB200226AB4 /* apple.jpg */; };
+		8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF618D34CB200226AB4 /* aubergine.jpg */; };
+		8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF718D34CB300226AB4 /* axe.jpg */; };
+		8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF818D34CB300226AB4 /* banana.jpg */; };
+		8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF918D34CB300226AB4 /* bed.jpg */; };
+		8353CC1E18D34CB300226AB4 /* bicycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFA18D34CB300226AB4 /* bicycle.jpg */; };
+		8353CC1F18D34CB300226AB4 /* bird.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFB18D34CB300226AB4 /* bird.jpg */; };
+		8353CC2018D34CB300226AB4 /* bow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFC18D34CB300226AB4 /* bow.jpg */; };
+		8353CC2118D34CB300226AB4 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFD18D34CB300226AB4 /* cat.jpg */; };
+		8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFE18D34CB300226AB4 /* cauliflower.jpg */; };
+		8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFF18D34CB300226AB4 /* computer desk.jpg */; };
+		8353CC2418D34CB300226AB4 /* cow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0018D34CB300226AB4 /* cow.jpg */; };
+		8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0118D34CB300226AB4 /* face smile1.jpg */; };
+		8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0218D34CB300226AB4 /* face smile2.jpg */; };
+		8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0318D34CB300226AB4 /* face smile3.jpg */; };
+		8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0418D34CB300226AB4 /* face smile4.jpg */; };
+		8353CC2918D34CB300226AB4 /* fox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0518D34CB300226AB4 /* fox.jpg */; };
+		8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0618D34CB300226AB4 /* giraffe.jpg */; };
+		8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0718D34CB300226AB4 /* helicopter.jpg */; };
+		8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0818D34CB300226AB4 /* horse.jpg */; };
+		8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0918D34CB300226AB4 /* Koala.jpg */; };
+		8353CC2E18D34CB300226AB4 /* lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0A18D34CB300226AB4 /* lion.jpg */; };
+		8353CC2F18D34CB300226AB4 /* onion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0B18D34CB300226AB4 /* onion.jpg */; };
+		8353CC3018D34CB300226AB4 /* pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0C18D34CB300226AB4 /* pear.jpg */; };
+		8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0D18D34CB300226AB4 /* pineapple.jpg */; };
+		8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0E18D34CB300226AB4 /* scorpion.jpg */; };
+		8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0F18D34CB300226AB4 /* squirrel.jpg */; };
+		8353CC3418D34CB300226AB4 /* swan (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1018D34CB300226AB4 /* swan (1).jpg */; };
+		8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1118D34CB300226AB4 /* table lamp.jpg */; };
+		8353CC3618D34CB300226AB4 /* tomato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1218D34CB300226AB4 /* tomato.jpg */; };
+		8353CC3718D34CB300226AB4 /* train.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1318D34CB300226AB4 /* train.jpg */; };
+		8353CC3818D34CB300226AB4 /* truck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1418D34CB300226AB4 /* truck.jpg */; };
+		8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1518D34CB300226AB4 /* wardrobe.jpg */; };
+		8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1618D34CB300226AB4 /* wasp.jpg */; };
+		8353CC3C18D34DE800226AB4 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC3B18D34DE800226AB4 /* Images.plist */; };
+		8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */; };
+		8353CC4218D35C4C00226AB4 /* LanguageComprehensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */; };
+		83A14FAC18D33C4E0037980A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAB18D33C4E0037980A /* Foundation.framework */; };
+		83A14FAE18D33C4E0037980A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAD18D33C4E0037980A /* CoreGraphics.framework */; };
+		83A14FB018D33C4E0037980A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAF18D33C4E0037980A /* UIKit.framework */; };
+		83A14FB618D33C4E0037980A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FB418D33C4E0037980A /* InfoPlist.strings */; };
+		83A14FB818D33C4E0037980A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FB718D33C4E0037980A /* main.m */; };
+		83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FBB18D33C4E0037980A /* AppDelegate.m */; };
+		83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FBD18D33C4E0037980A /* Images.xcassets */; };
+		83A14FC518D33C4E0037980A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FC418D33C4E0037980A /* XCTest.framework */; };
+		83A14FC618D33C4E0037980A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAB18D33C4E0037980A /* Foundation.framework */; };
+		83A14FC718D33C4E0037980A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAF18D33C4E0037980A /* UIKit.framework */; };
+		83A14FCF18D33C4E0037980A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FCD18D33C4E0037980A /* InfoPlist.strings */; };
+		83A14FD118D33C4E0037980A /* DementiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FD018D33C4E0037980A /* DementiaTests.m */; };
+		83A14FDB18D33E080037980A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FDA18D33E080037980A /* CoreLocation.framework */; };
+		83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */; };
+		83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83A14FC818D33C4E0037980A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83A14FA018D33C4E0037980A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A14FA718D33C4E0037980A;
+			remoteInfo = Dementia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8353CBF318D34CB200226AB4 /* accordion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accordion.jpg; sourceTree = "<group>"; };
+		8353CBF418D34CB200226AB4 /* airoplane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = airoplane.jpg; sourceTree = "<group>"; };
+		8353CBF518D34CB200226AB4 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
+		8353CBF618D34CB200226AB4 /* aubergine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aubergine.jpg; sourceTree = "<group>"; };
+		8353CBF718D34CB300226AB4 /* axe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = axe.jpg; sourceTree = "<group>"; };
+		8353CBF818D34CB300226AB4 /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana.jpg; sourceTree = "<group>"; };
+		8353CBF918D34CB300226AB4 /* bed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bed.jpg; sourceTree = "<group>"; };
+		8353CBFA18D34CB300226AB4 /* bicycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bicycle.jpg; sourceTree = "<group>"; };
+		8353CBFB18D34CB300226AB4 /* bird.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bird.jpg; sourceTree = "<group>"; };
+		8353CBFC18D34CB300226AB4 /* bow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bow.jpg; sourceTree = "<group>"; };
+		8353CBFD18D34CB300226AB4 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		8353CBFE18D34CB300226AB4 /* cauliflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cauliflower.jpg; sourceTree = "<group>"; };
+		8353CBFF18D34CB300226AB4 /* computer desk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "computer desk.jpg"; sourceTree = "<group>"; };
+		8353CC0018D34CB300226AB4 /* cow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cow.jpg; sourceTree = "<group>"; };
+		8353CC0118D34CB300226AB4 /* face smile1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile1.jpg"; sourceTree = "<group>"; };
+		8353CC0218D34CB300226AB4 /* face smile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile2.jpg"; sourceTree = "<group>"; };
+		8353CC0318D34CB300226AB4 /* face smile3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile3.jpg"; sourceTree = "<group>"; };
+		8353CC0418D34CB300226AB4 /* face smile4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile4.jpg"; sourceTree = "<group>"; };
+		8353CC0518D34CB300226AB4 /* fox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpg; sourceTree = "<group>"; };
+		8353CC0618D34CB300226AB4 /* giraffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giraffe.jpg; sourceTree = "<group>"; };
+		8353CC0718D34CB300226AB4 /* helicopter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helicopter.jpg; sourceTree = "<group>"; };
+		8353CC0818D34CB300226AB4 /* horse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = horse.jpg; sourceTree = "<group>"; };
+		8353CC0918D34CB300226AB4 /* Koala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Koala.jpg; sourceTree = "<group>"; };
+		8353CC0A18D34CB300226AB4 /* lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpg; sourceTree = "<group>"; };
+		8353CC0B18D34CB300226AB4 /* onion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = onion.jpg; sourceTree = "<group>"; };
+		8353CC0C18D34CB300226AB4 /* pear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pear.jpg; sourceTree = "<group>"; };
+		8353CC0D18D34CB300226AB4 /* pineapple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pineapple.jpg; sourceTree = "<group>"; };
+		8353CC0E18D34CB300226AB4 /* scorpion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scorpion.jpg; sourceTree = "<group>"; };
+		8353CC0F18D34CB300226AB4 /* squirrel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = squirrel.jpg; sourceTree = "<group>"; };
+		8353CC1018D34CB300226AB4 /* swan (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "swan (1).jpg"; sourceTree = "<group>"; };
+		8353CC1118D34CB300226AB4 /* table lamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "table lamp.jpg"; sourceTree = "<group>"; };
+		8353CC1218D34CB300226AB4 /* tomato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato.jpg; sourceTree = "<group>"; };
+		8353CC1318D34CB300226AB4 /* train.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = train.jpg; sourceTree = "<group>"; };
+		8353CC1418D34CB300226AB4 /* truck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = truck.jpg; sourceTree = "<group>"; };
+		8353CC1518D34CB300226AB4 /* wardrobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wardrobe.jpg; sourceTree = "<group>"; };
+		8353CC1618D34CB300226AB4 /* wasp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wasp.jpg; sourceTree = "<group>"; };
+		8353CC3B18D34DE800226AB4 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageComprehensionViewController.h; sourceTree = "<group>"; };
+		8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageComprehensionViewController.m; sourceTree = "<group>"; };
+		8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageComprehensionViewController.xib; sourceTree = "<group>"; };
+		83A14FA818D33C4E0037980A /* Dementia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dementia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A14FAB18D33C4E0037980A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83A14FAD18D33C4E0037980A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		83A14FAF18D33C4E0037980A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		83A14FB318D33C4E0037980A /* Dementia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dementia-Info.plist"; sourceTree = "<group>"; };
+		83A14FB518D33C4E0037980A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83A14FB718D33C4E0037980A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83A14FB918D33C4E0037980A /* Dementia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dementia-Prefix.pch"; sourceTree = "<group>"; };
+		83A14FBA18D33C4E0037980A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83A14FBB18D33C4E0037980A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83A14FBD18D33C4E0037980A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83A14FC318D33C4E0037980A /* DementiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DementiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A14FC418D33C4E0037980A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		83A14FCC18D33C4E0037980A /* DementiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DementiaTests-Info.plist"; sourceTree = "<group>"; };
+		83A14FCE18D33C4E0037980A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83A14FD018D33C4E0037980A /* DementiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DementiaTests.m; sourceTree = "<group>"; };
+		83A14FDA18D33E080037980A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		83A14FDC18D33FC30037980A /* LanguageNamingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageNamingViewController.h; sourceTree = "<group>"; };
+		83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageNamingViewController.m; sourceTree = "<group>"; };
+		83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageNamingViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83A14FA518D33C4E0037980A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FDB18D33E080037980A /* CoreLocation.framework in Frameworks */,
+				83A14FAE18D33C4E0037980A /* CoreGraphics.framework in Frameworks */,
+				83A14FB018D33C4E0037980A /* UIKit.framework in Frameworks */,
+				83A14FAC18D33C4E0037980A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A14FC018D33C4E0037980A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FC518D33C4E0037980A /* XCTest.framework in Frameworks */,
+				83A14FC718D33C4E0037980A /* UIKit.framework in Frameworks */,
+				83A14FC618D33C4E0037980A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8353CBF218D34CB200226AB4 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				8353CBF318D34CB200226AB4 /* accordion.jpg */,
+				8353CBF418D34CB200226AB4 /* airoplane.jpg */,
+				8353CBF518D34CB200226AB4 /* apple.jpg */,
+				8353CBF618D34CB200226AB4 /* aubergine.jpg */,
+				8353CBF718D34CB300226AB4 /* axe.jpg */,
+				8353CBF818D34CB300226AB4 /* banana.jpg */,
+				8353CBF918D34CB300226AB4 /* bed.jpg */,
+				8353CBFA18D34CB300226AB4 /* bicycle.jpg */,
+				8353CBFB18D34CB300226AB4 /* bird.jpg */,
+				8353CBFC18D34CB300226AB4 /* bow.jpg */,
+				8353CBFD18D34CB300226AB4 /* cat.jpg */,
+				8353CBFE18D34CB300226AB4 /* cauliflower.jpg */,
+				8353CBFF18D34CB300226AB4 /* computer desk.jpg */,
+				8353CC0018D34CB300226AB4 /* cow.jpg */,
+				8353CC0118D34CB300226AB4 /* face smile1.jpg */,
+				8353CC0218D34CB300226AB4 /* face smile2.jpg */,
+				8353CC0318D34CB300226AB4 /* face smile3.jpg */,
+				8353CC0418D34CB300226AB4 /* face smile4.jpg */,
+				8353CC0518D34CB300226AB4 /* fox.jpg */,
+				8353CC0618D34CB300226AB4 /* giraffe.jpg */,
+				8353CC0718D34CB300226AB4 /* helicopter.jpg */,
+				8353CC0818D34CB300226AB4 /* horse.jpg */,
+				8353CC0918D34CB300226AB4 /* Koala.jpg */,
+				8353CC0A18D34CB300226AB4 /* lion.jpg */,
+				8353CC0B18D34CB300226AB4 /* onion.jpg */,
+				8353CC0C18D34CB300226AB4 /* pear.jpg */,
+				8353CC0D18D34CB300226AB4 /* pineapple.jpg */,
+				8353CC0E18D34CB300226AB4 /* scorpion.jpg */,
+				8353CC0F18D34CB300226AB4 /* squirrel.jpg */,
+				8353CC1018D34CB300226AB4 /* swan (1).jpg */,
+				8353CC1118D34CB300226AB4 /* table lamp.jpg */,
+				8353CC1218D34CB300226AB4 /* tomato.jpg */,
+				8353CC1318D34CB300226AB4 /* train.jpg */,
+				8353CC1418D34CB300226AB4 /* truck.jpg */,
+				8353CC1518D34CB300226AB4 /* wardrobe.jpg */,
+				8353CC1618D34CB300226AB4 /* wasp.jpg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */ = {
+			isa = PBXGroup;
+			children = (
+				8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */,
+				8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */,
+				8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */,
+			);
+			name = "2. LanguageComprehension";
+			sourceTree = "<group>";
+		};
+		83A14F9F18D33C4E0037980A = {
+			isa = PBXGroup;
+			children = (
+				83A14FB118D33C4E0037980A /* Dementia */,
+				83A14FCA18D33C4E0037980A /* DementiaTests */,
+				83A14FAA18D33C4E0037980A /* Frameworks */,
+				83A14FA918D33C4E0037980A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83A14FA918D33C4E0037980A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FA818D33C4E0037980A /* Dementia.app */,
+				83A14FC318D33C4E0037980A /* DementiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83A14FAA18D33C4E0037980A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FDA18D33E080037980A /* CoreLocation.framework */,
+				83A14FAB18D33C4E0037980A /* Foundation.framework */,
+				83A14FAD18D33C4E0037980A /* CoreGraphics.framework */,
+				83A14FAF18D33C4E0037980A /* UIKit.framework */,
+				83A14FC418D33C4E0037980A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83A14FB118D33C4E0037980A /* Dementia */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FE118D33FCD0037980A /* UI */,
+				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
+				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
+				83A14FBD18D33C4E0037980A /* Images.xcassets */,
+				83A14FB218D33C4E0037980A /* Supporting Files */,
+			);
+			path = Dementia;
+			sourceTree = "<group>";
+		};
+		83A14FB218D33C4E0037980A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8353CBF218D34CB200226AB4 /* assets */,
+				83A14FB318D33C4E0037980A /* Dementia-Info.plist */,
+				83A14FB418D33C4E0037980A /* InfoPlist.strings */,
+				83A14FB718D33C4E0037980A /* main.m */,
+				83A14FB918D33C4E0037980A /* Dementia-Prefix.pch */,
+				8353CC3B18D34DE800226AB4 /* Images.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83A14FCA18D33C4E0037980A /* DementiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FD018D33C4E0037980A /* DementiaTests.m */,
+				83A14FCB18D33C4E0037980A /* Supporting Files */,
+			);
+			path = DementiaTests;
+			sourceTree = "<group>";
+		};
+		83A14FCB18D33C4E0037980A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FCC18D33C4E0037980A /* DementiaTests-Info.plist */,
+				83A14FCD18D33C4E0037980A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83A14FE118D33FCD0037980A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
+				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		83A14FE218D33FD20037980A /* 1. LanguageNaming */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FDC18D33FC30037980A /* LanguageNamingViewController.h */,
+				83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */,
+				83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */,
+			);
+			name = "1. LanguageNaming";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83A14FA718D33C4E0037980A /* Dementia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A14FD418D33C4E0037980A /* Build configuration list for PBXNativeTarget "Dementia" */;
+			buildPhases = (
+				83A14FA418D33C4E0037980A /* Sources */,
+				83A14FA518D33C4E0037980A /* Frameworks */,
+				83A14FA618D33C4E0037980A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dementia;
+			productName = Dementia;
+			productReference = 83A14FA818D33C4E0037980A /* Dementia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83A14FC218D33C4E0037980A /* DementiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A14FD718D33C4E0037980A /* Build configuration list for PBXNativeTarget "DementiaTests" */;
+			buildPhases = (
+				83A14FBF18D33C4E0037980A /* Sources */,
+				83A14FC018D33C4E0037980A /* Frameworks */,
+				83A14FC118D33C4E0037980A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A14FC918D33C4E0037980A /* PBXTargetDependency */,
+			);
+			name = DementiaTests;
+			productName = DementiaTests;
+			productReference = 83A14FC318D33C4E0037980A /* DementiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83A14FA018D33C4E0037980A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = chris;
+				TargetAttributes = {
+					83A14FC218D33C4E0037980A = {
+						TestTargetID = 83A14FA718D33C4E0037980A;
+					};
+				};
+			};
+			buildConfigurationList = 83A14FA318D33C4E0037980A /* Build configuration list for PBXProject "Dementia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83A14F9F18D33C4E0037980A;
+			productRefGroup = 83A14FA918D33C4E0037980A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83A14FA718D33C4E0037980A /* Dementia */,
+				83A14FC218D33C4E0037980A /* DementiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83A14FA618D33C4E0037980A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FB618D33C4E0037980A /* InfoPlist.strings in Resources */,
+				8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */,
+				8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */,
+				8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */,
+				8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */,
+				8353CC3018D34CB300226AB4 /* pear.jpg in Resources */,
+				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
+				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
+				8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */,
+				8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */,
+				8353CC1F18D34CB300226AB4 /* bird.jpg in Resources */,
+				8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */,
+				8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */,
+				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
+				8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */,
+				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
+				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
+				8353CC3418D34CB300226AB4 /* swan (1).jpg in Resources */,
+				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
+				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
+				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
+				8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */,
+				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
+				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
+				8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */,
+				8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */,
+				8353CC3618D34CB300226AB4 /* tomato.jpg in Resources */,
+				8353CC3718D34CB300226AB4 /* train.jpg in Resources */,
+				8353CC3C18D34DE800226AB4 /* Images.plist in Resources */,
+				8353CC1918D34CB300226AB4 /* apple.jpg in Resources */,
+				8353CC4218D35C4C00226AB4 /* LanguageComprehensionViewController.xib in Resources */,
+				83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */,
+				8353CC2418D34CB300226AB4 /* cow.jpg in Resources */,
+				8353CC2E18D34CB300226AB4 /* lion.jpg in Resources */,
+				8353CC2F18D34CB300226AB4 /* onion.jpg in Resources */,
+				8353CC3818D34CB300226AB4 /* truck.jpg in Resources */,
+				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
+				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
+				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
+				8353CC2118D34CB300226AB4 /* cat.jpg in Resources */,
+				8353CC1E18D34CB300226AB4 /* bicycle.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A14FC118D33C4E0037980A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FCF18D33C4E0037980A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83A14FA418D33C4E0037980A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
+				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
+				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
+				83A14FB818D33C4E0037980A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A14FBF18D33C4E0037980A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A14FD118D33C4E0037980A /* DementiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83A14FC918D33C4E0037980A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A14FA718D33C4E0037980A /* Dementia */;
+			targetProxy = 83A14FC818D33C4E0037980A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83A14FB418D33C4E0037980A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83A14FB518D33C4E0037980A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83A14FCD18D33C4E0037980A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83A14FCE18D33C4E0037980A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83A14FD218D33C4E0037980A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		83A14FD318D33C4E0037980A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83A14FD518D33C4E0037980A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
+				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83A14FD618D33C4E0037980A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
+				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		83A14FD818D33C4E0037980A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dementia.app/Dementia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DementiaTests/DementiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		83A14FD918D33C4E0037980A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dementia.app/Dementia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
+				INFOPLIST_FILE = "DementiaTests/DementiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83A14FA318D33C4E0037980A /* Build configuration list for PBXProject "Dementia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A14FD218D33C4E0037980A /* Debug */,
+				83A14FD318D33C4E0037980A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A14FD418D33C4E0037980A /* Build configuration list for PBXNativeTarget "Dementia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A14FD518D33C4E0037980A /* Debug */,
+				83A14FD618D33C4E0037980A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A14FD718D33C4E0037980A /* Build configuration list for PBXNativeTarget "DementiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A14FD818D33C4E0037980A /* Debug */,
+				83A14FD918D33C4E0037980A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83A14FA018D33C4E0037980A /* Project object */;
+}
