@@ -19,13 +19,14 @@
     __weak IBOutlet UIButton *confirmButton;
     NSArray *imagesDicts;
     NSDictionary *currentImage;
-    BOOL isCorrect;
-    int score;
-    int order;
+    BOOL answerWasCorrect;
+    int currentScore;
+    int currentImageOrder;
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
 - (IBAction)showControlsButtonPressed:(id)sender;
--(void)showControls;
--(void)hideControls;
+-(void)showControlPanel;
+-(void)hideControlPanel;
+-(NSArray *)getTestImages;
 @end

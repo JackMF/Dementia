@@ -14,24 +14,25 @@
 
 
 @implementation Test
-@synthesize preTestViewController, testViewController, postTestViewController;
--(id)initWithPreTest:(PreTestViewController *)pre test:(TestViewController *)theTestViewController postTest:(PostTestViewController *)post navigationController:(UINavigationController *)navController
+@synthesize testViewController;
+@synthesize testScore;
+-(id)initWithTest:(TestViewController *)initTestViewController navigationController:(UINavigationController *)initNavController
 {
     if (self = [super init]) {
-        // Set our pre-test controller
-        self.preTestViewController = pre;
-        self.preTestViewController.test = self;
-        
         // Set our test controller
-        self.testViewController = theTestViewController;
-        self.testViewController.test = self;
+        testViewController = initTestViewController;
+        testViewController.test = self;
+        
+        // Set our pre-test controller
+        preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
+        preTestViewController.test = self;
         
         // Set our post-test controller
-        self.postTestViewController = post;
-        self.postTestViewController.test = self;
+        postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
+        postTestViewController.test = self;
 
         // Set our navigation controller
-        navigationController = navController;
+        navigationController = initNavController;
     }
     return self;
 }

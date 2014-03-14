@@ -35,17 +35,13 @@
     [super viewDidLoad];
     
     // Prepare the first test
-    PreTestViewController *preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
     LanguageNamingViewController *languageNamingViewController = [[LanguageNamingViewController alloc] initWithNibName:@"LanguageNamingViewController" bundle:nil];
-    PostTestViewController *postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
-    Test *firstTest = [[Test alloc] initWithPreTest:preTestViewController test:languageNamingViewController postTest:postTestViewController navigationController:self.navigationController];
+    Test *firstTest = [[Test alloc] initWithTest:languageNamingViewController navigationController:self.navigationController];
     [tests addObject:firstTest];
     
     // Prepare the second test
-    PreTestViewController *preTestViewController2 = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
     LanguageComprehensionViewController *languageComprehensionViewController = [[LanguageComprehensionViewController alloc] initWithNibName:@"LanguageComprehensionViewController" bundle:nil];
-    PostTestViewController *postTestViewController2 = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
-    Test *secondTest = [[Test alloc] initWithPreTest:preTestViewController2 test:languageComprehensionViewController postTest:postTestViewController2 navigationController:self.navigationController];
+    Test *secondTest = [[Test alloc] initWithTest:languageComprehensionViewController navigationController:self.navigationController];
     [tests addObject:secondTest];
 }
 

@@ -24,8 +24,9 @@
     return self;
 }
 
--(void)hasFinished
+-(void)hasFinishedTestWithScore:(int)testScore
 {
+    score = testScore;
     [test startPostTest];
 }
 

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 @class Test;
 @interface TestViewController : UIViewController
+{
+    int score;
+}
 @property (nonatomic) Test *test;
--(void)hasFinished;
+-(void)hasFinishedTestWithScore:(int)score;
 @end

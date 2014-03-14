@@ -12,11 +12,12 @@
 @interface Test : NSObject
 {
     UINavigationController *navigationController;
+    PreTestViewController *preTestViewController;
+    PostTestViewController *postTestViewController;
 }
--(id)initWithPreTest:(PreTestViewController *)pre test:(TestViewController *)test postTest:(PostTestViewController *)post navigationController:(UINavigationController *)navController;
-@property (nonatomic) PreTestViewController *preTestViewController;
+-(id)initWithTest:(TestViewController *)initTestViewController navigationController:(UINavigationController *)initNavController;
+@property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
-@property (nonatomic) PostTestViewController *postTestViewController;
 -(void)startPreTest;
 -(void)startTest;
 -(void)startPostTest;

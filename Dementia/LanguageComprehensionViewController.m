@@ -29,13 +29,13 @@
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
--(int)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return 200;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)theCollectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
