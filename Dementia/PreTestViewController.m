@@ -29,8 +29,7 @@
 {
     [super viewDidLoad];
     // Set my own title
-    NSString *title = [(UIViewController *)[test testViewController] title];
-    [titleLabel setText:title];
+    [titleLabel setText:[test getTestName]];
 }
 
 - (void)didReceiveMemoryWarning

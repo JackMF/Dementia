@@ -22,5 +22,5 @@
 -(void)startTest;
 -(void)startPostTest;
 -(void)endTest;
-
+-(NSString *)getTestName;
 @end

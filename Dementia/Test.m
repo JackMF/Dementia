@@ -57,5 +57,9 @@
     [navigationController popToRootViewControllerAnimated:YES];
 }
 
+-(NSString *)getTestName
+{
+    return [(UIViewController *)[self testViewController] title];
+}
 
 @end

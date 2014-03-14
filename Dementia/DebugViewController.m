@@ -52,6 +52,10 @@
 
 -(int)numberOfSectionsInTableView:(UITableView *)tableView{ return 1; }
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ return [tests count];}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.0;
+}
 
 -(UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -59,7 +63,7 @@
     UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     Test *test = [tests objectAtIndex:[indexPath row]];
-    NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", [indexPath row], test];
+    NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", [indexPath row]+1, [test getTestName]];
     [cell.textLabel setText:cellText];
     return cell;
 }
