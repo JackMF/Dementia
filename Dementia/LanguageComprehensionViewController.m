@@ -7,20 +7,19 @@
 //
 
 #import "LanguageComprehensionViewController.h"
-#import "ImageLoader.h"
+#import "Test.h"
 
 @interface LanguageComprehensionViewController ()
 
 @end
 
 @implementation LanguageComprehensionViewController
+@synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Language - Comprehension";
-        imagesDicts = [[ImageLoader sharedInstance] getTestImages]; // Load images for the test
     }
     return self;
 }
@@ -28,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = [test testName];
+    imagesDicts = [test imageDictionaries];
 }
 
 - (void)didReceiveMemoryWarning

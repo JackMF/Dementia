@@ -10,7 +10,6 @@
 #import "PreTestViewController.h"
 #import "PostTestViewController.h"
 #import "TestViewController.h"
-#import <UIKit/UIKit.h>
 
 
 @implementation Test
@@ -31,7 +30,7 @@
        
         // Set our test controller
         testViewController = [[NSClassFromString(className) alloc] init];
-        testViewController.test = self;
+        [testViewController setTest:self];
         
         // Set our pre-test controller
         preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];

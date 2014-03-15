@@ -7,7 +7,7 @@
 //
 
 #import "LanguageNamingViewController.h"
-#import "ImageLoader.h"
+#import "Test.h"
 
 #define kImageViewAnimationDuration 0.3
 #define kControlPanelAnimationDuration 0.2
@@ -17,13 +17,12 @@
 @end
 
 @implementation LanguageNamingViewController
+@synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Language - Naming";
-        imagesDicts = [[ImageLoader sharedInstance] getTestImages]; // Load images for the test
     }
     return self;
 }
@@ -39,6 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = [test testName];
+    imagesDicts = [test imageDictionaries];
 }
 
 // Loads the next image, handles animation
