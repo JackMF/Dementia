@@ -13,4 +13,5 @@
 {
     NSArray *imagesDicts;
 }
+- (IBAction)imageButtonPressed:(id)sender;
 @end

@@ -29,13 +29,53 @@
 				<key>order</key>
 				<integer>1</integer>
 				<key>filename</key>
-				<string>bicycle.jpg</string>
+				<string>bow.jpg</string>
 				<key>name</key>
-				<string>bicycle</string>
+				<string>bow.jpg</string>
 			</dict>
 			<dict>
 				<key>order</key>
 				<integer>2</integer>
+				<key>filename</key>
+				<string>helicopter.jpg</string>
+				<key>name</key>
+				<string>helicopter</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>3</integer>
+				<key>filename</key>
+				<string>fox.jpg</string>
+				<key>name</key>
+				<string>fox</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>4</integer>
+				<key>filename</key>
+				<string>axe.jpg</string>
+				<key>name</key>
+				<string>axe</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>5</integer>
+				<key>filename</key>
+				<string>squirrel.jpg</string>
+				<key>name</key>
+				<string>squirrel</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>6</integer>
+				<key>filename</key>
+				<string>swan.jpg</string>
+				<key>name</key>
+				<string>swan</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>7</integer>
 				<key>filename</key>
 				<string>accordion.jpg</string>
 				<key>name</key>
@@ -56,7 +96,7 @@
 		<string>lorem ipsum 2</string>
 		<key>postTestMessage</key>
 		<string>lorem ipsum 2</string>
-		<key>images</key>
+		<key>imageDictionaries</key>
 		<array>
 			<dict>
 				<key>order</key>
@@ -70,13 +110,53 @@
 				<key>order</key>
 				<integer>1</integer>
 				<key>filename</key>
-				<string>bicycle.jpg</string>
+				<string>bow.jpg</string>
 				<key>name</key>
-				<string>bicycle</string>
+				<string>bow.jpg</string>
 			</dict>
 			<dict>
 				<key>order</key>
 				<integer>2</integer>
+				<key>filename</key>
+				<string>helicopter.jpg</string>
+				<key>name</key>
+				<string>helicopter</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>3</integer>
+				<key>filename</key>
+				<string>fox.jpg</string>
+				<key>name</key>
+				<string>fox</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>4</integer>
+				<key>filename</key>
+				<string>axe.jpg</string>
+				<key>name</key>
+				<string>axe</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>5</integer>
+				<key>filename</key>
+				<string>squirrel.jpg</string>
+				<key>name</key>
+				<string>squirrel</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>6</integer>
+				<key>filename</key>
+				<string>swan.jpg</string>
+				<key>name</key>
+				<string>swan</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>7</integer>
 				<key>filename</key>
 				<string>accordion.jpg</string>
 				<key>name</key>
