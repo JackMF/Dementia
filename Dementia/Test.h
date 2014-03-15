@@ -15,12 +15,22 @@
     PreTestViewController *preTestViewController;
     PostTestViewController *postTestViewController;
 }
--(id)initWithTest:(TestViewController *)initTestViewController navigationController:(UINavigationController *)initNavController;
+
+-(id)initWithPlistDict:(NSDictionary *)plistDict;
+// Values loaded from property list
+@property (nonatomic) int order;
+@property (nonatomic) NSString *className;
+@property (nonatomic) NSString *categoryName;
+@property (nonatomic) NSString *testName;
+@property (nonatomic) NSString *preTestInstructions;
+@property (nonatomic) NSString *postTestInstructions;
+@property (nonatomic) NSArray *imageDictionaries;
+
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
+-(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;
 -(void)startTest;
 -(void)startPostTest;
 -(void)endTest;
--(NSString *)getTestName;
 @end

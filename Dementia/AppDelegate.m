@@ -8,12 +8,14 @@
 
 #import "AppDelegate.h"
 #import "DebugViewController.h"
+#import "TestManager.h"
 
 @implementation AppDelegate
 
 // THE ENTRY POINT
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestManager sharedInstance];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Instantiate our debug view controller

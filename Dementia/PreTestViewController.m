@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Set my own title
-    [titleLabel setText:[test getTestName]];
+    [titleLabel setText:[test testName]];
 }
 
 - (void)didReceiveMemoryWarning

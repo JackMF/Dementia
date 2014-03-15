@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>order</key>
+		<integer>0</integer>
+		<key>className</key>
+		<string>LanguageNamingViewController</string>
+		<key>categoryName</key>
+		<string>Language</string>
+		<key>testName</key>
+		<string>Naming</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum</string>
+		<key>imageDictionaries</key>
+		<array>
+			<dict>
+				<key>order</key>
+				<integer>0</integer>
+				<key>filename</key>
+				<string>scorpion.jpg</string>
+				<key>name</key>
+				<string>scorpion</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>1</integer>
+				<key>filename</key>
+				<string>bicycle.jpg</string>
+				<key>name</key>
+				<string>bicycle</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>2</integer>
+				<key>filename</key>
+				<string>accordion.jpg</string>
+				<key>name</key>
+				<string>accordion</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>1</integer>
+		<key>className</key>
+		<string>LanguageComprehensionViewController</string>
+		<key>categoryName</key>
+		<string>Language</string>
+		<key>testName</key>
+		<string>Comprehension</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum 2</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum 2</string>
+		<key>images</key>
+		<array>
+			<dict>
+				<key>order</key>
+				<integer>0</integer>
+				<key>filename</key>
+				<string>scorpion.jpg</string>
+				<key>name</key>
+				<string>scorpion</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>1</integer>
+				<key>filename</key>
+				<string>bicycle.jpg</string>
+				<key>name</key>
+				<string>bicycle</string>
+			</dict>
+			<dict>
+				<key>order</key>
+				<integer>2</integer>
+				<key>filename</key>
+				<string>accordion.jpg</string>
+				<key>name</key>
+				<string>accordion</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

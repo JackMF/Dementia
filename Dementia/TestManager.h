@@ -1,5 +1,5 @@
 //
-//  ImageLoader.h
+//  TestManager.h
 //  Dementia
 //
 //  Created by Chris on 14/03/2014.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ImageLoader : NSObject
-{
-    NSArray *testImages;
-}
-+(ImageLoader *)sharedInstance;
--(NSArray *)getTestImages;
+@interface TestManager : NSObject
+@property (nonatomic) NSArray *tests;
++(TestManager *)sharedInstance;
+
 @end

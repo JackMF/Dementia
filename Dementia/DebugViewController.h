@@ -11,7 +11,7 @@
 @interface DebugViewController : UIViewController <UITableViewDataSource, UITabBarControllerDelegate>
 {
     __weak IBOutlet UITableView *tableView;
-    NSMutableArray *tests;
+    NSArray *tests;
 }
 
 @end

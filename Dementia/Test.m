@@ -16,25 +16,40 @@
 @implementation Test
 @synthesize testViewController;
 @synthesize testScore;
--(id)initWithTest:(TestViewController *)initTestViewController navigationController:(UINavigationController *)initNavController
+@synthesize order, className, categoryName, testName, preTestInstructions, postTestInstructions, imageDictionaries;
+
+-(id)initWithPlistDict:(NSDictionary *)plistDict
 {
     if (self = [super init]) {
+        order = [[plistDict valueForKey:@"order"] integerValue];
+        className = [plistDict valueForKey:@"className"];
+        categoryName = [plistDict valueForKey:@"categoryName"];
+        testName = [plistDict valueForKey:@"testName"];
+        preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
+        postTestInstructions = [plistDict valueForKey:@"postTestInstructions"];
+        imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
+       
         // Set our test controller
-        testViewController = initTestViewController;
+        testViewController = [[NSClassFromString(className) alloc] init];
         testViewController.test = self;
         
         // Set our pre-test controller
         preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
         preTestViewController.test = self;
-        
         // Set our post-test controller
         postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
         postTestViewController.test = self;
-
+        
         // Set our navigation controller
-        navigationController = initNavController;
+//        navigationController = initNavController;
     }
     return self;
+}
+
+-(void)launchWithNavigationController:(UINavigationController *)navController
+{
+    navigationController = navController;
+    [self startPreTest];
 }
 
 -(void)startPreTest
@@ -55,11 +70,6 @@
 -(void)endTest
 {
     [navigationController popToRootViewControllerAnimated:YES];
-}
-
--(NSString *)getTestName
-{
-    return [(UIViewController *)[self testViewController] title];
 }
 
 @end
