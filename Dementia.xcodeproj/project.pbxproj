@@ -329,7 +329,6 @@
 				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
-				83FD799118D5F9890055A26C /* ExampleTestViewController */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
 				83A14FB218D33C4E0037980A /* Supporting Files */,
@@ -375,6 +374,7 @@
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
 				8359B67E18D377A8001BDDB8 /* TestViewController */,
+				83FD799118D5F9890055A26C /* ExampleTestViewController */,
 				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
 				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
 			);
