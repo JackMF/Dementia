@@ -38,7 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = [test testName];           // Set this ViewController's title
+    self.title = [test getFullTestName];           // Set this ViewController's title
     imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
 

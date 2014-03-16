@@ -17,28 +17,37 @@
 @synthesize testScore;
 @synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries;
 
-// Initialises the test using a dictionary from the property list
--(id)initWithPlistDict:(NSDictionary *)plistDict
+-(id)init
 {
-    if (self = [super init]) {
-        order = [[plistDict valueForKey:@"order"] integerValue];
-        className = [plistDict valueForKey:@"className"];
-        categoryName = [plistDict valueForKey:@"categoryName"];
-        testName = [plistDict valueForKey:@"testName"];
-        preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
-        postTestMessage = [plistDict valueForKey:@"postTestMessage"];
-        imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
-       
-        // Set our test controller
-        testViewController = [[NSClassFromString(className) alloc] init];
-        [testViewController setTest:self];
-        
+    self = [super init];
+    if (self) {
         // Set our pre-test controller
         preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
         preTestViewController.test = self;
         // Set our post-test controller
         postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
         postTestViewController.test = self;
+    }
+    return self;
+}
+
+// Initialises the test using a dictionary from the property list
+-(id)initWithPlistDict:(NSDictionary *)plistDict
+{
+    if (self = [self init]) {
+        if (plistDict) {
+            order = [[plistDict valueForKey:@"order"] integerValue];
+            className = [plistDict valueForKey:@"className"];
+            categoryName = [plistDict valueForKey:@"categoryName"];
+            testName = [plistDict valueForKey:@"testName"];
+            preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
+            postTestMessage = [plistDict valueForKey:@"postTestMessage"];
+            imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
+           
+            // Set our test controller
+            testViewController = [[NSClassFromString(className) alloc] init];
+            [testViewController setTest:self];
+        }
     }
     return self;
 }
@@ -67,6 +76,11 @@
 -(void)endTest
 {
     [navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(NSString *)getFullTestName
+{
+    return [NSString stringWithFormat:@"%@ - %@", categoryName, testName];
 }
 
 @end

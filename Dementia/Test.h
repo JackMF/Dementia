@@ -33,4 +33,5 @@
 -(void)startTest;
 -(void)startPostTest;
 -(void)endTest;
+-(NSString *)getFullTestName;
 @end

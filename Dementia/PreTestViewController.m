@@ -30,7 +30,7 @@
     [super viewDidLoad];
     if (test) {
         // Set my own title
-        [titleLabel setText:[test testName]];
+        [titleLabel setText:[test getFullTestName]];
         [textView setText:[test preTestInstructions]];
     }
 }
