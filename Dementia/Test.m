@@ -15,7 +15,7 @@
 @implementation Test
 @synthesize testViewController;
 @synthesize testScore;
-@synthesize order, className, categoryName, testName, preTestInstructions, postTestInstructions, imageDictionaries;
+@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries;
 
 // Initialises the test using a dictionary from the property list
 -(id)initWithPlistDict:(NSDictionary *)plistDict
@@ -26,7 +26,7 @@
         categoryName = [plistDict valueForKey:@"categoryName"];
         testName = [plistDict valueForKey:@"testName"];
         preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
-        postTestInstructions = [plistDict valueForKey:@"postTestInstructions"];
+        postTestMessage = [plistDict valueForKey:@"postTestMessage"];
         imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
        
         // Set our test controller

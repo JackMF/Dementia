@@ -10,7 +10,8 @@
 @class Test;
 @interface PostTestViewController : UIViewController
 {
-    IBOutlet UILabel *titleLabel;
+    __weak IBOutlet UILabel *titleLabel;
+    __weak IBOutlet UITextView *textView;
 }
 - (IBAction)endButtonPressed;
 @property (nonatomic) Test *test;

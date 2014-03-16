@@ -10,7 +10,8 @@
 @class Test;
 @interface PreTestViewController : UIViewController
 {
-    IBOutlet UILabel *titleLabel;
+    __weak IBOutlet UILabel *titleLabel;
+    __weak IBOutlet UITextView *textView;
 }
 - (IBAction)startButtonPressed;
 @property (nonatomic) Test *test;

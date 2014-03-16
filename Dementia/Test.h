@@ -23,7 +23,7 @@
 @property (nonatomic) NSString *categoryName;
 @property (nonatomic) NSString *testName;
 @property (nonatomic) NSString *preTestInstructions;
-@property (nonatomic) NSString *postTestInstructions;
+@property (nonatomic) NSString *postTestMessage;
 @property (nonatomic) NSArray *imageDictionaries;
 
 @property (nonatomic) int testScore;
