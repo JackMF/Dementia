@@ -36,16 +36,21 @@
 		8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0D18D34CB300226AB4 /* pineapple.jpg */; };
 		8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0E18D34CB300226AB4 /* scorpion.jpg */; };
 		8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0F18D34CB300226AB4 /* squirrel.jpg */; };
-		8353CC3418D34CB300226AB4 /* swan (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1018D34CB300226AB4 /* swan (1).jpg */; };
 		8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1118D34CB300226AB4 /* table lamp.jpg */; };
 		8353CC3618D34CB300226AB4 /* tomato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1218D34CB300226AB4 /* tomato.jpg */; };
 		8353CC3718D34CB300226AB4 /* train.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1318D34CB300226AB4 /* train.jpg */; };
 		8353CC3818D34CB300226AB4 /* truck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1418D34CB300226AB4 /* truck.jpg */; };
 		8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1518D34CB300226AB4 /* wardrobe.jpg */; };
 		8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1618D34CB300226AB4 /* wasp.jpg */; };
-		8353CC3C18D34DE800226AB4 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC3B18D34DE800226AB4 /* Images.plist */; };
 		8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */; };
-		8353CC4218D35C4C00226AB4 /* LanguageComprehensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */; };
+		8359B67218D376E8001BDDB8 /* PreTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B67018D376E8001BDDB8 /* PreTestViewController.m */; };
+		8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B67118D376E8001BDDB8 /* PreTestViewController.xib */; };
+		8359B67818D37720001BDDB8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B67718D37720001BDDB8 /* TestViewController.m */; };
+		8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B67A18D37753001BDDB8 /* PostTestViewController.m */; };
+		8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B67B18D37753001BDDB8 /* PostTestViewController.xib */; };
+		8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68118D377FB001BDDB8 /* DebugViewController.m */; };
+		8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B68218D377FB001BDDB8 /* DebugViewController.xib */; };
+		8359B68C18D37C45001BDDB8 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68B18D37C45001BDDB8 /* Test.m */; };
 		83A14FAC18D33C4E0037980A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAB18D33C4E0037980A /* Foundation.framework */; };
 		83A14FAE18D33C4E0037980A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAD18D33C4E0037980A /* CoreGraphics.framework */; };
 		83A14FB018D33C4E0037980A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAF18D33C4E0037980A /* UIKit.framework */; };
@@ -61,6 +66,10 @@
 		83A14FDB18D33E080037980A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FDA18D33E080037980A /* CoreLocation.framework */; };
 		83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */; };
 		83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */; };
+		83E763B118D3BBEE002846B1 /* LanguageComprehensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */; };
+		83E763B918D3CA9F002846B1 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E763B818D3CA9F002846B1 /* TestManager.m */; };
+		83E763BB18D3CB46002846B1 /* Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BA18D3CB46002846B1 /* Tests.plist */; };
+		83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BC18D3D9C2002846B1 /* swan.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,17 +112,27 @@
 		8353CC0D18D34CB300226AB4 /* pineapple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pineapple.jpg; sourceTree = "<group>"; };
 		8353CC0E18D34CB300226AB4 /* scorpion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scorpion.jpg; sourceTree = "<group>"; };
 		8353CC0F18D34CB300226AB4 /* squirrel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = squirrel.jpg; sourceTree = "<group>"; };
-		8353CC1018D34CB300226AB4 /* swan (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "swan (1).jpg"; sourceTree = "<group>"; };
 		8353CC1118D34CB300226AB4 /* table lamp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "table lamp.jpg"; sourceTree = "<group>"; };
 		8353CC1218D34CB300226AB4 /* tomato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato.jpg; sourceTree = "<group>"; };
 		8353CC1318D34CB300226AB4 /* train.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = train.jpg; sourceTree = "<group>"; };
 		8353CC1418D34CB300226AB4 /* truck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = truck.jpg; sourceTree = "<group>"; };
 		8353CC1518D34CB300226AB4 /* wardrobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wardrobe.jpg; sourceTree = "<group>"; };
 		8353CC1618D34CB300226AB4 /* wasp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wasp.jpg; sourceTree = "<group>"; };
-		8353CC3B18D34DE800226AB4 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageComprehensionViewController.h; sourceTree = "<group>"; };
 		8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageComprehensionViewController.m; sourceTree = "<group>"; };
-		8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageComprehensionViewController.xib; sourceTree = "<group>"; };
+		8359B66F18D376E8001BDDB8 /* PreTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreTestViewController.h; sourceTree = "<group>"; };
+		8359B67018D376E8001BDDB8 /* PreTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreTestViewController.m; sourceTree = "<group>"; };
+		8359B67118D376E8001BDDB8 /* PreTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreTestViewController.xib; sourceTree = "<group>"; };
+		8359B67618D37720001BDDB8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		8359B67718D37720001BDDB8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		8359B67918D37753001BDDB8 /* PostTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTestViewController.h; sourceTree = "<group>"; };
+		8359B67A18D37753001BDDB8 /* PostTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTestViewController.m; sourceTree = "<group>"; };
+		8359B67B18D37753001BDDB8 /* PostTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTestViewController.xib; sourceTree = "<group>"; };
+		8359B68018D377FB001BDDB8 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		8359B68118D377FB001BDDB8 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
+		8359B68218D377FB001BDDB8 /* DebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugViewController.xib; sourceTree = "<group>"; };
+		8359B68A18D37C45001BDDB8 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		8359B68B18D37C45001BDDB8 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		83A14FA818D33C4E0037980A /* Dementia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dementia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A14FAB18D33C4E0037980A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83A14FAD18D33C4E0037980A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +153,11 @@
 		83A14FDC18D33FC30037980A /* LanguageNamingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageNamingViewController.h; sourceTree = "<group>"; };
 		83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageNamingViewController.m; sourceTree = "<group>"; };
 		83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageNamingViewController.xib; sourceTree = "<group>"; };
+		83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageComprehensionViewController.xib; sourceTree = "<group>"; };
+		83E763B718D3CA9F002846B1 /* TestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManager.h; sourceTree = "<group>"; };
+		83E763B818D3CA9F002846B1 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
+		83E763BA18D3CB46002846B1 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
+		83E763BC18D3D9C2002846B1 /* swan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +217,7 @@
 				8353CC0D18D34CB300226AB4 /* pineapple.jpg */,
 				8353CC0E18D34CB300226AB4 /* scorpion.jpg */,
 				8353CC0F18D34CB300226AB4 /* squirrel.jpg */,
-				8353CC1018D34CB300226AB4 /* swan (1).jpg */,
+				83E763BC18D3D9C2002846B1 /* swan.jpg */,
 				8353CC1118D34CB300226AB4 /* table lamp.jpg */,
 				8353CC1218D34CB300226AB4 /* tomato.jpg */,
 				8353CC1318D34CB300226AB4 /* train.jpg */,
@@ -209,9 +233,57 @@
 			children = (
 				8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */,
 				8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */,
-				8353CC4018D35C4C00226AB4 /* LanguageComprehensionViewController.xib */,
+				83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */,
 			);
 			name = "2. LanguageComprehension";
+			sourceTree = "<group>";
+		};
+		8359B67418D376EF001BDDB8 /* PreTest */ = {
+			isa = PBXGroup;
+			children = (
+				8359B66F18D376E8001BDDB8 /* PreTestViewController.h */,
+				8359B67018D376E8001BDDB8 /* PreTestViewController.m */,
+				8359B67118D376E8001BDDB8 /* PreTestViewController.xib */,
+			);
+			name = PreTest;
+			sourceTree = "<group>";
+		};
+		8359B67518D376F8001BDDB8 /* PostTest */ = {
+			isa = PBXGroup;
+			children = (
+				8359B67918D37753001BDDB8 /* PostTestViewController.h */,
+				8359B67A18D37753001BDDB8 /* PostTestViewController.m */,
+				8359B67B18D37753001BDDB8 /* PostTestViewController.xib */,
+			);
+			name = PostTest;
+			sourceTree = "<group>";
+		};
+		8359B67E18D377A8001BDDB8 /* TestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8359B67618D37720001BDDB8 /* TestViewController.h */,
+				8359B67718D37720001BDDB8 /* TestViewController.m */,
+			);
+			name = TestViewController;
+			sourceTree = "<group>";
+		};
+		8359B67F18D377E6001BDDB8 /* DebugViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8359B68018D377FB001BDDB8 /* DebugViewController.h */,
+				8359B68118D377FB001BDDB8 /* DebugViewController.m */,
+				8359B68218D377FB001BDDB8 /* DebugViewController.xib */,
+			);
+			name = DebugViewController;
+			sourceTree = "<group>";
+		};
+		8359B68918D37C3E001BDDB8 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				8359B68A18D37C45001BDDB8 /* Test.h */,
+				8359B68B18D37C45001BDDB8 /* Test.m */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 		83A14F9F18D33C4E0037980A = {
@@ -248,6 +320,8 @@
 		83A14FB118D33C4E0037980A /* Dementia */ = {
 			isa = PBXGroup;
 			children = (
+				83E763B618D3CA70002846B1 /* TestManager */,
+				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
@@ -265,7 +339,7 @@
 				83A14FB418D33C4E0037980A /* InfoPlist.strings */,
 				83A14FB718D33C4E0037980A /* main.m */,
 				83A14FB918D33C4E0037980A /* Dementia-Prefix.pch */,
-				8353CC3B18D34DE800226AB4 /* Images.plist */,
+				83E763BA18D3CB46002846B1 /* Tests.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,6 +365,10 @@
 		83A14FE118D33FCD0037980A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8359B67F18D377E6001BDDB8 /* DebugViewController */,
+				8359B67418D376EF001BDDB8 /* PreTest */,
+				8359B67518D376F8001BDDB8 /* PostTest */,
+				8359B67E18D377A8001BDDB8 /* TestViewController */,
 				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
 				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
 			);
@@ -305,6 +383,15 @@
 				83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */,
 			);
 			name = "1. LanguageNaming";
+			sourceTree = "<group>";
+		};
+		83E763B618D3CA70002846B1 /* TestManager */ = {
+			isa = PBXGroup;
+			children = (
+				83E763B718D3CA9F002846B1 /* TestManager.h */,
+				83E763B818D3CA9F002846B1 /* TestManager.m */,
+			);
+			name = TestManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,18 +475,22 @@
 				8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */,
 				8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */,
 				8353CC3018D34CB300226AB4 /* pear.jpg in Resources */,
+				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
 				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
 				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
 				8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */,
+				8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */,
 				8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */,
 				8353CC1F18D34CB300226AB4 /* bird.jpg in Resources */,
 				8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */,
 				8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */,
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
+				83E763BB18D3CB46002846B1 /* Tests.plist in Resources */,
 				8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */,
 				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
 				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
-				8353CC3418D34CB300226AB4 /* swan (1).jpg in Resources */,
+				83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */,
+				8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */,
 				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
 				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
 				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
@@ -409,10 +500,9 @@
 				8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */,
 				8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */,
 				8353CC3618D34CB300226AB4 /* tomato.jpg in Resources */,
+				83E763B118D3BBEE002846B1 /* LanguageComprehensionViewController.xib in Resources */,
 				8353CC3718D34CB300226AB4 /* train.jpg in Resources */,
-				8353CC3C18D34DE800226AB4 /* Images.plist in Resources */,
 				8353CC1918D34CB300226AB4 /* apple.jpg in Resources */,
-				8353CC4218D35C4C00226AB4 /* LanguageComprehensionViewController.xib in Resources */,
 				83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */,
 				8353CC2418D34CB300226AB4 /* cow.jpg in Resources */,
 				8353CC2E18D34CB300226AB4 /* lion.jpg in Resources */,
@@ -441,9 +531,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8359B67818D37720001BDDB8 /* TestViewController.m in Sources */,
+				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
+				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
+				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
 				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
+				8359B67218D376E8001BDDB8 /* PreTestViewController.m in Sources */,
+				8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */,
 				83A14FB818D33C4E0037980A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,10 +659,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Wait (98TCEGCLBT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B59DA2D4-49D9-46A2-BA92-C538CD1ACA39";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -576,10 +675,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Wait (98TCEGCLBT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B59DA2D4-49D9-46A2-BA92-C538CD1ACA39";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
