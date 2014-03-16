@@ -27,7 +27,12 @@
 -(void)hasFinishedTestWithScore:(int)testScore
 {
     score = testScore;
-    [self.test startPostTest];
+    if (self.test) [self.test startPostTest]; // If we have a test, start the post test
+    else {
+        NSString *scoreString = [NSString stringWithFormat:@"%i points", score];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finished! (debug mode)" message:scoreString delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)viewDidLoad

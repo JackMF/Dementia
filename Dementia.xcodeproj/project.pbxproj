@@ -70,6 +70,8 @@
 		83E763B918D3CA9F002846B1 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E763B818D3CA9F002846B1 /* TestManager.m */; };
 		83E763BB18D3CB46002846B1 /* Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BA18D3CB46002846B1 /* Tests.plist */; };
 		83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BC18D3D9C2002846B1 /* swan.jpg */; };
+		83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD799318D5F9A60055A26C /* ExampleTestViewController.m */; };
+		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,9 @@
 		83E763B818D3CA9F002846B1 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
 		83E763BA18D3CB46002846B1 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
 		83E763BC18D3D9C2002846B1 /* swan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swan.jpg; sourceTree = "<group>"; };
+		83FD799218D5F9A60055A26C /* ExampleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTestViewController.h; sourceTree = "<group>"; };
+		83FD799318D5F9A60055A26C /* ExampleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTestViewController.m; sourceTree = "<group>"; };
+		83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +374,7 @@
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
 				8359B67E18D377A8001BDDB8 /* TestViewController */,
+				83FD799118D5F9890055A26C /* ExampleTestViewController */,
 				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
 				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
 			);
@@ -392,6 +398,16 @@
 				83E763B818D3CA9F002846B1 /* TestManager.m */,
 			);
 			name = TestManager;
+			sourceTree = "<group>";
+		};
+		83FD799118D5F9890055A26C /* ExampleTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				83FD799218D5F9A60055A26C /* ExampleTestViewController.h */,
+				83FD799318D5F9A60055A26C /* ExampleTestViewController.m */,
+				83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */,
+			);
+			name = ExampleTestViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +503,7 @@
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
 				83E763BB18D3CB46002846B1 /* Tests.plist in Resources */,
 				8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */,
+				83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */,
 				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
 				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
 				83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */,
@@ -535,6 +552,7 @@
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
+				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
 				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
