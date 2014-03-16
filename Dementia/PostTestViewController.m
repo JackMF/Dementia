@@ -28,8 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Set my own title
-    [titleLabel setText:[test testName]];
+    if (test) {
+        // Set my own title
+        [titleLabel setText:[test testName]];
+        [textView setText:[test postTestMessage]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
