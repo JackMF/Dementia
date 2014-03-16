@@ -9,22 +9,32 @@
 #import "AppDelegate.h"
 #import "DebugViewController.h"
 #import "TestManager.h"
+#import "ExampleTestViewController.h"
 
 @implementation AppDelegate
 
 // THE ENTRY POINT
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestManager sharedInstance];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Instantiate our debug view controller
+    // Create an instance of the test manager
+    [TestManager sharedInstance];
+
+
+    // Instantiate our debug view controller (displays all tests in a list)
     DebugViewController *debug = [[DebugViewController alloc] initWithNibName:@"DebugViewController" bundle:nil];
     // Instatiate a navigation controller
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:debug];
-
-    // Set the root view controller of our window to the first view controller
-    [self.window setRootViewController:navController];
+    [navController setTitle:@"DEBUG"];
+    
+    // Instantiate the ExampleTextViewController (for in-progress test view controllers)
+    ExampleTestViewController *exTestVC = [[ExampleTestViewController alloc] initWithNibName:@"ExampleTestViewController" bundle:nil];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];   // Make a tab bar controller
+    [tabBarController setViewControllers:@[navController, exTestVC]];           // Set it's view controllers
+    // Set the root view controller of our window to the tab bar controller
+    [self.window setRootViewController:tabBarController];
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

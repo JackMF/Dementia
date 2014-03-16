@@ -56,8 +56,8 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Test *test = [tests objectAtIndex:[indexPath row]];
-    [test launchWithNavigationController:self.navigationController];
+    Test *test = [tests objectAtIndex:[indexPath row]];                 // Get the test for this row
+    [test launchWithNavigationController:self.navigationController];    // Start the test, loading views on the navigation controller
 }
 
 - (void)didReceiveMemoryWarning

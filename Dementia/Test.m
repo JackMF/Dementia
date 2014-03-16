@@ -17,6 +17,7 @@
 @synthesize testScore;
 @synthesize order, className, categoryName, testName, preTestInstructions, postTestInstructions, imageDictionaries;
 
+// Initialises the test using a dictionary from the property list
 -(id)initWithPlistDict:(NSDictionary *)plistDict
 {
     if (self = [super init]) {
@@ -38,16 +39,13 @@
         // Set our post-test controller
         postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
         postTestViewController.test = self;
-        
-        // Set our navigation controller
-//        navigationController = initNavController;
     }
     return self;
 }
 
 -(void)launchWithNavigationController:(UINavigationController *)navController
 {
-    navigationController = navController;
+    navigationController = navController;       // Store reference to the navigation controller
     [self startPreTest];
 }
 
