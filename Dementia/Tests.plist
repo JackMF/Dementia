@@ -168,7 +168,7 @@
 		<key>order</key>
 		<integer>2</integer>
 		<key>className</key>
-		<string>MemoryRecallViewController </string>
+		<string>MemoryRecallViewController</string>
 		<key>categoryName</key>
 		<string>Memory</string>
 		<key>testName</key>

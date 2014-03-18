@@ -17,6 +17,7 @@
     __weak IBOutlet UIButton *yesButton;
     __weak IBOutlet UIButton *noButton;
     __weak IBOutlet UIButton *confirmButton;
+    __weak IBOutlet UILabel *question;
     NSArray *imagesDicts;
     NSDictionary *currentImage;
     BOOL answerWasCorrect;

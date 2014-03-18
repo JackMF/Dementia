@@ -34,7 +34,13 @@ static TestManager *_sharedInstance;
     NSMutableArray *newTests = [[NSMutableArray alloc] init];
     for (NSDictionary *testDict in loadedTestDicts) {
         Test *newTest = [[Test alloc] initWithPlistDict:testDict]; // Instantiate a new Test objects based on this dict
-        [newTests addObject:newTest];                              // Add the test to our newTests
+        if (newTest){
+            [newTests addObject:newTest];                              // Add the test to our newTests        }
+        }
+        else{
+            NSLog(@"Test %@ fail to load test",[testDict valueForKey:@"testName"]);
+        }
+                  
     }
     tests = newTests;
 }

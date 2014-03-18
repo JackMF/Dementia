@@ -46,6 +46,10 @@
            
             // Set our test controller
             testViewController = [[NSClassFromString(className) alloc] init];
+           if (!testViewController)
+           {
+               return nil;
+           }
             [testViewController setTest:self];
         }
     }

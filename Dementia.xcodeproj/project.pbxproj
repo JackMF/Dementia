@@ -333,7 +333,6 @@
 				83E763B618D3CA70002846B1 /* TestManager */,
 				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
-				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
@@ -383,6 +382,7 @@
 				83FD799118D5F9890055A26C /* ExampleTestViewController */,
 				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
 				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
+				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
 			);
 			name = UI;
 			sourceTree = "<group>";

@@ -12,6 +12,7 @@
 @interface LanguageComprehensionViewController : TestViewController
 {
     NSArray *imagesDicts;
+    BOOL isSelected;
 }
 - (IBAction)imageButtonPressed:(id)sender;
 @end

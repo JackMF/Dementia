@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    isSelected = NO;
     self.title = [test getFullTestName];
     imagesDicts = [test imageDictionaries];
     for (NSDictionary *imageDict in imagesDicts) {
@@ -45,13 +46,31 @@
 
 - (IBAction)imageButtonPressed:(id)sender {
     UIButton* button = (UIButton*)sender;
-    button.selected = !button.selected;
+    if (isSelected && !button.selected) {
+        
+    }
+    else{
+        button.selected = !button.selected;
+        isSelected = !isSelected;
+    }
+    
+    
+   
+    
     CGRect buttonFrame = button.frame;
     double borderSize = 10;
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+        
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-    if (button.selected) [borderView setBackgroundColor:[UIColor greenColor]];
-    else [borderView setBackgroundColor:[UIColor whiteColor]];
+    if (button.selected){
+        [borderView setBackgroundColor:[UIColor greenColor]];
+    }
+    else {
+        [borderView setBackgroundColor:[UIColor whiteColor]];
+    }
     [self.view insertSubview:borderView belowSubview:button];
+        
+    
+    
 }
 @end
