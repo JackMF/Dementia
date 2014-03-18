@@ -11,6 +11,8 @@
 @interface ExampleTestViewController : TestViewController
 {
     __weak IBOutlet UILabel *infoLabel;
+    __weak IBOutlet UIButton *pressME;
+    int currentScore;
 }
 -(IBAction)finishButtonPressed;
 

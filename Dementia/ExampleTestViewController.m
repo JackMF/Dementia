@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad
 {
+    currentScore = 0;
     [super viewDidLoad];
     [infoLabel setText:@"Press the button below to finish the test"];
     // Do any additional setup after loading the view from its nib.
@@ -41,6 +42,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)pressMeButtonPressed:(id)sender {
+    currentScore++;
+    NSLog(@"Score: %i", currentScore);
+    
 }
 
 @end
