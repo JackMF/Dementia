@@ -37,7 +37,9 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    isControlPanelDisplayed = NO;
     self.title = [test getFullTestName];           // Set this ViewController's title
     imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
@@ -49,6 +51,7 @@
     NSDictionary *imageDict = [imagesDicts objectAtIndex:currentImageOrder];
     UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
 
+    isControlPanelDisplayed = NO;
     // Work out where things are, and where they should go
     CGRect originalFrame = inputImageView.frame;
     CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
@@ -116,6 +119,7 @@
 -(void)hideControlPanel
 {
     isControlPanelDisplayed = NO;
+    [confirmButton setHidden:YES];
     [self resetDecisionButtons];    // First reset the appearance of the buttons
     CGRect currentFrame = controlPanel.frame;
     double newY = currentFrame.origin.y + currentFrame.size.height;
