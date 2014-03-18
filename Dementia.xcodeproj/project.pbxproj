@@ -72,6 +72,8 @@
 		83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BC18D3D9C2002846B1 /* swan.jpg */; };
 		83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD799318D5F9A60055A26C /* ExampleTestViewController.m */; };
 		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
+		9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */; };
+		9C9935E618D893DF007E0D25 /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,9 @@
 		83FD799218D5F9A60055A26C /* ExampleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTestViewController.h; sourceTree = "<group>"; };
 		83FD799318D5F9A60055A26C /* ExampleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTestViewController.m; sourceTree = "<group>"; };
 		83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTestViewController.xib; sourceTree = "<group>"; };
+		9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryRecallViewController.h; sourceTree = "<group>"; };
+		9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryRecallViewController.m; sourceTree = "<group>"; };
+		9C9935E718D893DF007E0D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MemoryRecallViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,8 +333,9 @@
 				83E763B618D3CA70002846B1 /* TestManager */,
 				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
-				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
+				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
+				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
 				83A14FB218D33C4E0037980A /* Supporting Files */,
 			);
@@ -408,6 +414,16 @@
 				83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */,
 			);
 			name = ExampleTestViewController;
+			sourceTree = "<group>";
+		};
+		9C9935E018D88DF1007E0D25 /* 3. Memory Recall */ = {
+			isa = PBXGroup;
+			children = (
+				9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */,
+				9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */,
+				9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */,
+			);
+			name = "3. Memory Recall";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +527,7 @@
 				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
 				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
 				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
+				9C9935E618D893DF007E0D25 /* MemoryRecallViewController.xib in Resources */,
 				8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */,
 				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
 				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
@@ -550,6 +567,7 @@
 			files = (
 				8359B67818D37720001BDDB8 /* TestViewController.m in Sources */,
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
+				9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
 				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,
@@ -595,6 +613,14 @@
 				83A14FCE18D33C4E0037980A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C9935E718D893DF007E0D25 /* en */,
+			);
+			name = MemoryRecallViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

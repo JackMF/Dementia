@@ -164,5 +164,19 @@
 			</dict>
 		</array>
 	</dict>
+	<dict>
+		<key>order</key>
+		<integer>2</integer>
+		<key>className</key>
+		<string>MemoryRecallViewController </string>
+		<key>categoryName</key>
+		<string>Memory</string>
+		<key>testName</key>
+		<string>Immediate Recall</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum 2</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum 2</string>
+	</dict>
 </array>
 </plist>
