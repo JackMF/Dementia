@@ -72,9 +72,21 @@
 // Handles logic if we push the yes or no button
 - (IBAction)decisionButtonPressed:(id)sender
 {
+    //the backround colour of buttons when they are pressed
+    UIColor *colourWhenPressed = [UIColor redColor];
+    
     answerWasCorrect = (sender==yesButton); // Correct if the tester pushed the Yes button
-    if (answerWasCorrect) [yesButton setBackgroundColor:[UIColor redColor]];    // If we were right, highlight the yes button
-    else [noButton setBackgroundColor:[UIColor redColor]];          // If we were wrong, highlight the no button
+    
+    if (answerWasCorrect){
+        [yesButton setBackgroundColor:colourWhenPressed];
+        [noButton setBackgroundColor:[UIColor clearColor]];
+        
+    }    // If we were right, highlight the yes button
+    else{
+        [noButton setBackgroundColor:colourWhenPressed];
+        [yesButton setBackgroundColor:[UIColor clearColor]];
+        
+    }         // If we were wrong, highlight the no button
     [confirmButton setHidden:NO];           // Show the confirm button
 }
 
