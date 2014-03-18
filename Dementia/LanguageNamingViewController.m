@@ -89,12 +89,19 @@
 
 // Triggered when the invisible button at the bottom of the screen is pressed
 - (IBAction)showControlsButtonPressed:(id)sender {
-    [self showControlPanel];
+    if (isControlPanelDisplayed) {
+        [self hideControlPanel];
+    }
+    else{
+        [self showControlPanel];
+    }
+   
 }
 
 // Show the control panel at the bottom of the screen
 -(void)showControlPanel
 {
+    isControlPanelDisplayed = YES;
     CGRect currentFrame = controlPanel.frame;
     double newY = currentFrame.origin.y - currentFrame.size.height;
     CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
@@ -108,6 +115,7 @@
 // Hide the control panel at the bottom of the screen
 -(void)hideControlPanel
 {
+    isControlPanelDisplayed = NO;
     [self resetDecisionButtons];    // First reset the appearance of the buttons
     CGRect currentFrame = controlPanel.frame;
     double newY = currentFrame.origin.y + currentFrame.size.height;

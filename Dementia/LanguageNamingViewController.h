@@ -23,6 +23,7 @@
     BOOL answerWasCorrect;
     int currentScore;
     int currentImageOrder;
+    BOOL isControlPanelDisplayed;
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
