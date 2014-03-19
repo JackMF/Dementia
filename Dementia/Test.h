@@ -25,9 +25,10 @@
 @property (nonatomic) NSString *preTestInstructions;
 @property (nonatomic) NSString *postTestMessage;
 @property (nonatomic) NSArray *imageDictionaries;
-
+@property (nonatomic) NSArray *questions;
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
+
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;
 -(void)startTest;

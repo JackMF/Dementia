@@ -8,6 +8,7 @@
 
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
+#define kImageViewAnimationDuration 0.3
 
 @interface LanguageComprehensionViewController ()
 
@@ -24,10 +25,20 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    currentScore = 0;
+    currentScore = 0;
+    [self loadNextQuestion];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     isSelected = NO;
+    [nextQuesiton setHidden:YES];
+    
     self.title = [test getFullTestName];
     imagesDicts = [test imageDictionaries];
     for (NSDictionary *imageDict in imagesDicts) {
@@ -35,7 +46,11 @@
         int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
         UIButton *button = (UIButton *)[self.view viewWithTag:tag];
         [button setImage:newImage forState:UIControlStateNormal];
-    }
+     }
+    
+    questionDicts = [test questions]; //Loading the quesitons
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +61,7 @@
 
 - (IBAction)imageButtonPressed:(id)sender {
     UIButton* button = (UIButton*)sender;
+    
     if (isSelected && !button.selected) {
         
     }
@@ -53,9 +69,9 @@
         button.selected = !button.selected;
         isSelected = !isSelected;
     }
+    if (isSelected) [nextQuesiton setHidden:NO];
+    else [nextQuesiton setHidden:YES];
     
-    
-   
     
     CGRect buttonFrame = button.frame;
     double borderSize = 10;
@@ -64,11 +80,61 @@
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     if (button.selected){
         [borderView setBackgroundColor:[UIColor greenColor]];
+        
     }
     else {
         [borderView setBackgroundColor:[UIColor whiteColor]];
+        
     }
     [self.view insertSubview:borderView belowSubview:button];
+        
+    
+    
+}
+
+-(void)loadNextQuestion{
+    
+    //Check if previous question was correct
+    
+        // put code here
+    
+
+    NSDictionary *questionDict = [questionDicts objectAtIndex:currentQuestionOrder];
+    NSString *newQuestion = [questionDict valueForKey:@"question"];
+    CGRect originalFrame = questionLabel.frame;
+    CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
+    CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
+    
+    // Animate and swap images
+    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
+        questionLabel.frame = leftFrame;   // Animate the image view off to the left
+    } completion:^(BOOL finished) {         // Once animation is finished
+        [questionLabel setText:newQuestion]; // Set the new image
+        questionLabel.frame = rightFrame; // Move the inputImageView the right
+        [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {    // Once animation is finished
+            questionLabel.frame = originalFrame; // Animate the inputImageView in from the right
+        }];
+    }];
+    
+    //[questionLabel setText:newQuestion];
+    
+    
+    
+    
+    
+}
+
+- (IBAction)nextButtonPressed:(id)sender {
+   
+    currentQuestionOrder++;
+    if (currentQuestionOrder < [questionDicts count]){
+        //check if there are more question
+        [nextQuesiton setHidden:YES];
+        [self loadNextQuestion];
+        
+        
+    }
+    else [super hasFinishedTestWithScore:currentScore];
         
     
     

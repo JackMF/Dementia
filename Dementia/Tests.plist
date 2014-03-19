@@ -164,15 +164,24 @@
 			</dict>
 		</array>
 		<key>questions</key>
-		<array/>
-		<key>Something you can fly in</key>
-		<string></string>
-		<key>Something with webbed feet</key>
-		<string></string>
-		<key>Something you can fly in - 2 - 2</key>
-		<string></string>
-		<key>Something you can fly in - 2 - 2 - 2</key>
-		<string></string>
+		<array>
+			<dict>
+				<key>correctFileName</key>
+				<string>helicopter.jpg</string>
+				<key>answer</key>
+				<string>helicopter</string>
+				<key>question</key>
+				<string>Something you can fly in</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>swan.jpg</string>
+				<key>answer</key>
+				<string>swan</string>
+				<key>question</key>
+				<string>Something with webbed feet</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>order</key>

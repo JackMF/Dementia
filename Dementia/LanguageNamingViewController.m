@@ -57,7 +57,7 @@
     CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
     CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
 
-    // Animage and swap images
+    // Animate and swap images
     [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
         inputImageView.frame = leftFrame;   // Animate the image view off to the left
     } completion:^(BOOL finished) {         // Once animation is finished
