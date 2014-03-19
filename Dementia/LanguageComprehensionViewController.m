@@ -37,12 +37,15 @@
 {
     [super viewDidLoad];
     isSelected = NO;
+    currentButtonSelected = nil;
+    
     [nextQuesiton setHidden:YES];
     
     self.title = [test getFullTestName];
     imagesDicts = [test imageDictionaries];
     for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
+        [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
         int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
         UIButton *button = (UIButton *)[self.view viewWithTag:tag];
         [button setImage:newImage forState:UIControlStateNormal];
@@ -69,7 +72,14 @@
         button.selected = !button.selected;
         isSelected = !isSelected;
     }
-    if (isSelected) [nextQuesiton setHidden:NO];
+    if (isSelected){
+        
+        currentButtonSelected = [[button currentImage] accessibilityIdentifier];
+        
+        NSLog(@"Current Image Selected: %@", currentButtonSelected);
+        [nextQuesiton setHidden:NO];
+        
+    }
     else [nextQuesiton setHidden:YES];
     
     
@@ -80,6 +90,7 @@
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     if (button.selected){
         [borderView setBackgroundColor:[UIColor greenColor]];
+        
         
     }
     else {
@@ -119,13 +130,12 @@
     //[questionLabel setText:newQuestion];
     
     
-    
-    
-    
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
    
+    
+    
     currentQuestionOrder++;
     if (currentQuestionOrder < [questionDicts count]){
         //check if there are more question

@@ -16,6 +16,7 @@
     BOOL isSelected;
     int currentScore;
     int currentQuestionOrder;
+    NSString *currentButtonSelected;
     
     __weak IBOutlet UILabel *questionLabel;
     __weak IBOutlet UIButton *nextQuesiton;
