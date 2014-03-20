@@ -29,7 +29,7 @@
     
     [super viewWillAppear:animated];
     currentScore = 0;
-    currentScore = 0;
+    currentQuestionOrder = 0;
     [self loadNextQuestion];
 }
 
@@ -67,7 +67,7 @@
     UIButton* button = (UIButton*)sender;
     
     if (isSelected && !button.selected) {
-        //currentButtonSelected = nil;
+
         
     }
     else{
@@ -130,14 +130,16 @@
     }];
 
     
-    correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];
+    correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"]; //Getting the correct answer for the next questions
+    
+    
+
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
    
     if (correctAnswer == currentButtonSelected) {
         currentScore++;
-    
     }
     NSLog(@"Current Score: %i", currentScore);
     currentQuestionOrder++;

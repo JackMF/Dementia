@@ -15,7 +15,7 @@
 @implementation Test
 @synthesize testViewController;
 @synthesize testScore;
-@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions;
+@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story;
 
 -(id)init
 {
@@ -42,8 +42,10 @@
             testName = [plistDict valueForKey:@"testName"];
             preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
             postTestMessage = [plistDict valueForKey:@"postTestMessage"];
-            imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
-            questions = [plistDict valueForKey:@"questions"];
+            if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
+                    
+            if ([[plistDict allKeys] containsObject:@"questions"]) questions = [plistDict valueForKey:@"questions"];
+            if ([[plistDict allKeys] containsObject:@"story"]) story = [plistDict valueForKey:@"story"];
            
             // Set our test controller
             testViewController = [[NSClassFromString(className) alloc] init];

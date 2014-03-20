@@ -12,7 +12,12 @@
 @interface MemoryRecallViewController : TestViewController
 {
     
-    __weak IBOutlet UILabel *Story;
+    NSString *story;
+    NSArray *buttonDicts;
+    int currentScore;
+    
+    __weak IBOutlet UILabel *storyLabel;
+    
 }
 
 @end

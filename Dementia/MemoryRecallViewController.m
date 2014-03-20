@@ -25,9 +25,30 @@
     return self;
 }
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    currentScore=0;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = [test getFullTestName];
+    story = [test story];
+    [storyLabel setText:story];
+    NSLog(@"Story: %@", story);
+    
+    
+    /*for (NSDictionary *imageDict in imagesDicts) {
+        UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
+        [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
+        int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
+        UIButton *button = (UIButton *)[self.view viewWithTag:tag];
+        [button setImage:newImage forState:UIControlStateNormal];
+    }*/
+    
     // Do any additional setup after loading the view from its nib.
 }
 
