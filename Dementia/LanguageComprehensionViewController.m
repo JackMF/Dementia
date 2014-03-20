@@ -43,6 +43,7 @@
     
     self.title = [test getFullTestName];
     imagesDicts = [test imageDictionaries];
+    
     for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
         [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
@@ -66,21 +67,26 @@
     UIButton* button = (UIButton*)sender;
     
     if (isSelected && !button.selected) {
+        //currentButtonSelected = nil;
         
     }
     else{
         button.selected = !button.selected;
         isSelected = !isSelected;
+        if (isSelected){
+            
+            currentButtonSelected = [[button currentImage] accessibilityIdentifier];
+            
+            NSLog(@"Current Image Selected: %@", currentButtonSelected);
+            [nextQuesiton setHidden:NO];
+            
+        }
+        else{
+            [nextQuesiton setHidden:YES];
+            currentButtonSelected = nil;
+            NSLog(@"Current Image Selected: %@", currentButtonSelected);
+        }
     }
-    if (isSelected){
-        
-        currentButtonSelected = [[button currentImage] accessibilityIdentifier];
-        
-        NSLog(@"Current Image Selected: %@", currentButtonSelected);
-        [nextQuesiton setHidden:NO];
-        
-    }
-    else [nextQuesiton setHidden:YES];
     
     
     CGRect buttonFrame = button.frame;
@@ -105,10 +111,6 @@
 
 -(void)loadNextQuestion{
     
-    //Check if previous question was correct
-    
-        // put code here
-    
 
     NSDictionary *questionDict = [questionDicts objectAtIndex:currentQuestionOrder];
     NSString *newQuestion = [questionDict valueForKey:@"question"];
@@ -126,16 +128,18 @@
             questionLabel.frame = originalFrame; // Animate the inputImageView in from the right
         }];
     }];
+
     
-    //[questionLabel setText:newQuestion];
-    
-    
+    correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
    
+    if (correctAnswer == currentButtonSelected) {
+        currentScore++;
     
-    
+    }
+    NSLog(@"Current Score: %i", currentScore);
     currentQuestionOrder++;
     if (currentQuestionOrder < [questionDicts count]){
         //check if there are more question

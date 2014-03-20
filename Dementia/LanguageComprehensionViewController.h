@@ -17,6 +17,7 @@
     int currentScore;
     int currentQuestionOrder;
     NSString *currentButtonSelected;
+    NSString * correctAnswer;
     
     __weak IBOutlet UILabel *questionLabel;
     __weak IBOutlet UIButton *nextQuesiton;
