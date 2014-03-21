@@ -8,7 +8,7 @@
 
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
-#define kImageViewAnimationDuration 0.3
+#define kImageViewAnimationDuration 0.6
 
 @interface LanguageComprehensionViewController ()
 
@@ -72,14 +72,14 @@
     
 
     
-    if (!isSelected && currentButtonSelected != nameOfButton) {
+    if (!isSelected && currentButtonSelected != nameOfButton) { //case when nothing is selected
         button.selected = YES;
         currentButtonSelected = nameOfButton;
         isSelected = YES;
         [nextQuesiton setHidden:NO];
         NSLog(@"Current Image Selected1: %@", currentButtonSelected);
     }
-    else if(isSelected && currentButtonSelected == nameOfButton){
+    else if(isSelected && currentButtonSelected == nameOfButton){ //case when the current button is selcted
         button.selected = NO;
         isSelected = NO;
         currentButtonSelected = nil;
@@ -102,7 +102,7 @@
                     button2.selected = NO;
                     
                     CGRect buttonFrame = button2.frame;
-                    double borderSize = 10;
+                    double borderSize = 7;
                     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
                     
                     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
@@ -119,14 +119,14 @@
     
 
     CGRect buttonFrame = button.frame;
-    double borderSize = 10;
+    double borderSize = 7;
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
     
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     
 
     if (button.selected){
-        [borderView setBackgroundColor:[UIColor greenColor]];
+        [borderView setBackgroundColor:[UIColor blackColor]];
         
         
     }

@@ -50,7 +50,7 @@
             
             if ([[plistDict allKeys] containsObject:@"buttonNames"]) buttonNames = [plistDict valueForKey:@"buttonNames"];
             
-              if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
+            if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
            
             // Set our test controller
             testViewController = [[NSClassFromString(className) alloc] init];

@@ -297,5 +297,33 @@ Last Sunday, the annual litter collection took place in Primrose Woods. Forty tw
 		<key>spell12</key>
 		<string>Brought</string>
 	</dict>
+	<dict>
+		<key>order</key>
+		<integer>4</integer>
+		<key>className</key>
+		<string>FluencyLetterS</string>
+		<key>categoryName</key>
+		<string>Fluency</string>
+		<key>testName</key>
+		<string>LetterS</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum 2</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum 2</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>5</integer>
+		<key>className</key>
+		<string>ExecutiveReverseDigitSpan</string>
+		<key>categoryName</key>
+		<string>Executive</string>
+		<key>testName</key>
+		<string>ReverseDigitSpan</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum 2</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum 2</string>
+	</dict>
 </array>
 </plist>
