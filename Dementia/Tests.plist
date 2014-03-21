@@ -181,6 +181,54 @@
 				<key>question</key>
 				<string>Something with webbed feet</string>
 			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>squirrel.jpg</string>
+				<key>answer</key>
+				<string>squirrel</string>
+				<key>question</key>
+				<string>An animal that climbs trees</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>axe.jpg</string>
+				<key>answer</key>
+				<string>axe</string>
+				<key>question</key>
+				<string>Something used for chopping</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>helicopter.jpg</string>
+				<key>answer</key>
+				<string>helicopter</string>
+				<key>question</key>
+				<string>A means of transport</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>axe.jpg</string>
+				<key>answer</key>
+				<string>axe</string>
+				<key>question</key>
+				<string>Something with a sharp edge</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>scorpion.jpg</string>
+				<key>answer</key>
+				<string>scorpion</string>
+				<key>question</key>
+				<string>Something with a sting</string>
+			</dict>
+			<dict>
+				<key>correctFileName</key>
+				<string>squirrel.jpg</string>
+				<key>answer</key>
+				<string>squirrel</string>
+				<key>question</key>
+				<string>Something with a diet of nuts and seeds</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
