@@ -31,6 +31,7 @@
     currentScore = 0;
     currentQuestionOrder = 0;
     
+    
     //[self loadNextQuestion];
 }
 
@@ -55,6 +56,8 @@
     
     questionDicts = [test questions]; //Loading the quesitons
     [questionLabel setText:[[questionDicts objectAtIndex:currentQuestionOrder] valueForKey:@"question"]];
+    correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"]; 
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,14 +80,14 @@
         currentButtonSelected = nameOfButton;
         isSelected = YES;
         [nextQuesiton setHidden:NO];
-        NSLog(@"Current Image Selected1: %@", currentButtonSelected);
+        ///NSLog(@"Current Image Selected1: %@", currentButtonSelected);
     }
     else if(isSelected && currentButtonSelected == nameOfButton){ //case when the current button is selcted
         button.selected = NO;
         isSelected = NO;
         currentButtonSelected = nil;
         [nextQuesiton setHidden:YES];
-        NSLog(@"Current Image Selected2: %@", currentButtonSelected);
+        //NSLog(@"Current Image Selected2: %@", currentButtonSelected);
         
         
     }
@@ -94,7 +97,7 @@
         [nextQuesiton setHidden:NO];
         
         currentButtonSelected = nameOfButton;
-        NSLog(@"Current Image Selected3: %@", currentButtonSelected);
+        //NSLog(@"Current Image Selected3: %@", currentButtonSelected);
         for (id object in [self.view subviews]) {
             if ([object isKindOfClass:[UIButton class]]) {
                 UIButton *button2 = (UIButton *) object;
@@ -102,7 +105,7 @@
                     button2.selected = NO;
                     
                     CGRect buttonFrame = button2.frame;
-                    double borderSize = 7;
+                    double borderSize = 5;
                     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
                     
                     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
@@ -119,14 +122,14 @@
     
 
     CGRect buttonFrame = button.frame;
-    double borderSize = 7;
+    double borderSize = 5;
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
     
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     
 
     if (button.selected){
-        [borderView setBackgroundColor:[UIColor blackColor]];
+        [borderView setBackgroundColor:[UIColor grayColor]];
         
         
     }
@@ -189,7 +192,7 @@
         }
     }
 
-    
+
     correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"]; //Getting the correct answer for the next questions
     
 
@@ -197,6 +200,9 @@
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
+    
+    NSLog(@"selected image %@",currentButtonSelected);
+    NSLog(@"correct image %@",correctAnswer);
    
     if (correctAnswer == currentButtonSelected) {
         currentScore++;
