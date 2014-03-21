@@ -10,7 +10,7 @@
 #import "DebugViewController.h"
 #import "TestManager.h"
 #import "ExampleTestViewController.h"
-
+#import "MemoryRecallViewController.h"
 @implementation AppDelegate
 
 // THE ENTRY POINT
@@ -31,6 +31,8 @@
     // Instantiate the ExampleTextViewController (for in-progress test view controllers)
     ExampleTestViewController *exTestVC = [[ExampleTestViewController alloc] initWithNibName:@"ExampleTestViewController" bundle:nil];
     
+    MemoryRecallViewController *ir = [[MemoryRecallViewController alloc] initWithNibName:@"MemoryRecallViewController" bundle:nil];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];   // Make a tab bar controller
     [tabBarController setViewControllers:@[navController, exTestVC]];           // Set it's view controllers
     // Set the root view controller of our window to the tab bar controller
@@ -43,7 +45,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Sent when	 the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 

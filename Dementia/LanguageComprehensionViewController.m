@@ -53,8 +53,6 @@
      }
     
     questionDicts = [test questions]; //Loading the quesitons
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,10 +146,8 @@
         [nextQuesiton setHidden:YES];
         [self loadNextQuestion];
         
-        
     }
     else [super hasFinishedTestWithScore:currentScore];
-        
     
     
 }

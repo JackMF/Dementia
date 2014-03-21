@@ -13,8 +13,9 @@
 {
     
     NSString *story;
-    NSArray *buttonDicts;
+    NSArray *namesOfButtons;
     int currentScore;
+    __weak IBOutlet UILabel *testL;
     
     __weak IBOutlet UILabel *storyLabel;
     
