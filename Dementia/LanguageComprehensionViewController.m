@@ -64,36 +64,67 @@
 }
 
 - (IBAction)imageButtonPressed:(id)sender {
-    UIButton* button = (UIButton*)sender;
     
-    if (isSelected && !button.selected) {
+    
+    UIButton* button = (UIButton*)sender;
+    NSString* nameOfButton = [[button currentImage] accessibilityIdentifier];
+    
+    
 
+    
+    if (!isSelected && currentButtonSelected != nameOfButton) {
+        button.selected = YES;
+        currentButtonSelected = nameOfButton;
+        isSelected = YES;
+        [nextQuesiton setHidden:NO];
+        NSLog(@"Current Image Selected1: %@", currentButtonSelected);
+    }
+    else if(isSelected && currentButtonSelected == nameOfButton){
+        button.selected = NO;
+        isSelected = NO;
+        currentButtonSelected = nil;
+        [nextQuesiton setHidden:YES];
+        NSLog(@"Current Image Selected2: %@", currentButtonSelected);
+        
         
     }
     else{
-        button.selected = !button.selected;
-        isSelected = !isSelected;
-        if (isSelected){
-            
-            currentButtonSelected = [[button currentImage] accessibilityIdentifier];
-            
-            NSLog(@"Current Image Selected: %@", currentButtonSelected);
-            [nextQuesiton setHidden:NO];
-            
+        button.selected = YES;
+        isSelected = YES;
+        [nextQuesiton setHidden:NO];
+        
+        currentButtonSelected = nameOfButton;
+        NSLog(@"Current Image Selected3: %@", currentButtonSelected);
+        for (id object in [self.view subviews]) {
+            if ([object isKindOfClass:[UIButton class]]) {
+                UIButton *button2 = (UIButton *) object;
+                if (button2 != button) {
+                    button2.selected = NO;
+                    
+                    CGRect buttonFrame = button2.frame;
+                    double borderSize = 10;
+                    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+                    
+                    UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+                    [borderView setBackgroundColor:[UIColor whiteColor]];
+                    [self.view insertSubview:borderView belowSubview:button2];
+                    
+                }
+                
+                
+            }
         }
-        else{
-            [nextQuesiton setHidden:YES];
-            currentButtonSelected = nil;
-            NSLog(@"Current Image Selected: %@", currentButtonSelected);
-        }
+        
     }
     
-    
+
     CGRect buttonFrame = button.frame;
     double borderSize = 10;
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
-        
+    
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+    
+
     if (button.selected){
         [borderView setBackgroundColor:[UIColor greenColor]];
         
@@ -102,10 +133,12 @@
     else {
         [borderView setBackgroundColor:[UIColor whiteColor]];
         
+        
     }
     [self.view insertSubview:borderView belowSubview:button];
-        
     
+    
+
     
 }
 
@@ -118,6 +151,9 @@
     CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
     CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
     
+    
+
+    
     // Animate and swap images
     [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
         questionLabel.frame = leftFrame;   // Animate the image view off to the left
@@ -128,11 +164,35 @@
             questionLabel.frame = originalFrame; // Animate the inputImageView in from the right
         }];
     }];
+    
+    //Unselect current selected image.
+    isSelected = NO;
+    currentButtonSelected = nil;
+    
+    for (id object in [self.view subviews]) {
+        if ([object isKindOfClass:[UIButton class]]) {
+            
+            UIButton *button = (UIButton *) object;
+            if (button.selected) {
+                CGRect buttonFrame = button.frame;
+                double borderSize = 10;
+                CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+                UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+                
+                [borderView setBackgroundColor:[UIColor whiteColor]];
+                [self.view insertSubview:borderView belowSubview:button];
+                
+            }
+            
+            
+            
+        }
+    }
 
     
     correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"]; //Getting the correct answer for the next questions
     
-    
+
 
 }
 
@@ -150,7 +210,6 @@
         
     }
     else [super hasFinishedTestWithScore:currentScore];
-    
     
 }
 @end
