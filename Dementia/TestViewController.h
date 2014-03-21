@@ -11,8 +11,7 @@
 @class ControlPanelViewController;
 
 @interface TestViewController : UIViewController
-{
-}
+
 @property (nonatomic) Test *test;
 @property (nonatomic) ControlPanelViewController *controlPanelViewController;
 -(void)hasFinished;

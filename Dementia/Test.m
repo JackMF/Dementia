@@ -44,9 +44,9 @@
             preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
             postTestMessage = [plistDict valueForKey:@"postTestMessage"];
            
-            hasControlPanel = NO;
+            hasControlPanel = YES;
             if([[plistDict allKeys] containsObject:@"hasControlPanel"])
-                hasControlPanel = (BOOL)[plistDict valueForKey:@"hasControlPanel"];
+                hasControlPanel = [[plistDict valueForKey:@"hasControlPanel"] boolValue];
             
             if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
                     
@@ -60,9 +60,8 @@
             // Set our test controller
             testViewController = [[NSClassFromString(className) alloc] init];
            if (!testViewController)
-           {
                return nil;
-           }
+
             [testViewController setTest:self];
         }
     }

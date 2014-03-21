@@ -29,11 +29,16 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.test setTestScore:0];
+}
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];
     
-    if ([test hasControlPanel]) {
+    if ([self.test hasControlPanel]) {
         // Add the control panel to the view
         [self addChildViewController:controlPanelViewController];
         CGRect cpFrame = CGRectMake(0.0, 1024.0-185.0, 768.0, 185.0);
@@ -59,14 +64,7 @@
 //        [alert show];
     }
 }
--(void)didConfirmAnswer
-{
-    if ([controlPanelViewController answerWasCorrect]) {
-        [test addToTestScore:1];
-    } else {
-        [test addToTestScore:0];
-    }
-}
+
 
 - (void)didReceiveMemoryWarning
 {
