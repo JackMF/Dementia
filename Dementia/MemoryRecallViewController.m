@@ -38,8 +38,23 @@
     self.title = [test getFullTestName];
     story = [test story];
     [storyLabel setText:story];
-    NSLog(@"Story: %@", story);
     
+    
+    NSLog(@"Story: %@", story);
+    namesOfButtons = [test buttonNames];
+    
+    int tag = 1;
+    for (NSString *buttonName in namesOfButtons) {
+        UIButton *button = (UIButton *) [self.view viewWithTag:tag];
+        [button setTitle:buttonName forState:UIControlStateNormal];
+        tag++;
+        
+    //[super hasFinishedTestWithScore:currentScore];
+    
+        
+    }
+    
+    //for ()
     
     /*for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];

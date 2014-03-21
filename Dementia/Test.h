@@ -27,6 +27,9 @@
 @property (nonatomic) NSArray *imageDictionaries;
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) NSString *story;
+@property (nonatomic) NSArray *buttonNames;
+@property (nonatomic) NSArray *toSpell;
+
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
 

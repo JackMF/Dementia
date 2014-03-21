@@ -251,6 +251,51 @@ Last Sunday, the annual litter collection took place in Primrose Woods. Forty tw
 Last Sunday, the annual litter collection took place in Primrose Woods. Forty two people joined in to remove old bicycles and shopping trolleys. Mr Douglas Watt from the woodland project told local reporters that he was very impressed and especially proud of the 17 children who came along.
 Last Sunday, the annual litter collection took place in Primrose Woods. Forty two people joined in to remove old bicycles and shopping trolleys. Mr Douglas Watt from the woodland project told local reporters that he was very impressed and especially proud of the 17 children who came along.
 Last Sunday, the annual litter collection took place in Primrose Woods. Forty two people joined in to remove old bicycles and shopping trolleys. Mr Douglas Watt from the woodland project told local reporters that he was very impressed and especially proud of the 17 children who came along.</string>
+		<key>buttonNames</key>
+		<array>
+			<string>Sunday</string>
+			<string>Annual Litter Collection</string>
+		</array>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>3</integer>
+		<key>className</key>
+		<string>LanguageSpellingViewController</string>
+		<key>categoryName</key>
+		<string>Language</string>
+		<key>testName</key>
+		<string>Spelling</string>
+		<key>preTestInstructions</key>
+		<string>lorem ipsum 2</string>
+		<key>postTestMessage</key>
+		<string>lorem ipsum 2</string>
+		<key>toSpell</key>
+		<array/>
+		<key>spell1</key>
+		<string>Envelope</string>
+		<key>spell2</key>
+		<string>Skateboard</string>
+		<key>spell3</key>
+		<string>Constructing</string>
+		<key>spell4</key>
+		<string>Partner</string>
+		<key>spell5</key>
+		<string>Biscuit</string>
+		<key>spell6</key>
+		<string>Lawnmower</string>
+		<key>spell7</key>
+		<string>Deliver</string>
+		<key>spell8</key>
+		<string>Recorded</string>
+		<key>spell9</key>
+		<string>Coathanger</string>
+		<key>spell10</key>
+		<string>Orchestra</string>
+		<key>spell11</key>
+		<string>Screwdriver</string>
+		<key>spell12</key>
+		<string>Brought</string>
 	</dict>
 </array>
 </plist>
