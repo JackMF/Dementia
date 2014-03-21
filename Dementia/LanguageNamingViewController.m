@@ -8,9 +8,9 @@
 
 #import "LanguageNamingViewController.h"
 #import "Test.h"
+#import "ControlPanelViewController.h"
 
 #define kImageViewAnimationDuration 0.3
-#define kControlPanelAnimationDuration 0.2
 
 @interface LanguageNamingViewController ()
 
@@ -18,7 +18,6 @@
 
 @implementation LanguageNamingViewController
 @synthesize test;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,16 +29,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    currentScore = 0;       // Reset the current score
     currentImageOrder = 0;  // Reset the current image we're showing
     [self loadNextImage];   // Load the next (i.e first) image
 }
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
-    isControlPanelDisplayed = NO;
     self.title = [test getFullTestName];           // Set this ViewController's title
     imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
@@ -51,7 +47,6 @@
     NSDictionary *imageDict = [imagesDicts objectAtIndex:currentImageOrder];
     UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
 
-    isControlPanelDisplayed = NO;
     // Work out where things are, and where they should go
     CGRect originalFrame = inputImageView.frame;
     CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
@@ -69,87 +64,18 @@
      }];
 }
 
-// Handles logic if we push the yes or no button
-- (IBAction)decisionButtonPressed:(id)sender
-{
-    //the backround colour of buttons when they are pressed
-    UIColor *colourWhenPressed = [UIColor redColor];
-    
-    answerWasCorrect = (sender==yesButton); // Correct if the tester pushed the Yes button
-    
-    if (answerWasCorrect){
-        [yesButton setBackgroundColor:colourWhenPressed];
-        [noButton setBackgroundColor:[UIColor clearColor]];
-        
-    }    // If we were right, highlight the yes button
-    else{
-        [noButton setBackgroundColor:colourWhenPressed];
-        [yesButton setBackgroundColor:[UIColor clearColor]];
-        
-    }         // If we were wrong, highlight the no button
-    [confirmButton setHidden:NO];           // Show the confirm button
-}
-
 // Handle presses of the confirm button
-- (IBAction)confirmButtonPressed:(id)sender {
-    if (answerWasCorrect) currentScore++;   // If we're correct, update the score for this test
-    NSLog(@"Score: %i", currentScore);      // Log the new score
+- (void)didConfirmAnswer
+{
+    if ([[super controlPanelViewController] answerWasCorrect])
+        [test addToTestScore:1];            // If we're correct, update the score for this test
     currentImageOrder++;                    // Increment our  image order
-    [confirmButton setHidden:YES];          // Hide the confirm button
-    [self hideControlPanel];                    // Hide the control panel
     if (currentImageOrder < [imagesDicts count])  // If there's still images left
         [self loadNextImage];               // Load the next image
-    else [super hasFinishedTestWithScore:currentScore];  // Otherwise tell the Test we've finished, and our score
+    else [super hasFinished];  // Otherwise tell the Test we've finished, and our score
 }
 
-// Triggered when the invisible button at the bottom of the screen is pressed
-- (IBAction)showControlsButtonPressed:(id)sender {
-    if (isControlPanelDisplayed) {
-        [self hideControlPanel];
-    }
-    else{
-        [self showControlPanel];
-    }
-   
-}
 
-// Show the control panel at the bottom of the screen
--(void)showControlPanel
-{
-    isControlPanelDisplayed = YES;
-    CGRect currentFrame = controlPanel.frame;
-    double newY = currentFrame.origin.y - currentFrame.size.height;
-    CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:kControlPanelAnimationDuration];
-    [UIView setAnimationDelay:0.0];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    controlPanel.frame = newFrame;
-    [UIView commitAnimations];
-}
-// Hide the control panel at the bottom of the screen
--(void)hideControlPanel
-{
-    isControlPanelDisplayed = NO;
-    [confirmButton setHidden:YES];
-    [self resetDecisionButtons];    // First reset the appearance of the buttons
-    CGRect currentFrame = controlPanel.frame;
-    double newY = currentFrame.origin.y + currentFrame.size.height;
-    CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:kControlPanelAnimationDuration];
-    [UIView setAnimationDelay:0.0];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-    controlPanel.frame = newFrame;
-    [UIView commitAnimations];
-}
-
-// Resets the decision buttons to their original state
--(void)resetDecisionButtons
-{
-    [yesButton setBackgroundColor:[UIColor clearColor]];
-    [noButton setBackgroundColor:[UIColor clearColor]];
-}
 
 - (void)didReceiveMemoryWarning
 {

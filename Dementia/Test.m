@@ -16,6 +16,7 @@
 @synthesize testViewController;
 @synthesize testScore;
 @synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story,buttonNames, toSpell;
+@synthesize hasControlPanel;
 
 -(id)init
 {
@@ -36,12 +37,16 @@
 {
     if (self = [self init]) {
         if (plistDict) {
-            order = [[plistDict valueForKey:@"order"] integerValue];
+            order = (int) [[plistDict valueForKey:@"order"] integerValue];
             className = [plistDict valueForKey:@"className"];
             categoryName = [plistDict valueForKey:@"categoryName"];
             testName = [plistDict valueForKey:@"testName"];
             preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
             postTestMessage = [plistDict valueForKey:@"postTestMessage"];
+           
+            hasControlPanel = NO;
+            if([[plistDict allKeys] containsObject:@"hasControlPanel"])
+                hasControlPanel = (BOOL)[plistDict valueForKey:@"hasControlPanel"];
             
             if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
                     
@@ -93,6 +98,13 @@
 -(NSString *)getFullTestName
 {
     return [NSString stringWithFormat:@"%@ - %@", categoryName, testName];
+}
+
+-(void)addToTestScore:(int)toAdd
+{
+    testScore+=toAdd;
+    NSLog(@"Score: %i", testScore);      // Log the new score
+
 }
 
 @end

@@ -48,7 +48,7 @@
     for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
         [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
-        int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
+        int tag = (int)[[imageDict valueForKey:@"order"] integerValue]+1;
         UIButton *button = (UIButton *)[self.view viewWithTag:tag];
         [button setImage:newImage forState:UIControlStateNormal];
      }
@@ -209,7 +209,7 @@
         [self loadNextQuestion];
         
     }
-    else [super hasFinishedTestWithScore:currentScore];
+    else [super hasFinished];
     
 }
 @end

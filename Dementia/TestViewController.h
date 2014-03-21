@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 @class Test;
+@class ControlPanelViewController;
+
 @interface TestViewController : UIViewController
 {
-    int score;
 }
 @property (nonatomic) Test *test;
--(void)hasFinishedTestWithScore:(int)score;
+@property (nonatomic) ControlPanelViewController *controlPanelViewController;
+-(void)hasFinished;
+-(void)didConfirmAnswer;
 @end

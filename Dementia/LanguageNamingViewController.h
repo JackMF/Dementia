@@ -13,21 +13,11 @@
 {
     // memory_keyword, IBThing, Class, pointer name
     __weak IBOutlet UIImageView *inputImageView;
-    __weak IBOutlet UIView *controlPanel;
-    __weak IBOutlet UIButton *yesButton;
-    __weak IBOutlet UIButton *noButton;
-    __weak IBOutlet UIButton *confirmButton;
     __weak IBOutlet UILabel *question;
     NSArray *imagesDicts;
     NSDictionary *currentImage;
     BOOL answerWasCorrect;
-    int currentScore;
     int currentImageOrder;
-    BOOL isControlPanelDisplayed;
 }
-- (IBAction)decisionButtonPressed:(id)sender;
-- (IBAction)confirmButtonPressed:(id)sender;
-- (IBAction)showControlsButtonPressed:(id)sender;
--(void)showControlPanel;
--(void)hideControlPanel;
+
 @end

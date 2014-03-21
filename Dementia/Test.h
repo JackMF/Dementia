@@ -32,11 +32,13 @@
 
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
+@property (nonatomic) BOOL hasControlPanel;
 
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;
 -(void)startTest;
 -(void)startPostTest;
 -(void)endTest;
+-(void)addToTestScore:(int)toAdd;
 -(NSString *)getFullTestName;
 @end
