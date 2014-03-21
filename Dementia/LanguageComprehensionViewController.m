@@ -30,7 +30,8 @@
     [super viewWillAppear:animated];
     currentScore = 0;
     currentQuestionOrder = 0;
-    [self loadNextQuestion];
+    
+    //[self loadNextQuestion];
 }
 
 - (void)viewDidLoad
@@ -53,6 +54,7 @@
      }
     
     questionDicts = [test questions]; //Loading the quesitons
+    [questionLabel setText:[[questionDicts objectAtIndex:currentQuestionOrder] valueForKey:@"question"]];
 }
 
 - (void)didReceiveMemoryWarning
