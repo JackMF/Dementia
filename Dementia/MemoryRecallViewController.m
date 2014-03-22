@@ -52,7 +52,7 @@
 	[buttonListViewController didMoveToParentViewController:self];
 
 	[storyTextView setText:[test story]];
-	[storyTextView setFont:[UIFont boldSystemFontOfSize:26.0]];
+	[storyTextView setFont:[UIFont systemFontOfSize:24.0]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,4 +61,9 @@
 	// Dispose of any resources that can be recreated.
 }
 
+- (IBAction)finishButtonPressed:(id)sender {
+	int corrent = [buttonListViewController getNumberOfCorrectAnswers];
+	[test addToTestScore:corrent];
+	[super hasFinished];
+}
 @end

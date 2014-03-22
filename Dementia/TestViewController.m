@@ -60,6 +60,11 @@
 	[super viewDidLoad];
 }
 
+-(BOOL)automaticallyAdjustsScrollViewInsets
+{
+	return NO;
+}
+
 -(void)hasFinished
 {
 	if (self.test)                  // If we have a test,

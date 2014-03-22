@@ -14,4 +14,5 @@
 	__weak IBOutlet UITextView *storyTextView;
 	ButtonListViewController *buttonListViewController;
 }
+- (IBAction)finishButtonPressed:(id)sender;
 @end
