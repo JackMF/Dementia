@@ -78,6 +78,8 @@
 		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
 		9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */; };
 		9C9935E618D893DF007E0D25 /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */; };
+		9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */; };
+		9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +180,9 @@
 		9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryRecallViewController.h; sourceTree = "<group>"; };
 		9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryRecallViewController.m; sourceTree = "<group>"; };
 		9C9935E718D893DF007E0D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MemoryRecallViewController.xib; sourceTree = "<group>"; };
+		9CB203D918DDB38A0080BFB2 /* LanguageSpellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSpellingViewController.h; sourceTree = "<group>"; };
+		9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSpellingViewController.m; sourceTree = "<group>"; };
+		9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageSpellingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +359,7 @@
 				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
+				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
 				83A14FB218D33C4E0037980A /* Supporting Files */,
@@ -458,6 +464,16 @@
 			name = "3. Memory Recall";
 			sourceTree = "<group>";
 		};
+		9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */ = {
+			isa = PBXGroup;
+			children = (
+				9CB203D918DDB38A0080BFB2 /* LanguageSpellingViewController.h */,
+				9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */,
+				9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */,
+			);
+			name = "4. Language Spelling";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -540,6 +556,7 @@
 				8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */,
 				8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */,
 				8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */,
+				9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */,
 				8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */,
 				8353CC3018D34CB300226AB4 /* pear.jpg in Resources */,
 				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
@@ -613,6 +630,7 @@
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
 				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
+				9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */,
 				8359B67218D376E8001BDDB8 /* PreTestViewController.m in Sources */,
 				8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */,
 				83A14FB818D33C4E0037980A /* main.m in Sources */,
