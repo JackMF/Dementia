@@ -15,12 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZFj-iC-ja3">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZFj-iC-ja3">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="poR-QV-aOK">
-                        <size key="itemSize" width="120" height="60"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="iwE-Ms-cQC">
+                        <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -33,6 +33,12 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZFj-iC-ja3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PVH-Nm-1Ph"/>
+                <constraint firstItem="ZFj-iC-ja3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SnG-oP-qxb"/>
+                <constraint firstAttribute="bottom" secondItem="ZFj-iC-ja3" secondAttribute="bottom" id="XCC-cn-fzW"/>
+                <constraint firstAttribute="trailing" secondItem="ZFj-iC-ja3" secondAttribute="trailing" id="s4J-7j-TRb"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

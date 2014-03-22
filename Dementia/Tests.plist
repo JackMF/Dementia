@@ -269,7 +269,15 @@ The next section of the test is “Language - Spelling”</string>
 		<key>buttonNames</key>
 		<array>
 			<string>Sunday</string>
-			<string>Annual Litter Collection</string>
+			<string>Annual litter collection</string>
+			<string>Primrose woods</string>
+			<string>Forty-two people</string>
+			<string>Bicycles and shopping trolleys</string>
+			<string>Douglas watt</string>
+			<string>Woodland project</string>
+			<string>Impressed and especially proud</string>
+			<string>17</string>
+			<string>children</string>
 		</array>
 	</dict>
 	<dict>
@@ -333,9 +341,9 @@ The next section of the test is “Reverse Digit Span”</string>
 		<key>testName</key>
 		<string>ReverseDigitSpan</string>
 		<key>preTestInstructions</key>
-		<string>Numbers should be read out at a pace of 1 number per second. Say: "I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice.
+		<string>Numbers should be read out at a pace of 1 number per second. Say: &quot;I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice.
             
-If I say ‘7 1 9’, what would you say?" If participant cannot complete the practice trial, another practice trial is provided at the level of two digits, before moving on to test items. If a participant cannot complete a practice trial at the level of two items, the test is scored as 0 out of 12 and no further test items are attempted. Advance warning that the number sequences will increase in length is provided at the start of each line of a trial.
+If I say ‘7 1 9’, what would you say?&quot; If participant cannot complete the practice trial, another practice trial is provided at the level of two digits, before moving on to test items. If a participant cannot complete a practice trial at the level of two items, the test is scored as 0 out of 12 and no further test items are attempted. Advance warning that the number sequences will increase in length is provided at the start of each line of a trial.
 
 In order to score a trial of a line as correct, participant must accurately recall all items in reverse order. No score is given for individual numbers correctly recalled in an incorrectly recalled sequence. If person gets at least one trial of a line correct, move on to the next line. Self-corrections are allowed; only the final answer is taken for scoring. Stop when person gets both trials of a line wrong.</string>
 		<key>postTestMessage</key>

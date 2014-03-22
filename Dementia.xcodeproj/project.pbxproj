@@ -70,6 +70,7 @@
 		83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */; };
 		83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5E75418DDC12A00FF375C /* ButtonListViewController.m */; };
 		83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */; };
+		83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */; };
 		83E763B118D3BBEE002846B1 /* LanguageComprehensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */; };
 		83E763B918D3CA9F002846B1 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E763B818D3CA9F002846B1 /* TestManager.m */; };
 		83E763BB18D3CB46002846B1 /* Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BA18D3CB46002846B1 /* Tests.plist */; };
@@ -77,7 +78,6 @@
 		83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD799318D5F9A60055A26C /* ExampleTestViewController.m */; };
 		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
 		9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */; };
-		9C9935E618D893DF007E0D25 /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */; };
 		9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */; };
 		9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */; };
 /* End PBXBuildFile section */
@@ -169,6 +169,7 @@
 		83D5E75318DDC12A00FF375C /* ButtonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonListViewController.h; sourceTree = "<group>"; };
 		83D5E75418DDC12A00FF375C /* ButtonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonListViewController.m; sourceTree = "<group>"; };
 		83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListViewController.xib; sourceTree = "<group>"; };
+		83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryRecallViewController.xib; sourceTree = "<group>"; };
 		83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageComprehensionViewController.xib; sourceTree = "<group>"; };
 		83E763B718D3CA9F002846B1 /* TestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManager.h; sourceTree = "<group>"; };
 		83E763B818D3CA9F002846B1 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
@@ -179,7 +180,6 @@
 		83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTestViewController.xib; sourceTree = "<group>"; };
 		9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryRecallViewController.h; sourceTree = "<group>"; };
 		9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryRecallViewController.m; sourceTree = "<group>"; };
-		9C9935E718D893DF007E0D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MemoryRecallViewController.xib; sourceTree = "<group>"; };
 		9CB203D918DDB38A0080BFB2 /* LanguageSpellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSpellingViewController.h; sourceTree = "<group>"; };
 		9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSpellingViewController.m; sourceTree = "<group>"; };
 		9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageSpellingViewController.xib; sourceTree = "<group>"; };
@@ -467,7 +467,7 @@
 			children = (
 				9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */,
 				9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */,
-				9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */,
+				83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */,
 			);
 			name = "3. Memory Recall";
 			sourceTree = "<group>";
@@ -589,7 +589,6 @@
 				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
 				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
 				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
-				9C9935E618D893DF007E0D25 /* MemoryRecallViewController.xib in Resources */,
 				8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */,
 				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
 				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
@@ -608,6 +607,7 @@
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
 				8353CC2118D34CB300226AB4 /* cat.jpg in Resources */,
+				83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */,
 				8353CC1E18D34CB300226AB4 /* bicycle.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,14 +678,6 @@
 				83A14FCE18D33C4E0037980A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9C9935E818D893DF007E0D25 /* MemoryRecallViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C9935E718D893DF007E0D25 /* en */,
-			);
-			name = MemoryRecallViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -7,19 +7,23 @@
 //
 
 #import "ButtonListViewController.h"
+#define kMinCellWidth 120.0f;
+#define kMinCellHeight 60.0f;
+
 
 @interface ButtonListViewController ()
 
 @end
 
 @implementation ButtonListViewController
-@synthesize buttonLabelValues;
+@synthesize buttonLabelValues, oneItemPerRow;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		// Custom initialization
 		buttonLabelValues = [NSArray array];
+		oneItemPerRow = NO;
 	}
 	return self;
 }
@@ -46,6 +50,18 @@
 	return 1;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Get content for this cell
+	NSString *labelContent = [buttonLabelValues objectAtIndex:[indexPath row]];
+	NSDictionary *attributes = @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:26.0] };
+	CGSize suggestedSize = [labelContent sizeWithAttributes:attributes];
+	if (oneItemPerRow) suggestedSize.width = self.view.frame.size.width;
+	else suggestedSize.width = fmax(suggestedSize.width+10, 120.0f);
+	suggestedSize.height = fmax(suggestedSize.height+10, 60.0f);
+	return suggestedSize;
+}
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
@@ -65,7 +81,6 @@
 	[cellLabel setTextAlignment:NSTextAlignmentCenter];
 	[cellLabel setFont:[UIFont boldSystemFontOfSize:26.0]];
 	NSString *labelValue = [buttonLabelValues objectAtIndex:[indexPath row]];
-	NSLog(@"%@ - %@", indexPath, labelValue );
 	[cellLabel setText:labelValue];
 	[cell addSubview:cellLabel];
 

@@ -44,7 +44,7 @@
 			preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
 			postTestMessage = [plistDict valueForKey:@"postTestMessage"];
 
-			hasControlPanel = YES;
+			hasControlPanel = NO;
 			if([[plistDict allKeys] containsObject:@"hasControlPanel"])
 				hasControlPanel = [[plistDict valueForKey:@"hasControlPanel"] boolValue];
 

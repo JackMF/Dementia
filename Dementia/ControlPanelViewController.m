@@ -40,7 +40,6 @@
 	[testVSDelegate didConfirmAnswer];      // Tell our test view controller we have an answer
 	[confirmButton setHidden:YES];          // Hide the confirm button
 	[self hideControlPanel];       // Hide the control panel
-
 }
 
 // Show the control panel at the bottom of the screen

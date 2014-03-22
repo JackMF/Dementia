@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ButtonListViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ButtonListViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
 	__weak IBOutlet UICollectionView *listCollectionView;
+
 }
 @property (nonatomic) NSArray *buttonLabelValues;
+@property (nonatomic) BOOL oneItemPerRow;
 -(NSInteger)getNumberOfCorrectAnswers;
 @end

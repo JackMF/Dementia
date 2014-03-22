@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TestViewController.h"
-
+@class ButtonListViewController;
 @interface MemoryRecallViewController : TestViewController
 {
-	NSString *story;
-	NSArray *namesOfButtons;
-	int currentScore;
-	__weak IBOutlet UILabel *testL;
-	__weak IBOutlet UILabel *storyLabel;
+	__weak IBOutlet UITextView *storyTextView;
+	ButtonListViewController *buttonListViewController;
 }
 @end

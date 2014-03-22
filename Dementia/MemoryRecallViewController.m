@@ -8,6 +8,7 @@
 
 #import "MemoryRecallViewController.h"
 #import "Test.h"
+#import "ButtonListViewController.h"
 
 @interface MemoryRecallViewController ()
 
@@ -28,43 +29,30 @@
 
 -(void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-
-	currentScore=0;
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	self.title = [test getFullTestName];
-	story = [test story];
-	[storyLabel setText:story];
 
+	buttonListViewController = [[ButtonListViewController alloc] initWithNibName:@"ButtonListViewController" bundle:nil];
+	// Add the control panel to the view
+	[self addChildViewController:buttonListViewController];
 
-	NSLog(@"Story: %@", story);
-	namesOfButtons = [test buttonNames];
+	CGRect cpFrame = CGRectMake(150.0, 300.0, 478.0, 700.0);
+	[buttonListViewController.view setFrame:cpFrame];
 
-	int tag = 1;
-	for (NSString *buttonName in namesOfButtons) {
-		UIButton *button = (UIButton *) [self.view viewWithTag:tag];
-		[button setTitle:buttonName forState:UIControlStateNormal];
-		tag++;
+	NSArray *buttonLabelValues = [test buttonNames];
+	[buttonListViewController setButtonLabelValues:buttonLabelValues];
 
-		//[super hasFinishedTestWithScore:currentScore];
+	[buttonListViewController setOneItemPerRow:YES];
 
+	[self.view addSubview:buttonListViewController.view];
+	[buttonListViewController didMoveToParentViewController:self];
 
-	}
-
-	//for ()
-
-	/*for (NSDictionary *imageDict in imagesDicts) {
-	    UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-	    [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
-	    int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
-	    UIButton *button = (UIButton *)[self.view viewWithTag:tag];
-	    [button setImage:newImage forState:UIControlStateNormal];
-	   }*/
-
-	// Do any additional setup after loading the view from its nib.
+	[storyTextView setText:[test story]];
+	[storyTextView setFont:[UIFont boldSystemFontOfSize:26.0]];
 }
 
 - (void)didReceiveMemoryWarning
