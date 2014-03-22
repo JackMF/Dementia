@@ -11,9 +11,9 @@
 
 @interface Test : NSObject
 {
-    UINavigationController *navigationController;
-    PreTestViewController *preTestViewController;
-    PostTestViewController *postTestViewController;
+	UINavigationController *navigationController;
+	PreTestViewController *preTestViewController;
+	PostTestViewController *postTestViewController;
 }
 
 -(id)initWithPlistDict:(NSDictionary *)plistDict;

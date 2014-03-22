@@ -11,13 +11,13 @@
 
 @interface LanguageNamingViewController : TestViewController
 {
-    // memory_keyword, IBThing, Class, pointer name
-    __weak IBOutlet UIImageView *inputImageView;
-    __weak IBOutlet UILabel *question;
-    NSArray *imagesDicts;
-    NSDictionary *currentImage;
-    BOOL answerWasCorrect;
-    int currentImageOrder;
+	// memory_keyword, IBThing, Class, pointer name
+	__weak IBOutlet UIImageView *inputImageView;
+	__weak IBOutlet UILabel *question;
+	NSArray *imagesDicts;
+	NSDictionary *currentImage;
+	BOOL answerWasCorrect;
+	int currentImageOrder;
 }
 
 @end

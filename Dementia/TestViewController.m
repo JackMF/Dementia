@@ -20,56 +20,58 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
-
-    }
-    return self;
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		// Custom initialization
+		controlPanelViewController = nil;
+	}
+	return self;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.test setTestScore:0];
+	[super viewWillAppear:animated];
+	if (![self test]) {
+		NSLog(@"NO TEST");
+	}
+	[self.test setTestScore:0];
+	if ([self.test hasControlPanel]) {
+		controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+		// Add the control panel to the view
+		[self addChildViewController:controlPanelViewController];
+		CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
+		[controlPanelViewController.view setFrame:cpFrame];
+		[controlPanelViewController setTestVSDelegate:self];
+		[self.view addSubview:controlPanelViewController.view];
+		[controlPanelViewController didMoveToParentViewController:self];
+
+		// Add the control event stuff
+		UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
+		[self.view addGestureRecognizer:singleFingerTap];
+	}
+}
+
+-(void)didConfirmAnswer
+{
+
 }
 
 -(void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    if ([self.test hasControlPanel]) {
-        // Add the control panel to the view
-        [self addChildViewController:controlPanelViewController];
-        CGRect cpFrame = CGRectMake(0.0, 1024.0-185.0, 768.0, 185.0);
-        [controlPanelViewController.view setFrame:cpFrame];
-        [controlPanelViewController setTestVSDelegate:self];
-        [self.view addSubview:controlPanelViewController.view];
-        [controlPanelViewController didMoveToParentViewController:self];
-        
-        // Add the control event stuff
-        UITapGestureRecognizer *singleFingerTap =
-        [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
-        [self.view addGestureRecognizer:singleFingerTap];
-
-    }
+	[super viewDidLoad];
 }
 
 -(void)hasFinished
 {
-    if (self.test) [self.test startPostTest]; // If we have a test, start the post test
-    else {
-//        NSString *scoreString = [NSString stringWithFormat:@"%i points", score];
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finished! (debug mode)" message:scoreString delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-//        [alert show];
-    }
+	if (self.test)                  // If we have a test,
+		[self.test startPostTest];  // start the post test
 }
 
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 @end
