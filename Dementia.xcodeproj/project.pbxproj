@@ -45,6 +45,8 @@
 		8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1518D34CB300226AB4 /* wardrobe.jpg */; };
 		8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC1618D34CB300226AB4 /* wasp.jpg */; };
 		8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */; };
+		8358EBE418DDEE3500E1AAC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8358EBE218DDEE3500E1AAC9 /* icon.png */; };
+		8358EBE518DDEE3500E1AAC9 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8358EBE318DDEE3500E1AAC9 /* icon@2x.png */; };
 		8359B67218D376E8001BDDB8 /* PreTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B67018D376E8001BDDB8 /* PreTestViewController.m */; };
 		8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B67118D376E8001BDDB8 /* PreTestViewController.xib */; };
 		8359B67818D37720001BDDB8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B67718D37720001BDDB8 /* TestViewController.m */; };
@@ -133,6 +135,8 @@
 		8353CC1618D34CB300226AB4 /* wasp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wasp.jpg; sourceTree = "<group>"; };
 		8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageComprehensionViewController.h; sourceTree = "<group>"; };
 		8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageComprehensionViewController.m; sourceTree = "<group>"; };
+		8358EBE218DDEE3500E1AAC9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8358EBE318DDEE3500E1AAC9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8359B66F18D376E8001BDDB8 /* PreTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreTestViewController.h; sourceTree = "<group>"; };
 		8359B67018D376E8001BDDB8 /* PreTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreTestViewController.m; sourceTree = "<group>"; };
 		8359B67118D376E8001BDDB8 /* PreTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreTestViewController.xib; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 		8353CBF218D34CB200226AB4 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				8358EBE218DDEE3500E1AAC9 /* icon.png */,
+				8358EBE318DDEE3500E1AAC9 /* icon@2x.png */,
 				8353CBF318D34CB200226AB4 /* accordion.jpg */,
 				8353CBF418D34CB200226AB4 /* airoplane.jpg */,
 				8353CBF518D34CB200226AB4 /* apple.jpg */,
@@ -580,6 +586,7 @@
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
 				83E763BB18D3CB46002846B1 /* Tests.plist in Resources */,
 				8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */,
+				8358EBE518DDEE3500E1AAC9 /* icon@2x.png in Resources */,
 				83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */,
 				83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */,
 				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
@@ -606,6 +613,7 @@
 				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
+				8358EBE418DDEE3500E1AAC9 /* icon.png in Resources */,
 				8353CC2118D34CB300226AB4 /* cat.jpg in Resources */,
 				83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */,
 				8353CC1E18D34CB300226AB4 /* bicycle.jpg in Resources */,
