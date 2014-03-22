@@ -7,12 +7,14 @@
 //
 
 #import "TestViewController.h"
+@class ButtonListViewController;
 
 @interface ExampleTestViewController : TestViewController
 {
 	__weak IBOutlet UILabel *infoLabel;
 	__weak IBOutlet UIButton *pressME;
 	int currentScore;
+	ButtonListViewController *buttonListViewController;
 }
 -(IBAction)finishButtonPressed;
 

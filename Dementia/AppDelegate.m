@@ -29,14 +29,12 @@
 	[navController setTitle:@"DEBUG"];
 
 	// Instantiate the ExampleTextViewController (for in-progress test view controllers)
-//    ExampleTestViewController *exTestVC = [[ExampleTestViewController alloc] initWithNibName:@"ExampleTestViewController" bundle:nil];
+	ExampleTestViewController *exTestVC = [[ExampleTestViewController alloc] initWithNibName:@"ExampleTestViewController" bundle:nil];
 
-//    MemoryRecallViewController *ir = [[MemoryRecallViewController alloc] initWithNibName:@"MemoryRecallViewController" bundle:nil];
-
-//    UITabBarController *tabBarController = [[UITabBarController alloc] init];   // Make a tab bar controller
-//    [tabBarController setViewControllers:@[navController, exTestVC]];           // Set it's view controllers
+	UITabBarController *tabBarController = [[UITabBarController alloc] init];   // Make a tab bar controller
+	[tabBarController setViewControllers:@[navController, exTestVC]];           // Set it's view controllers
 	// Set the root view controller of our window to the tab bar controller
-	[self.window setRootViewController:navController];
+	[self.window setRootViewController:tabBarController];
 
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
