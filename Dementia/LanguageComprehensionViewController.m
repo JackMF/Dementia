@@ -9,6 +9,7 @@
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
 #define kImageViewAnimationDuration 0.6
+#define kBorderSize 5
 
 @interface LanguageComprehensionViewController ()
 
@@ -49,7 +50,7 @@
     for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
         [newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
-        int tag = [[imageDict valueForKey:@"order"] integerValue]+1;
+        int tag = (int)[[imageDict valueForKey:@"order"] integerValue]+1;
         UIButton *button = (UIButton *)[self.view viewWithTag:tag];
         [button setImage:newImage forState:UIControlStateNormal];
      }
@@ -71,11 +72,16 @@
     
     UIButton* button = (UIButton*)sender;
     NSString* nameOfButton = [[button currentImage] accessibilityIdentifier];
+    UIImage *buttonImage = [button imageForState:UIControlStateNormal];
     
+    for (NSDictionary *imageDict in imagesDicts) {
+        UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
+        if (buttonImage == newImage) {
+//            currentButtonSelected = [imageDict valueForKey:@"filename"];
+        }
+    }
     
-
-    
-    if (!isSelected && currentButtonSelected != nameOfButton) { //case when nothing is selected
+    if (!isSelected) { //case when nothing is selected
         button.selected = YES;
         currentButtonSelected = nameOfButton;
         isSelected = YES;
@@ -105,8 +111,12 @@
                     button2.selected = NO;
                     
                     CGRect buttonFrame = button2.frame;
+<<<<<<< HEAD
                     double borderSize = 5;
                     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+=======
+                    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y - kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
+>>>>>>> bebf0f54096cf0256751b00c7428f56d74256987
                     
                     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
                     [borderView setBackgroundColor:[UIColor whiteColor]];
@@ -122,8 +132,12 @@
     
 
     CGRect buttonFrame = button.frame;
+<<<<<<< HEAD
     double borderSize = 5;
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+=======
+    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
+>>>>>>> bebf0f54096cf0256751b00c7428f56d74256987
     
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     
@@ -157,7 +171,7 @@
     
 
     
-    // Animate and swap images
+    // Animate and swap questions
     [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
         questionLabel.frame = leftFrame;   // Animate the image view off to the left
     } completion:^(BOOL finished) {         // Once animation is finished
@@ -178,8 +192,7 @@
             UIButton *button = (UIButton *) object;
             if (button.selected) {
                 CGRect buttonFrame = button.frame;
-                double borderSize = 10;
-                CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
+                CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
                 UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
                 
                 [borderView setBackgroundColor:[UIColor whiteColor]];
@@ -215,7 +228,7 @@
         [self loadNextQuestion];
         
     }
-    else [super hasFinishedTestWithScore:currentScore];
+    else [super hasFinished];
     
 }
 @end

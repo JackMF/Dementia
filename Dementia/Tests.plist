@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>hasControlPanel</key>
+		<true/>
 		<key>order</key>
 		<integer>0</integer>
 		<key>className</key>
@@ -84,6 +86,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>hasControlPanel</key>
+		<false/>
 		<key>order</key>
 		<integer>1</integer>
 		<key>className</key>

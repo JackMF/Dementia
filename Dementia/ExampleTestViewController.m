@@ -35,7 +35,7 @@
 
 -(IBAction)finishButtonPressed
 {
-    [super hasFinishedTestWithScore:currentScore];
+    [super hasFinished];
 }
 
 - (void)didReceiveMemoryWarning

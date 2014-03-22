@@ -35,8 +35,12 @@
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
 }
 
--(int)numberOfSectionsInTableView:(UITableView *)tableView{ return 1; }
--(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{ return [tests count];}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [tests count];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100.0;
@@ -48,7 +52,7 @@
     UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     Test *test = [tests objectAtIndex:[indexPath row]];
-    NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", [indexPath row]+1, [test getFullTestName]];
+    NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", (int)[indexPath row]+1, [test getFullTestName]];
     [cell.textLabel setText:cellText];
     [cell.textLabel setFont:[UIFont boldSystemFontOfSize:25.0]];
     return cell;

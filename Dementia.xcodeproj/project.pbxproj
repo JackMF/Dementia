@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833118CB18DCAB3900648698 /* ControlPanelViewController.m */; };
+		833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833118CC18DCAB3900648698 /* ControlPanelViewController.xib */; };
 		8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF318D34CB200226AB4 /* accordion.jpg */; };
 		8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF418D34CB200226AB4 /* airoplane.jpg */; };
 		8353CC1918D34CB300226AB4 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF518D34CB200226AB4 /* apple.jpg */; };
@@ -87,6 +89,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		833118CA18DCAB3900648698 /* ControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPanelViewController.h; sourceTree = "<group>"; };
+		833118CB18DCAB3900648698 /* ControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlPanelViewController.m; sourceTree = "<group>"; };
+		833118CC18DCAB3900648698 /* ControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControlPanelViewController.xib; sourceTree = "<group>"; };
 		8353CBF318D34CB200226AB4 /* accordion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accordion.jpg; sourceTree = "<group>"; };
 		8353CBF418D34CB200226AB4 /* airoplane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = airoplane.jpg; sourceTree = "<group>"; };
 		8353CBF518D34CB200226AB4 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
@@ -195,6 +200,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		833118C918DCAB2500648698 /* ControlPanel */ = {
+			isa = PBXGroup;
+			children = (
+				833118CA18DCAB3900648698 /* ControlPanelViewController.h */,
+				833118CB18DCAB3900648698 /* ControlPanelViewController.m */,
+				833118CC18DCAB3900648698 /* ControlPanelViewController.xib */,
+			);
+			name = ControlPanel;
+			sourceTree = "<group>";
+		};
 		8353CBF218D34CB200226AB4 /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +390,7 @@
 		83A14FE118D33FCD0037980A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				833118C918DCAB2500648698 /* ControlPanel */,
 				8359B67F18D377E6001BDDB8 /* DebugViewController */,
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
@@ -510,6 +526,7 @@
 				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
 				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
 				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
+				833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */,
 				8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */,
 				8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */,
 				8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */,
@@ -569,6 +586,7 @@
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
 				9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
+				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
 				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
