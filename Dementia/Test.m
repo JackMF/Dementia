@@ -81,7 +81,7 @@
 
 -(void)startTest
 {
-	[navigationController pushViewController:(UIViewController *)testViewController animated:YES];
+	[navigationController pushViewController:testViewController animated:YES];
 }
 
 -(void)startPostTest
@@ -103,7 +103,6 @@
 {
 	testScore+=toAdd;
 	NSLog(@"Score: %i", testScore);      // Log the new score
-
 }
 
 @end

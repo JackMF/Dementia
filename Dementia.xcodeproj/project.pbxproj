@@ -359,7 +359,6 @@
 				8359B68918D37C3E001BDDB8 /* Test */,
 				83A14FE118D33FCD0037980A /* UI */,
 				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
-				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
 				83A14FB218D33C4E0037980A /* Supporting Files */,
@@ -401,16 +400,16 @@
 		83A14FE118D33FCD0037980A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				83D5E75118DDC11500FF375C /* ButtonList */,
-				833118C918DCAB2500648698 /* ControlPanel */,
+				83D5E75818DDCC0300FF375C /* Custom UI Elements */,
+				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
+				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
+				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
+				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
 				8359B67F18D377E6001BDDB8 /* DebugViewController */,
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
 				8359B67E18D377A8001BDDB8 /* TestViewController */,
 				83FD799118D5F9890055A26C /* ExampleTestViewController */,
-				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
-				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
-				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -433,6 +432,15 @@
 				83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */,
 			);
 			name = ButtonList;
+			sourceTree = "<group>";
+		};
+		83D5E75818DDCC0300FF375C /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				83D5E75118DDC11500FF375C /* ButtonList */,
+				833118C918DCAB2500648698 /* ControlPanel */,
+			);
+			name = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
 		83E763B618D3CA70002846B1 /* TestManager */ = {

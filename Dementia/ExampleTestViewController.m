@@ -39,19 +39,25 @@
 	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 485.0, 768.0, 185.0);
 	[buttonListViewController.view setFrame:cpFrame];
 
-
 	NSArray *buttonLabelValues = @[@"1-A",@"2-B",@"3-C",@"4-D",@"5-E",@"6-F",@"7-G"];
 	[buttonListViewController setButtonLabelValues:buttonLabelValues];
 
 	[self.view addSubview:buttonListViewController.view];
 	[buttonListViewController didMoveToParentViewController:self];
-
 }
 
 -(IBAction)finishButtonPressed
 {
 	NSInteger correct = [buttonListViewController getNumberOfCorrectAnswers];
-	[test addToTestScore:correct];
+	if (test)
+		[test addToTestScore:correct];
+	else {
+
+		NSString *finishedMessage = [NSString stringWithFormat:@"%i correct answers", correct];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finished" message:finishedMessage delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+		[alert show];
+
+	}
 	[super hasFinished];
 }
 
