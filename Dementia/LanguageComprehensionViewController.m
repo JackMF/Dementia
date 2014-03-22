@@ -77,7 +77,8 @@
     for (NSDictionary *imageDict in imagesDicts) {
         UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
         if (buttonImage == newImage) {
-//            currentButtonSelected = [imageDict valueForKey:@"filename"];
+            nameOfButton = [imageDict valueForKey:@"filename"];
+            
         }
     }
     
@@ -111,12 +112,9 @@
                     button2.selected = NO;
                     
                     CGRect buttonFrame = button2.frame;
-<<<<<<< HEAD
-                    double borderSize = 5;
-                    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
-=======
+                    //double borderSize = 5;
+
                     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y - kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
->>>>>>> bebf0f54096cf0256751b00c7428f56d74256987
                     
                     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
                     [borderView setBackgroundColor:[UIColor whiteColor]];
@@ -132,12 +130,9 @@
     
 
     CGRect buttonFrame = button.frame;
-<<<<<<< HEAD
-    double borderSize = 5;
-    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-borderSize, buttonFrame.origin.y-borderSize, buttonFrame.size.width + (borderSize*2), buttonFrame.size.height + (borderSize*2));
-=======
+
     CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
->>>>>>> bebf0f54096cf0256751b00c7428f56d74256987
+
     
     UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
     

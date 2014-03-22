@@ -275,31 +275,20 @@ Last Sunday, the annual litter collection took place in Primrose Woods. Forty tw
 		<key>postTestMessage</key>
 		<string>lorem ipsum 2</string>
 		<key>toSpell</key>
-		<array/>
-		<key>spell1</key>
-		<string>Envelope</string>
-		<key>spell2</key>
-		<string>Skateboard</string>
-		<key>spell3</key>
-		<string>Constructing</string>
-		<key>spell4</key>
-		<string>Partner</string>
-		<key>spell5</key>
-		<string>Biscuit</string>
-		<key>spell6</key>
-		<string>Lawnmower</string>
-		<key>spell7</key>
-		<string>Deliver</string>
-		<key>spell8</key>
-		<string>Recorded</string>
-		<key>spell9</key>
-		<string>Coathanger</string>
-		<key>spell10</key>
-		<string>Orchestra</string>
-		<key>spell11</key>
-		<string>Screwdriver</string>
-		<key>spell12</key>
-		<string>Brought</string>
+		<array>
+			<string>Envelope</string>
+			<string>Skateboard</string>
+			<string>Constructing</string>
+			<string>Partner</string>
+			<string>Biscuit</string>
+			<string>Lawnmower</string>
+			<string>Deliver</string>
+			<string>Recorded</string>
+			<string>Coathanger</string>
+			<string>Orchestra</string>
+			<string>Screwdriver</string>
+			<string>Brought</string>
+		</array>
 	</dict>
 	<dict>
 		<key>order</key>
