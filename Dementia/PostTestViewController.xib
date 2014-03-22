@@ -42,7 +42,7 @@
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdc-3H-nu6">
-                    <rect key="frame" x="53" y="187" width="663" height="155"/>
+                    <rect key="frame" x="53" y="198" width="663" height="711"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum tortor eget augue feugiat ornare. Integer placerat lacus in tellus pharetra blandit. Vestibulum porttitor auctor condimentum. Ut velit risus, ullamcorper rutrum metus nec, tincidunt dapibus sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse molestie sem ac enim vulputate commodo. Suspendisse potenti. In ultricies odio risus, sed pharetra ligula pharetra ut. Vivamus volutpat justo at auctor hendrerit. Nullam iaculis elit sit amet quam elementum iaculis. Ut vehicula lectus odio, vitae vulputate felis sodales vel. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a dolor quis felis commodo auctor sit amet non ante.

@@ -14,9 +14,15 @@
 		<key>testName</key>
 		<string>Naming</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum</string>
+		<string>In each part of this section, a picture is shown, the person has to name the object shown in the picture. No time limit is enforced for the task.
+
+Incorrect answers are recorded and no prompt for alternative word is provided.
+
+Corrections are allowed; only the final answer is taken for scoring.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum</string>
+		<string>The “Language - Naming” section is now completed.
+
+The next section of the test is “Language Comprehension”</string>
 		<key>imageDictionaries</key>
 		<array>
 			<dict>
@@ -97,9 +103,15 @@
 		<key>testName</key>
 		<string>Comprehension</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum 2</string>
+		<string>On each screen 8 objects are shown, a question is either read by the person or to the person, depending on preference. The person has to select one of the 8 objects as an answer to the questions.
+            
+Some questions will require the repetition of an earlier item to serve as an answer; participants are not warned about this in advance but this can be clarified if queried. If no answer is provided, no picture should be selected.
+
+Self-corrections are allowed; only the final answer is taken for scoring.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum 2</string>
+		<string>The “Language - Comprehension” section is now completed.
+
+The next section of the test is Memory - Recall”</string>
 		<key>imageDictionaries</key>
 		<array>
 			<dict>
@@ -245,9 +257,13 @@
 		<key>testName</key>
 		<string>Immediate Recall</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum 2</string>
+		<string>In this test, a story  should be read at a steady pace of 2 words per second/the story should take around 20 seconds to read out. When finished reading story aloud, say to participant “Now that’s the end of the story, what can you remember?”.
+            
+Select the parts that they remember correctly. Time for recall is unlimited, until participants say that they can remember no more. Self -corrections are allowed; only the final answer is taken for scoring.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum 2</string>
+		<string>The “Memory - Immediate Recall” section is now completed.
+
+The next section of the test is “Language - Spelling”</string>
 		<key>story</key>
 		<string>Last Sunday, the annual litter collection took place in Primrose Woods. Forty two people joined in to remove old bicycles and shopping trolleys. Mr Douglas Watt from the woodland project told local reporters that he was very impressed and especially proud of the 17 children who came along.</string>
 		<key>buttonNames</key>
@@ -266,9 +282,13 @@
 		<key>testName</key>
 		<string>Spelling</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum 2</string>
+		<string>In this test, the person is given a word and asked to spell it. If the person is using assistive technology, ask them to turn off any predictive text facility.  As the person responds with each letter, click ‘yes’ if it is the correct letter, no if it is not.
+
+Unlimited time is given for spelling of each word. All words are assessed even if early words in the list are incorrect. Move on to the next word if participant is unable or unwilling to attempt spelling of one word.  Self corrections are allowed; only the final answer is taken.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum 2</string>
+		<string>The “Language - Spelling” section is now completed.
+            
+The next section of the test is “Fluency - S”</string>
 		<key>toSpell</key>
 		<array>
 			<string>Envelope</string>
@@ -293,11 +313,15 @@
 		<key>categoryName</key>
 		<string>Fluency</string>
 		<key>testName</key>
-		<string>LetterS</string>
+		<string>Letter S</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum 2</string>
+		<string>The person can perform this task either by speaking or writing. In part one  Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter. But not names of people or places, or numbers. If writing, say: “You will have two minutes and the letter is S.” If speaking, say “You will have one minute and the letter is S.” Tell the participant to stop when the device vibrates.
+
+In part two the person copies/repeats these words. If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.” If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum 2</string>
+		<string>The “Fluency S” section is now completed.
+
+The next section of the test is “Reverse Digit Span”</string>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -309,9 +333,15 @@
 		<key>testName</key>
 		<string>ReverseDigitSpan</string>
 		<key>preTestInstructions</key>
-		<string>lorem ipsum 2</string>
+		<string>Numbers should be read out at a pace of 1 number per second. Say: "I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice.
+            
+If I say ‘7 1 9’, what would you say?" If participant cannot complete the practice trial, another practice trial is provided at the level of two digits, before moving on to test items. If a participant cannot complete a practice trial at the level of two items, the test is scored as 0 out of 12 and no further test items are attempted. Advance warning that the number sequences will increase in length is provided at the start of each line of a trial.
+
+In order to score a trial of a line as correct, participant must accurately recall all items in reverse order. No score is given for individual numbers correctly recalled in an incorrectly recalled sequence. If person gets at least one trial of a line correct, move on to the next line. Self-corrections are allowed; only the final answer is taken for scoring. Stop when person gets both trials of a line wrong.</string>
 		<key>postTestMessage</key>
-		<string>lorem ipsum 2</string>
+		<string>The Reverse Digits” section is now completed.
+
+The next section of the test is “Alteration”</string>
 	</dict>
 </array>
 </plist>

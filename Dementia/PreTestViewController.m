@@ -32,6 +32,7 @@
 		// Set my own title
 		[titleLabel setText:[test getFullTestName]];
 		[textView setText:[test preTestInstructions]];
+		[textView setFont:[UIFont systemFontOfSize:36]];
 	}
 }
 

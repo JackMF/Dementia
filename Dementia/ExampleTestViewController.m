@@ -56,7 +56,6 @@
 		NSString *finishedMessage = [NSString stringWithFormat:@"%i correct answers", correct];
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finished" message:finishedMessage delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
 		[alert show];
-
 	}
 	[super hasFinished];
 }
