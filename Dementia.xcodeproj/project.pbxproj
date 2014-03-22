@@ -505,6 +505,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = chris;
 				TargetAttributes = {
+					83A14FA718D33C4E0037980A = {
+						DevelopmentTeam = 26R7HX9L96;
+					};
 					83A14FC218D33C4E0037980A = {
 						TestTargetID = 83A14FA718D33C4E0037980A;
 					};
@@ -739,13 +742,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Wait (98TCEGCLBT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B59DA2D4-49D9-46A2-BA92-C538CD1ACA39";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -755,13 +759,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Wait (98TCEGCLBT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B59DA2D4-49D9-46A2-BA92-C538CD1ACA39";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

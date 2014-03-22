@@ -20,89 +20,89 @@
 
 -(id)init
 {
-    self = [super init];
-    if (self) {
-        // Set our pre-test controller
-        preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
-        preTestViewController.test = self;
-        // Set our post-test controller
-        postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
-        postTestViewController.test = self;
-    }
-    return self;
+	self = [super init];
+	if (self) {
+		// Set our pre-test controller
+		preTestViewController = [[PreTestViewController alloc] initWithNibName:@"PreTestViewController" bundle:nil];
+		preTestViewController.test = self;
+		// Set our post-test controller
+		postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
+		postTestViewController.test = self;
+	}
+	return self;
 }
 
 // Initialises the test using a dictionary from the property list
 -(id)initWithPlistDict:(NSDictionary *)plistDict
 {
-    if (self = [self init]) {
-        if (plistDict) {
-            order = (int) [[plistDict valueForKey:@"order"] integerValue];
-            className = [plistDict valueForKey:@"className"];
-            categoryName = [plistDict valueForKey:@"categoryName"];
-            testName = [plistDict valueForKey:@"testName"];
-            preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
-            postTestMessage = [plistDict valueForKey:@"postTestMessage"];
-           
-            hasControlPanel = YES;
-            if([[plistDict allKeys] containsObject:@"hasControlPanel"])
-                hasControlPanel = [[plistDict valueForKey:@"hasControlPanel"] boolValue];
-            
-            if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
-                    
-            if ([[plistDict allKeys] containsObject:@"questions"]) questions = [plistDict valueForKey:@"questions"];
-            if ([[plistDict allKeys] containsObject:@"story"]) story = [plistDict valueForKey:@"story"];
-            
-            if ([[plistDict allKeys] containsObject:@"buttonNames"]) buttonNames = [plistDict valueForKey:@"buttonNames"];
-            
-            if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
-           
-            // Set our test controller
-            testViewController = [[NSClassFromString(className) alloc] init];
-           if (!testViewController)
-               return nil;
+	if (self = [self init]) {
+		if (plistDict) {
+			order = (int) [[plistDict valueForKey:@"order"] integerValue];
+			className = [plistDict valueForKey:@"className"];
+			categoryName = [plistDict valueForKey:@"categoryName"];
+			testName = [plistDict valueForKey:@"testName"];
+			preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
+			postTestMessage = [plistDict valueForKey:@"postTestMessage"];
 
-            [testViewController setTest:self];
-        }
-    }
-    return self;
+			hasControlPanel = YES;
+			if([[plistDict allKeys] containsObject:@"hasControlPanel"])
+				hasControlPanel = [[plistDict valueForKey:@"hasControlPanel"] boolValue];
+
+			if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
+
+			if ([[plistDict allKeys] containsObject:@"questions"]) questions = [plistDict valueForKey:@"questions"];
+			if ([[plistDict allKeys] containsObject:@"story"]) story = [plistDict valueForKey:@"story"];
+
+			if ([[plistDict allKeys] containsObject:@"buttonNames"]) buttonNames = [plistDict valueForKey:@"buttonNames"];
+
+			if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
+
+			// Set our test controller
+			testViewController = [[NSClassFromString(className) alloc] init];
+			if (!testViewController)
+				return nil;
+
+			[testViewController setTest:self];
+		}
+	}
+	return self;
 }
 
 -(void)launchWithNavigationController:(UINavigationController *)navController
 {
-    navigationController = navController;       // Store reference to the navigation controller
-    [self startPreTest];
+	navigationController = navController;       // Store reference to the navigation controller
+	[self startPreTest];
 }
 
 -(void)startPreTest
 {
-    [navigationController pushViewController:preTestViewController animated:YES];
+	[navigationController pushViewController:preTestViewController animated:YES];
 }
 
 -(void)startTest
 {
-    [navigationController pushViewController:(UIViewController *)testViewController animated:YES];
+	[navigationController pushViewController:(UIViewController *)testViewController animated:YES];
 }
 
 -(void)startPostTest
 {
-    [navigationController pushViewController:postTestViewController animated:YES];
+	[navigationController pushViewController:postTestViewController animated:YES];
 }
 
 -(void)endTest
 {
-    [navigationController popToRootViewControllerAnimated:YES];
+	[navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(NSString *)getFullTestName
 {
-    return [NSString stringWithFormat:@"%@ - %@", categoryName, testName];
+	return [NSString stringWithFormat:@"%@ - %@", categoryName, testName];
 }
 
 -(void)addToTestScore:(int)toAdd
 {
-    testScore+=toAdd;
-    NSLog(@"Score: %i", testScore);      // Log the new score
+	testScore+=toAdd;
+	NSLog(@"Score: %i", testScore);      // Log the new score
 
 }
 

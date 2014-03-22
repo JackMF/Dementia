@@ -11,19 +11,17 @@
 
 @interface LanguageComprehensionViewController : TestViewController
 {
-    NSArray *imagesDicts;
-    NSArray *questionDicts;
-    BOOL isSelected;
-    int currentScore;
-    int currentQuestionOrder;
-    NSString *currentButtonSelected;
-    NSString * correctAnswer;
-    
-    __weak IBOutlet UILabel *questionLabel;
-    __weak IBOutlet UIButton *nextQuesiton;
+	NSArray *imagesDicts;
+	NSArray *questionDicts;
+	BOOL isSelected;
+	int currentQuestionOrder;
+	NSString *currentButtonSelected;
+	NSString * correctAnswer;
+
+	__weak IBOutlet UILabel *questionLabel;
+	__weak IBOutlet UIButton *nextQuesiton;
 }
 - (IBAction)imageButtonPressed:(id)sender;
-
 - (IBAction)nextButtonPressed:(id)sender;
 
 @end

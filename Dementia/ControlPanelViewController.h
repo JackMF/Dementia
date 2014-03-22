@@ -11,12 +11,12 @@
 
 @interface ControlPanelViewController : UIViewController
 {
-    __weak IBOutlet UIButton *yesButton;
-    __weak IBOutlet UIButton *noButton;
-    __weak IBOutlet UIButton *confirmButton;
-    __weak IBOutlet UIView *controlPanelView;
-    ControlPanelViewController *cpVC;
-    
+	__weak IBOutlet UIButton *yesButton;
+	__weak IBOutlet UIButton *noButton;
+	__weak IBOutlet UIButton *confirmButton;
+	__weak IBOutlet UIView *controlPanelView;
+	ControlPanelViewController *cpVC;
+
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
