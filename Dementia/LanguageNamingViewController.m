@@ -31,6 +31,7 @@
 	[super viewWillAppear:animated];
 	currentImageOrder = 0;  // Reset the current image we're showing
 	[self loadNextImage];   // Load the next (i.e first) image
+    [super makeDynamicControlPanel];
 }
 
 - (void)viewDidLoad

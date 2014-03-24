@@ -13,6 +13,11 @@
 {
     
     
+    __weak IBOutlet UILabel *toSpellLabel;
+    int questionOrder;
+    NSArray *toSpellArray;
+    
 }
+
 
 @end

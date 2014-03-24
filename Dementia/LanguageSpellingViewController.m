@@ -28,6 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    questionOrder = 0;
+    toSpellArray = [test toSpell];
+    [toSpellLabel setText:[toSpellArray objectAtIndex:questionOrder]];
+     
     // Do any additional setup after loading the view from its nib.
 }
 

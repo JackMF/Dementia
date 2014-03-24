@@ -16,4 +16,6 @@
 @property (nonatomic) ControlPanelViewController *controlPanelViewController;
 -(void)hasFinished;
 -(void)didConfirmAnswer;
+-(void)makeStaticControlPanel;
+-(void)makeDynamicControlPanel;
 @end

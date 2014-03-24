@@ -35,20 +35,47 @@
 		NSLog(@"NO TEST");
 	}
 	[self.test setTestScore:0];
-	if ([self.test hasControlPanel]) {
-		controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
-		// Add the control panel to the view
-		[self addChildViewController:controlPanelViewController];
-		CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
-		[controlPanelViewController.view setFrame:cpFrame];
-		[controlPanelViewController setTestVSDelegate:self];
-		[self.view addSubview:controlPanelViewController.view];
-		[controlPanelViewController didMoveToParentViewController:self];
+//	if ([self.test hasControlPanel]) {
+//		controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+//		// Add the control panel to the view
+//		[self addChildViewController:controlPanelViewController];
+//		CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
+//		[controlPanelViewController.view setFrame:cpFrame];
+//		[controlPanelViewController setTestVSDelegate:self];
+//		[self.view addSubview:controlPanelViewController.view];
+//		[controlPanelViewController didMoveToParentViewController:self];
+//
+//		// Add the control event stuff
+//		UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
+//		[self.view addGestureRecognizer:singleFingerTap];
+//	}
+}
 
-		// Add the control event stuff
-		UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
-		[self.view addGestureRecognizer:singleFingerTap];
-	}
+-(void)makeStaticControlPanel{
+    controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+    // Add the control panel to the view
+    [self addChildViewController:controlPanelViewController];
+    CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
+    [controlPanelViewController.view setFrame:cpFrame];
+    [controlPanelViewController setTestVSDelegate:self];
+    [self.view addSubview:controlPanelViewController.view];
+    [controlPanelViewController didMoveToParentViewController:self];
+    
+}
+-(void)makeDynamicControlPanel{
+    controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+    // Add the control panel to the view
+    [self addChildViewController:controlPanelViewController];
+    CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
+    [controlPanelViewController.view setFrame:cpFrame];
+    [controlPanelViewController setTestVSDelegate:self];
+    [self.view addSubview:controlPanelViewController.view];
+    [controlPanelViewController didMoveToParentViewController:self];
+    
+    // Add the control event stuff
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
+    [self.view addGestureRecognizer:singleFingerTap];
+    
 }
 
 -(void)didConfirmAnswer
