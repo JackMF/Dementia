@@ -20,7 +20,5 @@
     
 }
 
--(void)loadNextWord;
-- (IBAction)nextButtonPressed:(id)sender;
 
 @end

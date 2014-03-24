@@ -8,6 +8,7 @@
 
 #import "LanguageSpellingViewController.h"
 #import "Test.h"
+#import "ControlPanelViewController.h"
 #define kImageViewAnimationDuration 0.6
 
 @interface LanguageSpellingViewController ()
@@ -33,13 +34,12 @@
     wordOrder = 0;
     toSpellArray = [test toSpell];
     [super makeDynamicControlPanel];
-    [super showContolPanel];
+   // [super showContolPanel];
     [self loadNextWord];
     
     
   
     
-    //[toSpellLabel setText:[toSpellArray objectAtIndex:wordOrder]];
 
     
     
@@ -51,9 +51,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    
- 
     
 }
 
@@ -77,12 +74,20 @@
 	        toSpellLabel.frame = originalFrame;     // Animate the inputImageView in from the right
 		}];
 	}];
-    wordOrder++;
+
     
 }
 
-- (IBAction)nextButtonPressed:(id)sender {
-    [self loadNextWord];
+
+
+- (void)didConfirmAnswer
+{
+	if ([[super controlPanelViewController] answerWasCorrect])
+		[test addToTestScore:1];            // If we're correct, update the score for this test
+	wordOrder++;                    // Increment our  image order
+	if (wordOrder < [toSpellArray count])  // If there's still images left
+		[self loadNextWord];               // Load the next image
+	else [super hasFinished];  // Otherwise tell the Test we've finished, and our score
 }
 
 - (void)didReceiveMemoryWarning
