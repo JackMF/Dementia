@@ -11,14 +11,9 @@
 
 @interface LanguageSpellingViewController : TestViewController
 {
-
-
 	__weak IBOutlet UILabel *toSpellLabel;
 	int wordOrder;
 	NSArray *toSpellArray;
-
 }
-
 -(void)loadNextWord;
-
 @end
