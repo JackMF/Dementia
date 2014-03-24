@@ -28,32 +28,22 @@
 	return self;
 }
 
+-(void)viewDidLoad
+{
+	[super viewDidLoad];
+	self.title = [test getFullTestName];
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	if (![self test]) {
-		NSLog(@"NO TEST");
-	}
 	[self.test setTestScore:0];
-//	if ([self.test hasControlPanel]) {
-//		controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
-//		// Add the control panel to the view
-//		[self addChildViewController:controlPanelViewController];
-//		CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
-//		[controlPanelViewController.view setFrame:cpFrame];
-//		[controlPanelViewController setTestVSDelegate:self];
-//		[self.view addSubview:controlPanelViewController.view];
-//		[controlPanelViewController didMoveToParentViewController:self];
-//
-//		// Add the control event stuff
-//		UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
-//		[self.view addGestureRecognizer:singleFingerTap];
-//	}
 }
 
--(void)makeControlPanel
+-(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
 {
 	controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+	[controlPanelViewController setIsDynamic:isDynamic];
 	// Add the control panel to the view
 	[self addChildViewController:controlPanelViewController];
 	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
@@ -64,28 +54,20 @@
 }
 
 -(void)makeStaticControlPanel {
-	[self makeControlPanel];
+	[self makeControlPanelWithIsDynamic:NO];
+	[controlPanelViewController performSelectorOnMainThread:@selector(showControlPanel) withObject:nil waitUntilDone:NO];
 }
 -(void)makeDynamicControlPanel {
-	[self makeControlPanel];
-	// Add the control event stuff
+	[self makeControlPanelWithIsDynamic:YES];
+	// Add gesture recognizer
 	UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:controlPanelViewController action:@selector(toggleControlPanel)];
 	[self.view addGestureRecognizer:singleFingerTap];
-
 }
 
 -(void)didConfirmAnswer
 {
 }
 
--(void)showContolPanel {
-	[controlPanelViewController showControlPanel];
-}
-
--(void)viewDidLoad
-{
-	[super viewDidLoad];
-}
 
 -(BOOL)automaticallyAdjustsScrollViewInsets
 {

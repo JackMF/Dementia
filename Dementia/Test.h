@@ -32,7 +32,6 @@
 
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
-@property (nonatomic) BOOL hasControlPanel;
 
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;

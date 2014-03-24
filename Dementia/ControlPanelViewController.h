@@ -17,12 +17,14 @@
 	__weak IBOutlet UIView *controlPanelView;
 	ControlPanelViewController *cpVC;
 
+
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
 @property (nonatomic) TestViewController *testVSDelegate;
 @property (nonatomic) BOOL isDisplayed;
 @property (nonatomic) BOOL answerWasCorrect;
+@property (nonatomic) BOOL isDynamic;
 - (void)toggleControlPanel;
 -(void)showControlPanel;
 -(void)hideControlPanel;

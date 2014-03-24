@@ -17,6 +17,7 @@
 @implementation ControlPanelViewController
 @synthesize testVSDelegate;
 @synthesize isDisplayed;
+@synthesize isDynamic;
 @synthesize answerWasCorrect;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +25,7 @@
 	if (self) {
 		// Custom initialization
 		isDisplayed = NO;
+		isDynamic = NO;
 	}
 	return self;
 }
@@ -34,19 +36,22 @@
 	// Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+}
 
 // Handle presses of the confirm button
 - (IBAction)confirmButtonPressed:(id)sender {
 	[testVSDelegate didConfirmAnswer];      // Tell our test view controller we have an answer
+	[self resetDecisionButtons];        // First reset the appearance of the buttons
 	[confirmButton setHidden:YES];          // Hide the confirm button
-	[self hideControlPanel];       // Hide the control panel
+	if (isDynamic)                     // If we're using a dynamic control panel
+		[self hideControlPanel];       // Hide the control panel
 }
 
-// Show the control panel at the bottom of the screen
--(void)showControlPanel
+-(void)animateControlPanelToY:(double)newY
 {
 	CGRect currentFrame = controlPanelView.frame;
-	double newY = currentFrame.origin.y - currentFrame.size.height;
 	CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:kControlPanelAnimationDuration];
@@ -54,22 +59,22 @@
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
 	controlPanelView.frame = newFrame;
 	[UIView commitAnimations];
+}
+
+// Show the control panel at the bottom of the screen
+-(void)showControlPanel
+{
+	double newY = 0.0;
+	[self animateControlPanelToY:newY];
 	isDisplayed = YES;
 }
 // Hide the control panel at the bottom of the screen
 -(void)hideControlPanel
 {
 	[confirmButton setHidden:YES];
-	[self resetDecisionButtons];    // First reset the appearance of the buttons
-	CGRect currentFrame = controlPanelView.frame;
-	double newY = currentFrame.origin.y + currentFrame.size.height;
-	CGRect newFrame = CGRectMake(currentFrame.origin.x, newY, currentFrame.size.width, currentFrame.size.height);
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:kControlPanelAnimationDuration];
-	[UIView setAnimationDelay:0.0];
-	[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-	controlPanelView.frame = newFrame;
-	[UIView commitAnimations];
+	[self resetDecisionButtons];        // First reset the appearance of the buttons
+	double newY = 185.0;
+	[self animateControlPanelToY:newY];
 	isDisplayed = NO;
 }
 
@@ -92,10 +97,12 @@
 // Triggered when the invisible button at the bottom of the screen is pressed
 - (void)toggleControlPanel
 {
-	if ([self isDisplayed])
-		[self hideControlPanel];
-	else
-		[self showControlPanel];
+	if (isDynamic) {
+		if ([self isDisplayed])
+			[self hideControlPanel];
+		else
+			[self showControlPanel];
+	}
 }
 
 - (void)didReceiveMemoryWarning

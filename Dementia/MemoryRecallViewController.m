@@ -34,7 +34,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.title = [test getFullTestName];
 
 	buttonListViewController = [[ButtonListViewController alloc] initWithNibName:@"ButtonListViewController" bundle:nil];
 	// Add the control panel to the view

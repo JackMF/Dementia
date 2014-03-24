@@ -11,16 +11,14 @@
 
 @interface LanguageSpellingViewController : TestViewController
 {
-    
-    
-    __weak IBOutlet UIButton *tempNextButton;
-    __weak IBOutlet UILabel *toSpellLabel;
-    int wordOrder;
-    NSArray *toSpellArray;
-    
+
+
+	__weak IBOutlet UILabel *toSpellLabel;
+	int wordOrder;
+	NSArray *toSpellArray;
+
 }
 
 -(void)loadNextWord;
-- (IBAction)nextButtonPressed:(id)sender;
 
 @end

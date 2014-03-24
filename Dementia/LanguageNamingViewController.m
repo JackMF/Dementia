@@ -31,13 +31,12 @@
 	[super viewWillAppear:animated];
 	currentImageOrder = 0;  // Reset the current image we're showing
 	[self loadNextImage];   // Load the next (i.e first) image
-    [super makeDynamicControlPanel];
+	[super makeDynamicControlPanel];
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.title = [test getFullTestName];           // Set this ViewController's title
 	imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
 

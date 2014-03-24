@@ -3,8 +3,6 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>hasControlPanel</key>
-		<true/>
 		<key>order</key>
 		<integer>0</integer>
 		<key>className</key>
@@ -92,8 +90,6 @@ The next section of the test is “Language Comprehension”</string>
 		</array>
 	</dict>
 	<dict>
-		<key>hasControlPanel</key>
-		<false/>
 		<key>order</key>
 		<integer>1</integer>
 		<key>className</key>

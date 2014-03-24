@@ -41,7 +41,6 @@
 
 	[nextQuesiton setHidden:YES];
 
-	self.title = [test getFullTestName];
 	imagesDicts = [test imageDictionaries];
 
 	for (NSDictionary *imageDict in imagesDicts) {
@@ -66,90 +65,90 @@
 
 - (IBAction)imageButtonPressed:(id)sender {
 
-    
-    
-    UIButton* button = (UIButton*)sender;
-    NSString* nameOfButton = [[button currentImage] accessibilityIdentifier];
-    UIImage *buttonImage = [button imageForState:UIControlStateNormal];
-    
-    for (NSDictionary *imageDict in imagesDicts) {
-        UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-        if (buttonImage == newImage) {
-            nameOfButton = [imageDict valueForKey:@"filename"];
-            
-        }
-    }
-    
-    if (!isSelected) { //case when nothing is selected
-        button.selected = YES;
-        currentButtonSelected = nameOfButton;
-        isSelected = YES;
-        [nextQuesiton setHidden:NO];
-        ///NSLog(@"Current Image Selected1: %@", currentButtonSelected);
-    }
-    else if(isSelected && currentButtonSelected == nameOfButton){ //case when the current button is selcted
-        button.selected = NO;
-        isSelected = NO;
-        currentButtonSelected = nil;
-        [nextQuesiton setHidden:YES];
-        //NSLog(@"Current Image Selected2: %@", currentButtonSelected);
-        
-        
-    }
-    else{
-        button.selected = YES;
-        isSelected = YES;
-        [nextQuesiton setHidden:NO];
-        
-        currentButtonSelected = nameOfButton;
-        //NSLog(@"Current Image Selected3: %@", currentButtonSelected);
-        for (id object in [self.view subviews]) {
-            if ([object isKindOfClass:[UIButton class]]) {
-                UIButton *button2 = (UIButton *) object;
-                if (button2 != button) {
-                    button2.selected = NO;
-                    
-                    CGRect buttonFrame = button2.frame;
-                    //double borderSize = 5;
 
-                    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y - kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
-                    
-                    UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-                    [borderView setBackgroundColor:[UIColor whiteColor]];
-                    [self.view insertSubview:borderView belowSubview:button2];
-                    
-                }
-                
-                
-            }
-        }
-        
-    }
-    
 
-    CGRect buttonFrame = button.frame;
+	UIButton* button = (UIButton*)sender;
+	NSString* nameOfButton = [[button currentImage] accessibilityIdentifier];
+	UIImage *buttonImage = [button imageForState:UIControlStateNormal];
 
-    CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
+	for (NSDictionary *imageDict in imagesDicts) {
+		UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
+		if (buttonImage == newImage) {
+			nameOfButton = [imageDict valueForKey:@"filename"];
 
-    
-    UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-    
+		}
+	}
 
-    if (button.selected){
-        [borderView setBackgroundColor:[UIColor grayColor]];
-        
-        
-    }
-    else {
-        [borderView setBackgroundColor:[UIColor whiteColor]];
-        
-        
-    }
-    [self.view insertSubview:borderView belowSubview:button];
-    
-    
+	if (!isSelected) { //case when nothing is selected
+		button.selected = YES;
+		currentButtonSelected = nameOfButton;
+		isSelected = YES;
+		[nextQuesiton setHidden:NO];
+		///NSLog(@"Current Image Selected1: %@", currentButtonSelected);
+	}
+	else if(isSelected && currentButtonSelected == nameOfButton) { //case when the current button is selcted
+		button.selected = NO;
+		isSelected = NO;
+		currentButtonSelected = nil;
+		[nextQuesiton setHidden:YES];
+		//NSLog(@"Current Image Selected2: %@", currentButtonSelected);
 
-    
+
+	}
+	else{
+		button.selected = YES;
+		isSelected = YES;
+		[nextQuesiton setHidden:NO];
+
+		currentButtonSelected = nameOfButton;
+		//NSLog(@"Current Image Selected3: %@", currentButtonSelected);
+		for (id object in [self.view subviews]) {
+			if ([object isKindOfClass:[UIButton class]]) {
+				UIButton *button2 = (UIButton *) object;
+				if (button2 != button) {
+					button2.selected = NO;
+
+					CGRect buttonFrame = button2.frame;
+					//double borderSize = 5;
+
+					CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y - kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
+
+					UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+					[borderView setBackgroundColor:[UIColor whiteColor]];
+					[self.view insertSubview:borderView belowSubview:button2];
+
+				}
+
+
+			}
+		}
+
+	}
+
+
+	CGRect buttonFrame = button.frame;
+
+	CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
+
+
+	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+
+
+	if (button.selected) {
+		[borderView setBackgroundColor:[UIColor grayColor]];
+
+
+	}
+	else {
+		[borderView setBackgroundColor:[UIColor whiteColor]];
+
+
+	}
+	[self.view insertSubview:borderView belowSubview:button];
+
+
+
+
 }
 
 

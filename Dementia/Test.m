@@ -16,7 +16,6 @@
 @synthesize testViewController;
 @synthesize testScore;
 @synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story,buttonNames, toSpell;
-@synthesize hasControlPanel;
 
 -(id)init
 {
@@ -44,10 +43,6 @@
 			preTestInstructions = [plistDict valueForKey:@"preTestInstructions"];
 			postTestMessage = [plistDict valueForKey:@"postTestMessage"];
 
-			hasControlPanel = NO;
-			if([[plistDict allKeys] containsObject:@"hasControlPanel"])
-				hasControlPanel = [[plistDict valueForKey:@"hasControlPanel"] boolValue];
-
 			if ([[plistDict allKeys] containsObject:@"imageDictionaries"]) imageDictionaries = [plistDict valueForKey:@"imageDictionaries"];
 
 			if ([[plistDict allKeys] containsObject:@"questions"]) questions = [plistDict valueForKey:@"questions"];
@@ -58,10 +53,9 @@
 			if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
 
 			// Set our test controller
-			testViewController = [[NSClassFromString(className) alloc] init];
+			testViewController = [[NSClassFromString(className) alloc] initWithNibName:className bundle:nil];
 			if (!testViewController)
 				return nil;
-
 			[testViewController setTest:self];
 		}
 	}
