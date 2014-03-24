@@ -18,4 +18,5 @@
 -(void)didConfirmAnswer;
 -(void)makeStaticControlPanel;
 -(void)makeDynamicControlPanel;
+-(void)showContolPanel;
 @end

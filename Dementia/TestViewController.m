@@ -53,6 +53,8 @@
 
 -(void)makeStaticControlPanel{
     controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
+    
+
     // Add the control panel to the view
     [self addChildViewController:controlPanelViewController];
     CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
@@ -60,6 +62,10 @@
     [controlPanelViewController setTestVSDelegate:self];
     [self.view addSubview:controlPanelViewController.view];
     [controlPanelViewController didMoveToParentViewController:self];
+    
+    
+    
+
     
 }
 -(void)makeDynamicControlPanel{
@@ -80,6 +86,10 @@
 
 -(void)didConfirmAnswer
 {
+}
+
+-(void)showContolPanel{
+    [controlPanelViewController showControlPanel];
 }
 
 -(void)viewDidLoad
