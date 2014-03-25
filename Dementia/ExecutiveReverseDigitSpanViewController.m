@@ -40,10 +40,14 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     digitsOrder = 0;
+    currentScore = 0;
+    rowOfPreviousAnswer = 0;
     //[super makeStaticControlPanel];
     digitsArray = [test Digits];
     [self loadNextDigits];
     [self makeButtons];
+
+    
     
 }
 
@@ -57,6 +61,7 @@
 
     
     NSArray *digits= [reversedDigits componentsSeparatedByString:@" "];
+    numberOfDigits = [digits count];
     
 	
     
@@ -64,7 +69,7 @@
 	// Add the control panel to the view
 	[self addChildViewController:buttonListViewController];
     
-	CGRect cpFrame = CGRectMake(150.0, 600.0, 768.0, 100.0);
+	CGRect cpFrame = CGRectMake(80.0, 600.0, 600.0, 150.0);
 	[buttonListViewController.view setFrame:cpFrame];
     
 	NSArray *buttonLabelValues = digits;
@@ -119,9 +124,35 @@
 
 -(void)nextButtonPressed:(id)sender{
     
+     //Caclulating Score
+    int curentRow = numberOfDigits -1;
+    BOOL isCorrect = ([buttonListViewController getNumberOfCorrectAnswers] == numberOfDigits);
+    
+    //Checking if we need to stop
+    if(curentRow == rowOfPreviousAnswer){
+        if (!previousAnswerCorrect && !isCorrect){
+            [super hasFinished];
+        }
+    }
+    
+    else{
+        
+        if (isCorrect) [test addToTestScore:1];
+        
+    }
+    
+    //Loading Next Question
+    previousAnswerCorrect = isCorrect;
+    rowOfPreviousAnswer = curentRow;
     digitsOrder++;
-    [self loadNextDigits];
-    [self makeButtons];
+    if (digitsOrder < [digitsArray count]){
+        [self loadNextDigits];
+        [self makeButtons];
+    }
+    
+    else{
+        [super hasFinished];
+    }
     
 }
 

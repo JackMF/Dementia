@@ -14,6 +14,10 @@
 {
     NSArray *digitsArray;
     int digitsOrder;
+    BOOL previousAnswerCorrect;
+    int rowOfPreviousAnswer;
+    int currentScore;
+    int numberOfDigits;
     ButtonListViewController *buttonListViewController;
     
     __weak IBOutlet UIButton *nextButton;
