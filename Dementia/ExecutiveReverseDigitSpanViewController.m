@@ -46,9 +46,6 @@
     digitsArray = [test Digits];
     [self loadNextDigits];
     [self makeButtons];
-
-    
-    
 }
 
 -(void)makeButtons{
@@ -133,6 +130,7 @@
         if (!previousAnswerCorrect && !isCorrect){
             [super hasFinished];
         }
+        else if (isCorrect) [test addToTestScore:1];
     }
     
     else{
@@ -155,8 +153,6 @@
     }
     
 }
-
-
 
 
 - (void)didReceiveMemoryWarning
