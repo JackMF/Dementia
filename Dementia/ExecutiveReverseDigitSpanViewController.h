@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "TestViewController.h"
+@class ButtonListViewController;
 
 @interface ExecutiveReverseDigitSpanViewController : TestViewController
 {
     NSArray *digitsArray;
+    int digitsOrder;
+    ButtonListViewController *buttonListViewController;
     
+    __weak IBOutlet UIButton *nextButton;
     __weak IBOutlet UILabel *toReverseLabel;
 }
+- (IBAction)nextButtonPressed:(id)sender;
 
 
 @end
