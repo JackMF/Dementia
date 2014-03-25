@@ -79,6 +79,10 @@
 		83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BC18D3D9C2002846B1 /* swan.jpg */; };
 		83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD799318D5F9A60055A26C /* ExampleTestViewController.m */; };
 		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
+		9C0E72AD18E0D3F5004BD383 /* FluencyLetterSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */; };
+		9C0E72AE18E0D3F5004BD383 /* FluencyLetterSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */; };
+		9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B7AA818E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m */; };
+		9C8B7AAB18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8B7AA918E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib */; };
 		9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */; };
 		9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB203DA18DDB38A0080BFB2 /* LanguageSpellingViewController.m */; };
 		9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB203DB18DDB38A0080BFB2 /* LanguageSpellingViewController.xib */; };
@@ -182,6 +186,12 @@
 		83FD799218D5F9A60055A26C /* ExampleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTestViewController.h; sourceTree = "<group>"; };
 		83FD799318D5F9A60055A26C /* ExampleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTestViewController.m; sourceTree = "<group>"; };
 		83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTestViewController.xib; sourceTree = "<group>"; };
+		9C0E72AA18E0D3F5004BD383 /* FluencyLetterSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluencyLetterSViewController.h; sourceTree = "<group>"; };
+		9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FluencyLetterSViewController.m; sourceTree = "<group>"; };
+		9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FluencyLetterSViewController.xib; sourceTree = "<group>"; };
+		9C8B7AA718E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecutiveReverseDigitSpanViewController.h; sourceTree = "<group>"; };
+		9C8B7AA818E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecutiveReverseDigitSpanViewController.m; sourceTree = "<group>"; };
+		9C8B7AA918E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveReverseDigitSpanViewController.xib; sourceTree = "<group>"; };
 		9C9935E118D88E73007E0D25 /* MemoryRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryRecallViewController.h; sourceTree = "<group>"; };
 		9C9935E218D88E73007E0D25 /* MemoryRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryRecallViewController.m; sourceTree = "<group>"; };
 		9CB203D918DDB38A0080BFB2 /* LanguageSpellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSpellingViewController.h; sourceTree = "<group>"; };
@@ -411,6 +421,8 @@
 				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
 				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
 				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
+				9C0E72A918E0C728004BD383 /* 5.FluencyLetterS */,
+				9C8B7AA618E0C514005F8497 /* 6. Excutive Reverse Digit Span */,
 				8359B67F18D377E6001BDDB8 /* DebugViewController */,
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
@@ -466,6 +478,26 @@
 				83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */,
 			);
 			name = ExampleTestViewController;
+			sourceTree = "<group>";
+		};
+		9C0E72A918E0C728004BD383 /* 5.FluencyLetterS */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E72AA18E0D3F5004BD383 /* FluencyLetterSViewController.h */,
+				9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */,
+				9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */,
+			);
+			name = 5.FluencyLetterS;
+			sourceTree = "<group>";
+		};
+		9C8B7AA618E0C514005F8497 /* 6. Excutive Reverse Digit Span */ = {
+			isa = PBXGroup;
+			children = (
+				9C8B7AA718E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.h */,
+				9C8B7AA818E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m */,
+				9C8B7AA918E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib */,
+			);
+			name = "6. Excutive Reverse Digit Span";
 			sourceTree = "<group>";
 		};
 		9C9935E018D88DF1007E0D25 /* 3. Memory Recall */ = {
@@ -606,10 +638,12 @@
 				8353CC3718D34CB300226AB4 /* train.jpg in Resources */,
 				8353CC1918D34CB300226AB4 /* apple.jpg in Resources */,
 				83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */,
+				9C0E72AE18E0D3F5004BD383 /* FluencyLetterSViewController.xib in Resources */,
 				8353CC2418D34CB300226AB4 /* cow.jpg in Resources */,
 				8353CC2E18D34CB300226AB4 /* lion.jpg in Resources */,
 				8353CC2F18D34CB300226AB4 /* onion.jpg in Resources */,
 				8353CC3818D34CB300226AB4 /* truck.jpg in Resources */,
+				9C8B7AAB18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib in Resources */,
 				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
@@ -639,6 +673,8 @@
 				8359B67818D37720001BDDB8 /* TestViewController.m in Sources */,
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
 				9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */,
+				9C0E72AD18E0D3F5004BD383 /* FluencyLetterSViewController.m in Sources */,
+				9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
