@@ -15,7 +15,7 @@
 @implementation Test
 @synthesize testViewController;
 @synthesize testScore;
-@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story,buttonNames, toSpell, Digits;
+@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story,buttonNames, toSpell, buttonText;
 
 -(id)init
 {
@@ -51,7 +51,7 @@
 			if ([[plistDict allKeys] containsObject:@"buttonNames"]) buttonNames = [plistDict valueForKey:@"buttonNames"];
 
 			if ([[plistDict allKeys] containsObject:@"toSpell"]) toSpell = [plistDict valueForKey:@"toSpell"];
-			if ([[plistDict allKeys] containsObject:@"Digits"]) Digits = [plistDict valueForKey:@"Digits"];
+			if ([[plistDict allKeys] containsObject:@"buttonText"]) buttonText = [plistDict valueForKey:@"buttonText"];
             
 
 			// Set our test controller

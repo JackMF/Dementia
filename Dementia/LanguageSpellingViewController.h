@@ -14,7 +14,7 @@
 	__weak IBOutlet UILabel *toSpellLabel;
 	int wordOrder;
 	NSArray *toSpellArray;
-    
+    __weak IBOutlet UILabel *promtLabel;
 }
 -(void)loadNextWord;
 @end

@@ -7,7 +7,17 @@
 //
 
 #import "TestViewController.h"
+#import <UIKit/UIKit.h>
+
+@class ButtonListViewController;
 
 @interface ExecutiveAlternationViewController : TestViewController
+{
+    __weak IBOutlet UIButton *finishButton;
+    NSArray *buttonText;
+    ButtonListViewController *buttonListViewController;
+}
+
+- (IBAction)finishButtonPressed:(id)sender;
 
 @end

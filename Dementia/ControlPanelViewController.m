@@ -84,6 +84,7 @@
 	[self resetDecisionButtons];
 	answerWasCorrect = (sender==yesButton); // Correct if the tester pushed the Yes button
 	[(UIButton *)sender setBackgroundColor :[UIColor redColor]];
+    //[(UIButton *)sender setTintColor:[UIColor greenColor]];
 	[confirmButton setHidden:NO];           // Show the confirm button
 }
 

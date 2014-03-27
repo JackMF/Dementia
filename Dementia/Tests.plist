@@ -328,7 +328,7 @@ In part two the person copies/repeats these words. If writing, say: “Copy thes
 The next section of the test is “Reverse Digit Span”</string>
 	</dict>
 	<dict>
-		<key>Digits</key>
+		<key>buttonText</key>
 		<array>
 			<string>2 6</string>
 			<string>5 8</string>
@@ -350,7 +350,7 @@ The next section of the test is “Reverse Digit Span”</string>
 		<key>categoryName</key>
 		<string>Executive</string>
 		<key>testName</key>
-		<string>ReverseDigitSpan</string>
+		<string>Reverse Digit Span</string>
 		<key>preTestInstructions</key>
 		<string>Numbers should be read out at a pace of 1 number per second. Say: &quot;I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice.
             
@@ -361,6 +361,83 @@ In order to score a trial of a line as correct, participant must accurately reca
 		<string>The Reverse Digits” section is now completed.
 
 The next section of the test is “Alteration”</string>
+	</dict>
+	<dict>
+		<key>buttonText</key>
+		<array>
+			<string>4-D</string>
+			<string>5-E</string>
+			<string>6-F</string>
+			<string>7-G</string>
+			<string>8-H</string>
+			<string>9-I</string>
+			<string>10-J</string>
+			<string>11-K</string>
+			<string>12-L</string>
+			<string>13-M</string>
+			<string>15-O</string>
+		</array>
+		<key>order</key>
+		<integer>6</integer>
+		<key>className</key>
+		<string>ExecutiveAlternationViewController</string>
+		<key>categoryName</key>
+		<string>Executive</string>
+		<key>testName</key>
+		<string>Alternation</string>
+		<key>preTestInstructions</key>
+		<string>text</string>
+		<key>postTestMessage</key>
+		<string>text</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>7</integer>
+		<key>className</key>
+		<string>FluencyLetterTViewController</string>
+		<key>categoryName</key>
+		<string>Fluency</string>
+		<key>testName</key>
+		<string>Letter T</string>
+		<key>preTestInstructions</key>
+		<string>The person can perform this task either by speaking or writing. In part one  Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter. But not names of people or places, or numbers. If writing, say: “You will have two minutes and the letter is S.” If speaking, say “You will have one minute and the letter is S.” Tell the participant to stop when the device vibrates.
+
+In part two the person copies/repeats these words. If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.” If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin.</string>
+		<key>postTestMessage</key>
+		<string>The “Fluency T” section is now completed.
+
+The next section of the test is “Reverse Digit Span”</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>8</integer>
+		<key>className</key>
+		<string>VisuospatialDotCountingViewController</string>
+		<key>categoryName</key>
+		<string>Visuospatial</string>
+		<key>testName</key>
+		<string>Dot Counting</string>
+		<key>preTestInstructions</key>
+		<string>In each part of this section, a picture is shown, the person has to name the object shown in the picture. No time limit is enforced for the task.
+
+Incorrect answers are recorded and no prompt for alternative word is provided.
+
+Corrections are allowed; only the final answer is taken for scoring.</string>
+		<key>postTestMessage</key>
+		<string>The “Language - Naming” section is now completed.
+
+The next section of the test is “Language Comprehension”</string>
+		<key>imageDictionaries</key>
+		<array>
+			<dict>
+				<key>order</key>
+				<integer>0</integer>
+				<key>filename</key>
+				<string>visuiospatial1.jpg</string>
+				<key>name</key>
+				<string>1</string>
+			</dict>
+		</array>
 	</dict>
 </array>
 </plist>

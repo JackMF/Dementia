@@ -11,7 +11,7 @@
 #import "Test.h"
 #import "ControlPanelViewController.h"
 #import "ButtonListViewController.h"
-#define kImageViewAnimationDuration 0.6
+#define kImageViewAnimationDuration 0.2
 
 
 @interface ExecutiveReverseDigitSpanViewController ()
@@ -43,7 +43,7 @@
     currentScore = 0;
     rowOfPreviousAnswer = 0;
     //[super makeStaticControlPanel];
-    digitsArray = [test Digits];
+    digitsArray = [test buttonText];
     [self loadNextDigits];
     [self makeButtons];
 }
@@ -81,8 +81,7 @@
 -(void)loadNextDigits{
     
     NSMutableString *newDigits = [digitsArray objectAtIndex:digitsOrder];
-    //NSString *reversedDigits = [newDigits rever]
-            
+  
     
 	CGRect originalFrame = toReverseLabel.frame;
 	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
@@ -136,9 +135,7 @@
     else{
         
         if (isCorrect) [test addToTestScore:1];
-        
     }
-    
     //Loading Next Question
     previousAnswerCorrect = isCorrect;
     rowOfPreviousAnswer = curentRow;
@@ -153,7 +150,6 @@
     }
     
 }
-
 
 - (void)didReceiveMemoryWarning
 {

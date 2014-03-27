@@ -7,12 +7,14 @@
 //
 
 #import "ExecutiveAlternationViewController.h"
-
+#import "Test.h"
+#import "ButtonListViewController.h"
 @interface ExecutiveAlternationViewController ()
 
 @end
 
 @implementation ExecutiveAlternationViewController
+@synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,6 +23,28 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    buttonText = [test buttonText];
+    
+    
+    buttonListViewController = [[ButtonListViewController alloc] initWithNibName:@"ButtonListViewController" bundle:nil];
+	// Add the control panel to the view
+	[self addChildViewController:buttonListViewController];
+    
+	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 485.0, 768.0, 185.0);
+	[buttonListViewController.view setFrame:cpFrame];
+    
+	NSArray *buttonLabelValues = buttonText;
+	[buttonListViewController setButtonLabelValues:buttonLabelValues];
+    
+	[self.view addSubview:buttonListViewController.view];
+	[buttonListViewController didMoveToParentViewController:self];
+    
+    
 }
 
 - (void)viewDidLoad
@@ -35,4 +59,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)finishButtonPressed:(id)sender {
+    [test addToTestScore:[buttonListViewController getNumberOfCorrectAnswers]];
+    [super hasFinished];
+    
+}
 @end

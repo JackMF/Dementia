@@ -19,6 +19,7 @@
     int currentScore;
     int numberOfDigits;
     ButtonListViewController *buttonListViewController;
+    __weak IBOutlet UILabel *promtLabel;
     
     __weak IBOutlet UIButton *nextButton;
     __weak IBOutlet UILabel *toReverseLabel;

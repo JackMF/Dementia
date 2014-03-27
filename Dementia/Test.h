@@ -29,7 +29,7 @@
 @property (nonatomic) NSString *story;
 @property (nonatomic) NSArray *buttonNames;
 @property (nonatomic) NSArray *toSpell;
-@property (nonatomic) NSArray *Digits;
+@property (nonatomic) NSArray *buttonText;
 
 @property (nonatomic) int testScore;
 @property (nonatomic) TestViewController *testViewController;
