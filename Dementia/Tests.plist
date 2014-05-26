@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>order</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>className</key>
 		<string>LanguageNamingViewController</string>
 		<key>categoryName</key>
@@ -91,7 +91,7 @@ The next section of the test is “Language Comprehension”</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>className</key>
 		<string>LanguageComprehensionViewController</string>
 		<key>categoryName</key>
@@ -245,7 +245,7 @@ The next section of the test is Memory - Recall”</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>2</integer>
+		<integer>3</integer>
 		<key>className</key>
 		<string>MemoryRecallViewController</string>
 		<key>categoryName</key>
@@ -278,7 +278,7 @@ The next section of the test is “Language - Spelling”</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>3</integer>
+		<integer>4</integer>
 		<key>className</key>
 		<string>LanguageSpellingViewController</string>
 		<key>categoryName</key>
@@ -311,7 +311,7 @@ The next section of the test is “Fluency - S”</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>4</integer>
+		<integer>5</integer>
 		<key>className</key>
 		<string>FluencyLetterSViewController</string>
 		<key>categoryName</key>
@@ -344,7 +344,7 @@ The next section of the test is “Reverse Digit Span”</string>
 			<string>2 3 6 8 4 9 2</string>
 		</array>
 		<key>order</key>
-		<integer>5</integer>
+		<integer>6</integer>
 		<key>className</key>
 		<string>ExecutiveReverseDigitSpanViewController</string>
 		<key>categoryName</key>
@@ -378,7 +378,7 @@ The next section of the test is “Alteration”</string>
 			<string>15-O</string>
 		</array>
 		<key>order</key>
-		<integer>6</integer>
+		<integer>7</integer>
 		<key>className</key>
 		<string>ExecutiveAlternationViewController</string>
 		<key>categoryName</key>
@@ -392,7 +392,7 @@ The next section of the test is “Alteration”</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>7</integer>
+		<integer>8</integer>
 		<key>className</key>
 		<string>FluencyLetterTViewController</string>
 		<key>categoryName</key>
@@ -406,11 +406,11 @@ In part two the person copies/repeats these words. If writing, say: “Copy thes
 		<key>postTestMessage</key>
 		<string>The “Fluency T” section is now completed.
 
-The next section of the test is “Reverse Digit Span”</string>
+The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>8</integer>
+		<integer>9</integer>
 		<key>className</key>
 		<string>VisuospatialDotCountingViewController</string>
 		<key>categoryName</key>
@@ -418,15 +418,11 @@ The next section of the test is “Reverse Digit Span”</string>
 		<key>testName</key>
 		<string>Dot Counting</string>
 		<key>preTestInstructions</key>
-		<string>In each part of this section, a picture is shown, the person has to name the object shown in the picture. No time limit is enforced for the task.
-
-Incorrect answers are recorded and no prompt for alternative word is provided.
-
-Corrections are allowed; only the final answer is taken for scoring.</string>
+		<string></string>
 		<key>postTestMessage</key>
-		<string>The “Language - Naming” section is now completed.
+		<string>The “Visuospatial - Dot Counting&quot; section is now completed.
 
-The next section of the test is “Language Comprehension”</string>
+The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 		<key>imageDictionaries</key>
 		<array>
 			<dict>
@@ -438,6 +434,116 @@ The next section of the test is “Language Comprehension”</string>
 				<string>1</string>
 			</dict>
 		</array>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>10</integer>
+		<key>className</key>
+		<string>VisuospatialCubeCountingViewController</string>
+		<key>categoryName</key>
+		<string>Visuospatial</string>
+		<key>testName</key>
+		<string>Cube Counting</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Visuospatial - Cube Counting” section is now completed.
+
+The next section of the test is “Visuospatial - Number Location&quot;</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>11</integer>
+		<key>className</key>
+		<string>VisuospatialNumberLocationViewController</string>
+		<key>categoryName</key>
+		<string>Visuospatial</string>
+		<key>testName</key>
+		<string>Number Location</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Visuospatial - Number Location” section is now completed.
+
+The next section of the test is “Executive - Sentence Completion”</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>12</integer>
+		<key>className</key>
+		<string>ExecutiveSentenceCompletionViewController</string>
+		<key>categoryName</key>
+		<string>Executive</string>
+		<key>testName</key>
+		<string>Sentence Completion</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Executive - Sentence Completion” section is now completed.
+
+The next section of the test is “Social Cognition - Part A&quot;.</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>13</integer>
+		<key>className</key>
+		<string>SocialCognitionPartAViewController</string>
+		<key>categoryName</key>
+		<string>Social Cognition</string>
+		<key>testName</key>
+		<string>Part A</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Social Cognition - Part A” section is now completed.
+
+The next section of the test is “Social Cognition - Part B&quot;.</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>14</integer>
+		<key>className</key>
+		<string>SocialCognitionPartAViewController</string>
+		<key>categoryName</key>
+		<string>Social Cognition</string>
+		<key>testName</key>
+		<string>Part B</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Social Cognition - Part B” section is now completed.
+
+The next section of the test is “Memory - Delayed Recall&quot;.</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>15</integer>
+		<key>className</key>
+		<string>MemoryDelayedRecognitionViewController</string>
+		<key>categoryName</key>
+		<string>Memory</string>
+		<key>testName</key>
+		<string>Delayed Recognition</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Memory - Delayed Recall” section is now completed.</string>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>12</integer>
+		<key>className</key>
+		<string>ExecutiveSentenceCompletionViewController</string>
+		<key>categoryName</key>
+		<string>Executive</string>
+		<key>testName</key>
+		<string>Sentence Completion</string>
+		<key>preTestInstructions</key>
+		<string></string>
+		<key>postTestMessage</key>
+		<string>The “Executive - Sentence Completion” section is now completed.
+
+The next section of the test is “Social Cognition - Part A&quot;.</string>
 	</dict>
 </array>
 </plist>

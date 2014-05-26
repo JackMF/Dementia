@@ -70,6 +70,26 @@
 		83A14FDB18D33E080037980A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FDA18D33E080037980A /* CoreLocation.framework */; };
 		83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */; };
 		83A14FE018D33FC30037980A /* LanguageNamingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */; };
+		83A57DF51933A1E700CBDFC5 /* ExecutiveAlternationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57DF31933A1E700CBDFC5 /* ExecutiveAlternationViewController.m */; };
+		83A57DF61933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57DF41933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib */; };
+		83A57DFB1933A21800CBDFC5 /* FluencyLetterTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57DF91933A21800CBDFC5 /* FluencyLetterTViewController.m */; };
+		83A57DFC1933A21800CBDFC5 /* FluencyLetterTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57DFA1933A21800CBDFC5 /* FluencyLetterTViewController.xib */; };
+		83A57E011933A23500CBDFC5 /* VisuospatialDotCountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57DFF1933A23500CBDFC5 /* VisuospatialDotCountingViewController.m */; };
+		83A57E021933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E001933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib */; };
+		83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E0D1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m */; };
+		83A57E141933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E121933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m */; };
+		83A57E191933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E171933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m */; };
+		83A57E1E1933A59300CBDFC5 /* SocialCognitionPartAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */; };
+		83A57E231933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */; };
+		83A57E241933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */; };
+		83A57E281933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */; };
+		83A57E291933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */; };
+		83A57E2D1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */; };
+		83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */; };
+		83A57E301933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */; };
+		83A57E321933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */; };
+		83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */; };
+		83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */; };
 		83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5E75418DDC12A00FF375C /* ButtonListViewController.m */; };
 		83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */; };
 		83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */; };
@@ -174,6 +194,36 @@
 		83A14FDC18D33FC30037980A /* LanguageNamingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageNamingViewController.h; sourceTree = "<group>"; };
 		83A14FDD18D33FC30037980A /* LanguageNamingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageNamingViewController.m; sourceTree = "<group>"; };
 		83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageNamingViewController.xib; sourceTree = "<group>"; };
+		83A57DF21933A1E700CBDFC5 /* ExecutiveAlternationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecutiveAlternationViewController.h; sourceTree = "<group>"; };
+		83A57DF31933A1E700CBDFC5 /* ExecutiveAlternationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecutiveAlternationViewController.m; sourceTree = "<group>"; };
+		83A57DF41933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveAlternationViewController.xib; sourceTree = "<group>"; };
+		83A57DF81933A21800CBDFC5 /* FluencyLetterTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluencyLetterTViewController.h; sourceTree = "<group>"; };
+		83A57DF91933A21800CBDFC5 /* FluencyLetterTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FluencyLetterTViewController.m; sourceTree = "<group>"; };
+		83A57DFA1933A21800CBDFC5 /* FluencyLetterTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FluencyLetterTViewController.xib; sourceTree = "<group>"; };
+		83A57DFE1933A23500CBDFC5 /* VisuospatialDotCountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisuospatialDotCountingViewController.h; sourceTree = "<group>"; };
+		83A57DFF1933A23500CBDFC5 /* VisuospatialDotCountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisuospatialDotCountingViewController.m; sourceTree = "<group>"; };
+		83A57E001933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialDotCountingViewController.xib; sourceTree = "<group>"; };
+		83A57E0C1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisuospatialCubeCountingViewController.h; sourceTree = "<group>"; };
+		83A57E0D1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisuospatialCubeCountingViewController.m; sourceTree = "<group>"; };
+		83A57E111933A57800CBDFC5 /* VisuospatialNumberLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisuospatialNumberLocationViewController.h; sourceTree = "<group>"; };
+		83A57E121933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisuospatialNumberLocationViewController.m; sourceTree = "<group>"; };
+		83A57E161933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecutiveSentenceCompletionViewController.h; sourceTree = "<group>"; };
+		83A57E171933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecutiveSentenceCompletionViewController.m; sourceTree = "<group>"; };
+		83A57E1B1933A59300CBDFC5 /* SocialCognitionPartAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialCognitionPartAViewController.h; sourceTree = "<group>"; };
+		83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCognitionPartAViewController.m; sourceTree = "<group>"; };
+		83A57E201933A5AA00CBDFC5 /* SocialCognitionPartBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialCognitionPartBViewController.h; sourceTree = "<group>"; };
+		83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCognitionPartBViewController.m; sourceTree = "<group>"; };
+		83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialCognitionPartBViewController.xib; sourceTree = "<group>"; };
+		83A57E251933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDelayedRecallViewController.h; sourceTree = "<group>"; };
+		83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDelayedRecallViewController.m; sourceTree = "<group>"; };
+		83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDelayedRecallViewController.xib; sourceTree = "<group>"; };
+		83A57E2A1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDelayedRecognitionViewController.h; sourceTree = "<group>"; };
+		83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDelayedRecognitionViewController.m; sourceTree = "<group>"; };
+		83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDelayedRecognitionViewController.xib; sourceTree = "<group>"; };
+		83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialCognitionPartAViewController.xib; sourceTree = "<group>"; };
+		83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveSentenceCompletionViewController.xib; sourceTree = "<group>"; };
+		83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialNumberLocationViewController.xib; sourceTree = "<group>"; };
+		83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialCubeCountingViewController.xib; sourceTree = "<group>"; };
 		83D5E75318DDC12A00FF375C /* ButtonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonListViewController.h; sourceTree = "<group>"; };
 		83D5E75418DDC12A00FF375C /* ButtonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonListViewController.m; sourceTree = "<group>"; };
 		83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListViewController.xib; sourceTree = "<group>"; };
@@ -279,14 +329,14 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
-		8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */ = {
+		8353CC3D18D35C3500226AB4 /* 2. Language Comprehension */ = {
 			isa = PBXGroup;
 			children = (
 				8353CC3E18D35C4C00226AB4 /* LanguageComprehensionViewController.h */,
 				8353CC3F18D35C4C00226AB4 /* LanguageComprehensionViewController.m */,
 				83E763B018D3BBEE002846B1 /* LanguageComprehensionViewController.xib */,
 			);
-			name = "2. LanguageComprehension";
+			name = "2. Language Comprehension";
 			sourceTree = "<group>";
 		};
 		8359B67418D376EF001BDDB8 /* PreTest */ = {
@@ -416,18 +466,8 @@
 		83A14FE118D33FCD0037980A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				83D5E75818DDCC0300FF375C /* Custom UI Elements */,
-				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
-				8353CC3D18D35C3500226AB4 /* 2. LanguageComprehension */,
-				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
-				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
-				9C0E72A918E0C728004BD383 /* 5.FluencyLetterS */,
-				9C8B7AA618E0C514005F8497 /* 6. Excutive Reverse Digit Span */,
-				8359B67F18D377E6001BDDB8 /* DebugViewController */,
-				8359B67418D376EF001BDDB8 /* PreTest */,
-				8359B67518D376F8001BDDB8 /* PostTest */,
-				8359B67E18D377A8001BDDB8 /* TestViewController */,
-				83FD799118D5F9890055A26C /* ExampleTestViewController */,
+				83A57E0B1933A31F00CBDFC5 /* Other */,
+				83A57E0A1933A31200CBDFC5 /* Tests */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -440,6 +480,142 @@
 				83A14FDE18D33FC30037980A /* LanguageNamingViewController.xib */,
 			);
 			name = "1. LanguageNaming";
+			sourceTree = "<group>";
+		};
+		83A57DF11933A17700CBDFC5 /* 7. ExecutiveAlternation */ = {
+			isa = PBXGroup;
+			children = (
+				83A57DF21933A1E700CBDFC5 /* ExecutiveAlternationViewController.h */,
+				83A57DF31933A1E700CBDFC5 /* ExecutiveAlternationViewController.m */,
+				83A57DF41933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib */,
+			);
+			name = "7. ExecutiveAlternation";
+			sourceTree = "<group>";
+		};
+		83A57DF71933A1FA00CBDFC5 /* 8. FluencyLetterT */ = {
+			isa = PBXGroup;
+			children = (
+				83A57DF81933A21800CBDFC5 /* FluencyLetterTViewController.h */,
+				83A57DF91933A21800CBDFC5 /* FluencyLetterTViewController.m */,
+				83A57DFA1933A21800CBDFC5 /* FluencyLetterTViewController.xib */,
+			);
+			name = "8. FluencyLetterT";
+			sourceTree = "<group>";
+		};
+		83A57DFD1933A22700CBDFC5 /* 9. Visuospatial Dot Counting */ = {
+			isa = PBXGroup;
+			children = (
+				83A57DFE1933A23500CBDFC5 /* VisuospatialDotCountingViewController.h */,
+				83A57DFF1933A23500CBDFC5 /* VisuospatialDotCountingViewController.m */,
+				83A57E001933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib */,
+			);
+			name = "9. Visuospatial Dot Counting";
+			sourceTree = "<group>";
+		};
+		83A57E031933A27700CBDFC5 /* 10. Visuospatial Cube Counting */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E0C1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.h */,
+				83A57E0D1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m */,
+				83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */,
+			);
+			name = "10. Visuospatial Cube Counting";
+			sourceTree = "<group>";
+		};
+		83A57E041933A2A200CBDFC5 /* 11. Visuospatial Number Location */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E111933A57800CBDFC5 /* VisuospatialNumberLocationViewController.h */,
+				83A57E121933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m */,
+				83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */,
+			);
+			name = "11. Visuospatial Number Location";
+			sourceTree = "<group>";
+		};
+		83A57E051933A2B300CBDFC5 /* 12. Executive Sentence Completion */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E161933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.h */,
+				83A57E171933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m */,
+				83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */,
+			);
+			name = "12. Executive Sentence Completion";
+			sourceTree = "<group>";
+		};
+		83A57E061933A2C500CBDFC5 /* 13. Social Cognition Part A */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E1B1933A59300CBDFC5 /* SocialCognitionPartAViewController.h */,
+				83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */,
+				83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */,
+			);
+			name = "13. Social Cognition Part A";
+			sourceTree = "<group>";
+		};
+		83A57E071933A2CB00CBDFC5 /* 14. Social Cognition Part B */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E201933A5AA00CBDFC5 /* SocialCognitionPartBViewController.h */,
+				83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */,
+				83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */,
+			);
+			name = "14. Social Cognition Part B";
+			sourceTree = "<group>";
+		};
+		83A57E081933A2E900CBDFC5 /* 15. Memory Delayed Recall */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E251933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.h */,
+				83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */,
+				83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */,
+			);
+			name = "15. Memory Delayed Recall";
+			sourceTree = "<group>";
+		};
+		83A57E091933A2F500CBDFC5 /* 16. Memory Delayed Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				83A57E2A1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.h */,
+				83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */,
+				83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */,
+			);
+			name = "16. Memory Delayed Recognition";
+			sourceTree = "<group>";
+		};
+		83A57E0A1933A31200CBDFC5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				83A14FE218D33FD20037980A /* 1. LanguageNaming */,
+				8353CC3D18D35C3500226AB4 /* 2. Language Comprehension */,
+				9C9935E018D88DF1007E0D25 /* 3. Memory Recall */,
+				9CB203D818DDB2DD0080BFB2 /* 4. Language Spelling */,
+				9C0E72A918E0C728004BD383 /* 5. FluencyLetterS */,
+				9C8B7AA618E0C514005F8497 /* 6. Excutive Reverse Digit Span */,
+				83A57DF11933A17700CBDFC5 /* 7. ExecutiveAlternation */,
+				83A57DF71933A1FA00CBDFC5 /* 8. FluencyLetterT */,
+				83A57DFD1933A22700CBDFC5 /* 9. Visuospatial Dot Counting */,
+				83A57E031933A27700CBDFC5 /* 10. Visuospatial Cube Counting */,
+				83A57E041933A2A200CBDFC5 /* 11. Visuospatial Number Location */,
+				83A57E051933A2B300CBDFC5 /* 12. Executive Sentence Completion */,
+				83A57E061933A2C500CBDFC5 /* 13. Social Cognition Part A */,
+				83A57E071933A2CB00CBDFC5 /* 14. Social Cognition Part B */,
+				83A57E081933A2E900CBDFC5 /* 15. Memory Delayed Recall */,
+				83A57E091933A2F500CBDFC5 /* 16. Memory Delayed Recognition */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		83A57E0B1933A31F00CBDFC5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				83D5E75818DDCC0300FF375C /* Custom UI Elements */,
+				8359B67F18D377E6001BDDB8 /* DebugViewController */,
+				8359B67418D376EF001BDDB8 /* PreTest */,
+				8359B67518D376F8001BDDB8 /* PostTest */,
+				8359B67E18D377A8001BDDB8 /* TestViewController */,
+				83FD799118D5F9890055A26C /* ExampleTestViewController */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		83D5E75118DDC11500FF375C /* ButtonList */ = {
@@ -480,14 +656,14 @@
 			name = ExampleTestViewController;
 			sourceTree = "<group>";
 		};
-		9C0E72A918E0C728004BD383 /* 5.FluencyLetterS */ = {
+		9C0E72A918E0C728004BD383 /* 5. FluencyLetterS */ = {
 			isa = PBXGroup;
 			children = (
 				9C0E72AA18E0D3F5004BD383 /* FluencyLetterSViewController.h */,
 				9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */,
 				9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */,
 			);
-			name = 5.FluencyLetterS;
+			name = "5. FluencyLetterS";
 			sourceTree = "<group>";
 		};
 		9C8B7AA618E0C514005F8497 /* 6. Excutive Reverse Digit Span */ = {
@@ -599,7 +775,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A14FB618D33C4E0037980A /* InfoPlist.strings in Resources */,
+				83A57DFC1933A21800CBDFC5 /* FluencyLetterTViewController.xib in Resources */,
+				83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */,
 				8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */,
+				83A57E021933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib in Resources */,
 				8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */,
 				8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */,
 				9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */,
@@ -607,12 +786,14 @@
 				8353CC3018D34CB300226AB4 /* pear.jpg in Resources */,
 				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
 				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
+				83A57E241933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib in Resources */,
 				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
 				833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */,
 				8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */,
 				8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */,
 				8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */,
 				8353CC1F18D34CB300226AB4 /* bird.jpg in Resources */,
+				83A57E321933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib in Resources */,
 				8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */,
 				8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */,
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
@@ -625,11 +806,15 @@
 				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
 				83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */,
 				8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */,
+				83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */,
+				83A57E301933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib in Resources */,
+				83A57DF61933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib in Resources */,
 				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
 				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
 				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
 				8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */,
 				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
+				83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */,
 				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
 				8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */,
 				8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */,
@@ -645,6 +830,7 @@
 				8353CC3818D34CB300226AB4 /* truck.jpg in Resources */,
 				9C8B7AAB18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib in Resources */,
 				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
+				83A57E291933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib in Resources */,
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
 				8358EBE418DDEE3500E1AAC9 /* icon.png in Resources */,
@@ -669,22 +855,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A57DFB1933A21800CBDFC5 /* FluencyLetterTViewController.m in Sources */,
 				83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */,
 				8359B67818D37720001BDDB8 /* TestViewController.m in Sources */,
+				83A57E1E1933A59300CBDFC5 /* SocialCognitionPartAViewController.m in Sources */,
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
 				9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */,
 				9C0E72AD18E0D3F5004BD383 /* FluencyLetterSViewController.m in Sources */,
 				9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */,
+				83A57E191933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
+				83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */,
 				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
+				83A57E281933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m in Sources */,
+				83A57E231933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m in Sources */,
+				83A57DF51933A1E700CBDFC5 /* ExecutiveAlternationViewController.m in Sources */,
+				83A57E2D1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
 				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
+				83A57E011933A23500CBDFC5 /* VisuospatialDotCountingViewController.m in Sources */,
 				9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */,
 				8359B67218D376E8001BDDB8 /* PreTestViewController.m in Sources */,
 				8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */,
+				83A57E141933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m in Sources */,
 				83A14FB818D33C4E0037980A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,7 +939,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -782,7 +979,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -804,8 +1002,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
@@ -821,8 +1019,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dementia/Dementia-Prefix.pch";
 				INFOPLIST_FILE = "Dementia/Dementia-Info.plist";
