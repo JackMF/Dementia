@@ -16,6 +16,8 @@
     __weak IBOutlet UIButton *finishButton;
     NSArray *buttonText;
     ButtonListViewController *buttonListViewController;
+    __weak IBOutlet UITextView *intructText;
+ 
 }
 
 - (IBAction)finishButtonPressed:(id)sender;

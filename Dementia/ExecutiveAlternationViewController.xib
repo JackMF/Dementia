@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExecutiveAlternationViewController">
             <connections>
                 <outlet property="finishButton" destination="zf8-4B-tRq" id="NG1-VM-ICS"/>
+                <outlet property="intructText" destination="oUi-uN-y6x" id="4ac-oJ-kqK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,6 +27,14 @@
                         <action selector="finishButtonPressed:" destination="-1" eventType="touchUpInside" id="w3E-oH-8AE"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-uN-y6x">
+                    <rect key="frame" x="18" y="242" width="733" height="143"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <string key="text">Say: "I want you to alternate between numbers, starting with 1-A, then 2-B, 3-C and so on. Please continue from there, alternating between numbers and letters, in order, without skipping any untill I tell you to stop."</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
