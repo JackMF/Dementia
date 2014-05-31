@@ -7,12 +7,16 @@
 //
 
 #import "MemoryDelayedRecallViewController.h"
+#import "Test.h"
+#import "ButtonListViewController.h"
+
 
 @interface MemoryDelayedRecallViewController ()
 
 @end
 
 @implementation MemoryDelayedRecallViewController
+@synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,11 +26,27 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    buttonListViewController = [[ButtonListViewController alloc] initWithNibName:@"ButtonListViewController" bundle:nil];
+	// Add the control panel to the view
+	[self addChildViewController:buttonListViewController];
+    
+	CGRect cpFrame = CGRectMake(150.0, 300.0, 478.0, 700.0);
+	[buttonListViewController.view setFrame:cpFrame];
+    
+	NSArray *buttonLabelValues = [test buttonNames];
+	[buttonListViewController setButtonLabelValues:buttonLabelValues];
+    
+	[buttonListViewController setOneItemPerRow:YES];
+    
+	[self.view addSubview:buttonListViewController.view];
+	[buttonListViewController didMoveToParentViewController:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +54,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (IBAction)finishButtonPressed:(id)sender {
+	int corrent = [buttonListViewController getNumberOfCorrectAnswers];
+	[test addToTestScore:corrent];
+	[super hasFinished];
+}
 @end

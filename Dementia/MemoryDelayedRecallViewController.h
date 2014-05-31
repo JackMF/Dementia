@@ -7,7 +7,16 @@
 //
 
 #import "TestViewController.h"
+#import <UIKit/UIKit.h>
+
+@class ButtonListViewController;
 
 @interface MemoryDelayedRecallViewController : TestViewController
-
+{
+    __weak IBOutlet UITextView *instructText;
+    ButtonListViewController *buttonListViewController;
+}
+- (IBAction)finishButtonPressed:(id)sender;
 @end
+
+

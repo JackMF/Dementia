@@ -520,6 +520,33 @@ The next section of the test is “Memory - Delayed Recall&quot;.</string>
 		<key>order</key>
 		<integer>15</integer>
 		<key>className</key>
+		<string>MemoryDelayedRecallViewController</string>
+		<key>categoryName</key>
+		<string>Memory</string>
+		<key>testName</key>
+		<string>Delayed Recall</string>
+		<key>preTestInstructions</key>
+		<string>Text</string>
+		<key>postTestMessage</key>
+		<string>The “Memory - Delayed Recall” section is now completed.</string>
+		<key>buttonNames</key>
+		<array>
+			<string>Sunday</string>
+			<string>Annual litter collection</string>
+			<string>Primrose woods</string>
+			<string>Forty-two people</string>
+			<string>Bicycles and shopping trolleys</string>
+			<string>Douglas watt</string>
+			<string>Woodland project</string>
+			<string>Impressed and especially proud</string>
+			<string>17</string>
+			<string>children</string>
+		</array>
+	</dict>
+	<dict>
+		<key>order</key>
+		<integer>16</integer>
+		<key>className</key>
 		<string>MemoryDelayedRecognitionViewController</string>
 		<key>categoryName</key>
 		<string>Memory</string>
@@ -529,22 +556,6 @@ The next section of the test is “Memory - Delayed Recall&quot;.</string>
 		<string></string>
 		<key>postTestMessage</key>
 		<string>The “Memory - Delayed Recall” section is now completed.</string>
-	</dict>
-	<dict>
-		<key>order</key>
-		<integer>12</integer>
-		<key>className</key>
-		<string>ExecutiveSentenceCompletionViewController</string>
-		<key>categoryName</key>
-		<string>Executive</string>
-		<key>testName</key>
-		<string>Sentence Completion</string>
-		<key>preTestInstructions</key>
-		<string></string>
-		<key>postTestMessage</key>
-		<string>The “Executive - Sentence Completion” section is now completed.
-
-The next section of the test is “Social Cognition - Part A&quot;.</string>
 	</dict>
 </array>
 </plist>
