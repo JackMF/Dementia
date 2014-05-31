@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "Test.h"
 #import "ControlPanelViewController.h"
+#import "MultiControlPanelViewController.h"
 
 
 @interface TestViewController ()
@@ -40,7 +41,7 @@
 	[self.test setTestScore:0];
 }
 
--(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
+-(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic
 {
 	controlPanelViewController = [[ControlPanelViewController alloc] initWithNibName:@"ControlPanelViewController" bundle:nil];
 	[controlPanelViewController setIsDynamic:isDynamic];
@@ -68,6 +69,22 @@
 {
 }
 
+-(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
+{
+	MultiControlPanelViewController *multiControlPanelViewController = [[MultiControlPanelViewController alloc] initWithNibName:@"MultiControlPanelViewController" bundle:nil];
+	[multiControlPanelViewController setButtonTitles:titles];
+	controlPanelViewController = multiControlPanelViewController;
+	[controlPanelViewController setIsDynamic:NO];
+	// Add the control panel to the view
+	[self addChildViewController:controlPanelViewController];
+	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
+	[controlPanelViewController.view setFrame:cpFrame];
+	[controlPanelViewController setTestVSDelegate:self];
+	[self.view addSubview:controlPanelViewController.view];
+	[controlPanelViewController didMoveToParentViewController:self];
+
+	[controlPanelViewController performSelectorOnMainThread:@selector(showControlPanel) withObject:nil waitUntilDone:NO];
+}
 
 -(BOOL)automaticallyAdjustsScrollViewInsets
 {

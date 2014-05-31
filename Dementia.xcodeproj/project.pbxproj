@@ -90,6 +90,8 @@
 		83A57E321933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */; };
 		83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */; };
 		83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */; };
+		83C84AC1193A26030019ED65 /* MultiControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C84ABF193A26030019ED65 /* MultiControlPanelViewController.m */; };
+		83C84AC2193A26030019ED65 /* MultiControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC0193A26030019ED65 /* MultiControlPanelViewController.xib */; };
 		83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5E75418DDC12A00FF375C /* ButtonListViewController.m */; };
 		83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */; };
 		83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */; };
@@ -224,6 +226,9 @@
 		83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveSentenceCompletionViewController.xib; sourceTree = "<group>"; };
 		83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialNumberLocationViewController.xib; sourceTree = "<group>"; };
 		83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialCubeCountingViewController.xib; sourceTree = "<group>"; };
+		83C84ABE193A26030019ED65 /* MultiControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiControlPanelViewController.h; sourceTree = "<group>"; };
+		83C84ABF193A26030019ED65 /* MultiControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiControlPanelViewController.m; sourceTree = "<group>"; };
+		83C84AC0193A26030019ED65 /* MultiControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiControlPanelViewController.xib; sourceTree = "<group>"; };
 		83D5E75318DDC12A00FF375C /* ButtonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonListViewController.h; sourceTree = "<group>"; };
 		83D5E75418DDC12A00FF375C /* ButtonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonListViewController.m; sourceTree = "<group>"; };
 		83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListViewController.xib; sourceTree = "<group>"; };
@@ -280,6 +285,9 @@
 				833118CA18DCAB3900648698 /* ControlPanelViewController.h */,
 				833118CB18DCAB3900648698 /* ControlPanelViewController.m */,
 				833118CC18DCAB3900648698 /* ControlPanelViewController.xib */,
+				83C84ABE193A26030019ED65 /* MultiControlPanelViewController.h */,
+				83C84ABF193A26030019ED65 /* MultiControlPanelViewController.m */,
+				83C84AC0193A26030019ED65 /* MultiControlPanelViewController.xib */,
 			);
 			name = ControlPanel;
 			sourceTree = "<group>";
@@ -813,6 +821,7 @@
 				8353CC2018D34CB300226AB4 /* bow.jpg in Resources */,
 				8353CC3318D34CB300226AB4 /* squirrel.jpg in Resources */,
 				8353CC2D18D34CB300226AB4 /* Koala.jpg in Resources */,
+				83C84AC2193A26030019ED65 /* MultiControlPanelViewController.xib in Resources */,
 				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
 				83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */,
 				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
@@ -872,6 +881,7 @@
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
 				83A57E281933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m in Sources */,
 				83A57E231933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m in Sources */,
+				83C84AC1193A26030019ED65 /* MultiControlPanelViewController.m in Sources */,
 				83A57DF51933A1E700CBDFC5 /* ExecutiveAlternationViewController.m in Sources */,
 				83A57E2D1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,

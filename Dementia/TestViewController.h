@@ -19,4 +19,5 @@
 -(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
 -(void)makeStaticControlPanel;
 -(void)makeDynamicControlPanel;
+-(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
 @end

@@ -9,6 +9,7 @@
 #import "ControlPanelViewController.h"
 #import "TestViewController.h"
 #define kControlPanelAnimationDuration 0.2
+#define kControlPanelHeight 185.0f
 
 @interface ControlPanelViewController ()
 
@@ -73,8 +74,7 @@
 {
 	[confirmButton setHidden:YES];
 	[self resetDecisionButtons];        // First reset the appearance of the buttons
-	double newY = 185.0;
-	[self animateControlPanelToY:newY];
+	[self animateControlPanelToY:kControlPanelHeight];
 	isDisplayed = NO;
 }
 
@@ -84,7 +84,7 @@
 	[self resetDecisionButtons];
 	answerWasCorrect = (sender==yesButton); // Correct if the tester pushed the Yes button
 	[(UIButton *)sender setBackgroundColor :[UIColor redColor]];
-    //[(UIButton *)sender setTintColor:[UIColor greenColor]];
+	//[(UIButton *)sender setTintColor:[UIColor greenColor]];
 	[confirmButton setHidden:NO];           // Show the confirm button
 }
 

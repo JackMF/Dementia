@@ -9,5 +9,10 @@
 #import "TestViewController.h"
 
 @interface ExecutiveSentenceCompletionViewController : TestViewController
+{
+	int currentQuestionOrder;
+	NSArray *questions;
+	__weak IBOutlet UILabel *toCompleteLabel;
+}
 
 @end

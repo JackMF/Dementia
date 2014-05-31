@@ -477,6 +477,21 @@ The next section of the test is “Executive - Sentence Completion”</string>
 		<string>Executive</string>
 		<key>testName</key>
 		<string>Sentence Completion</string>
+		<key>questions</key>
+		<array>
+			<string>The postman knocked on the...</string>
+			<string>He brought his umbrella with him in case of</string>
+			<string>Sally spread her toast with butter and</string>
+			<string>John went to the barbers to get his hair</string>
+			<string>She dived into the swimming</string>
+			<string>They all went to the local café for something to</string>
+		</array>
+		<key>buttonNames</key>
+		<array>
+			<string>Different</string>
+			<string>Related</string>
+			<string>Exact</string>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>
