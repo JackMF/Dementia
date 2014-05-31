@@ -10,7 +10,6 @@
 		833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833118CB18DCAB3900648698 /* ControlPanelViewController.m */; };
 		833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833118CC18DCAB3900648698 /* ControlPanelViewController.xib */; };
 		8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF318D34CB200226AB4 /* accordion.jpg */; };
-		8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF418D34CB200226AB4 /* airoplane.jpg */; };
 		8353CC1918D34CB300226AB4 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF518D34CB200226AB4 /* apple.jpg */; };
 		8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF618D34CB200226AB4 /* aubergine.jpg */; };
 		8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBF718D34CB300226AB4 /* axe.jpg */; };
@@ -23,10 +22,6 @@
 		8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFE18D34CB300226AB4 /* cauliflower.jpg */; };
 		8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CBFF18D34CB300226AB4 /* computer desk.jpg */; };
 		8353CC2418D34CB300226AB4 /* cow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0018D34CB300226AB4 /* cow.jpg */; };
-		8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0118D34CB300226AB4 /* face smile1.jpg */; };
-		8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0218D34CB300226AB4 /* face smile2.jpg */; };
-		8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0318D34CB300226AB4 /* face smile3.jpg */; };
-		8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0418D34CB300226AB4 /* face smile4.jpg */; };
 		8353CC2918D34CB300226AB4 /* fox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0518D34CB300226AB4 /* fox.jpg */; };
 		8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0618D34CB300226AB4 /* giraffe.jpg */; };
 		8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8353CC0718D34CB300226AB4 /* helicopter.jpg */; };
@@ -92,6 +87,11 @@
 		83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */; };
 		83C84AC1193A26030019ED65 /* MultiControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C84ABF193A26030019ED65 /* MultiControlPanelViewController.m */; };
 		83C84AC2193A26030019ED65 /* MultiControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC0193A26030019ED65 /* MultiControlPanelViewController.xib */; };
+		83C84AC4193A32C60019ED65 /* airplane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC3193A32C60019ED65 /* airplane.jpg */; };
+		83C84AC9193A43590019ED65 /* face0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC5193A43590019ED65 /* face0.jpg */; };
+		83C84ACA193A43590019ED65 /* face1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC6193A43590019ED65 /* face1.jpg */; };
+		83C84ACB193A43590019ED65 /* face2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC7193A43590019ED65 /* face2.jpg */; };
+		83C84ACC193A43590019ED65 /* face3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC8193A43590019ED65 /* face3.jpg */; };
 		83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5E75418DDC12A00FF375C /* ButtonListViewController.m */; };
 		83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */; };
 		83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */; };
@@ -125,7 +125,6 @@
 		833118CB18DCAB3900648698 /* ControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlPanelViewController.m; sourceTree = "<group>"; };
 		833118CC18DCAB3900648698 /* ControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControlPanelViewController.xib; sourceTree = "<group>"; };
 		8353CBF318D34CB200226AB4 /* accordion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accordion.jpg; sourceTree = "<group>"; };
-		8353CBF418D34CB200226AB4 /* airoplane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = airoplane.jpg; sourceTree = "<group>"; };
 		8353CBF518D34CB200226AB4 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
 		8353CBF618D34CB200226AB4 /* aubergine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aubergine.jpg; sourceTree = "<group>"; };
 		8353CBF718D34CB300226AB4 /* axe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = axe.jpg; sourceTree = "<group>"; };
@@ -138,10 +137,6 @@
 		8353CBFE18D34CB300226AB4 /* cauliflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cauliflower.jpg; sourceTree = "<group>"; };
 		8353CBFF18D34CB300226AB4 /* computer desk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "computer desk.jpg"; sourceTree = "<group>"; };
 		8353CC0018D34CB300226AB4 /* cow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cow.jpg; sourceTree = "<group>"; };
-		8353CC0118D34CB300226AB4 /* face smile1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile1.jpg"; sourceTree = "<group>"; };
-		8353CC0218D34CB300226AB4 /* face smile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile2.jpg"; sourceTree = "<group>"; };
-		8353CC0318D34CB300226AB4 /* face smile3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile3.jpg"; sourceTree = "<group>"; };
-		8353CC0418D34CB300226AB4 /* face smile4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "face smile4.jpg"; sourceTree = "<group>"; };
 		8353CC0518D34CB300226AB4 /* fox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpg; sourceTree = "<group>"; };
 		8353CC0618D34CB300226AB4 /* giraffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giraffe.jpg; sourceTree = "<group>"; };
 		8353CC0718D34CB300226AB4 /* helicopter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helicopter.jpg; sourceTree = "<group>"; };
@@ -229,6 +224,11 @@
 		83C84ABE193A26030019ED65 /* MultiControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiControlPanelViewController.h; sourceTree = "<group>"; };
 		83C84ABF193A26030019ED65 /* MultiControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiControlPanelViewController.m; sourceTree = "<group>"; };
 		83C84AC0193A26030019ED65 /* MultiControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiControlPanelViewController.xib; sourceTree = "<group>"; };
+		83C84AC3193A32C60019ED65 /* airplane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = airplane.jpg; sourceTree = "<group>"; };
+		83C84AC5193A43590019ED65 /* face0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face0.jpg; sourceTree = "<group>"; };
+		83C84AC6193A43590019ED65 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
+		83C84AC7193A43590019ED65 /* face2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face2.jpg; sourceTree = "<group>"; };
+		83C84AC8193A43590019ED65 /* face3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face3.jpg; sourceTree = "<group>"; };
 		83D5E75318DDC12A00FF375C /* ButtonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonListViewController.h; sourceTree = "<group>"; };
 		83D5E75418DDC12A00FF375C /* ButtonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonListViewController.m; sourceTree = "<group>"; };
 		83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListViewController.xib; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 				8358EBE218DDEE3500E1AAC9 /* icon.png */,
 				8358EBE318DDEE3500E1AAC9 /* icon@2x.png */,
 				8353CBF318D34CB200226AB4 /* accordion.jpg */,
-				8353CBF418D34CB200226AB4 /* airoplane.jpg */,
+				83C84AC3193A32C60019ED65 /* airplane.jpg */,
 				8353CBF518D34CB200226AB4 /* apple.jpg */,
 				8353CBF618D34CB200226AB4 /* aubergine.jpg */,
 				8353CBF718D34CB300226AB4 /* axe.jpg */,
@@ -311,10 +311,10 @@
 				8353CBFE18D34CB300226AB4 /* cauliflower.jpg */,
 				8353CBFF18D34CB300226AB4 /* computer desk.jpg */,
 				8353CC0018D34CB300226AB4 /* cow.jpg */,
-				8353CC0118D34CB300226AB4 /* face smile1.jpg */,
-				8353CC0218D34CB300226AB4 /* face smile2.jpg */,
-				8353CC0318D34CB300226AB4 /* face smile3.jpg */,
-				8353CC0418D34CB300226AB4 /* face smile4.jpg */,
+				83C84AC5193A43590019ED65 /* face0.jpg */,
+				83C84AC6193A43590019ED65 /* face1.jpg */,
+				83C84AC7193A43590019ED65 /* face2.jpg */,
+				83C84AC8193A43590019ED65 /* face3.jpg */,
 				8353CC0518D34CB300226AB4 /* fox.jpg */,
 				8353CC0618D34CB300226AB4 /* giraffe.jpg */,
 				8353CC0718D34CB300226AB4 /* helicopter.jpg */,
@@ -787,14 +787,15 @@
 				83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */,
 				8353CC1A18D34CB300226AB4 /* aubergine.jpg in Resources */,
 				83A57E021933A23500CBDFC5 /* VisuospatialDotCountingViewController.xib in Resources */,
-				8353CC2718D34CB300226AB4 /* face smile3.jpg in Resources */,
 				8353CC3518D34CB300226AB4 /* table lamp.jpg in Resources */,
+				83C84AC4193A32C60019ED65 /* airplane.jpg in Resources */,
 				9CB203DD18DDB38A0080BFB2 /* LanguageSpellingViewController.xib in Resources */,
-				8353CC2818D34CB300226AB4 /* face smile4.jpg in Resources */,
+				83C84ACA193A43590019ED65 /* face1.jpg in Resources */,
 				8353CC3018D34CB300226AB4 /* pear.jpg in Resources */,
 				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
 				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
 				83A57E241933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib in Resources */,
+				83C84AC9193A43590019ED65 /* face0.jpg in Resources */,
 				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
 				833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */,
 				8353CC2218D34CB300226AB4 /* cauliflower.jpg in Resources */,
@@ -806,12 +807,12 @@
 				8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */,
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
 				83E763BB18D3CB46002846B1 /* Tests.plist in Resources */,
-				8353CC1818D34CB300226AB4 /* airoplane.jpg in Resources */,
 				8358EBE518DDEE3500E1AAC9 /* icon@2x.png in Resources */,
 				83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */,
 				83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */,
 				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
 				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
+				83C84ACB193A43590019ED65 /* face2.jpg in Resources */,
 				83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */,
 				8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */,
 				83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */,
@@ -824,8 +825,6 @@
 				83C84AC2193A26030019ED65 /* MultiControlPanelViewController.xib in Resources */,
 				8353CC3A18D34CB300226AB4 /* wasp.jpg in Resources */,
 				83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */,
-				8353CC2518D34CB300226AB4 /* face smile1.jpg in Resources */,
-				8353CC2618D34CB300226AB4 /* face smile2.jpg in Resources */,
 				8353CC3118D34CB300226AB4 /* pineapple.jpg in Resources */,
 				8353CC3618D34CB300226AB4 /* tomato.jpg in Resources */,
 				83E763B118D3BBEE002846B1 /* LanguageComprehensionViewController.xib in Resources */,
@@ -841,6 +840,7 @@
 				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
 				83A57E291933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib in Resources */,
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
+				83C84ACC193A43590019ED65 /* face3.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
 				8358EBE418DDEE3500E1AAC9 /* icon.png in Resources */,
 				8353CC2118D34CB300226AB4 /* cat.jpg in Resources */,

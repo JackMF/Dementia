@@ -508,6 +508,51 @@ The next section of the test is “Social Cognition - Part A&quot;.</string>
 		<string>Social Cognition</string>
 		<key>testName</key>
 		<string>Part A</string>
+		<key>questions</key>
+		<array>
+			<array>
+				<string>cow.jpg</string>
+				<string>wasp.jpg</string>
+				<string>koala.jpg</string>
+				<string>lion.jpg</string>
+				<integer>1</integer>
+			</array>
+			<array>
+				<string>pear.jpg</string>
+				<string>apple.jpg</string>
+				<string>pineapple.jpg</string>
+				<string>banana.jpg</string>
+				<integer>3</integer>
+			</array>
+			<array>
+				<string>table lamp.jpg</string>
+				<string>wardrobe.jpg</string>
+				<string>bed.jpg</string>
+				<string>computer desk.jpg</string>
+				<integer>0</integer>
+			</array>
+			<array>
+				<string>cat.jpg</string>
+				<string>bird.jpg</string>
+				<string>giraffe.jpg</string>
+				<string>horse.jpg</string>
+				<integer>2</integer>
+			</array>
+			<array>
+				<string>tomato.jpg</string>
+				<string>cauliflower.jpg</string>
+				<string>onion.jpg</string>
+				<string>aubergine.jpg</string>
+				<integer>3</integer>
+			</array>
+			<array>
+				<string>truck.jpg</string>
+				<string>train.jpg</string>
+				<string>airplane.jpg</string>
+				<string>bicycle.jpg</string>
+				<integer>0</integer>
+			</array>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>

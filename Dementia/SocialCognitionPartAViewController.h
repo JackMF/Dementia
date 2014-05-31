@@ -9,5 +9,20 @@
 #import "TestViewController.h"
 
 @interface SocialCognitionPartAViewController : TestViewController
+{
+	int currentQuestionOrder;
+	int currentStageOrder;
+	NSArray *questions;
+	NSMutableArray *userAnswers;
+	__weak IBOutlet UIView *questionView;
+	__weak IBOutlet UIButton *answer0Button;
+	__weak IBOutlet UIButton *answer1Button;
+	__weak IBOutlet UIButton *answer2Button;
+	__weak IBOutlet UIButton *answer3Button;
+	__weak IBOutlet UIImageView *faceImageView;
+}
+- (IBAction)answerButtonPressed:(id)sender;
+-(void)populateQuestionView;
+-(int)getIndexForSender:(id)sender;
 
 @end
