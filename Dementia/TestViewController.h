@@ -20,4 +20,5 @@
 -(void)makeStaticControlPanel;
 -(void)makeDynamicControlPanel;
 -(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
+-(void)timerHasFinished;
 @end

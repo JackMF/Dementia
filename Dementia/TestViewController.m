@@ -49,7 +49,7 @@
 	[self addChildViewController:controlPanelViewController];
 	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
 	[controlPanelViewController.view setFrame:cpFrame];
-	[controlPanelViewController setTestVSDelegate:self];
+	[controlPanelViewController setTestVCDelegate:self];
 	[self.view addSubview:controlPanelViewController.view];
 	[controlPanelViewController didMoveToParentViewController:self];
 }
@@ -79,7 +79,7 @@
 	[self addChildViewController:controlPanelViewController];
 	CGRect cpFrame = CGRectMake(0.0, 1024.0 - 185.0, 768.0, 185.0);
 	[controlPanelViewController.view setFrame:cpFrame];
-	[controlPanelViewController setTestVSDelegate:self];
+	[controlPanelViewController setTestVCDelegate:self];
 	[self.view addSubview:controlPanelViewController.view];
 	[controlPanelViewController didMoveToParentViewController:self];
 
@@ -95,6 +95,11 @@
 {
 	if (self.test)                  // If we have a test,
 		[self.test startPostTest];  // start the post test
+}
+
+-(void)timerHasFinished
+{
+
 }
 
 - (void)didReceiveMemoryWarning

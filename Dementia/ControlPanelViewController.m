@@ -16,7 +16,7 @@
 @end
 
 @implementation ControlPanelViewController
-@synthesize testVSDelegate;
+@synthesize testVCDelegate;
 @synthesize isDisplayed;
 @synthesize isDynamic;
 @synthesize answerWasCorrect;
@@ -43,7 +43,7 @@
 
 // Handle presses of the confirm button
 - (IBAction)confirmButtonPressed:(id)sender {
-	[testVSDelegate didConfirmAnswer];      // Tell our test view controller we have an answer
+	[testVCDelegate didConfirmAnswer];      // Tell our test view controller we have an answer
 	[self resetDecisionButtons];        // First reset the appearance of the buttons
 	[confirmButton setHidden:YES];          // Hide the confirm button
 	if (isDynamic)                     // If we're using a dynamic control panel

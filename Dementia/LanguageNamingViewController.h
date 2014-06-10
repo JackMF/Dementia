@@ -14,6 +14,7 @@
 	// memory_keyword, IBThing, Class, pointer name
 	__weak IBOutlet UIImageView *inputImageView;
 	__weak IBOutlet UILabel *question;
+	CGPoint imageCenter;
 	NSArray *imagesDicts;
 	NSDictionary *currentImage;
 	BOOL answerWasCorrect;

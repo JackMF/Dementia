@@ -9,7 +9,7 @@
 #import "LanguageSpellingViewController.h"
 #import "Test.h"
 #import "ControlPanelViewController.h"
-#define kImageViewAnimationDuration 0.6
+#define kImageViewAnimationDuration 0.6f
 
 @interface LanguageSpellingViewController ()
 
@@ -41,22 +41,27 @@
 
 -(void)loadNextWord {
 	NSString *newWord = [toSpellArray objectAtIndex:wordOrder];
+	[self animateQuestionOutAndChangeValue:newWord];
+	wordOrder++;                    // Increment our  image order
+}
 
-	CGRect originalFrame = toSpellLabel.frame;
-	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-	CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-
+-(void)animateQuestionOutAndChangeValue:(NSString *)newWord
+{
 	// Animate and swap questions
 	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    toSpellLabel.frame = leftFrame;     // Animate the image view off to the left
-	} completion:^(BOOL finished) {         // Once animation is finished
-	    [toSpellLabel setText:newWord];     // Set the new image
-	    toSpellLabel.frame = rightFrame;     // Move the inputImageView the right
-	    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {     // Once animation is finished
-	        toSpellLabel.frame = originalFrame;     // Animate the inputImageView in from the right
-		}];
+	    toSpellLabel.alpha = 0.0f;
+	} completion:^(BOOL finished) {
+	    [toSpellLabel setText:newWord];
+	    [self animateQuestionIn];
 	}];
-	wordOrder++;                    // Increment our  image order
+
+}
+
+-(void)animateQuestionIn
+{
+	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {         // Once animation is finished
+	    toSpellLabel.alpha = 100.0f;
+	}];
 }
 
 // Handle presses of the confirm button

@@ -50,6 +50,8 @@
 		8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68118D377FB001BDDB8 /* DebugViewController.m */; };
 		8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B68218D377FB001BDDB8 /* DebugViewController.xib */; };
 		8359B68C18D37C45001BDDB8 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68B18D37C45001BDDB8 /* Test.m */; };
+		839EE22D194785C20026D6CF /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EE22B194785C20026D6CF /* TimerViewController.m */; };
+		839EE22E194785C20026D6CF /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EE22C194785C20026D6CF /* TimerViewController.xib */; };
 		83A14FAC18D33C4E0037980A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAB18D33C4E0037980A /* Foundation.framework */; };
 		83A14FAE18D33C4E0037980A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAD18D33C4E0037980A /* CoreGraphics.framework */; };
 		83A14FB018D33C4E0037980A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAF18D33C4E0037980A /* UIKit.framework */; };
@@ -171,6 +173,9 @@
 		8359B68218D377FB001BDDB8 /* DebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugViewController.xib; sourceTree = "<group>"; };
 		8359B68A18D37C45001BDDB8 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		8359B68B18D37C45001BDDB8 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		839EE22A194785C20026D6CF /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		839EE22B194785C20026D6CF /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		839EE22C194785C20026D6CF /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		83A14FA818D33C4E0037980A /* Dementia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dementia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A14FAB18D33C4E0037980A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83A14FAD18D33C4E0037980A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -393,6 +398,16 @@
 				8359B68B18D37C45001BDDB8 /* Test.m */,
 			);
 			name = Test;
+			sourceTree = "<group>";
+		};
+		839EE2291947858D0026D6CF /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				839EE22A194785C20026D6CF /* TimerViewController.h */,
+				839EE22B194785C20026D6CF /* TimerViewController.m */,
+				839EE22C194785C20026D6CF /* TimerViewController.xib */,
+			);
+			name = Timer;
 			sourceTree = "<group>";
 		};
 		83A14F9F18D33C4E0037980A = {
@@ -639,6 +654,7 @@
 		83D5E75818DDCC0300FF375C /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				839EE2291947858D0026D6CF /* Timer */,
 				83D5E75118DDC11500FF375C /* ButtonList */,
 				833118C918DCAB2500648698 /* ControlPanel */,
 			);
@@ -815,6 +831,7 @@
 				83C84ACB193A43590019ED65 /* face2.jpg in Resources */,
 				83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */,
 				8359B67318D376E8001BDDB8 /* PreTestViewController.xib in Resources */,
+				839EE22E194785C20026D6CF /* TimerViewController.xib in Resources */,
 				83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */,
 				83A57E301933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib in Resources */,
 				83A57DF61933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib in Resources */,
@@ -874,6 +891,7 @@
 				9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */,
 				83A57E191933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
+				839EE22D194785C20026D6CF /* TimerViewController.m in Sources */,
 				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
 				83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */,

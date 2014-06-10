@@ -15,13 +15,12 @@
 	__weak IBOutlet UIButton *noButton;
 	__weak IBOutlet UIButton *confirmButton;
 	__weak IBOutlet UIView *controlPanelView;
-	ControlPanelViewController *cpVC;
 
 
 }
 - (IBAction)decisionButtonPressed:(id)sender;
 - (IBAction)confirmButtonPressed:(id)sender;
-@property (nonatomic) TestViewController *testVSDelegate;
+@property (nonatomic) TestViewController *testVCDelegate;
 @property (nonatomic) BOOL isDisplayed;
 @property (nonatomic) BOOL answerWasCorrect;
 @property (nonatomic) BOOL isDynamic;

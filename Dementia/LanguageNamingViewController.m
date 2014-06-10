@@ -10,7 +10,7 @@
 #import "Test.h"
 #import "ControlPanelViewController.h"
 
-#define kImageViewAnimationDuration 0.3
+#define kImageViewAnimationDuration 0.6f
 
 @interface LanguageNamingViewController ()
 
@@ -18,6 +18,7 @@
 
 @implementation LanguageNamingViewController
 @synthesize test;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,12 +32,12 @@
 	[super viewWillAppear:animated];
 	currentImageOrder = 0;  // Reset the current image we're showing
 	[self loadNextImage];   // Load the next (i.e first) image
-	[super makeDynamicControlPanel];
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	[super makeDynamicControlPanel];
 	imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
 
@@ -47,20 +48,25 @@
 	NSDictionary *imageDict = [imagesDicts objectAtIndex:currentImageOrder];
 	UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
 
-	// Work out where things are, and where they should go
-	CGRect originalFrame = inputImageView.frame;
-	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-	CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-
 	// Animate and swap images
+	[self animateImageOutAndChangeValue:newImage];
+}
+
+-(void)animateImageOutAndChangeValue:(UIImage *)newImage
+{
 	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    inputImageView.frame = leftFrame;   // Animate the image view off to the left
-	} completion:^(BOOL finished) {         // Once animation is finished
+	    inputImageView.alpha = 0.0f;
+	} completion:^(BOOL finished) {
 	    [inputImageView setImage:newImage]; // Set the new image
-	    inputImageView.frame = rightFrame; // Move the inputImageView the right
-	    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {    // Once animation is finished
-	        inputImageView.frame = originalFrame; // Animate the inputImageView in from the right
-		}];
+	    [self animateImageIn];
+	}];
+
+}
+
+-(void)animateImageIn
+{
+	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
+	    inputImageView.alpha = 100.0f;
 	}];
 }
 
@@ -72,9 +78,9 @@
 	currentImageOrder++;                    // Increment our  image order
 	if (currentImageOrder < [imagesDicts count])  // If there's still images left
 		[self loadNextImage];               // Load the next image
-	else [super hasFinished];  // Otherwise tell the Test we've finished, and our score
+	else
+		[super hasFinished];  // Otherwise tell the Test we've finished, and our score
 }
-
 
 
 - (void)didReceiveMemoryWarning
