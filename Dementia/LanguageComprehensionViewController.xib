@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LanguageComprehensionViewController">
             <connections>
-                <outlet property="nextQuesiton" destination="dIX-pE-0RA" id="pUk-kC-xp7"/>
+                <outlet property="nextQuestionButton" destination="dIX-pE-0RA" id="5uA-dZ-asa"/>
                 <outlet property="questionLabel" destination="ejQ-2q-Qxc" id="6XV-Qp-vao"/>
                 <outlet property="view" destination="DCn-3C-lmt" id="ueI-o4-xR9"/>
             </connections>

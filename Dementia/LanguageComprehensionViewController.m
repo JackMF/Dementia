@@ -8,7 +8,7 @@
 
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
-#define kImageViewAnimationDuration 0.6
+#define kImageViewAnimationDuration 0.6f
 #define kBorderSize 5
 
 @interface LanguageComprehensionViewController ()
@@ -22,40 +22,161 @@
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
+		questionDicts = [NSArray new];
+		imagesDicts = [NSArray new];
 	}
 	return self;
 }
 
--(void)viewWillAppear:(BOOL)animated {
-
+-(void)viewWillAppear:(BOOL)animated
+{
 	[super viewWillAppear:animated];
 	currentQuestionOrder = 0;
-	//[self loadNextQuestion];
+	currentlySelectedButton.selected = NO;
+	currentlySelectedButton = nil;
+	[self resetButtons];
+	[self loadCurrentQuestion];
+}
+
+-(void)loadCurrentQuestion
+{
+	[questionLabel setText:[[questionDicts objectAtIndex:currentQuestionOrder] valueForKey:@"question"]];
+	correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	isSelected = NO;
-	currentButtonSelected = nil;
-
-	[nextQuesiton setHidden:YES];
-
+	questionDicts = [test questions];     //Loading the quesitons
 	imagesDicts = [test imageDictionaries];
+	[self displayButtonImages];
+	questionCenter = questionLabel.center;
+}
 
+-(void)displayButtonImages
+{
 	for (NSDictionary *imageDict in imagesDicts) {
-		UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-		[newImage setAccessibilityIdentifier:[imageDict valueForKey:@"filename"]];
+		// Load the image
+		NSString *imageFilename =[imageDict valueForKey:@"filename"];
+		UIImage *newImage = [UIImage imageNamed:imageFilename];
+
+		// Find the correct button
 		int tag = (int)[[imageDict valueForKey:@"order"] integerValue]+1;
 		UIButton *button = (UIButton *)[self.view viewWithTag:tag];
-		[button setImage:newImage forState:UIControlStateNormal];
-	}
 
-	questionDicts = [test questions];     //Loading the quesitons
-	[questionLabel setText:[[questionDicts objectAtIndex:currentQuestionOrder] valueForKey:@"question"]];
+		[button setImage:newImage forState:UIControlStateNormal];       // Set the image
+		[[button imageView] setContentMode: UIViewContentModeScaleAspectFit]; // Ensure the image scales properly
+		// Ensure the whole background is white when selected
+		[[button imageView] setBackgroundColor:[UIColor whiteColor]];
+		[button setAdjustsImageWhenHighlighted:NO];
+	}
+}
+
+- (IBAction)imageButtonPressed:(id)sender {
+	UIButton *pressedButton = (UIButton *)sender;
+
+	// Case when nothing is currently selected
+	if (!currentlySelectedButton) {
+		pressedButton.selected = YES;
+		currentlySelectedButton = pressedButton;
+		// Case when the tapped button was already selected
+	} else if(currentlySelectedButton && currentlySelectedButton == pressedButton) {
+		currentlySelectedButton.selected = NO;
+		currentlySelectedButton = nil;
+		// Case when tapping a diferent button from the currently selected one
+	} else if(currentlySelectedButton && currentlySelectedButton != pressedButton) {
+		currentlySelectedButton.selected = NO;
+		pressedButton.selected = YES;
+		currentlySelectedButton = pressedButton;
+	}
+	[self resetButtons];
+}
+
+-(NSString *)getFilenameForButton:(UIButton *)button
+{
+	for (NSDictionary *imageDict in imagesDicts) {
+		int tag = (int)[[imageDict valueForKey:@"order"] integerValue]+1;
+		if (tag == button.tag)
+			return [imageDict valueForKey:@"filename"];
+	}
+	return nil;
+}
+
+-(void)loadNextQuestion {
+	NSDictionary *questionDict = [questionDicts objectAtIndex:currentQuestionOrder];
+	// Load the correct answer for the next question
 	correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];
 
+	NSString *newQuestion = [questionDict valueForKey:@"question"];
+	[self swapQuestion:newQuestion];
+
 }
+
+-(void)swapQuestion:(NSString *)newQuestion
+{
+	// Animate and swap questions
+	[self animateQuestionOutAndChangeValue:newQuestion];
+}
+
+-(void)animateQuestionOutAndChangeValue:(NSString *)newValue
+{
+	[UIView animateWithDuration:kImageViewAnimationDuration
+	animations:^{
+	    questionLabel.alpha = 0.0f;
+	} completion:^(BOOL finished) {
+	    [questionLabel setText:newValue];
+	    //Unselect current selected image.
+	    currentlySelectedButton.selected = NO;
+	    currentlySelectedButton = nil;
+	    [self resetButtons];
+
+	    [self animateQuestionIn];
+	}];
+}
+
+-(void)animateQuestionIn
+{
+	[UIView animateWithDuration:kImageViewAnimationDuration
+	animations:^() {
+	    questionLabel.alpha = 100.0f;
+	}];
+}
+
+- (IBAction)nextButtonPressed:(id)sender {
+	if (correctAnswer == [self getFilenameForButton:currentlySelectedButton])
+		[test addToTestScore:1];
+
+	currentQuestionOrder++;
+	if (currentQuestionOrder < [questionDicts count]) {
+		//check if there are more question
+		[self loadNextQuestion];
+	} else
+		[super hasFinished];
+}
+
+-(void)resetButtons
+{
+	for (id object in [self.view subviews]) {
+		if ([object isKindOfClass:[UIButton class]])
+			[self configureBorderForButton:(UIButton *)object];
+	}
+	BOOL readyForNextQuestion = (currentQuestionOrder < [questionDicts count] && currentlySelectedButton!=nil);
+	[nextQuestionButton setHidden:!readyForNextQuestion];
+}
+
+-(void)configureBorderForButton:(UIButton *)button
+{
+	CGRect borderFrame = CGRectMake(button.frame.origin.x-kBorderSize, button.frame.origin.y-kBorderSize, button.frame.size.width + (kBorderSize*2), button.frame.size.height + (kBorderSize*2));
+	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+
+	if (button.selected)
+		[borderView setBackgroundColor:[UIColor grayColor]];
+	else
+		[borderView setBackgroundColor:[UIColor whiteColor]];
+
+	[self.view insertSubview:borderView belowSubview:button];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -63,146 +184,4 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (IBAction)imageButtonPressed:(id)sender {
-
-
-
-	UIButton* button = (UIButton*)sender;
-	NSString* nameOfButton = [[button currentImage] accessibilityIdentifier];
-	UIImage *buttonImage = [button imageForState:UIControlStateNormal];
-
-	for (NSDictionary *imageDict in imagesDicts) {
-		UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-		if (buttonImage == newImage) {
-			nameOfButton = [imageDict valueForKey:@"filename"];
-
-		}
-	}
-
-	if (!isSelected) { //case when nothing is selected
-		button.selected = YES;
-		currentButtonSelected = nameOfButton;
-		isSelected = YES;
-		[nextQuesiton setHidden:NO];
-		///NSLog(@"Current Image Selected1: %@", currentButtonSelected);
-	}
-	else if(isSelected && currentButtonSelected == nameOfButton) { //case when the current button is selcted
-		button.selected = NO;
-		isSelected = NO;
-		currentButtonSelected = nil;
-		[nextQuesiton setHidden:YES];
-		//NSLog(@"Current Image Selected2: %@", currentButtonSelected);
-
-
-	}
-	else{
-		button.selected = YES;
-		isSelected = YES;
-		[nextQuesiton setHidden:NO];
-
-		currentButtonSelected = nameOfButton;
-		//NSLog(@"Current Image Selected3: %@", currentButtonSelected);
-		for (id object in [self.view subviews]) {
-			if ([object isKindOfClass:[UIButton class]]) {
-				UIButton *button2 = (UIButton *) object;
-				if (button2 != button) {
-					button2.selected = NO;
-
-					CGRect buttonFrame = button2.frame;
-					//double borderSize = 5;
-
-					CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y - kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
-
-					UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-					[borderView setBackgroundColor:[UIColor whiteColor]];
-					[self.view insertSubview:borderView belowSubview:button2];
-
-				}
-
-
-			}
-		}
-
-	}
-
-
-	CGRect buttonFrame = button.frame;
-
-	CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
-
-
-	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-
-
-	if (button.selected) {
-		[borderView setBackgroundColor:[UIColor grayColor]];
-
-
-	}
-	else {
-		[borderView setBackgroundColor:[UIColor whiteColor]];
-
-
-	}
-	[self.view insertSubview:borderView belowSubview:button];
-
-
-
-
-}
-
-
-
--(void)loadNextQuestion {
-	NSDictionary *questionDict = [questionDicts objectAtIndex:currentQuestionOrder];
-	NSString *newQuestion = [questionDict valueForKey:@"question"];
-	CGRect originalFrame = questionLabel.frame;
-	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-	CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-
-	// Animate and swap questions
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    questionLabel.frame = leftFrame;     // Animate the image view off to the left
-	} completion:^(BOOL finished) {         // Once animation is finished
-	    [questionLabel setText:newQuestion];     // Set the new image
-	    questionLabel.frame = rightFrame;     // Move the inputImageView the right
-	    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {     // Once animation is finished
-	        questionLabel.frame = originalFrame;     // Animate the inputImageView in from the right
-		}];
-	}];
-
-	//Unselect current selected image.
-	isSelected = NO;
-	currentButtonSelected = nil;
-
-	for (id object in [self.view subviews]) {
-		if ([object isKindOfClass:[UIButton class]]) {
-			UIButton *button = (UIButton *) object;
-			if (button.selected) {
-				CGRect buttonFrame = button.frame;
-				CGRect borderFrame = CGRectMake(buttonFrame.origin.x-kBorderSize, buttonFrame.origin.y-kBorderSize, buttonFrame.size.width + (kBorderSize*2), buttonFrame.size.height + (kBorderSize*2));
-				UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-				[borderView setBackgroundColor:[UIColor whiteColor]];
-				[self.view insertSubview:borderView belowSubview:button];
-			}
-		}
-	}
-
-	correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];     //Getting the correct answer for the next questions
-}
-
-- (IBAction)nextButtonPressed:(id)sender {
-
-	if (correctAnswer == currentButtonSelected) {
-		[test addToTestScore:1];
-	}
-	currentQuestionOrder++;
-	if (currentQuestionOrder < [questionDicts count]) {
-		//check if there are more question
-		[nextQuesiton setHidden:YES];
-		[self loadNextQuestion];
-	}
-	else
-		[super hasFinished];
-}
 @end

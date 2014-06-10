@@ -13,13 +13,14 @@
 {
 	NSArray *imagesDicts;
 	NSArray *questionDicts;
-	BOOL isSelected;
 	int currentQuestionOrder;
-	NSString *currentButtonSelected;
-	NSString * correctAnswer;
+	UIButton *currentlySelectedButton;
+	NSString *correctAnswer;
 
+	CGPoint questionCenter;
+
+	__weak IBOutlet UIButton *nextQuestionButton;
 	__weak IBOutlet UILabel *questionLabel;
-	__weak IBOutlet UIButton *nextQuesiton;
 }
 - (IBAction)imageButtonPressed:(id)sender;
 - (IBAction)nextButtonPressed:(id)sender;
