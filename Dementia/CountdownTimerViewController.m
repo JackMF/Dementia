@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 chris. All rights reserved.
 //
 
-#import "TimerViewController.h"
+#import "CountdownTimerViewController.h"
 #import "TestViewController.h"
 #define kTestDurationSeconds 5.0f
 #define kSpeakingDurationSeconds 60.0f
 #define kWritingDurationSeconds 60.0f
 
-@interface TimerViewController ()
+@interface CountdownTimerViewController ()
 
 @end
 
-@implementation TimerViewController
+@implementation CountdownTimerViewController
 @synthesize testVCDelegate;
 int minutes, seconds;
 int secondsRemaining;
@@ -35,7 +35,7 @@ int secondsRemaining;
 	[super viewDidLoad];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
 	secondsRemaining = kTestDurationSeconds;
 	[self updateCountdownLabel];
@@ -68,6 +68,11 @@ int secondsRemaining;
 {
 	if (testVCDelegate)
 		[testVCDelegate timerHasFinished];
+}
+
+-(int)calculateScoreForDuration:(int)duration readingTime:(int)readingTime wordsGenerated:(int)wordsGenerated
+{
+	return (duration - readingTime) / wordsGenerated;
 }
 
 

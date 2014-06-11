@@ -8,7 +8,7 @@
 
 #import "FluencyLetterSViewController.h"
 #import "Test.h"
-#import "TimerViewController.h"
+#import "CountdownTimerViewController.h"
 
 @interface FluencyLetterSViewController ()
 
@@ -31,14 +31,14 @@
 	[super viewDidLoad];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
 	[self addTimerViewController];
 }
 
 -(void)addTimerViewController
 {
-	timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+	timerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
 	CGRect timerFrame = CGRectMake(100.0f, 100.0f, 600.0f, 200.0f);
 	[timerViewController.view setFrame:timerFrame];
 	[self addChildViewController:timerViewController];
@@ -87,7 +87,6 @@
 
 -(void)finishWithScore:(NSString *)score
 {
-	NSLog(@"%@", score);
 	int testScore = (int)[score integerValue];
 	[test addToTestScore:testScore];
 	[super hasFinished];
@@ -95,6 +94,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
+	timerViewController.view = nil;
 	[timerViewController removeFromParentViewController];
 	timerViewController = nil;
 }

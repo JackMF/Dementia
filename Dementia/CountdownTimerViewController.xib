@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownTimerViewController">
             <connections>
                 <outlet property="countdownLabel" destination="LFR-Rf-mEH" id="2sJ-Wh-Ast"/>
                 <outlet property="startButton" destination="cZ4-jj-NBW" id="oHI-Au-1Eg"/>

@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 @class TestViewController;
 
-@interface TimerViewController : UIViewController
+@interface CountdownTimerViewController : UIViewController
 {
 	__weak IBOutlet UILabel *countdownLabel;
 	__weak IBOutlet UIButton *startButton;
 	NSTimer *countdownTimer;
-	
+
 }
 - (IBAction)startButtonPressed:(id)sender;
 -(void)updateCountdownLabel;

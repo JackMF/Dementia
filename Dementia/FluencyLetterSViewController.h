@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TestViewController.h"
-@class TimerViewController;
+@class CountdownTimerViewController;
 
 @interface FluencyLetterSViewController : TestViewController <UIAlertViewDelegate, UITextFieldDelegate>
 {
-	TimerViewController *timerViewController;
+	CountdownTimerViewController *timerViewController;
 	UIAlertView *finishedAlertView;
 }
 
