@@ -65,7 +65,6 @@
 	if (currentStageOrder==1) {
 		int fileNum = [(NSNumber *)[currentQuestions objectAtIndex:4] integerValue];
 		NSString *smileFilename = [NSString stringWithFormat:@"face%i.jpg", fileNum];
-		NSLog(@"%@", smileFilename);
 		UIImage *face = [UIImage imageNamed:smileFilename];
 		[faceImageView setImage:face];
 	}
