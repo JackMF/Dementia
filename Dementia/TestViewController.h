@@ -20,5 +20,6 @@
 -(void)makeStaticControlPanel;
 -(void)makeDynamicControlPanel;
 -(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
--(void)timerHasFinished;
+-(void)countdownTimerHasFinished;
+-(void)timerStoppedWithTimeElapsed:(int)timeElapsed;
 @end

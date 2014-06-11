@@ -50,6 +50,8 @@
 		8359B68318D377FB001BDDB8 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68118D377FB001BDDB8 /* DebugViewController.m */; };
 		8359B68418D377FB001BDDB8 /* DebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8359B68218D377FB001BDDB8 /* DebugViewController.xib */; };
 		8359B68C18D37C45001BDDB8 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359B68B18D37C45001BDDB8 /* Test.m */; };
+		8383978A1948BAF000F67E26 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838397881948BAF000F67E26 /* TimerViewController.m */; };
+		8383978B1948BAF000F67E26 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838397891948BAF000F67E26 /* TimerViewController.xib */; };
 		839EE22D194785C20026D6CF /* CountdownTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EE22B194785C20026D6CF /* CountdownTimerViewController.m */; };
 		839EE22E194785C20026D6CF /* CountdownTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EE22C194785C20026D6CF /* CountdownTimerViewController.xib */; };
 		83A14FAC18D33C4E0037980A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A14FAB18D33C4E0037980A /* Foundation.framework */; };
@@ -173,6 +175,9 @@
 		8359B68218D377FB001BDDB8 /* DebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugViewController.xib; sourceTree = "<group>"; };
 		8359B68A18D37C45001BDDB8 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		8359B68B18D37C45001BDDB8 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		838397871948BAF000F67E26 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		838397881948BAF000F67E26 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		838397891948BAF000F67E26 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		839EE22A194785C20026D6CF /* CountdownTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownTimerViewController.h; sourceTree = "<group>"; };
 		839EE22B194785C20026D6CF /* CountdownTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownTimerViewController.m; sourceTree = "<group>"; };
 		839EE22C194785C20026D6CF /* CountdownTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountdownTimerViewController.xib; sourceTree = "<group>"; };
@@ -406,6 +411,9 @@
 				839EE22A194785C20026D6CF /* CountdownTimerViewController.h */,
 				839EE22B194785C20026D6CF /* CountdownTimerViewController.m */,
 				839EE22C194785C20026D6CF /* CountdownTimerViewController.xib */,
+				838397871948BAF000F67E26 /* TimerViewController.h */,
+				838397881948BAF000F67E26 /* TimerViewController.m */,
+				838397891948BAF000F67E26 /* TimerViewController.xib */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -798,6 +806,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8383978B1948BAF000F67E26 /* TimerViewController.xib in Resources */,
 				83A14FB618D33C4E0037980A /* InfoPlist.strings in Resources */,
 				83A57DFC1933A21800CBDFC5 /* FluencyLetterTViewController.xib in Resources */,
 				83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */,
@@ -893,6 +902,7 @@
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				839EE22D194785C20026D6CF /* CountdownTimerViewController.m in Sources */,
 				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
+				8383978A1948BAF000F67E26 /* TimerViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
 				83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */,
 				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,

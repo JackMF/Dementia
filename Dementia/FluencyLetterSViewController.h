@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "TestViewController.h"
 @class CountdownTimerViewController;
+@class TimerViewController;
 
 @interface FluencyLetterSViewController : TestViewController <UIAlertViewDelegate, UITextFieldDelegate>
 {
-	CountdownTimerViewController *timerViewController;
+	CountdownTimerViewController *countdownTimerViewController;
+	TimerViewController *timerViewController;
 	UIAlertView *finishedAlertView;
+	int numberOfWordsProduced;
+	int duration;
+	int repeatDuration;
 }
 
 @end

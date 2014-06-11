@@ -97,7 +97,12 @@
 		[self.test startPostTest];  // start the post test
 }
 
--(void)timerHasFinished
+-(void)countdownTimerHasFinished
+{
+
+}
+
+-(void)timerStoppedWithTimeElapsed:(int)timeElapsed
 {
 
 }

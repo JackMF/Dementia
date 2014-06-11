@@ -19,5 +19,6 @@
 - (IBAction)startButtonPressed:(id)sender;
 -(void)updateCountdownLabel;
 @property TestViewController *testVCDelegate;
+@property int countdownDuration;
 
 @end

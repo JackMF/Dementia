@@ -9,6 +9,11 @@
 #import "FluencyLetterSViewController.h"
 #import "Test.h"
 #import "CountdownTimerViewController.h"
+#import "TimerViewController.h"
+
+#define kTestDurationSeconds 5.0f
+#define kSpeakingDurationSeconds 60.0f
+#define kWritingDurationSeconds 60.0f
 
 @interface FluencyLetterSViewController ()
 
@@ -22,6 +27,7 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		// Custom initialization
+		duration = kTestDurationSeconds;
 	}
 	return self;
 }
@@ -33,13 +39,27 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-	[self addTimerViewController];
+	[self addCountdownTimer];
+	[self addTimer];
 }
 
--(void)addTimerViewController
+
+-(void)addCountdownTimer
 {
-	timerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+	countdownTimerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"CountdownTimerViewController" bundle:nil];
 	CGRect timerFrame = CGRectMake(100.0f, 100.0f, 600.0f, 200.0f);
+	[countdownTimerViewController.view setFrame:timerFrame];
+	[self addChildViewController:countdownTimerViewController];
+	[countdownTimerViewController setTestVCDelegate:self];
+	[countdownTimerViewController setCountdownDuration:duration];
+	[countdownTimerViewController didMoveToParentViewController:self];
+	[self.view addSubview:countdownTimerViewController.view];
+}
+
+-(void)addTimer
+{
+	timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+	CGRect timerFrame = CGRectMake(100.0f, 500.0f, 600.0f, 200.0f);
 	[timerViewController.view setFrame:timerFrame];
 	[self addChildViewController:timerViewController];
 	[timerViewController setTestVCDelegate:self];
@@ -47,15 +67,13 @@
 	[self.view addSubview:timerViewController.view];
 }
 
--(void)timerHasFinished
+-(void)countdownTimerHasFinished
 {
-	NSLog(@"timer Finished");
 	[self displayFinishedAlertView];
 }
 
 -(void)displayFinishedAlertView
 {
-
 	finishedAlertView = [UIAlertView new];
 	[finishedAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
 	[finishedAlertView setTitle:@"How many words did the participant produce?"];
@@ -74,29 +92,38 @@
 {
 	if (buttonIndex == 1) {
 		UITextField *numberField = [alertView textFieldAtIndex:0];
-		[self finishWithScore:numberField.text];
+		NSString *number = numberField.text;
+		numberOfWordsProduced = (int)[number integerValue];
 	}
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 	[finishedAlertView dismissWithClickedButtonIndex:0 animated:YES];
-	[self finishWithScore:textField.text];
+	NSString *number = textField.text;
+	numberOfWordsProduced = (int)[number integerValue];
 	return YES;
 }
 
--(void)finishWithScore:(NSString *)score
+-(void)timerStoppedWithTimeElapsed:(int)timeElapsed
 {
-	int testScore = (int)[score integerValue];
-	[test addToTestScore:testScore];
+	repeatDuration = timeElapsed;
+	int score = [self calculateScore];
+	[test addToTestScore:score];
 	[super hasFinished];
 }
 
+-(int)calculateScore
+{
+	return (duration - repeatDuration) / numberOfWordsProduced;
+}
+
+
 -(void)viewWillDisappear:(BOOL)animated
 {
-	timerViewController.view = nil;
-	[timerViewController removeFromParentViewController];
-	timerViewController = nil;
+	countdownTimerViewController.view = nil;
+	[countdownTimerViewController removeFromParentViewController];
+	countdownTimerViewController = nil;
 }
 
 - (void)didReceiveMemoryWarning
