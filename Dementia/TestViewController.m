@@ -10,6 +10,7 @@
 #import "Test.h"
 #import "ControlPanelViewController.h"
 #import "MultiControlPanelViewController.h"
+#define kAnimationDuration 0.6f
 
 
 @interface TestViewController ()
@@ -69,10 +70,10 @@
 {
 }
 
--(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
+-(void)makeMultiControlPanelWithTitles:(NSArray *)titles andValues:(NSArray *)values
 {
 	MultiControlPanelViewController *multiControlPanelViewController = [[MultiControlPanelViewController alloc] initWithNibName:@"MultiControlPanelViewController" bundle:nil];
-	[multiControlPanelViewController setButtonTitles:titles];
+	[multiControlPanelViewController setButtonTitles:titles andValues:values];
 	controlPanelViewController = multiControlPanelViewController;
 	[controlPanelViewController setIsDynamic:NO];
 	// Add the control panel to the view
@@ -104,6 +105,45 @@
 
 -(void)timerStoppedWithTimeElapsed:(int)timeElapsed
 {
+
+}
+
+-(void)animateElementOut:(id)element andBringBackWithValue:(id)newValue
+{
+	if ([element isKindOfClass:[UILabel class]])
+		[self animateLabelOut:element andBringBackWithValue:newValue];
+	else if ([element isKindOfClass:[UIImageView class]])
+		[self animateImageViewOut:element andBringBackWithValue:newValue];
+}
+
+-(void)animateLabelOut:(UILabel *)label andBringBackWithValue:(NSString *)newValue
+{
+	// Animate and swap questions
+	[UIView animateWithDuration:kAnimationDuration animations:^() {
+	    [label setAlpha:0.0f];
+	} completion:^(BOOL finished) {
+
+	    [label setText:newValue];
+	    [UIView animateWithDuration:kAnimationDuration
+	    animations:^() {
+	        [label setAlpha:100.0f];
+		}];
+	}];
+
+}
+
+-(void)animateImageViewOut:(UIImageView *)imageView andBringBackWithValue:(UIImage *)newValue
+{
+	// Animate and swap questions
+	[UIView animateWithDuration:kAnimationDuration animations:^() {
+	    [imageView setAlpha:0.0f];
+	} completion:^(BOOL finished) {
+	    [imageView setImage:newValue];
+	    [UIView animateWithDuration:kAnimationDuration
+	    animations:^() {
+	        [imageView setAlpha:100.0f];
+		}];
+	}];
 
 }
 

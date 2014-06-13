@@ -9,5 +9,10 @@
 #import "TestViewController.h"
 
 @interface MemoryDelayedRecognitionViewController : TestViewController
+{
+	NSArray *questions;
+	__weak IBOutlet UILabel *questionLabel;
+	int currentQuestionOrder;
+}
 
 @end

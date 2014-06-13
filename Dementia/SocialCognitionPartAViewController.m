@@ -36,10 +36,13 @@
 {
 	currentQuestionOrder = 0;
 	currentStageOrder = 0;
-
-//	NSArray *cpButtonTitles = [test buttonNames];
-//	[super makeMultiControlPanelWithTitles:cpButtonTitles];
+	[answer0Button setImage:nil forState:UIControlStateNormal];
+	[answer1Button setImage:nil forState:UIControlStateNormal];
+	[answer2Button setImage:nil forState:UIControlStateNormal];
+	[answer3Button setImage:nil forState:UIControlStateNormal];
+	[faceImageView setImage:nil];
 	[self loadNextQuestion];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,7 +71,6 @@
 		UIImage *face = [UIImage imageNamed:smileFilename];
 		[faceImageView setImage:face];
 	}
-
 }
 
 -(void)loadNextQuestion {

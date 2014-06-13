@@ -14,7 +14,6 @@
 
 @implementation MultiControlPanelViewController
 @synthesize answerScore;
-@synthesize buttonTitles;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,10 +24,12 @@
 	return self;
 }
 
--(void)setButtonTitles:(NSArray *)titles
+-(void)setButtonTitles:(NSArray *)titles andValues:(NSArray *) values
 {
 	buttonTitles = titles;
+	buttonValues = values;
 }
+
 
 - (void)viewDidLoad
 {
@@ -43,11 +44,11 @@
 {
 	[self resetDecisionButtons];
 	if (sender==buttonOne)
-		answerScore = 2;
+		answerScore = (int)[[buttonValues objectAtIndex:0] integerValue];
 	else if (sender==buttonTwo)
-		answerScore = 1;
+		answerScore = (int)[[buttonValues objectAtIndex:1] integerValue];
 	else if (sender==buttonThree)
-		answerScore = 0;
+		answerScore = (int)[[buttonValues objectAtIndex:2] integerValue];
 	[(UIButton *)sender setBackgroundColor :[UIColor redColor]];
 	//[(UIButton *)sender setTintColor:[UIColor greenColor]];
 	[confirmButton setHidden:NO];           // Show the confirm button

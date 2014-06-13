@@ -293,7 +293,7 @@ Unlimited time is given for spelling of each word. All words are assessed even i
 		<string>The “Language - Spelling” section is now completed.
             
 The next section of the test is “Fluency - S”</string>
-		<key>toSpell</key>
+		<key>questions</key>
 		<array>
 			<string>Envelope</string>
 			<string>Skateboard</string>
@@ -612,6 +612,41 @@ The next section of the test is “Memory - Delayed Recall&quot;.</string>
 		<string>Memory</string>
 		<key>testName</key>
 		<string>Delayed Recognition</string>
+		<key>questions</key>
+		<array>
+			<array>
+				<string>Was the story about an event that occurred last Saturday?</string>
+				<string>0</string>
+			</array>
+			<array>
+				<string>Was the event the annual litter collection?</string>
+				<string>1</string>
+			</array>
+			<array>
+				<string>Did this take place in Primrose Woods?</string>
+				<string>1</string>
+			</array>
+			<array>
+				<string>Did they remove old drink cans and sweet wrappers?</string>
+				<string>0</string>
+			</array>
+			<array>
+				<string>Was the man in the story called Mr Watt?</string>
+				<string>1</string>
+			</array>
+			<array>
+				<string>Was his first name ‘Thomas’?</string>
+				<string>0</string>
+			</array>
+			<array>
+				<string>Was he from the local council?</string>
+				<string>0</string>
+			</array>
+			<array>
+				<string>Was he especially proud of the children for coming along?</string>
+				<string>1</string>
+			</array>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>

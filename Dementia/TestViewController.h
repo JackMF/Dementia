@@ -19,7 +19,8 @@
 -(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
 -(void)makeStaticControlPanel;
 -(void)makeDynamicControlPanel;
--(void)makeMultiControlPanelWithTitles:(NSArray *)titles;
+-(void)makeMultiControlPanelWithTitles:(NSArray *)titles andValues:(NSArray *)values;
 -(void)countdownTimerHasFinished;
 -(void)timerStoppedWithTimeElapsed:(int)timeElapsed;
+-(void)animateElementOut:(id)element andBringBackWithValue:(id)value;
 @end

@@ -49,25 +49,8 @@
 	UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
 
 	// Animate and swap images
-	[self animateImageOutAndChangeValue:newImage];
-}
-
--(void)animateImageOutAndChangeValue:(UIImage *)newImage
-{
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    inputImageView.alpha = 0.0f;
-	} completion:^(BOOL finished) {
-	    [inputImageView setImage:newImage]; // Set the new image
-	    [self animateImageIn];
-	}];
-
-}
-
--(void)animateImageIn
-{
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    inputImageView.alpha = 100.0f;
-	}];
+//	[self animateImageOutAndChangeValue:newImage];
+	[super animateElementOut:inputImageView andBringBackWithValue:newImage];
 }
 
 // Handle presses of the confirm button

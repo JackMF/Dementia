@@ -13,9 +13,10 @@
 	__weak IBOutlet UIButton *buttonOne;
 	__weak IBOutlet UIButton *buttonTwo;
 	__weak IBOutlet UIButton *buttonThree;
+	NSArray *buttonTitles;
+	NSArray *buttonValues;
 }
 @property (nonatomic) int answerScore;
-@property (nonatomic) NSArray *buttonTitles;
--(void)setButtonTitles:(NSArray *)titles;
+-(void)setButtonTitles:(NSArray *)titles andValues:(NSArray *) values;
 
 @end

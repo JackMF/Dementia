@@ -35,33 +35,14 @@
 	[super viewWillAppear:animated];
 	[super makeStaticControlPanel];
 	wordOrder = 0;
-	toSpellArray = [test toSpell];
+	toSpellArray = [test questions];
 	[self loadNextWord];
 }
 
 -(void)loadNextWord {
 	NSString *newWord = [toSpellArray objectAtIndex:wordOrder];
-	[self animateQuestionOutAndChangeValue:newWord];
+	[super animateElementOut:toSpellLabel andBringBackWithValue:newWord];
 	wordOrder++;                    // Increment our  image order
-}
-
--(void)animateQuestionOutAndChangeValue:(NSString *)newWord
-{
-	// Animate and swap questions
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    toSpellLabel.alpha = 0.0f;
-	} completion:^(BOOL finished) {
-	    [toSpellLabel setText:newWord];
-	    [self animateQuestionIn];
-	}];
-
-}
-
--(void)animateQuestionIn
-{
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {         // Once animation is finished
-	    toSpellLabel.alpha = 100.0f;
-	}];
 }
 
 // Handle presses of the confirm button

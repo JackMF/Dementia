@@ -108,38 +108,11 @@
 	correctAnswer = [[questionDicts objectAtIndex: currentQuestionOrder] valueForKey:@"correctFileName"];
 
 	NSString *newQuestion = [questionDict valueForKey:@"question"];
-	[self swapQuestion:newQuestion];
+	[super animateElementOut:questionLabel andBringBackWithValue:newQuestion];
+	currentlySelectedButton.selected = NO;
+	currentlySelectedButton = nil;
+	[self resetButtons];
 
-}
-
--(void)swapQuestion:(NSString *)newQuestion
-{
-	// Animate and swap questions
-	[self animateQuestionOutAndChangeValue:newQuestion];
-}
-
--(void)animateQuestionOutAndChangeValue:(NSString *)newValue
-{
-	[UIView animateWithDuration:kImageViewAnimationDuration
-	animations:^{
-	    questionLabel.alpha = 0.0f;
-	} completion:^(BOOL finished) {
-	    [questionLabel setText:newValue];
-	    //Unselect current selected image.
-	    currentlySelectedButton.selected = NO;
-	    currentlySelectedButton = nil;
-	    [self resetButtons];
-
-	    [self animateQuestionIn];
-	}];
-}
-
--(void)animateQuestionIn
-{
-	[UIView animateWithDuration:kImageViewAnimationDuration
-	animations:^() {
-	    questionLabel.alpha = 100.0f;
-	}];
 }
 
 - (IBAction)nextButtonPressed:(id)sender {

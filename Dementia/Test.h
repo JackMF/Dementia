@@ -28,7 +28,6 @@
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) NSString *story;
 @property (nonatomic) NSArray *buttonNames;
-@property (nonatomic) NSArray *toSpell;
 @property (nonatomic) NSArray *buttonText;
 
 @property (nonatomic) int testScore;
