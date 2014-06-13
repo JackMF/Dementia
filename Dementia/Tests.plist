@@ -616,35 +616,35 @@ The next section of the test is “Memory - Delayed Recall&quot;.</string>
 		<array>
 			<array>
 				<string>Was the story about an event that occurred last Saturday?</string>
-				<string>0</string>
+				<integer>0</integer>
 			</array>
 			<array>
 				<string>Was the event the annual litter collection?</string>
-				<string>1</string>
+				<integer>1</integer>
 			</array>
 			<array>
 				<string>Did this take place in Primrose Woods?</string>
-				<string>1</string>
+				<integer>1</integer>
 			</array>
 			<array>
 				<string>Did they remove old drink cans and sweet wrappers?</string>
-				<string>0</string>
+				<integer>0</integer>
 			</array>
 			<array>
 				<string>Was the man in the story called Mr Watt?</string>
-				<string>1</string>
+				<integer>1</integer>
 			</array>
 			<array>
 				<string>Was his first name ‘Thomas’?</string>
-				<string>0</string>
+				<integer>0</integer>
 			</array>
 			<array>
 				<string>Was he from the local council?</string>
-				<string>0</string>
+				<integer>0</integer>
 			</array>
 			<array>
 				<string>Was he especially proud of the children for coming along?</string>
-				<string>1</string>
+				<integer>1</integer>
 			</array>
 		</array>
 		<key>preTestInstructions</key>

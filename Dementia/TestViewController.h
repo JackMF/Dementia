@@ -14,13 +14,20 @@
 
 @property (nonatomic) Test *test;
 @property (nonatomic) ControlPanelViewController *controlPanelViewController;
+-(void)animateElementOut:(id)element andBringBackWithValue:(id)value;
+
 -(void)hasFinished;
 -(void)didConfirmAnswer;
--(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
--(void)makeStaticControlPanel;
--(void)makeDynamicControlPanel;
--(void)makeMultiControlPanelWithTitles:(NSArray *)titles andValues:(NSArray *)values;
+
 -(void)countdownTimerHasFinished;
 -(void)timerStoppedWithTimeElapsed:(int)timeElapsed;
--(void)animateElementOut:(id)element andBringBackWithValue:(id)value;
+
+
+-(void)makeStaticControlPanel;
+-(void)makeDynamicControlPanel;
+-(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic;
+
+-(void)makeMultiControlPanelWithTitles:(NSArray *)titles andValues:(NSArray *)values;
+-(void)updateMultiControlPanelValues:(NSArray *)newValues;
+
 @end

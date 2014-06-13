@@ -6,9 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiControlPanelViewController">
             <connections>
-                <outlet property="buttonOne" destination="pV6-kO-Zbt" id="PcI-Ay-9ws"/>
-                <outlet property="buttonThree" destination="YYP-yu-Dxf" id="TXG-GB-8b7"/>
-                <outlet property="buttonTwo" destination="H6q-cv-4pk" id="tdb-F6-F8V"/>
+                <outlet property="buttonCollectionView" destination="8UG-je-4NO" id="yKQ-EC-NJg"/>
                 <outlet property="confirmButton" destination="cyP-O9-a2g" id="Jv3-yL-RJi"/>
                 <outlet property="controlPanelView" destination="8dO-Yw-8I7" id="c6M-ST-qhA"/>
                 <outlet property="view" destination="N4X-jc-mGA" id="owF-Gb-o4H"/>
@@ -20,31 +18,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dO-Yw-8I7">
-                    <rect key="frame" x="0.0" y="185" width="768" height="185"/>
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="185"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV6-kO-Zbt">
-                            <rect key="frame" x="54" y="10" width="210" height="80"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <state key="normal">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="decisionButtonPressed:" destination="-1" eventType="touchUpInside" id="xOI-Qc-oCj"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-yu-Dxf">
-                            <rect key="frame" x="549" y="10" width="126" height="80"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <state key="normal">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="decisionButtonPressed:" destination="-1" eventType="touchUpInside" id="vhq-G7-vox"/>
-                            </connections>
-                        </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyP-O9-a2g">
                             <rect key="frame" x="314" y="110" width="141" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,19 +35,23 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPi-Lv-mnI">
                             <rect key="frame" x="84" y="92" width="600" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.55156674589999999" green="0.55156674589999999" blue="0.55156674589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-cv-4pk">
-                            <rect key="frame" x="314" y="10" width="170" height="80"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <state key="normal">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8UG-je-4NO">
+                            <rect key="frame" x="0.0" y="1" width="768" height="93"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SxP-yZ-5S8">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
                             <connections>
-                                <action selector="decisionButtonPressed:" destination="-1" eventType="touchUpInside" id="um3-T6-3vh"/>
+                                <outlet property="dataSource" destination="-1" id="0iR-De-n4o"/>
+                                <outlet property="delegate" destination="-1" id="Sgz-Yt-9Xp"/>
                             </connections>
-                        </button>
+                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
                 </view>

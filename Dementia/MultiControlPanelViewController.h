@@ -8,15 +8,13 @@
 
 #import "ControlPanelViewController.h"
 
-@interface MultiControlPanelViewController : ControlPanelViewController
+@interface MultiControlPanelViewController : ControlPanelViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
-	__weak IBOutlet UIButton *buttonOne;
-	__weak IBOutlet UIButton *buttonTwo;
-	__weak IBOutlet UIButton *buttonThree;
 	NSArray *buttonTitles;
 	NSArray *buttonValues;
+	__weak IBOutlet UICollectionView *buttonCollectionView;
 }
 @property (nonatomic) int answerScore;
 -(void)setButtonTitles:(NSArray *)titles andValues:(NSArray *) values;
-
+-(void)updateButtonValues:(NSArray *)newValues;
 @end

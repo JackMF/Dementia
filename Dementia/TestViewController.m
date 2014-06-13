@@ -87,6 +87,11 @@
 	[controlPanelViewController performSelectorOnMainThread:@selector(showControlPanel) withObject:nil waitUntilDone:NO];
 }
 
+-(void)updateMultiControlPanelValues:(NSArray *)newValues
+{
+	[(MultiControlPanelViewController *)controlPanelViewController updateButtonValues : newValues];
+}
+
 -(BOOL)automaticallyAdjustsScrollViewInsets
 {
 	return NO;

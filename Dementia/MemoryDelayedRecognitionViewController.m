@@ -8,7 +8,7 @@
 
 #import "MemoryDelayedRecognitionViewController.h"
 #import "Test.h"
-#import "ControlPanelViewController.h"
+#import "MultiControlPanelViewController.h"
 
 @interface MemoryDelayedRecognitionViewController ()
 
@@ -30,13 +30,13 @@
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view from its nib.
-	questions = [[super test] questions];
-	[super makeStaticControlPanel];
+	questions = [test questions];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
 	currentQuestionOrder = 0;
+	[super makeMultiControlPanelWithTitles:@[@"True",@"False"] andValues:@[@0,@1]];
 	[self loadNextQuestion];
 }
 
@@ -44,16 +44,26 @@
 {
 	NSArray *nextQuestionArray = [questions objectAtIndex:currentQuestionOrder];
 	NSString *nextQuestion = [nextQuestionArray objectAtIndex:0];
-
 	[super animateElementOut:questionLabel andBringBackWithValue:nextQuestion];
+	[self updateButtonValues];
 	currentQuestionOrder++;
+}
+
+-(void)updateButtonValues
+{
+	NSMutableArray *newButtonValues = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:1], nil];
+	NSArray *nextQuestionArray = [questions objectAtIndex:currentQuestionOrder];
+	NSInteger nextCorrectAnswer = (int) [[nextQuestionArray objectAtIndex:1] integerValue];
+	[newButtonValues replaceObjectAtIndex:nextCorrectAnswer withObject:[NSNumber numberWithInt:0]];
+	[super updateMultiControlPanelValues:newButtonValues];
 }
 
 // Handle presses of the confirm button
 - (void)didConfirmAnswer
 {
-	if ([[super controlPanelViewController] answerWasCorrect])
-		[test addToTestScore:1];            // If we're correct, update the score for this test
+	MultiControlPanelViewController *cp = (MultiControlPanelViewController *)[super controlPanelViewController];
+	int score = [cp answerScore];
+	[test addToTestScore:score];
 	if (currentQuestionOrder < [questions count])     // If there's still images left
 		[self loadNextQuestion];               // Load the next image
 	else [super hasFinished];     // Otherwise tell the Test we've finished, and our score
