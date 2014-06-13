@@ -127,11 +127,10 @@
 	[UIView animateWithDuration:kAnimationDuration animations:^() {
 	    [label setAlpha:0.0f];
 	} completion:^(BOOL finished) {
-
 	    [label setText:newValue];
 	    [UIView animateWithDuration:kAnimationDuration
 	    animations:^() {
-	        [label setAlpha:100.0f];
+	        [label setAlpha:1.0f];
 		}];
 	}];
 
@@ -146,7 +145,7 @@
 	    [imageView setImage:newValue];
 	    [UIView animateWithDuration:kAnimationDuration
 	    animations:^() {
-	        [imageView setAlpha:100.0f];
+	        [imageView setAlpha:1.0f];
 		}];
 	}];
 

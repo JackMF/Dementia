@@ -62,12 +62,29 @@ int secondsElapsed;
 }
 
 - (IBAction)startButtonPressed {
-	timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+	if (![timer isValid]) {
+		timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+	}
 }
 
 - (IBAction)stopButtonPressed {
 	[timer invalidate];
+	timer = nil;
 	[self timerHasFinished];
+}
+
+-(void)didMoveToParentViewController:(UIViewController *)parent
+{
+	if (!parent) {
+		[timer invalidate];
+		timer = nil;
+		secondsElapsed = 0;
+	}
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+	[timer invalidate];
+	timer = nil;
 }
 
 - (void)didReceiveMemoryWarning

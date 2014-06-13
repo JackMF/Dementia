@@ -43,14 +43,20 @@
 	[self addTimer];
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+	[self removeTimers];
+}
+
 
 -(void)addCountdownTimer
 {
 	countdownTimerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"CountdownTimerViewController" bundle:nil];
 	CGRect timerFrame = CGRectMake(100.0f, 100.0f, 600.0f, 200.0f);
 	[countdownTimerViewController.view setFrame:timerFrame];
-	[self addChildViewController:countdownTimerViewController];
 	[countdownTimerViewController setTestVCDelegate:self];
+
+	[self addChildViewController:countdownTimerViewController];
 	[countdownTimerViewController setCountdownDuration:duration];
 	[countdownTimerViewController didMoveToParentViewController:self];
 	[self.view addSubview:countdownTimerViewController.view];
@@ -61,8 +67,9 @@
 	timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
 	CGRect timerFrame = CGRectMake(100.0f, 500.0f, 600.0f, 200.0f);
 	[timerViewController.view setFrame:timerFrame];
-	[self addChildViewController:timerViewController];
 	[timerViewController setTestVCDelegate:self];
+
+	[self addChildViewController:timerViewController];
 	[timerViewController didMoveToParentViewController:self];
 	[self.view addSubview:timerViewController.view];
 }
@@ -118,12 +125,20 @@
 	return (duration - repeatDuration) / numberOfWordsProduced;
 }
 
-
--(void)viewWillDisappear:(BOOL)animated
+-(void)removeTimers
 {
 	countdownTimerViewController.view = nil;
 	[countdownTimerViewController removeFromParentViewController];
 	countdownTimerViewController = nil;
+
+	timerViewController.view = nil;
+	[timerViewController removeFromParentViewController];
+	timerViewController = nil;
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
 }
 
 - (void)didReceiveMemoryWarning

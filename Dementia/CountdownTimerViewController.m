@@ -68,6 +68,16 @@ int secondsRemaining;
 		[testVCDelegate countdownTimerHasFinished];
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+	[countdownTimer invalidate];
+	NSLog(@"willDisappear");
+}
+
+-(void)willMoveToParentViewController:(UIViewController *)parent
+{
+	NSLog(@"willMove");
+}
 
 - (void)didReceiveMemoryWarning
 {
