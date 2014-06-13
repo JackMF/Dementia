@@ -11,10 +11,10 @@
 
 @interface VisuospatialDotCountingViewController : TestViewController
 {
-    NSArray *images;
-    int currentScore;
-    int currentImage;
-    __weak IBOutlet UIImageView *imageViewer;
+	NSArray *images;
+	int currentScore;
+	int currentImageOrder;
+	__weak IBOutlet UIImageView *imageViewer;
 }
 
 @end

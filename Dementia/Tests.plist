@@ -418,23 +418,19 @@ The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 		<string>Visuospatial</string>
 		<key>testName</key>
 		<string>Dot Counting</string>
+		<key>questions</key>
+		<array>
+			<string>dot0.png</string>
+			<string>dot1.png</string>
+			<string>dot2.png</string>
+			<string>dot3.png</string>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>
 		<string>The “Visuospatial - Dot Counting&quot; section is now completed.
 
 The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
-		<key>imageDictionaries</key>
-		<array>
-			<dict>
-				<key>order</key>
-				<integer>0</integer>
-				<key>filename</key>
-				<string>visuiospatial1.jpg</string>
-				<key>name</key>
-				<string>1</string>
-			</dict>
-		</array>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -445,6 +441,13 @@ The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 		<string>Visuospatial</string>
 		<key>testName</key>
 		<string>Cube Counting</string>
+		<key>questions</key>
+		<array>
+			<string>cube0.png</string>
+			<string>cube1.png</string>
+			<string>cube2.png</string>
+			<string>cube3.png</string>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>
@@ -461,6 +464,13 @@ The next section of the test is “Visuospatial - Number Location&quot;</string>
 		<string>Visuospatial</string>
 		<key>testName</key>
 		<string>Number Location</string>
+		<key>questions</key>
+		<array>
+			<string>number0.png</string>
+			<string>number1.png</string>
+			<string>number2.png</string>
+			<string>number3.png</string>
+		</array>
 		<key>preTestInstructions</key>
 		<string></string>
 		<key>postTestMessage</key>

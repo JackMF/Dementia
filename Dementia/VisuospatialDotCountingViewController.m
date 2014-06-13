@@ -9,6 +9,7 @@
 #import "VisuospatialDotCountingViewController.h"
 #import "TestViewController.h"
 #import "Test.h"
+#import "ControlPanelViewController.h"
 #define kImageViewAnimationDuration 0.3
 
 @interface VisuospatialDotCountingViewController ()
@@ -19,55 +20,52 @@
 @synthesize test;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		// Custom initialization
+	}
+	return self;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    currentImage = 0;
-    currentScore = 0;
-    [super viewWillAppear:animated];
-    images = [test imageDictionaries];
-    [self loadNextImage];
+	currentImageOrder = 0;
+	currentScore = 0;
+	[super viewWillAppear:animated];
+	images = [test questions];
+	[self loadNextImage];
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	[super viewDidLoad];
+	[super makeStaticControlPanel];
+	// Do any additional setup after loading the view from its nib.
 }
 
 -(void)loadNextImage
 {
- 	// Grab the new image
-	NSDictionary *imageDict = [images objectAtIndex:currentImage];
-	UIImage *newImage = [UIImage imageNamed:[imageDict valueForKey:@"filename"]];
-    
-	// Work out where things are, and where they should go
-	CGRect originalFrame = imageViewer.frame;
-	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-	CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-    
-	// Animate and swap images
-	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    imageViewer.frame = leftFrame;   // Animate the image view off to the left
-	} completion:^(BOOL finished) {         // Once animation is finished
-	    [imageViewer setImage:newImage]; // Set the new image
-	    imageViewer.frame = rightFrame; // Move the inputImageView the right
-	    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {    // Once animation is finished
-	        imageViewer.frame = originalFrame; // Animate the inputImageView in from the right
-		}];
-	}];
+	// Grab the new image
+	NSString *filename = [images objectAtIndex:currentImageOrder];
+	UIImage *newImage = [UIImage imageNamed:filename];
+	[super animateElementOut:imageViewer andBringBackWithValue:newImage];
+	currentImageOrder++;
+}
+
+-(void)didConfirmAnswer
+{
+	if ([[super controlPanelViewController] answerWasCorrect])
+		[test addToTestScore:1];            // If we're correct, update the score for this test
+	if (currentImageOrder < [images count])     // If there's still images left
+		[self loadNextImage];
+	else [super hasFinished];     // Otherwise tell the Test we've finished, and our score
+
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 @end
