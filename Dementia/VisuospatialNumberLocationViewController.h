@@ -9,5 +9,11 @@
 #import "TestViewController.h"
 
 @interface VisuospatialNumberLocationViewController : TestViewController
+{
+	NSArray *images;
+	int currentScore;
+	int currentImageOrder;
+	__weak IBOutlet UIImageView *imageViewer;
+}
 
 @end

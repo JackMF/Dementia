@@ -27,19 +27,9 @@
 	return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-	currentImageOrder = 0;
-	currentScore = 0;
-	[super viewWillAppear:animated];
-	images = [test questions];
-	[self loadNextImage];
-}
-
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[super makeStaticControlPanel];
 	// Do any additional setup after loading the view from its nib.
 }
 
@@ -50,6 +40,16 @@
 	UIImage *newImage = [UIImage imageNamed:filename];
 	[super animateElementOut:imageViewer andBringBackWithValue:newImage];
 	currentImageOrder++;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super makeStaticControlPanel];
+	currentImageOrder = 0;
+	currentScore = 0;
+	[super viewWillAppear:animated];
+	images = [test questions];
+	[self loadNextImage];
 }
 
 -(void)didConfirmAnswer
