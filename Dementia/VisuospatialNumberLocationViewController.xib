@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VisuospatialNumberLocationViewController">
             <connections>
-                <outlet property="imageViewer" destination="RMW-nQ-QBq" id="QRp-YU-3kW"/>
+                <outlet property="imageView" destination="RMW-nQ-QBq" id="csi-2x-RVl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uqp-xA-4PB"/>
             </connections>
         </placeholder>

@@ -10,7 +10,6 @@
 @class Test;
 @interface PreTestViewController : UIViewController
 {
-	__weak IBOutlet UILabel *titleLabel;
 	__weak IBOutlet UITextView *textView;
 }
 - (IBAction)startButtonPressed;

@@ -72,6 +72,7 @@
 -(void)startPreTest
 {
 	[navigationController pushViewController:preTestViewController animated:YES];
+	[preTestViewController setTitle:[self getFullTestName]];
 }
 
 -(void)startTest

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostTestViewController">
             <connections>
                 <outlet property="textView" destination="Rdc-3H-nu6" id="1oP-GZ-Ivn"/>
-                <outlet property="titleLabel" destination="get-NZ-mSb" id="Gbf-Na-72i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,24 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="get-NZ-mSb">
-                    <rect key="frame" x="53" y="100" width="663" height="29"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Kk-vVD">
+                    <rect key="frame" x="20" y="95" width="188" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Kk-vVD">
-                    <rect key="frame" x="316" y="150" width="130" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-jF-cE1">
-                    <rect key="frame" x="359" y="938" width="50" height="41"/>
+                    <rect key="frame" x="352" y="938" width="65" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="Next">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -42,7 +34,7 @@
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdc-3H-nu6">
-                    <rect key="frame" x="53" y="198" width="663" height="711"/>
+                    <rect key="frame" x="20" y="135" width="728" height="734"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum tortor eget augue feugiat ornare. Integer placerat lacus in tellus pharetra blandit. Vestibulum porttitor auctor condimentum. Ut velit risus, ullamcorper rutrum metus nec, tincidunt dapibus sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse molestie sem ac enim vulputate commodo. Suspendisse potenti. In ultricies odio risus, sed pharetra ligula pharetra ut. Vivamus volutpat justo at auctor hendrerit. Nullam iaculis elit sit amet quam elementum iaculis. Ut vehicula lectus odio, vitae vulputate felis sodales vel. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a dolor quis felis commodo auctor sit amet non ante.
@@ -54,7 +46,7 @@ Nullam ante eros, gravida in orci vel, pellentesque rhoncus ipsum. Fusce luctus 
 Quisque sit amet nibh nec tortor posuere adipiscing id a sem. Praesent dignissim aliquam nisl sed dapibus. Duis tortor augue, luctus ut felis facilisis, ullamcorper commodo dui. Nulla aliquam sapien nec semper consequat. Proin in dui nec lorem mollis cursus ut in nibh. Duis ut risus tincidunt nisl dictum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor laoreet risus, ut laoreet sem rutrum vitae. Nullam eget elementum neque, ut vehicula metus. Maecenas aliquam ut enim ac fringilla.
 
 Duis at leo dictum, mollis augue sit amet, consectetur tortor. Nullam ac dolor vitae odio hendrerit ullamcorper. Aliquam at pellentesque mauris. Vivamus semper congue sapien, id iaculis eros interdum quis. Cras in sem vitae ligula tincidunt malesuada. Sed nisi purus, malesuada non urna at, tempor porta arcu. Ut ut euismod eros, vel vestibulum odio. Nullam sed consequat arcu. Donec scelerisque nibh id enim feugiat molestie. Duis quis velit eu magna tempor luctus. Maecenas luctus massa at sem cursus, sed luctus dui fermentum. Integer pulvinar, nulla eget elementum semper, lectus neque vehicula tortor, non iaculis diam nibh ut lacus. Donec imperdiet molestie erat, sit amet imperdiet lorem consectetur sit amet. Sed ultricies nisl ac dignissim feugiat.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>

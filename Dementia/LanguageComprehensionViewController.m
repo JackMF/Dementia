@@ -9,7 +9,7 @@
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
 #define kImageViewAnimationDuration 0.6f
-#define kBorderSize 5
+#define kBorderSize 6
 
 @interface LanguageComprehensionViewController ()
 
@@ -141,9 +141,10 @@
 {
 	CGRect borderFrame = CGRectMake(button.frame.origin.x-kBorderSize, button.frame.origin.y-kBorderSize, button.frame.size.width + (kBorderSize*2), button.frame.size.height + (kBorderSize*2));
 	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+	UIColor *selectedColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:0.7f];
 
 	if (button.selected)
-		[borderView setBackgroundColor:[UIColor grayColor]];
+		[borderView setBackgroundColor:selectedColor];
 	else
 		[borderView setBackgroundColor:[UIColor whiteColor]];
 

@@ -13,7 +13,7 @@
 	NSArray *images;
 	int currentScore;
 	int currentImageOrder;
-	__weak IBOutlet UIImageView *imageViewer;
+	__weak IBOutlet UIImageView *imageView;
 }
 
 @end

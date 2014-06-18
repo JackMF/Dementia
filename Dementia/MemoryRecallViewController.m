@@ -28,13 +28,13 @@
 
 -(void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+	[self addButtonListViewController];
+	[self setButtonLabelValues];
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[self addButtonListViewController];
-	[self setButtonLabelValues];
 	[self setStoryText];
 }
 
@@ -43,7 +43,7 @@
 	// Add the control panel to the view
 	buttonListViewController = [[ButtonListViewController alloc] initWithNibName:@"ButtonListViewController" bundle:nil];
 	[self addChildViewController:buttonListViewController];
-	CGRect cpFrame = CGRectMake(150.0, 300.0, 478.0, 700.0);
+	CGRect cpFrame = CGRectMake(150.0, 260.0, 478.0, 680.0);
 	[buttonListViewController.view setFrame:cpFrame];
 	[buttonListViewController setOneItemPerRow:YES];
 	[self.view addSubview:buttonListViewController.view];

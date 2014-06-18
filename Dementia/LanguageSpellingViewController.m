@@ -34,6 +34,7 @@
 -(void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[super makeStaticControlPanel];
+	[toSpellLabel setText:nil];
 	wordOrder = 0;
 	toSpellArray = [test questions];
 	[self loadNextWord];

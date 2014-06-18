@@ -30,6 +30,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	[super makeStaticControlPanel];
+	[imageView setImage:nil];
 	currentImageOrder = 0;  // Reset the current image we're showing
 	[self loadNextImage];   // Load the next (i.e first) image
 }
@@ -37,7 +39,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[super makeDynamicControlPanel];
 	imagesDicts = [test imageDictionaries]; // Load the images for this test
 }
 
@@ -50,7 +51,7 @@
 
 	// Animate and swap images
 //	[self animateImageOutAndChangeValue:newImage];
-	[super animateElementOut:inputImageView andBringBackWithValue:newImage];
+	[super animateElementOut:imageView andBringBackWithValue:newImage];
 }
 
 // Handle presses of the confirm button

@@ -36,10 +36,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+	[super viewWillAppear:animated];
 	[super makeStaticControlPanel];
+	[imageView setImage:nil];
 	currentImageOrder = 0;
 	currentScore = 0;
-	[super viewWillAppear:animated];
 	images = [test questions];
 	[self loadNextImage];
 }
@@ -50,7 +51,7 @@
 	// Grab the new image
 	NSString *filename = [images objectAtIndex:currentImageOrder];
 	UIImage *newImage = [UIImage imageNamed:filename];
-	[super animateElementOut:imageViewer andBringBackWithValue:newImage];
+	[super animateElementOut:imageView andBringBackWithValue:newImage];
 	currentImageOrder++;
 }
 
