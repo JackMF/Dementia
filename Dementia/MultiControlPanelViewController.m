@@ -76,7 +76,8 @@
 
 	// Make the selected background view
 	UIView *selectedBGView = [[UIView alloc] initWithFrame:cell.bounds];
-	[selectedBGView setBackgroundColor:[UIColor greenColor]];
+	UIColor *selectedColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:0.2f];
+	[selectedBGView setBackgroundColor:selectedColor];
 	cell.selectedBackgroundView = selectedBGView;
 
 	// Populate the cell with the label

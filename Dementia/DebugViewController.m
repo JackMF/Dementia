@@ -52,7 +52,8 @@
 	UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 	Test *test = [tests objectAtIndex:[indexPath row]];
-	NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", (int)[indexPath row]+1, [test getFullTestName]];
+//	NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", (int)[indexPath row]+1, [test getFullTestName]];
+	NSString *cellText = [NSString stringWithFormat:@"%@", [test getFullTestName]];
 	[cell.textLabel setText:cellText];
 	[cell.textLabel setFont:[UIFont boldSystemFontOfSize:25.0]];
 	return cell;

@@ -35,8 +35,8 @@
                         <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="mfo-jq-Yzb"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask the participant to reverse the following digits:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-0Z-ijX">
-                    <rect key="frame" x="72" y="206" width="625" height="31"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask the participant to repeat the following digits in reverse order:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="625" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-0Z-ijX">
+                    <rect key="frame" x="72" y="206" width="625" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

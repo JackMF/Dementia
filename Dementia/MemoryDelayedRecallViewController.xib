@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Say: &quot;At the the beginning of this interview, I read you a short story. Tell me as much as you can rememeber about the story&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-ay-oMe">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Say: &quot;At the the beginning of this interview, I read you a short story. Tell me as much as you can rememeber about the story&quot;" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWN-ay-oMe">
                     <rect key="frame" x="42" y="138" width="685" height="115"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

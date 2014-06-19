@@ -68,12 +68,14 @@
 
 	// Make the background view
 	UIView *bgView = [[UIView alloc] initWithFrame:cell.bounds];
-	[bgView setBackgroundColor:[UIColor redColor]];
+	UIColor *bgColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.2f];
+	[bgView setBackgroundColor:bgColor];
 	cell.backgroundView = bgView;
 
 	// Make the selected background view
 	UIView *selectedBGView = [[UIView alloc] initWithFrame:cell.bounds];
-	[selectedBGView setBackgroundColor:[UIColor greenColor]];
+	UIColor *selectedColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:0.2f];
+	[selectedBGView setBackgroundColor:selectedColor];
 	cell.selectedBackgroundView = selectedBGView;
 
 	// Populate the cell with the label
@@ -91,15 +93,12 @@
 {
 	UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 	[cell setSelected:YES];
-//	cell.backgroundColor = [UIColor greenColor];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 	[cell setSelected:NO];
-
-//	[cell setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning

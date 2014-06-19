@@ -37,7 +37,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[super makeStaticControlPanel];
+	[super makeDynamicControlPanel];
 	[imageView setImage:nil];
 	currentImageOrder = 0;
 	currentScore = 0;

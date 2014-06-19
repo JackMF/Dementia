@@ -30,7 +30,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[super makeStaticControlPanel];
+	[super makeDynamicControlPanel];
 	[imageView setImage:nil];
 	currentImageOrder = 0;  // Reset the current image we're showing
 	[self loadNextImage];   // Load the next (i.e first) image
