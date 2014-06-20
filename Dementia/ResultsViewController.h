@@ -11,9 +11,10 @@
 
 @interface ResultsViewController : UIViewController <UIScrollViewDelegate>
 {
+	TestManager *testManager;
 
 	__weak IBOutlet UIScrollView *scrollView;
-    __weak IBOutlet UIView *contentView;
+	__weak IBOutlet UIView *contentView;
 
 	__weak IBOutlet UILabel *dateOfTestingLabel;
 	__weak IBOutlet UILabel *patientNameLabel;
