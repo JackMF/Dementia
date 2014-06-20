@@ -15,10 +15,11 @@
 {
 	CountdownTimerViewController *countdownTimerViewController;
 	TimerViewController *timerViewController;
+	__weak IBOutlet UISegmentedControl *speakingWritingSegmentedControl;
 	UIAlertView *finishedAlertView;
 	int numberOfWordsProduced;
 	int duration;
 	int repeatDuration;
 }
-
+- (IBAction)speakingWritingValueChanged;
 @end

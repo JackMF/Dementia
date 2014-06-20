@@ -11,7 +11,6 @@
 #import "CountdownTimerViewController.h"
 #import "TimerViewController.h"
 
-#define kTestDurationSeconds 5.0f
 #define kSpeakingDurationSeconds 60.0f
 #define kWritingDurationSeconds 120.0f
 
@@ -27,7 +26,7 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		// Custom initialization
-		duration = kTestDurationSeconds;
+		duration = kSpeakingDurationSeconds;
 	}
 	return self;
 }
@@ -48,11 +47,38 @@
 	[self removeTimers];
 }
 
+-(void)viewDidLayoutSubviews
+{
+	[self setSeg];
+}
+
+-(void)setSeg
+{
+//	CGRect frame = speakingWritingSegmentedControl.frame;
+//	[speakingWritingSegmentedControl setFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 50.0f)];
+	UIFont *font = [UIFont boldSystemFontOfSize:26.0f];
+	NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+	[speakingWritingSegmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
+}
+
+- (IBAction)speakingWritingValueChanged {
+	int newIndex = [speakingWritingSegmentedControl selectedSegmentIndex];
+	if (newIndex==0) duration=kSpeakingDurationSeconds;
+	else if (newIndex==1) duration=kWritingDurationSeconds;
+	[self setSeg];
+	[self addCountdownTimer];
+}
 
 -(void)addCountdownTimer
 {
+	if (countdownTimerViewController) {
+		[countdownTimerViewController removeFromParentViewController];
+		countdownTimerViewController.view = nil;
+		countdownTimerViewController = nil;
+	}
+
 	countdownTimerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"CountdownTimerViewController" bundle:nil];
-	CGRect timerFrame = CGRectMake(84.0f, 250.0f, 600.0f, 90.0f);
+	CGRect timerFrame = CGRectMake(84.0f, 235.0f, 600.0f, 90.0f);
 	[countdownTimerViewController.view setFrame:timerFrame];
 	[countdownTimerViewController setTestVCDelegate:self];
 
@@ -64,8 +90,14 @@
 
 -(void)addTimer
 {
+
+	if (timerViewController) {
+		[timerViewController removeFromParentViewController];
+		timerViewController.view = nil;
+		timerViewController = nil;
+	}
 	timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
-	CGRect timerFrame = CGRectMake(84.0f, 570.0f, 600.0f, 90.0f);
+	CGRect timerFrame = CGRectMake(84.0f, 550.0f, 600.0f, 90.0f);
 	[timerViewController.view setFrame:timerFrame];
 	[timerViewController setTestVCDelegate:self];
 
@@ -116,13 +148,20 @@
 {
 	repeatDuration = timeElapsed;
 	int score = [self calculateScore];
-	[test addToTestScore:score];
-	[super hasFinished];
+	if (score!=-1) {
+		[test addToTestScore:score];
+		[super hasFinished];
+	} else {
+		[self addCountdownTimer];
+		[self addTimer];
+	}
 }
 
 -(int)calculateScore
 {
-	return (duration - repeatDuration) / numberOfWordsProduced;
+	if (numberOfWordsProduced && duration && repeatDuration)
+		return (duration - repeatDuration) / numberOfWordsProduced;
+	else return -1;
 }
 
 -(void)removeTimers
@@ -146,5 +185,4 @@
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
 }
-
 @end

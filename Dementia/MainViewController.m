@@ -11,6 +11,7 @@
 #import "TestManager.h"
 #import "DebugViewController.h"
 #import "ResultsViewController.h"
+#import "PatientDetailsFormViewController.h"
 
 @interface MainViewController ()
 
@@ -45,6 +46,7 @@
 	[self setTestLabelValue];
 	[self.navigationController.navigationItem setLeftBarButtonItem:nil];
 	[self setNavButton];
+	[self setPatientDetails];
 }
 
 -(void)setNavButton
@@ -59,17 +61,31 @@
 	[self presentViewController:navController animated:YES completion:nil];
 }
 
+- (IBAction)enterPatientDetailsButtonPressed:(id)sender {
+	PatientDetailsFormViewController *patientDetailsFormViewController = [[PatientDetailsFormViewController alloc] initWithNibName:@"PatientDetailsFormViewController" bundle:nil];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:patientDetailsFormViewController];
+	[self presentViewController:navController animated:YES completion:nil];
+}
+
+-(void)setPatientDetails
+{
+	[patientNameLabel setText:[testManager patientName]];
+	[patientHospitalNumberLabel setText:[testManager patientHospitalNoOrAddress]];
+}
+
 - (IBAction)continueButtonPressed {
 	[self showCurrentTest];
 }
 
 - (IBAction)endButtonPressed {
 	ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithNibName:@"ResultsViewController" bundle:nil];
-	[self presentViewController:resultsViewController animated:YES completion:nil];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:resultsViewController];
+	[self presentViewController:navController animated:YES completion:nil];
 }
 
 -(void)setTestLabelValue
 {
+	[patientDetailsView setHidden:(![testManager patientName] || ![testManager patientHospitalNoOrAddress])];
 	[progressLabel setText:[NSString stringWithFormat:@"%i/%i tests completed", currentTestOrder, [tests count]]];
 	[currentTestLabel setText:[currentTest getFullTestName]];
 }

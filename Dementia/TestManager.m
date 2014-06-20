@@ -12,6 +12,7 @@
 @implementation TestManager
 static TestManager *_sharedInstance;
 @synthesize tests;
+@synthesize testDate, patientAgeLeavingEducation, patientOccupation, patientHandedness, patientName, patiendDateOfBirth;
 
 -(id)init
 {
@@ -40,7 +41,6 @@ static TestManager *_sharedInstance;
 		else{
 			NSLog(@"Test %@ fail to load test",[testDict valueForKey:@"testName"]);
 		}
-
 	}
 	tests = newTests;
 }

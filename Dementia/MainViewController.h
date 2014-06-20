@@ -20,7 +20,11 @@
 	DebugViewController *debugViewController;
 	__weak IBOutlet UILabel *progressLabel;
 	__weak IBOutlet UILabel *currentTestLabel;
+	__weak IBOutlet UILabel *patientNameLabel;
+	__weak IBOutlet UILabel *patientHospitalNumberLabel;
+	__weak IBOutlet UIView *patientDetailsView;
 }
+- (IBAction)enterPatientDetailsButtonPressed:(id)sender;
 
 - (IBAction)continueButtonPressed;
 - (IBAction)endButtonPressed;
