@@ -39,7 +39,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[self.test setTestScore:0];
+	[self.test setScore:0];
 }
 
 -(void)makeControlPanelWithIsDynamic:(BOOL)isDynamic
@@ -99,6 +99,7 @@
 
 -(void)hasFinished
 {
+	[self.test setIsComplete:YES];
 	if (self.test)                  // If we have a test,
 		[self.test startPostTest];  // start the post test
 }

@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "DebugViewController.h"
 #import "TestManager.h"
-#import "ExampleTestViewController.h"
-#import "MemoryRecallViewController.h"
+#import "MainViewController.h"
+
 @implementation AppDelegate
 
 // THE ENTRY POINT
@@ -20,24 +19,12 @@
 
 	// Create an instance of the test manager
 	[TestManager sharedInstance];
+	MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
 
-
-	// Instantiate our debug view controller (displays all tests in a list)
-	DebugViewController *debug = [[DebugViewController alloc] initWithNibName:@"DebugViewController" bundle:nil];
-	// Instatiate a navigation controller
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:debug];
-	[navController setTitle:@"DEBUG"];
-
-	// Instantiate the ExampleTextViewController (for in-progress test view controllers)
-	//ExampleTestViewController *exTestVC = [[ExampleTestViewController alloc] initWithNibName:@"ExampleTestViewController" bundle:nil];
-
-	//UITabBarController *tabBarController = [[UITabBarController alloc] init];   // Make a tab bar controller
-	//[tabBarController setViewControllers:@[navController, exTestVC]];
-    // Set it's view controllers
-    
+	// Set it's view controllers
 	// Set the root view controller of our window to the tab bar controller
-	//[self.window setRootViewController:tabBarController];
-    [self.window setRootViewController:navController];
+	[self.window setRootViewController:navController];
 
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];

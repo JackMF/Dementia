@@ -10,8 +10,8 @@
 
 @interface DebugViewController : UIViewController <UITableViewDataSource, UITabBarControllerDelegate>
 {
-    __weak IBOutlet UITableView *tableView;
-    NSArray *tests;
+	__weak IBOutlet UITableView *tableView;
+	NSArray *tests;
 }
-
+-(void)done;
 @end

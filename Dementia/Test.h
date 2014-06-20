@@ -30,14 +30,15 @@
 @property (nonatomic) NSArray *buttonNames;
 @property (nonatomic) NSArray *buttonText;
 
-@property (nonatomic) int testScore;
+@property (nonatomic) int score;
+@property (nonatomic) bool isComplete;
 @property (nonatomic) TestViewController *testViewController;
 
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;
 -(void)startTest;
 -(void)startPostTest;
--(void)endTest;
+-(void)endTest:(bool)isAnimated;
 -(void)addToTestScore:(int)toAdd;
 -(NSString *)getFullTestName;
 @end

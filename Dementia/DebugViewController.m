@@ -27,12 +27,19 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+}
 
+-(void)done
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+	UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+	[self.navigationItem setRightBarButtonItem:closeButton];
 	[tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+	[tableView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,12 +57,18 @@
 {
 	NSString *CellIdentifier = @"Cell";
 	UITableViewCell *cell = [theTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	if (!cell) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 	Test *test = [tests objectAtIndex:[indexPath row]];
-//	NSString *cellText = [NSString stringWithFormat:@"Test %i: %@", (int)[indexPath row]+1, [test getFullTestName]];
+
 	NSString *cellText = [NSString stringWithFormat:@"%@", [test getFullTestName]];
 	[cell.textLabel setText:cellText];
 	[cell.textLabel setFont:[UIFont boldSystemFontOfSize:25.0]];
+
+	if ([test isComplete]) {
+		NSString *detailText = [NSString stringWithFormat:@"Score %i", [test score]];
+		[cell.detailTextLabel setText:detailText];
+	}
+
 	return cell;
 }
 

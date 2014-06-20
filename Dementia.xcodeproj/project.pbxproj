@@ -86,14 +86,12 @@
 		83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E0D1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m */; };
 		83A57E141933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E121933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m */; };
 		83A57E191933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E171933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m */; };
-		83A57E1E1933A59300CBDFC5 /* SocialCognitionPartAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */; };
-		83A57E231933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */; };
-		83A57E241933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */; };
+		83A57E1E1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E1C1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.m */; };
 		83A57E281933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */; };
 		83A57E291933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */; };
 		83A57E2D1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */; };
 		83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */; };
-		83A57E301933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */; };
+		83A57E301933A6BB00CBDFC5 /* ExecutiveSocialCognitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E2F1933A6BB00CBDFC5 /* ExecutiveSocialCognitionViewController.xib */; };
 		83A57E321933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */; };
 		83A57E341933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */; };
 		83A57E381933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */; };
@@ -108,6 +106,10 @@
 		83C84ACA193A43590019ED65 /* face1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC6193A43590019ED65 /* face1.jpg */; };
 		83C84ACB193A43590019ED65 /* face2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC7193A43590019ED65 /* face2.jpg */; };
 		83C84ACC193A43590019ED65 /* face3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83C84AC8193A43590019ED65 /* face3.jpg */; };
+		83CCFA641953A28F002D9967 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CCFA621953A28F002D9967 /* MainViewController.m */; };
+		83CCFA651953A28F002D9967 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CCFA631953A28F002D9967 /* MainViewController.xib */; };
+		83CCFA6A1953BEDB002D9967 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CCFA681953BEDB002D9967 /* ResultsViewController.m */; };
+		83CCFA6B1953BEDB002D9967 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CCFA691953BEDB002D9967 /* ResultsViewController.xib */; };
 		83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D5E75418DDC12A00FF375C /* ButtonListViewController.m */; };
 		83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */; };
 		83D5E75A18DDDEB400FF375C /* MemoryRecallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D5E75918DDDEB400FF375C /* MemoryRecallViewController.xib */; };
@@ -115,8 +117,6 @@
 		83E763B918D3CA9F002846B1 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E763B818D3CA9F002846B1 /* TestManager.m */; };
 		83E763BB18D3CB46002846B1 /* Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BA18D3CB46002846B1 /* Tests.plist */; };
 		83E763BD18D3D9C2002846B1 /* swan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83E763BC18D3D9C2002846B1 /* swan.jpg */; };
-		83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD799318D5F9A60055A26C /* ExampleTestViewController.m */; };
-		83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */; };
 		9C0E72AD18E0D3F5004BD383 /* FluencyLetterSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */; };
 		9C0E72AE18E0D3F5004BD383 /* FluencyLetterSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */; };
 		9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B7AA818E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m */; };
@@ -236,18 +236,15 @@
 		83A57E121933A57800CBDFC5 /* VisuospatialNumberLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisuospatialNumberLocationViewController.m; sourceTree = "<group>"; };
 		83A57E161933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecutiveSentenceCompletionViewController.h; sourceTree = "<group>"; };
 		83A57E171933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecutiveSentenceCompletionViewController.m; sourceTree = "<group>"; };
-		83A57E1B1933A59300CBDFC5 /* SocialCognitionPartAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialCognitionPartAViewController.h; sourceTree = "<group>"; };
-		83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCognitionPartAViewController.m; sourceTree = "<group>"; };
-		83A57E201933A5AA00CBDFC5 /* SocialCognitionPartBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialCognitionPartBViewController.h; sourceTree = "<group>"; };
-		83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCognitionPartBViewController.m; sourceTree = "<group>"; };
-		83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialCognitionPartBViewController.xib; sourceTree = "<group>"; };
+		83A57E1B1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecutiveSocialCognitionViewController.h; sourceTree = "<group>"; };
+		83A57E1C1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecutiveSocialCognitionViewController.m; sourceTree = "<group>"; };
 		83A57E251933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDelayedRecallViewController.h; sourceTree = "<group>"; };
 		83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDelayedRecallViewController.m; sourceTree = "<group>"; };
 		83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDelayedRecallViewController.xib; sourceTree = "<group>"; };
 		83A57E2A1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDelayedRecognitionViewController.h; sourceTree = "<group>"; };
 		83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDelayedRecognitionViewController.m; sourceTree = "<group>"; };
 		83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDelayedRecognitionViewController.xib; sourceTree = "<group>"; };
-		83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialCognitionPartAViewController.xib; sourceTree = "<group>"; };
+		83A57E2F1933A6BB00CBDFC5 /* ExecutiveSocialCognitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveSocialCognitionViewController.xib; sourceTree = "<group>"; };
 		83A57E311933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExecutiveSentenceCompletionViewController.xib; sourceTree = "<group>"; };
 		83A57E331933A6F100CBDFC5 /* VisuospatialNumberLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialNumberLocationViewController.xib; sourceTree = "<group>"; };
 		83A57E371933A72C00CBDFC5 /* VisuospatialCubeCountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisuospatialCubeCountingViewController.xib; sourceTree = "<group>"; };
@@ -263,6 +260,12 @@
 		83C84AC6193A43590019ED65 /* face1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face1.jpg; sourceTree = "<group>"; };
 		83C84AC7193A43590019ED65 /* face2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face2.jpg; sourceTree = "<group>"; };
 		83C84AC8193A43590019ED65 /* face3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face3.jpg; sourceTree = "<group>"; };
+		83CCFA611953A28F002D9967 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		83CCFA621953A28F002D9967 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		83CCFA631953A28F002D9967 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		83CCFA671953BEDB002D9967 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		83CCFA681953BEDB002D9967 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		83CCFA691953BEDB002D9967 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		83D5E75318DDC12A00FF375C /* ButtonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonListViewController.h; sourceTree = "<group>"; };
 		83D5E75418DDC12A00FF375C /* ButtonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonListViewController.m; sourceTree = "<group>"; };
 		83D5E75518DDC12A00FF375C /* ButtonListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListViewController.xib; sourceTree = "<group>"; };
@@ -272,9 +275,6 @@
 		83E763B818D3CA9F002846B1 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
 		83E763BA18D3CB46002846B1 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
 		83E763BC18D3D9C2002846B1 /* swan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = swan.jpg; sourceTree = "<group>"; };
-		83FD799218D5F9A60055A26C /* ExampleTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTestViewController.h; sourceTree = "<group>"; };
-		83FD799318D5F9A60055A26C /* ExampleTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTestViewController.m; sourceTree = "<group>"; };
-		83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTestViewController.xib; sourceTree = "<group>"; };
 		9C0E72AA18E0D3F5004BD383 /* FluencyLetterSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluencyLetterSViewController.h; sourceTree = "<group>"; };
 		9C0E72AB18E0D3F5004BD383 /* FluencyLetterSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FluencyLetterSViewController.m; sourceTree = "<group>"; };
 		9C0E72AC18E0D3F5004BD383 /* FluencyLetterSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FluencyLetterSViewController.xib; sourceTree = "<group>"; };
@@ -490,9 +490,12 @@
 			children = (
 				83E763B618D3CA70002846B1 /* TestManager */,
 				8359B68918D37C3E001BDDB8 /* Test */,
-				83A14FE118D33FCD0037980A /* UI */,
-				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
 				83A14FBA18D33C4E0037980A /* AppDelegate.h */,
+				83A14FBB18D33C4E0037980A /* AppDelegate.m */,
+				83A14FE118D33FCD0037980A /* UI */,
+				83CCFA611953A28F002D9967 /* MainViewController.h */,
+				83CCFA621953A28F002D9967 /* MainViewController.m */,
+				83CCFA631953A28F002D9967 /* MainViewController.xib */,
 				83A14FBD18D33C4E0037980A /* Images.xcassets */,
 				83A14FB218D33C4E0037980A /* Supporting Files */,
 			);
@@ -609,44 +612,34 @@
 			name = "12. Executive Sentence Completion";
 			sourceTree = "<group>";
 		};
-		83A57E061933A2C500CBDFC5 /* 13. Social Cognition Part A */ = {
+		83A57E061933A2C500CBDFC5 /* 13. Social Cognition */ = {
 			isa = PBXGroup;
 			children = (
-				83A57E1B1933A59300CBDFC5 /* SocialCognitionPartAViewController.h */,
-				83A57E1C1933A59300CBDFC5 /* SocialCognitionPartAViewController.m */,
-				83A57E2F1933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib */,
+				83A57E1B1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.h */,
+				83A57E1C1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.m */,
+				83A57E2F1933A6BB00CBDFC5 /* ExecutiveSocialCognitionViewController.xib */,
 			);
-			name = "13. Social Cognition Part A";
+			name = "13. Social Cognition";
 			sourceTree = "<group>";
 		};
-		83A57E071933A2CB00CBDFC5 /* 14. Social Cognition Part B */ = {
-			isa = PBXGroup;
-			children = (
-				83A57E201933A5AA00CBDFC5 /* SocialCognitionPartBViewController.h */,
-				83A57E211933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m */,
-				83A57E221933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib */,
-			);
-			name = "14. Social Cognition Part B";
-			sourceTree = "<group>";
-		};
-		83A57E081933A2E900CBDFC5 /* 15. Memory Delayed Recall */ = {
+		83A57E081933A2E900CBDFC5 /* 14. Memory Delayed Recall */ = {
 			isa = PBXGroup;
 			children = (
 				83A57E251933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.h */,
 				83A57E261933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m */,
 				83A57E271933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib */,
 			);
-			name = "15. Memory Delayed Recall";
+			name = "14. Memory Delayed Recall";
 			sourceTree = "<group>";
 		};
-		83A57E091933A2F500CBDFC5 /* 16. Memory Delayed Recognition */ = {
+		83A57E091933A2F500CBDFC5 /* 15. Memory Delayed Recognition */ = {
 			isa = PBXGroup;
 			children = (
 				83A57E2A1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.h */,
 				83A57E2B1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m */,
 				83A57E2C1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib */,
 			);
-			name = "16. Memory Delayed Recognition";
+			name = "15. Memory Delayed Recognition";
 			sourceTree = "<group>";
 		};
 		83A57E0A1933A31200CBDFC5 /* Tests */ = {
@@ -664,10 +657,9 @@
 				83A57E031933A27700CBDFC5 /* 10. Visuospatial Cube Counting */,
 				83A57E041933A2A200CBDFC5 /* 11. Visuospatial Number Location */,
 				83A57E051933A2B300CBDFC5 /* 12. Executive Sentence Completion */,
-				83A57E061933A2C500CBDFC5 /* 13. Social Cognition Part A */,
-				83A57E071933A2CB00CBDFC5 /* 14. Social Cognition Part B */,
-				83A57E081933A2E900CBDFC5 /* 15. Memory Delayed Recall */,
-				83A57E091933A2F500CBDFC5 /* 16. Memory Delayed Recognition */,
+				83A57E061933A2C500CBDFC5 /* 13. Social Cognition */,
+				83A57E081933A2E900CBDFC5 /* 14. Memory Delayed Recall */,
+				83A57E091933A2F500CBDFC5 /* 15. Memory Delayed Recognition */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -675,14 +667,24 @@
 		83A57E0B1933A31F00CBDFC5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				83CCFA661953BEA8002D9967 /* Results */,
 				83D5E75818DDCC0300FF375C /* Custom UI Elements */,
 				8359B67F18D377E6001BDDB8 /* DebugViewController */,
 				8359B67418D376EF001BDDB8 /* PreTest */,
 				8359B67518D376F8001BDDB8 /* PostTest */,
 				8359B67E18D377A8001BDDB8 /* TestViewController */,
-				83FD799118D5F9890055A26C /* ExampleTestViewController */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		83CCFA661953BEA8002D9967 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				83CCFA671953BEDB002D9967 /* ResultsViewController.h */,
+				83CCFA681953BEDB002D9967 /* ResultsViewController.m */,
+				83CCFA691953BEDB002D9967 /* ResultsViewController.xib */,
+			);
+			name = Results;
 			sourceTree = "<group>";
 		};
 		83D5E75118DDC11500FF375C /* ButtonList */ = {
@@ -712,16 +714,6 @@
 				83E763B818D3CA9F002846B1 /* TestManager.m */,
 			);
 			name = TestManager;
-			sourceTree = "<group>";
-		};
-		83FD799118D5F9890055A26C /* ExampleTestViewController */ = {
-			isa = PBXGroup;
-			children = (
-				83FD799218D5F9A60055A26C /* ExampleTestViewController.h */,
-				83FD799318D5F9A60055A26C /* ExampleTestViewController.m */,
-				83FD799418D5F9A60055A26C /* ExampleTestViewController.xib */,
-			);
-			name = ExampleTestViewController;
 			sourceTree = "<group>";
 		};
 		9C0E72A918E0C728004BD383 /* 5. FluencyLetterS */ = {
@@ -858,7 +850,6 @@
 				8388281E194B5B160025947B /* dot1.png in Resources */,
 				8359B67D18D37753001BDDB8 /* PostTestViewController.xib in Resources */,
 				83A14FBE18D33C4E0037980A /* Images.xcassets in Resources */,
-				83A57E241933A5AA00CBDFC5 /* SocialCognitionPartBViewController.xib in Resources */,
 				83C84AC9193A43590019ED65 /* face0.jpg in Resources */,
 				8353CC1718D34CB300226AB4 /* accordion.jpg in Resources */,
 				833118CE18DCAB3900648698 /* ControlPanelViewController.xib in Resources */,
@@ -868,12 +859,12 @@
 				8353CC2C18D34CB300226AB4 /* horse.jpg in Resources */,
 				8353CC1F18D34CB300226AB4 /* bird.jpg in Resources */,
 				83A57E321933A6DB00CBDFC5 /* ExecutiveSentenceCompletionViewController.xib in Resources */,
+				83CCFA651953A28F002D9967 /* MainViewController.xib in Resources */,
 				8353CC2318D34CB300226AB4 /* computer desk.jpg in Resources */,
 				8353CC1C18D34CB300226AB4 /* banana.jpg in Resources */,
 				8353CC1B18D34CB300226AB4 /* axe.jpg in Resources */,
 				83E763BB18D3CB46002846B1 /* Tests.plist in Resources */,
 				8358EBE518DDEE3500E1AAC9 /* icon@2x.png in Resources */,
-				83FD799618D5F9A60055A26C /* ExampleTestViewController.xib in Resources */,
 				83D5E75718DDC12A00FF375C /* ButtonListViewController.xib in Resources */,
 				8353CC1D18D34CB300226AB4 /* bed.jpg in Resources */,
 				8353CC2A18D34CB300226AB4 /* giraffe.jpg in Resources */,
@@ -883,7 +874,7 @@
 				839EE22E194785C20026D6CF /* CountdownTimerViewController.xib in Resources */,
 				83882827194B5B1E0025947B /* number2.png in Resources */,
 				83A57E2E1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.xib in Resources */,
-				83A57E301933A6BB00CBDFC5 /* SocialCognitionPartAViewController.xib in Resources */,
+				83A57E301933A6BB00CBDFC5 /* ExecutiveSocialCognitionViewController.xib in Resources */,
 				83A57DF61933A1E700CBDFC5 /* ExecutiveAlternationViewController.xib in Resources */,
 				8353CC3218D34CB300226AB4 /* scorpion.jpg in Resources */,
 				8388281D194B5B160025947B /* dot0.png in Resources */,
@@ -912,6 +903,7 @@
 				9C8B7AAB18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.xib in Resources */,
 				8353CC2B18D34CB300226AB4 /* helicopter.jpg in Resources */,
 				83A57E291933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.xib in Resources */,
+				83CCFA6B1953BEDB002D9967 /* ResultsViewController.xib in Resources */,
 				8353CC2918D34CB300226AB4 /* fox.jpg in Resources */,
 				83C84ACC193A43590019ED65 /* face3.jpg in Resources */,
 				8353CC3918D34CB300226AB4 /* wardrobe.jpg in Resources */,
@@ -941,26 +933,26 @@
 				83A57DFB1933A21800CBDFC5 /* FluencyLetterTViewController.m in Sources */,
 				83D5E75618DDC12A00FF375C /* ButtonListViewController.m in Sources */,
 				8359B67818D37720001BDDB8 /* TestViewController.m in Sources */,
-				83A57E1E1933A59300CBDFC5 /* SocialCognitionPartAViewController.m in Sources */,
+				83A57E1E1933A59300CBDFC5 /* ExecutiveSocialCognitionViewController.m in Sources */,
 				83E763B918D3CA9F002846B1 /* TestManager.m in Sources */,
 				9C9935E418D88E73007E0D25 /* MemoryRecallViewController.m in Sources */,
 				9C0E72AD18E0D3F5004BD383 /* FluencyLetterSViewController.m in Sources */,
 				9C8B7AAA18E0C598005F8497 /* ExecutiveReverseDigitSpanViewController.m in Sources */,
 				83A57E191933A58600CBDFC5 /* ExecutiveSentenceCompletionViewController.m in Sources */,
+				83CCFA6A1953BEDB002D9967 /* ResultsViewController.m in Sources */,
 				8359B67C18D37753001BDDB8 /* PostTestViewController.m in Sources */,
 				839EE22D194785C20026D6CF /* CountdownTimerViewController.m in Sources */,
 				833118CD18DCAB3900648698 /* ControlPanelViewController.m in Sources */,
 				8383978A1948BAF000F67E26 /* TimerViewController.m in Sources */,
 				83A14FBC18D33C4E0037980A /* AppDelegate.m in Sources */,
 				83A57E0F1933A3F700CBDFC5 /* VisuospatialCubeCountingViewController.m in Sources */,
-				83FD799518D5F9A60055A26C /* ExampleTestViewController.m in Sources */,
 				8359B68C18D37C45001BDDB8 /* Test.m in Sources */,
 				83A57E281933A5BC00CBDFC5 /* MemoryDelayedRecallViewController.m in Sources */,
-				83A57E231933A5AA00CBDFC5 /* SocialCognitionPartBViewController.m in Sources */,
 				83C84AC1193A26030019ED65 /* MultiControlPanelViewController.m in Sources */,
 				83A57DF51933A1E700CBDFC5 /* ExecutiveAlternationViewController.m in Sources */,
 				83A57E2D1933A5CA00CBDFC5 /* MemoryDelayedRecognitionViewController.m in Sources */,
 				8353CC4118D35C4C00226AB4 /* LanguageComprehensionViewController.m in Sources */,
+				83CCFA641953A28F002D9967 /* MainViewController.m in Sources */,
 				83A14FDF18D33FC30037980A /* LanguageNamingViewController.m in Sources */,
 				83A57E011933A23500CBDFC5 /* VisuospatialDotCountingViewController.m in Sources */,
 				9CB203DC18DDB38A0080BFB2 /* LanguageSpellingViewController.m in Sources */,

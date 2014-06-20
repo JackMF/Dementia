@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialCognitionPartAViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExecutiveSocialCognitionViewController">
             <connections>
                 <outlet property="answer0Button" destination="0JS-ry-7ZL" id="4wN-6a-Qdp"/>
                 <outlet property="answer1Button" destination="kQD-Qv-t02" id="6N6-Td-HmN"/>

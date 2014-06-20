@@ -43,6 +43,6 @@
 }
 
 - (IBAction)endButtonPressed {
-	[test endTest];
+	[test endTest:NO];
 }
 @end

@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 chris. All rights reserved.
 //
 
-#import "SocialCognitionPartAViewController.h"
+#import "ExecutiveSocialCognitionViewController.h"
 #import "Test.h"
 #define kImageViewAnimationDuration 0.2
 
-@interface SocialCognitionPartAViewController ()
+@interface ExecutiveSocialCognitionViewController ()
 
 @end
 
-@implementation SocialCognitionPartAViewController
+@implementation ExecutiveSocialCognitionViewController
 @synthesize test;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

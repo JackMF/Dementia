@@ -8,7 +8,7 @@
 
 #import "TestViewController.h"
 
-@interface SocialCognitionPartAViewController : TestViewController
+@interface ExecutiveSocialCognitionViewController : TestViewController
 {
 	int currentQuestionOrder;
 	int currentStageOrder;

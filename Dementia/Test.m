@@ -13,9 +13,8 @@
 
 
 @implementation Test
-@synthesize testViewController;
-@synthesize testScore;
-@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries,questions,story,buttonNames,  buttonText;
+@synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries, questions, story, buttonNames,  buttonText;
+@synthesize score, testViewController, isComplete;
 
 -(id)init
 {
@@ -27,6 +26,7 @@
 		// Set our post-test controller
 		postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
 		postTestViewController.test = self;
+		isComplete = NO;
 	}
 	return self;
 }
@@ -85,9 +85,9 @@
 	[navigationController pushViewController:postTestViewController animated:YES];
 }
 
--(void)endTest
+-(void)endTest:(bool)isAnimated
 {
-	[navigationController popToRootViewControllerAnimated:YES];
+	[navigationController popToRootViewControllerAnimated:isAnimated];
 }
 
 -(NSString *)getFullTestName
@@ -97,8 +97,7 @@
 
 -(void)addToTestScore:(int)toAdd
 {
-	testScore+=toAdd;
-	NSLog(@"Score: %i", testScore);      // Log the new score
+	score+=toAdd;
 }
 
 @end

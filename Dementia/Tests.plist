@@ -497,11 +497,11 @@ The next section of the test is “Social Cognition - Part A&quot;.</string>
 		<key>order</key>
 		<integer>13</integer>
 		<key>className</key>
-		<string>SocialCognitionPartAViewController</string>
+		<string>ExecutiveSocialCognitionViewController</string>
 		<key>categoryName</key>
-		<string>Social Cognition</string>
+		<string>Executive</string>
 		<key>testName</key>
-		<string>Part A</string>
+		<string>Social Cognition</string>
 		<key>questions</key>
 		<array>
 			<array>
@@ -558,22 +558,6 @@ The next section of the test is “Social Cognition - Part B&quot;.</string>
 		<key>order</key>
 		<integer>14</integer>
 		<key>className</key>
-		<string>SocialCognitionPartAViewController</string>
-		<key>categoryName</key>
-		<string>Social Cognition</string>
-		<key>testName</key>
-		<string>Part B</string>
-		<key>preTestInstructions</key>
-		<string></string>
-		<key>postTestMessage</key>
-		<string>The “Social Cognition - Part B” section is now completed.
-
-The next section of the test is “Memory - Delayed Recall&quot;.</string>
-	</dict>
-	<dict>
-		<key>order</key>
-		<integer>15</integer>
-		<key>className</key>
 		<string>MemoryDelayedRecallViewController</string>
 		<key>categoryName</key>
 		<string>Memory</string>
@@ -599,7 +583,7 @@ The next section of the test is “Memory - Delayed Recall&quot;.</string>
 	</dict>
 	<dict>
 		<key>order</key>
-		<integer>16</integer>
+		<integer>15</integer>
 		<key>className</key>
 		<string>MemoryDelayedRecognitionViewController</string>
 		<key>categoryName</key>

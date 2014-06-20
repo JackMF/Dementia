@@ -1,18 +1,18 @@
 //
-//  SocialCognitionPartBViewController.m
+//  ResultsViewController.m
 //  Dementia
 //
-//  Created by Chris on 26/05/2014.
+//  Created by Chris on 20/06/2014.
 //  Copyright (c) 2014 chris. All rights reserved.
 //
 
-#import "SocialCognitionPartBViewController.h"
+#import "ResultsViewController.h"
 
-@interface SocialCognitionPartBViewController ()
+@interface ResultsViewController ()
 
 @end
 
-@implementation SocialCognitionPartBViewController
+@implementation ResultsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

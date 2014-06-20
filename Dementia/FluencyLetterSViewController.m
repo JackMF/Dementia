@@ -13,7 +13,7 @@
 
 #define kTestDurationSeconds 5.0f
 #define kSpeakingDurationSeconds 60.0f
-#define kWritingDurationSeconds 60.0f
+#define kWritingDurationSeconds 120.0f
 
 @interface FluencyLetterSViewController ()
 
@@ -52,7 +52,7 @@
 -(void)addCountdownTimer
 {
 	countdownTimerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"CountdownTimerViewController" bundle:nil];
-	CGRect timerFrame = CGRectMake(100.0f, 100.0f, 600.0f, 200.0f);
+	CGRect timerFrame = CGRectMake(84.0f, 250.0f, 600.0f, 90.0f);
 	[countdownTimerViewController.view setFrame:timerFrame];
 	[countdownTimerViewController setTestVCDelegate:self];
 
@@ -65,7 +65,7 @@
 -(void)addTimer
 {
 	timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
-	CGRect timerFrame = CGRectMake(100.0f, 500.0f, 600.0f, 200.0f);
+	CGRect timerFrame = CGRectMake(84.0f, 570.0f, 600.0f, 90.0f);
 	[timerViewController.view setFrame:timerFrame];
 	[timerViewController setTestVCDelegate:self];
 
