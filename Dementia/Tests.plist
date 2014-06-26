@@ -88,6 +88,8 @@ The next section of the test is “Language Comprehension”</string>
 				<string>accordion</string>
 			</dict>
 		</array>
+		<key>maxScore</key>
+		<integer>8</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -226,6 +228,8 @@ The next section of the test is Memory - Recall”</string>
 				<string>Something with a diet of nuts and seeds?</string>
 			</dict>
 		</array>
+		<key>maxScore</key>
+		<integer>8</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -259,6 +263,8 @@ The next section of the test is “Language - Spelling”</string>
 			<string>17</string>
 			<string>children</string>
 		</array>
+		<key>maxScore</key>
+		<integer>10</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -292,6 +298,8 @@ The next section of the test is “Fluency - S”</string>
 			<string>Screwdriver</string>
 			<string>Brought</string>
 		</array>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -299,7 +307,7 @@ The next section of the test is “Fluency - S”</string>
 		<key>className</key>
 		<string>FluencyLetterSViewController</string>
 		<key>categoryName</key>
-		<string>Fluency</string>
+		<string>Verbal Fluency</string>
 		<key>testName</key>
 		<string>Letter S</string>
 		<key>preTestInstructions</key>
@@ -310,6 +318,8 @@ In part two the person copies/repeats these words. If writing, say: “Copy thes
 		<string>The “Fluency S” section is now completed.
 
 The next section of the test is “Reverse Digit Span”</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>buttonText</key>
@@ -345,6 +355,8 @@ In order to score a trial of a line as correct, participant must accurately reca
 		<string>The Reverse Digits” section is now completed.
 
 The next section of the test is “Alteration”</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>buttonText</key>
@@ -374,6 +386,8 @@ The next section of the test is “Alteration”</string>
 		<string>text</string>
 		<key>postTestMessage</key>
 		<string>text</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -381,7 +395,7 @@ The next section of the test is “Alteration”</string>
 		<key>className</key>
 		<string>FluencyLetterTViewController</string>
 		<key>categoryName</key>
-		<string>Fluency</string>
+		<string>Verbal Fluency</string>
 		<key>testName</key>
 		<string>Letter T</string>
 		<key>preTestInstructions</key>
@@ -392,6 +406,8 @@ In part two the person copies/repeats these words. If writing, say: “Copy thes
 		<string>The “Fluency T” section is now completed.
 
 The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -414,7 +430,9 @@ The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 		<key>postTestMessage</key>
 		<string>The “Visuospatial - Dot Counting&quot; section is now completed.
 
-The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
+The next section of the test is “Visuospatial - Cube Counting&quot;.</string>
+		<key>maxScore</key>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -438,6 +456,8 @@ The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 		<string>The “Visuospatial - Cube Counting” section is now completed.
 
 The next section of the test is “Visuospatial - Number Location&quot;</string>
+		<key>maxScore</key>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -461,6 +481,8 @@ The next section of the test is “Visuospatial - Number Location&quot;</string>
 		<string>The “Visuospatial - Number Location” section is now completed.
 
 The next section of the test is “Executive - Sentence Completion”</string>
+		<key>maxScore</key>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -492,6 +514,8 @@ The next section of the test is “Executive - Sentence Completion”</string>
 		<string>The “Executive - Sentence Completion” section is now completed.
 
 The next section of the test is “Social Cognition - Part A&quot;.</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -553,6 +577,8 @@ The next section of the test is “Social Cognition - Part A&quot;.</string>
 		<string>The “Social Cognition - Part A” section is now completed.
 
 The next section of the test is “Social Cognition - Part B&quot;.</string>
+		<key>maxScore</key>
+		<integer>12</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -580,6 +606,8 @@ The next section of the test is “Social Cognition - Part B&quot;.</string>
 			<string>17</string>
 			<string>children</string>
 		</array>
+		<key>maxScore</key>
+		<integer>10</integer>
 	</dict>
 	<dict>
 		<key>order</key>
@@ -629,6 +657,8 @@ The next section of the test is “Social Cognition - Part B&quot;.</string>
 		<string></string>
 		<key>postTestMessage</key>
 		<string>The “Memory - Delayed Recall” section is now completed.</string>
+		<key>maxScore</key>
+		<integer>4</integer>
 	</dict>
 </array>
 </plist>

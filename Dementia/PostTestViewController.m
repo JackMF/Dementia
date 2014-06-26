@@ -8,6 +8,7 @@
 
 #import "PostTestViewController.h"
 #import "Test.h"
+#import "TestManager.h"
 
 @interface PostTestViewController ()
 
@@ -30,7 +31,6 @@
 	[super viewDidLoad];
 	if (test) {
 		// Set my own title
-		[titleLabel setText:[test getFullTestName]];
 		[textView setText:[test postTestMessage]];
 		[textView setFont:[UIFont systemFontOfSize:30]];
 	}
@@ -43,6 +43,7 @@
 }
 
 - (IBAction)endButtonPressed {
-	[test endTest:NO];
+	testManager = [TestManager sharedInstance];
+	[testManager endTestAndStartNextWithNavController:self.navigationController];
 }
 @end

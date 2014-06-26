@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestViewController.h"
 @class Test;
-@interface PreTestViewController : UIViewController
+@interface PreTestViewController : TestViewController
 {
 	__weak IBOutlet UITextView *textView;
 }

@@ -9,7 +9,7 @@
 #import "MemoryDelayedRecallViewController.h"
 #import "Test.h"
 #import "ButtonListViewController.h"
-
+#import "TestManager.h"
 
 @interface MemoryDelayedRecallViewController ()
 
@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	testManager = [TestManager sharedInstance];
 }
 
 -(void)addButtonListViewController
@@ -46,7 +47,7 @@
 	[buttonListViewController.view setFrame:cpFrame];
 
 	NSArray *buttonLabelValues = [test buttonNames];
-	[buttonListViewController setButtonLabelValues:buttonLabelValues];
+	[buttonListViewController setButtonValues:buttonLabelValues];
 
 	[buttonListViewController setOneItemPerRow:YES];
 
@@ -61,8 +62,35 @@
 	// Dispose of any resources that can be recreated.
 }
 - (IBAction)finishButtonPressed:(id)sender {
-	int corrent = [buttonListViewController getNumberOfCorrectAnswers];
-	[test addToTestScore:corrent];
+	int correct = (int) [buttonListViewController getNumberOfCorrectAnswers];
+	int recallScore = (int) [(Test *)[[testManager tests] objectAtIndex:2] score];
+	double percentRetained = [self getPercentRetainedFromRecallScore:recallScore delayedRecallScore:correct];
+	int score = [self getScoreFromPercentageRetined:percentRetained];
+	[test addToTestScore:score];
 	[super hasFinished];
+}
+
+
+-(double)getPercentRetainedFromRecallScore:(int)recallScore delayedRecallScore:(int)delayedRecallScore
+{
+	if (recallScore && delayedRecallScore)
+		return delayedRecallScore / (float)recallScore;
+	return 0.0;
+}
+
+-(int)getScoreFromPercentageRetined:(double)percentageRetained
+{
+	if (percentageRetained == 0.0) return 0;
+	else if (percentageRetained <= 0.1) return 1;
+	else if (percentageRetained <= 0.2) return 2;
+	else if (percentageRetained <= 0.3) return 3;
+	else if (percentageRetained <= 0.4) return 4;
+	else if (percentageRetained <= 0.5) return 5;
+	else if (percentageRetained <= 0.6) return 6;
+	else if (percentageRetained <= 0.7) return 7;
+	else if (percentageRetained <= 0.8) return 8;
+	else if (percentageRetained <= 0.9) return 9;
+	else if (percentageRetained > 0.9) return 10;
+	return 0;
 }
 @end

@@ -43,6 +43,11 @@ int secondsRemaining;
 - (IBAction)startButtonPressed:(id)sender {
 //	if([countdownTimer isValid])
 	countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCountdownLabel) userInfo:nil repeats:YES];
+	[startButton setEnabled:NO];
+}
+
+- (IBAction)stopButtonPressed:(id)sender {
+	[self timerHasFinished];
 }
 
 -(void)updateCountdownLabel
@@ -57,13 +62,13 @@ int secondsRemaining;
 	} else {
 		labelText = @"00:00";
 		countdownLabel.text = labelText;
-		[countdownTimer invalidate];
 		[self timerHasFinished];
 	}
 }
 
 -(void)timerHasFinished
 {
+	[countdownTimer invalidate];
 	if (testVCDelegate)
 		[testVCDelegate countdownTimerHasFinished];
 }

@@ -14,7 +14,8 @@
 
 @implementation Test
 @synthesize order, className, categoryName, testName, preTestInstructions, postTestMessage, imageDictionaries, questions, story, buttonNames,  buttonText;
-@synthesize score, testViewController, isComplete;
+@synthesize maxScore, score, testViewController, hasStarted, isComplete;
+@synthesize vfi;
 
 -(id)init
 {
@@ -26,6 +27,7 @@
 		// Set our post-test controller
 		postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
 		postTestViewController.test = self;
+		hasStarted = NO;
 		isComplete = NO;
 	}
 	return self;
@@ -52,6 +54,7 @@
 
 			if ([[plistDict allKeys] containsObject:@"buttonText"]) buttonText = [plistDict valueForKey:@"buttonText"];
 
+			if ([[plistDict allKeys] containsObject:@"maxScore"]) maxScore = (int) [[plistDict valueForKey:@"maxScore"] integerValue];
 
 			// Set our test controller
 			testViewController = [[NSClassFromString(className) alloc] initWithNibName:className bundle:nil];
@@ -78,6 +81,7 @@
 -(void)startTest
 {
 	[navigationController pushViewController:testViewController animated:YES];
+	hasStarted = YES;
 }
 
 -(void)startPostTest

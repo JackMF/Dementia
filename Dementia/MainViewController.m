@@ -11,7 +11,7 @@
 #import "TestManager.h"
 #import "DebugViewController.h"
 #import "ResultsViewController.h"
-#import "PatientDetailsFormViewController.h"
+#import "ParticipantDetailsFormViewController.h"
 
 @interface MainViewController ()
 
@@ -24,7 +24,6 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		// Custom initialization
-		currentTestOrder = 0;
 		// Create an instance of the test manager
 		testManager = [TestManager sharedInstance];
 		tests = [testManager tests];
@@ -41,18 +40,67 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-	if ([currentTest isComplete]) currentTestOrder++;
-	currentTest = [tests objectAtIndex:currentTestOrder];                 // Get the test for this row
 	[self setTestLabelValue];
 	[self.navigationController.navigationItem setLeftBarButtonItem:nil];
 	[self setNavButton];
-	[self setPatientDetails];
+	[self setParticipantDetails];
+	[self updateParticipantDetailsButton];
+	[self updateTestButton];
+	[self updateTestResultsButton];
 }
 
+-(void)updateTestResultsButton
+{
+	if (![testManager participantName] || ![testManager hasStarted])
+		[testResultsButton setEnabled:NO];
+	else [testResultsButton setEnabled:YES];
+}
+
+-(void)updateTestButton
+{
+	if (![testManager participantName])
+		[testButton setEnabled:NO];
+	else {
+		[testButton setEnabled:YES];
+		if (![testManager hasStarted])
+			[testButton setTitle:@"Start Test" forState:UIControlStateNormal];
+		else
+			[testButton setTitle:@"Continue Test" forState:UIControlStateNormal];
+	}
+}
+
+-(void)updateParticipantDetailsButton
+{
+	if (![testManager participantName])
+		[participantDetailsButton setTitle:@"Enter Participant Details" forState:UIControlStateNormal];
+	else
+		[participantDetailsButton setTitle:@"Edit Participant Details" forState:UIControlStateNormal];
+}
 -(void)setNavButton
 {
-	UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStyleBordered target:self action:@selector(showDebugViewController)];
+	UIBarButtonItem *listButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(menuButtonPressed)];
 	self.navigationItem.rightBarButtonItem = listButton;
+}
+
+-(void)menuButtonPressed
+{
+	UIActionSheet *menuActionSheet = [[UIActionSheet alloc]
+	    initWithTitle:@"Menu"
+	    delegate:self
+	    cancelButtonTitle:@"Cancel"
+	    destructiveButtonTitle:nil
+	    otherButtonTitles:
+	    @"Choose Test...",
+	    @"Cancel",
+	    nil];
+	[menuActionSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex==0) {
+		[self showDebugViewController];
+	}
 }
 
 -(void)showDebugViewController
@@ -61,20 +109,27 @@
 	[self presentViewController:navController animated:YES completion:nil];
 }
 
-- (IBAction)enterPatientDetailsButtonPressed:(id)sender {
-	PatientDetailsFormViewController *patientDetailsFormViewController = [[PatientDetailsFormViewController alloc] initWithNibName:@"PatientDetailsFormViewController" bundle:nil];
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:patientDetailsFormViewController];
+- (IBAction)enterParticipantDetailsButtonPressed:(id)sender {
+	ParticipantDetailsFormViewController *participantDetailsFormViewController = [[ParticipantDetailsFormViewController alloc] initWithNibName:@"ParticipantDetailsFormViewController" bundle:nil];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:participantDetailsFormViewController];
 	[self presentViewController:navController animated:YES completion:nil];
 }
 
--(void)setPatientDetails
+-(void)setParticipantDetails
 {
-	[patientNameLabel setText:[testManager patientName]];
-	[patientHospitalNumberLabel setText:[testManager patientHospitalNoOrAddress]];
+	[participantNameLabel setText:[testManager participantName]];
+	[participantHospitalNumberLabel setText:[testManager participantHospitalNoOrAddress]];
 }
 
-- (IBAction)continueButtonPressed {
+- (IBAction)testButtonPressed {
 	[self showCurrentTest];
+}
+
+-(void)showCurrentTest
+{
+	// Start the test, loading views on the navigation controller
+	Test *nextText = [[testManager tests] objectAtIndex:[testManager currentTestOrder]];
+	[nextText launchWithNavigationController:self.navigationController];
 }
 
 - (IBAction)endButtonPressed {
@@ -85,15 +140,13 @@
 
 -(void)setTestLabelValue
 {
-	[patientDetailsView setHidden:(![testManager patientName] || ![testManager patientHospitalNoOrAddress])];
-	[progressLabel setText:[NSString stringWithFormat:@"%i/%i tests completed", currentTestOrder, [tests count]]];
-	[currentTestLabel setText:[currentTest getFullTestName]];
+	[participantDetailsView setHidden:(![testManager participantName] || ![testManager participantHospitalNoOrAddress])];
+	[progressLabel setText:[NSString stringWithFormat:@"%i/%i tests completed", [testManager currentTestOrder], (int) [tests count]]];
+	Test *nextText = [[testManager tests]objectAtIndex:[testManager currentTestOrder]];
+	NSString *name = [nextText getFullTestName];
+	[currentTestLabel setText:name];
 }
 
--(void)showCurrentTest
-{
-	[currentTest launchWithNavigationController:self.navigationController];    // Start the test, loading views on the navigation controller
-}
 
 - (void)didReceiveMemoryWarning
 {

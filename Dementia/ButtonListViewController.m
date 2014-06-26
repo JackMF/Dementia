@@ -28,11 +28,17 @@
 	return self;
 }
 
+-(void)setButtonValues:(NSArray *)newButtonValues
+{
+	buttonLabelValues = newButtonValues;
+	[listCollectionView reloadData];
+}
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[listCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 	[listCollectionView setAllowsMultipleSelection:YES];
+	[listCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
 -(NSInteger)getNumberOfCorrectAnswers
@@ -66,6 +72,9 @@
 {
 	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
 
+	for (UIView *v in [cell.contentView subviews])
+		[v removeFromSuperview];
+
 	// Make the background view
 	UIView *bgView = [[UIView alloc] initWithFrame:cell.bounds];
 	UIColor *bgColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.2f];
@@ -84,7 +93,7 @@
 	[cellLabel setFont:[UIFont boldSystemFontOfSize:26.0]];
 	NSString *labelValue = [buttonLabelValues objectAtIndex:[indexPath row]];
 	[cellLabel setText:labelValue];
-	[cell addSubview:cellLabel];
+	[cell.contentView addSubview:cellLabel];
 
 	return cell;
 }

@@ -69,7 +69,7 @@
 	[answer3Button setImage:image3 forState:UIControlStateNormal];
 
 	if (currentStageOrder==1) {
-		int fileNum = [(NSNumber *)[currentQuestions objectAtIndex:4] integerValue];
+		int fileNum = (int) [(NSNumber *)[currentQuestions objectAtIndex:4] integerValue];
 		NSString *smileFilename = [NSString stringWithFormat:@"face%i.jpg", fileNum];
 		UIImage *face = [UIImage imageNamed:smileFilename];
 		[faceImageView setImage:face];
@@ -122,7 +122,7 @@
 	} else if (currentStageOrder==1) {
 		int score = 0;
 		NSArray *currentQuestions = [questions objectAtIndex:currentQuestionOrder-1];
-		int correctAnswer = [(NSNumber *)[currentQuestions objectAtIndex:4] integerValue];
+		int correctAnswer = (int) [(NSNumber *)[currentQuestions objectAtIndex:4] integerValue];
 		// If the user chose the correct answer
 		if (userAnswer == correctAnswer) {
 			score = 2;

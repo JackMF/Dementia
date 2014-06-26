@@ -10,7 +10,6 @@
 #import "Test.h"
 #import "CountdownTimerViewController.h"
 #import "TimerViewController.h"
-
 #define kSpeakingDurationSeconds 60.0f
 #define kWritingDurationSeconds 120.0f
 
@@ -54,15 +53,13 @@
 
 -(void)setSeg
 {
-//	CGRect frame = speakingWritingSegmentedControl.frame;
-//	[speakingWritingSegmentedControl setFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 50.0f)];
 	UIFont *font = [UIFont boldSystemFontOfSize:26.0f];
 	NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
 	[speakingWritingSegmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 
 - (IBAction)speakingWritingValueChanged {
-	int newIndex = [speakingWritingSegmentedControl selectedSegmentIndex];
+	int newIndex = (int) [speakingWritingSegmentedControl selectedSegmentIndex];
 	if (newIndex==0) duration=kSpeakingDurationSeconds;
 	else if (newIndex==1) duration=kWritingDurationSeconds;
 	[self setSeg];
@@ -147,7 +144,9 @@
 -(void)timerStoppedWithTimeElapsed:(int)timeElapsed
 {
 	repeatDuration = timeElapsed;
-	int score = [self calculateScore];
+	double vfi = [super getVFIFromNumberOfWordsProduced:numberOfWordsProduced duration:duration repeatDuration:repeatDuration];
+	[test setVfi:vfi];
+	int score = [super getScoreFromVFI:vfi andDuration:duration];
 	if (score!=-1) {
 		[test addToTestScore:score];
 		[super hasFinished];
@@ -155,13 +154,6 @@
 		[self addCountdownTimer];
 		[self addTimer];
 	}
-}
-
--(int)calculateScore
-{
-	if (numberOfWordsProduced && duration && repeatDuration)
-		return (duration - repeatDuration) / numberOfWordsProduced;
-	else return -1;
 }
 
 -(void)removeTimers

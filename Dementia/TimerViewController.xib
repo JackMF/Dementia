@@ -6,9 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController">
             <connections>
-                <outlet property="startButton" destination="GCR-hd-eg2" id="Btf-8d-pq6"/>
-                <outlet property="stopButton" destination="QRD-Cu-p5s" id="0x6-dG-K4J"/>
-                <outlet property="timerLabel" destination="hCw-9t-2O6" id="0be-GR-ANb"/>
+                <outlet property="startButton" destination="FvU-eQ-Gwc" id="QWe-C5-GGr"/>
+                <outlet property="stopButton" destination="wDi-oV-jRb" id="DLj-qc-fs0"/>
+                <outlet property="timerLabel" destination="WgA-o2-pEf" id="u2Y-HV-Vok"/>
                 <outlet property="view" destination="z83-ez-hQR" id="8sf-EH-y7h"/>
             </connections>
         </placeholder>
@@ -17,33 +17,33 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCR-hd-eg2">
-                    <rect key="frame" x="324" y="20" width="67" height="48"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-o2-pEf">
+                    <rect key="frame" x="92" y="27" width="117" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvU-eQ-Gwc">
+                    <rect key="frame" x="355" y="21" width="67" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="Start">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="startButtonPressed" destination="-1" eventType="touchUpInside" id="9D2-Md-T40"/>
+                        <action selector="startButtonPressed" destination="-1" eventType="touchUpInside" id="xlq-7w-Fpk"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-9t-2O6">
-                    <rect key="frame" x="68" y="27" width="117" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-Cu-p5s">
-                    <rect key="frame" x="466" y="20" width="66" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDi-oV-jRb">
+                    <rect key="frame" x="479" y="21" width="66" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="Stop">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="stopButtonPressed" destination="-1" eventType="touchUpInside" id="NGt-8c-rwN"/>
+                        <action selector="stopButtonPressed" destination="-1" eventType="touchUpInside" id="Qod-56-ln1"/>
                     </connections>
                 </button>
             </subviews>

@@ -67,7 +67,8 @@
 	if ([test isComplete]) {
 		NSString *detailText = [NSString stringWithFormat:@"Score %i", [test score]];
 		[cell.detailTextLabel setText:detailText];
-	}
+	} else
+		[cell.detailTextLabel setText:@""];
 
 	return cell;
 }

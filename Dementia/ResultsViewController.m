@@ -31,24 +31,51 @@
 	[super viewDidLoad];
 	[self addDoneButton];
 	[self setupScrollView];
-	[self setupPatientDetails];
+	[self setupParticipantDetails];
 	[self setupTestScores];
+	[self setupCategoryScores];
+}
+
+-(void)setupCategoryScores
+{
+	[languageLabel setText:[testManager categoryScoreWithCategoryName:@"Language"]];
+	[verbalFluencyLabel setText:[testManager categoryScoreWithCategoryName:@"Verbal Fluency"]];
+	[executiveLabel setText:[testManager categoryScoreWithCategoryName:@"Executive"]];
+	[memoryLabel setText:[testManager categoryScoreWithCategoryName:@"Memory"]];
+	[visuospatialLabel setText:[testManager categoryScoreWithCategoryName:@"Visuospatial"]];
+	[alsSpecificLabel setText:[testManager categoryScoreWithCategoryName:@"alsSpecific"]];
+	[alsNonSpecificLabel setText:[testManager categoryScoreWithCategoryName:@"alsNonSpecific"]];
+	[ecasScoreLabel setText:[testManager ecasScore]];
 }
 
 -(void)setupTestScores
 {
-
+	[languageNamingLabel setText:[testManager scoreForTestWithIndex:0]];
+	[languageComprehensionLabel setText:[testManager scoreForTestWithIndex:1]];
+	[memoryRecallLabel setText:[testManager scoreForTestWithIndex:2]];
+	[languageSpellingLabel setText:[testManager scoreForTestWithIndex:3]];
+	[fluencyLetterSLabel setText:[testManager scoreForTestWithIndex:4]];
+	[executiveReverseLabel setText:[testManager scoreForTestWithIndex:5]];
+	[executiveAlternationLabel setText:[testManager scoreForTestWithIndex:6]];
+	[fluencyLetterTLabel setText:[testManager scoreForTestWithIndex:7]];
+	[visuospatialDotLabel setText:[testManager scoreForTestWithIndex:8]];
+	[visuospatialCubeLabel setText:[testManager scoreForTestWithIndex:9]];
+	[visuospatialNumberLabel setText:[testManager scoreForTestWithIndex:10]];
+	[executiveSentenceLabel setText:[testManager scoreForTestWithIndex:11]];
+	[executiveSocialCognitionLabel setText:[testManager scoreForTestWithIndex:12]];
+	[memoryDelayedRecallLabel setText:[testManager scoreForTestWithIndex:13]];
+	[memoryDelayedRecognitionLabel setText:[testManager scoreForTestWithIndex:14]];
 }
 
--(void)setupPatientDetails
+-(void)setupParticipantDetails
 {
 	[dateOfTestingLabel setText:[testManager testDate]];
-	[patientNameLabel setText:[testManager patientName]];
-	[patientDateOfBirthLabel setText:[testManager patiendDateOfBirth]];
-	[patientHospitalNumberLabel setText:[testManager patientHospitalNoOrAddress]];
-	[patientAgeAtLeavingEducationLabel setText:[testManager patientAgeLeavingEducation]];
-	[patientOccupationLabel setText:[testManager patientOccupation]];
-	[patientHandednessLabel setText:[testManager patientHandedness]];
+	[participantNameLabel setText:[testManager participantName]];
+	[participantDateOfBirthLabel setText:[testManager participantDateOfBirth]];
+	[participantHospitalNumberLabel setText:[testManager participantHospitalNoOrAddress]];
+	[participantAgeAtLeavingEducationLabel setText:[testManager participantAgeLeavingEducation]];
+	[participantOccupationLabel setText:[testManager participantOccupation]];
+	[participantHandednessLabel setText:[testManager participantHandedness]];
 }
 
 -(void)setupScrollView

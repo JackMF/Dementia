@@ -11,22 +11,22 @@
 @class Test;
 @class DebugViewController;
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UIActionSheetDelegate>
 {
 	NSArray *tests;
-	int currentTestOrder;
 	TestManager *testManager;
-	Test *currentTest;
 	DebugViewController *debugViewController;
 	__weak IBOutlet UILabel *progressLabel;
 	__weak IBOutlet UILabel *currentTestLabel;
-	__weak IBOutlet UILabel *patientNameLabel;
-	__weak IBOutlet UILabel *patientHospitalNumberLabel;
-	__weak IBOutlet UIView *patientDetailsView;
+	__weak IBOutlet UILabel *participantNameLabel;
+	__weak IBOutlet UILabel *participantHospitalNumberLabel;
+	__weak IBOutlet UIView *participantDetailsView;
+	__weak IBOutlet UIButton *participantDetailsButton;
+	__weak IBOutlet UIButton *testButton;
+	__weak IBOutlet UIButton *testResultsButton;
 }
-- (IBAction)enterPatientDetailsButtonPressed:(id)sender;
-
-- (IBAction)continueButtonPressed;
+- (IBAction)enterParticipantDetailsButtonPressed:(id)sender;
+- (IBAction)testButtonPressed;
 - (IBAction)endButtonPressed;
 
 @end

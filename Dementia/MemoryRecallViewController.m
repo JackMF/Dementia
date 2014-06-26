@@ -53,7 +53,7 @@
 -(void)setButtonLabelValues
 {
 	NSArray *buttonLabelValues = [test buttonNames];
-	[buttonListViewController setButtonLabelValues:buttonLabelValues];
+	[buttonListViewController setButtonValues:buttonLabelValues];
 }
 
 -(void)setStoryText
@@ -63,7 +63,7 @@
 }
 
 - (IBAction)finishButtonPressed:(id)sender {
-	int corrent = [buttonListViewController getNumberOfCorrectAnswers];
+	int corrent = (int) [buttonListViewController getNumberOfCorrectAnswers];
 	[test addToTestScore:corrent];
 	[super hasFinished];
 }

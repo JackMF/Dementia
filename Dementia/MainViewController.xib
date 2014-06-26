@@ -7,10 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="currentTestLabel" destination="PLs-lm-WXN" id="G2v-gS-zWM"/>
-                <outlet property="patientDetailsView" destination="b8M-Vw-Lnr" id="cvD-t3-mFq"/>
-                <outlet property="patientHospitalNumberLabel" destination="yoh-YT-N33" id="1nI-Ql-V8b"/>
-                <outlet property="patientNameLabel" destination="ZQM-oT-BFO" id="ETW-qa-mtX"/>
+                <outlet property="participantDetailsButton" destination="QMB-ph-BEX" id="4yD-iJ-RM7"/>
+                <outlet property="participantDetailsView" destination="b8M-Vw-Lnr" id="4Uk-kv-qqu"/>
+                <outlet property="participantHospitalNumberLabel" destination="yoh-YT-N33" id="PLl-ge-95e"/>
+                <outlet property="participantNameLabel" destination="ZQM-oT-BFO" id="9cG-a5-PAb"/>
                 <outlet property="progressLabel" destination="L5G-oz-UIs" id="r7f-wX-99c"/>
+                <outlet property="testButton" destination="YoN-sk-zZg" id="gdi-dd-9nl"/>
+                <outlet property="testResultsButton" destination="ZQ4-E9-JEn" id="uAq-vM-HJk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,15 +74,15 @@
                     <rect key="frame" x="479" y="904" width="189" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="Continue Test">
+                    <state key="normal" title="Start Test">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="continueButtonPressed" destination="-1" eventType="touchUpInside" id="DZn-dS-KFm"/>
+                        <action selector="testButtonPressed" destination="-1" eventType="touchUpInside" id="D2t-NG-7de"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edinburgh Cognitive And Behavioural Als Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCf-z5-NHJ">
-                    <rect key="frame" x="49" y="112" width="671" height="36"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edinburgh Cognitive And Behavioural ALS Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCf-z5-NHJ">
+                    <rect key="frame" x="42" y="112" width="685" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,8 +95,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-sJ-dni">
-                    <rect key="frame" x="49" y="275" width="209" height="36"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Participant Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-sJ-dni">
+                    <rect key="frame" x="49" y="275" width="261" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -114,10 +117,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ4-E9-JEn">
-                    <rect key="frame" x="89" y="904" width="225" height="48"/>
+                    <rect key="frame" x="89" y="904" width="168" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="Get Test Results">
+                    <state key="normal" title="Test Results">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -125,14 +128,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMB-ph-BEX">
-                    <rect key="frame" x="398" y="269" width="281" height="48"/>
+                    <rect key="frame" x="393" y="269" width="334" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="Enter Patient Details">
+                    <state key="normal" title="Enter Participant Details">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="enterPatientDetailsButtonPressed:" destination="-1" eventType="touchUpInside" id="2d5-FF-T2c"/>
+                        <action selector="enterParticipantDetailsButtonPressed:" destination="-1" eventType="touchUpInside" id="Slg-cK-RlW"/>
                     </connections>
                 </button>
             </subviews>

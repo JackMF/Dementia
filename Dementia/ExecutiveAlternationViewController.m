@@ -42,7 +42,7 @@
 	[buttonListViewController.view setFrame:cpFrame];
 
 	NSArray *buttonLabelValues = buttonText;
-	[buttonListViewController setButtonLabelValues:buttonLabelValues];
+	[buttonListViewController setButtonValues:buttonLabelValues];
 
 	[self.view addSubview:buttonListViewController.view];
 	[buttonListViewController didMoveToParentViewController:self];
@@ -61,7 +61,8 @@
 }
 
 - (IBAction)finishButtonPressed:(id)sender {
-	[test addToTestScore:[buttonListViewController getNumberOfCorrectAnswers]];
+	int score = (int) [buttonListViewController getNumberOfCorrectAnswers];
+	[test addToTestScore:score];
 	[super hasFinished];
 
 }

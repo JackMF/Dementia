@@ -13,7 +13,8 @@
 	__weak IBOutlet UICollectionView *listCollectionView;
 
 }
-@property (nonatomic) NSArray *buttonLabelValues;
+@property (nonatomic, setter = setButtonValues :) NSArray *buttonLabelValues;
 @property (nonatomic) BOOL oneItemPerRow;
 -(NSInteger)getNumberOfCorrectAnswers;
+-(void)setButtonValues:(NSArray *)newButtonValues;
 @end

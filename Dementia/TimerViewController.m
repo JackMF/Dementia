@@ -37,6 +37,7 @@ int secondsElapsed;
 {
 	secondsElapsed = 0;
 	[self updateTimerLabel];
+	[stopButton setEnabled:NO];
 }
 
 -(void)updateTimerLabel
@@ -63,6 +64,8 @@ int secondsElapsed;
 
 - (IBAction)startButtonPressed {
 	if (![timer isValid]) {
+		[startButton setEnabled:NO];
+		[stopButton setEnabled:YES];
 		timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
 	}
 }

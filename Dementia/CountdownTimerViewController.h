@@ -13,10 +13,12 @@
 {
 	__weak IBOutlet UILabel *countdownLabel;
 	__weak IBOutlet UIButton *startButton;
+	__weak IBOutlet UIButton *stopButton;
 	NSTimer *countdownTimer;
 
 }
 - (IBAction)startButtonPressed:(id)sender;
+- (IBAction)stopButtonPressed:(id)sender;
 -(void)updateCountdownLabel;
 @property TestViewController *testVCDelegate;
 @property int countdownDuration;

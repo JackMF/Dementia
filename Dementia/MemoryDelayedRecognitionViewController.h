@@ -13,6 +13,7 @@
 	NSArray *questions;
 	__weak IBOutlet UILabel *questionLabel;
 	int currentQuestionOrder;
+	int numCorrectAnswers;
 }
 
 @end

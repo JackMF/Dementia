@@ -18,20 +18,20 @@
                 <outlet property="executiveSocialCognitionLabel" destination="vvy-dc-c71" id="qJm-oH-bEE"/>
                 <outlet property="fluencyLetterSLabel" destination="2t5-WA-bac" id="Dso-18-eo2"/>
                 <outlet property="fluencyLetterTLabel" destination="TII-n3-kni" id="MrU-QZ-ADS"/>
-                <outlet property="langaugeNamingLabel" destination="Tu1-8E-ULQ" id="cyO-7Y-9E1"/>
                 <outlet property="languageComprehensionLabel" destination="O2E-bc-29B" id="dCu-Ec-OVv"/>
                 <outlet property="languageLabel" destination="mQt-jn-mxm" id="Ugh-Qx-M3R"/>
+                <outlet property="languageNamingLabel" destination="Tu1-8E-ULQ" id="71K-pC-HqN"/>
                 <outlet property="languageSpellingLabel" destination="Viy-qn-8QF" id="lc5-tt-3sr"/>
                 <outlet property="memoryDelayedRecallLabel" destination="hQv-V9-JQ2" id="PHE-YR-Yml"/>
                 <outlet property="memoryDelayedRecognitionLabel" destination="RBj-jl-bJf" id="xD0-hP-wvf"/>
                 <outlet property="memoryLabel" destination="oLX-cc-atc" id="YzR-ye-QTN"/>
                 <outlet property="memoryRecallLabel" destination="7L1-2n-fEE" id="wjz-8f-kCI"/>
-                <outlet property="patientAgeAtLeavingEducationLabel" destination="zAp-IL-NAM" id="6lP-wU-YDL"/>
-                <outlet property="patientDateOfBirthLabel" destination="R2F-Eg-LgB" id="HaI-Es-eNF"/>
-                <outlet property="patientHandednessLabel" destination="eIN-Rk-s6u" id="Yer-S0-fux"/>
-                <outlet property="patientHospitalNumberLabel" destination="Z07-Dt-OX5" id="COs-g2-wxu"/>
-                <outlet property="patientNameLabel" destination="Cv4-5v-J1L" id="dX1-xc-ejo"/>
-                <outlet property="patientOccupationLabel" destination="a2u-3Q-vdX" id="imK-yo-wY4"/>
+                <outlet property="participantAgeAtLeavingEducationLabel" destination="zAp-IL-NAM" id="mFM-wH-rbX"/>
+                <outlet property="participantDateOfBirthLabel" destination="R2F-Eg-LgB" id="gfc-W8-WLd"/>
+                <outlet property="participantHandednessLabel" destination="eIN-Rk-s6u" id="PAK-qx-Gm7"/>
+                <outlet property="participantHospitalNumberLabel" destination="Z07-Dt-OX5" id="znT-Xb-8QG"/>
+                <outlet property="participantNameLabel" destination="Cv4-5v-J1L" id="SvW-U9-wCL"/>
+                <outlet property="participantOccupationLabel" destination="a2u-3Q-vdX" id="MJM-I3-1GX"/>
                 <outlet property="scrollView" destination="nbP-5k-PZU" id="csr-p6-SrQ"/>
                 <outlet property="verbalFluencyLabel" destination="dA4-Q0-Rec" id="Cf1-tL-orm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="P0f-fs-6D0"/>
@@ -358,8 +358,8 @@
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ir0-4F-fd5">
-                    <rect key="frame" x="45" y="43" width="181" height="32"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Participant Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ir0-4F-fd5">
+                    <rect key="frame" x="45" y="43" width="226" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <nil key="highlightedColor"/>
@@ -449,7 +449,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.33713151209999997" blue="7.621079918e-05" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

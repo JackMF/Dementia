@@ -31,8 +31,12 @@
 @property (nonatomic) NSArray *buttonText;
 
 @property (nonatomic) int score;
+@property (nonatomic) int maxScore;
+@property (nonatomic) bool hasStarted;
 @property (nonatomic) bool isComplete;
 @property (nonatomic) TestViewController *testViewController;
+
+@property (nonatomic) double vfi;
 
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;

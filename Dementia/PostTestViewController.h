@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestViewController.h"
 @class Test;
-@interface PostTestViewController : UIViewController
+@class TestManager;
+@interface PostTestViewController : TestViewController
 {
-	__weak IBOutlet UILabel *titleLabel;
 	__weak IBOutlet UITextView *textView;
+	TestManager *testManager;
 }
 - (IBAction)endButtonPressed;
 @property (nonatomic) Test *test;

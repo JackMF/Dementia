@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownTimerViewController">
             <connections>
-                <outlet property="countdownLabel" destination="LFR-Rf-mEH" id="2sJ-Wh-Ast"/>
-                <outlet property="startButton" destination="cZ4-jj-NBW" id="oHI-Au-1Eg"/>
+                <outlet property="countdownLabel" destination="LFR-Rf-mEH" id="6le-k5-UaN"/>
+                <outlet property="startButton" destination="hSh-Yt-iSS" id="M6V-mV-xHd"/>
+                <outlet property="stopButton" destination="xea-d4-WwF" id="Onk-zA-Ulg"/>
                 <outlet property="view" destination="Gu3-r2-gc5" id="HhF-Vq-HYm"/>
             </connections>
         </placeholder>
@@ -16,24 +17,35 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ4-jj-NBW">
-                    <rect key="frame" x="409" y="21" width="67" height="48"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-Rf-mEH">
+                    <rect key="frame" x="91.5" y="27" width="117" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-Yt-iSS">
+                    <rect key="frame" x="355" y="21" width="67" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="Start">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="startButtonPressed:" destination="-1" eventType="touchUpInside" id="gVD-Nz-9bm"/>
+                        <action selector="startButtonPressed:" destination="-1" eventType="touchUpInside" id="Us4-Dh-K3S"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-Rf-mEH">
-                    <rect key="frame" x="125" y="27" width="117" height="36"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xea-d4-WwF">
+                    <rect key="frame" x="479" y="21" width="66" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <state key="normal" title="Stop">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="stopButtonPressed:" destination="-1" eventType="touchUpInside" id="YYE-Qi-CVU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
         </view>

@@ -22,6 +22,7 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		// Custom initialization
+		numCorrectAnswers = 0;
 	}
 	return self;
 }
@@ -36,7 +37,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	currentQuestionOrder = 0;
-	[super makeMultiControlPanelWithTitles:@[@"True",@"False"] andValues:@[@0,@1]];
+	[super makeMultiControlPanelWithTitles:@[@"YES",@"NO"] andValues:@[@0,@1]];
 	[self loadNextQuestion];
 }
 
@@ -62,11 +63,28 @@
 - (void)didConfirmAnswer
 {
 	MultiControlPanelViewController *cp = (MultiControlPanelViewController *)[super controlPanelViewController];
-	int score = [cp answerScore];
-	[test addToTestScore:score];
+	int answerScore = [cp answerScore];
+	numCorrectAnswers += answerScore;
 	if (currentQuestionOrder < [questions count])     // If there's still images left
 		[self loadNextQuestion];               // Load the next image
-	else [super hasFinished];     // Otherwise tell the Test we've finished, and our score
+	else [self calculateScoreAndFinish];
+}
+
+-(void)calculateScoreAndFinish
+{
+	int score = [self getScore];
+	[test addToTestScore:score];
+	[super hasFinished];
+}
+
+-(int)getScore
+{
+	if (numCorrectAnswers <= 4) return 0;
+	else if (numCorrectAnswers == 5) return 1;
+	else if (numCorrectAnswers == 6) return 2;
+	else if (numCorrectAnswers == 7) return 3;
+	else if (numCorrectAnswers == 8) return 4;
+	return 0;
 }
 
 - (void)didReceiveMemoryWarning

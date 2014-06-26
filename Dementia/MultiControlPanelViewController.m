@@ -94,7 +94,7 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-	int index = indexPath.row;
+	int index = (int) indexPath.row;
 	answerScore = (int)[[buttonValues objectAtIndex:index] integerValue];
 	[cell setSelected:YES];
 	[confirmButton setHidden:NO];           // Show the confirm button

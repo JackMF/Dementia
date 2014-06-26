@@ -17,14 +17,14 @@
 	__weak IBOutlet UIView *contentView;
 
 	__weak IBOutlet UILabel *dateOfTestingLabel;
-	__weak IBOutlet UILabel *patientNameLabel;
-	__weak IBOutlet UILabel *patientDateOfBirthLabel;
-	__weak IBOutlet UILabel *patientHospitalNumberLabel;
-	__weak IBOutlet UILabel *patientAgeAtLeavingEducationLabel;
-	__weak IBOutlet UILabel *patientOccupationLabel;
-	__weak IBOutlet UILabel *patientHandednessLabel;
+	__weak IBOutlet UILabel *participantNameLabel;
+	__weak IBOutlet UILabel *participantDateOfBirthLabel;
+	__weak IBOutlet UILabel *participantHospitalNumberLabel;
+	__weak IBOutlet UILabel *participantAgeAtLeavingEducationLabel;
+	__weak IBOutlet UILabel *participantOccupationLabel;
+	__weak IBOutlet UILabel *participantHandednessLabel;
 
-	__weak IBOutlet UILabel *langaugeNamingLabel;
+	__weak IBOutlet UILabel *languageNamingLabel;
 	__weak IBOutlet UILabel *languageComprehensionLabel;
 	__weak IBOutlet UILabel *memoryRecallLabel;
 	__weak IBOutlet UILabel *languageSpellingLabel;
