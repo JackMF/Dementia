@@ -38,12 +38,8 @@
 	currentStageOrder = 0;
 	for (UIButton *button in @[answer0Button, answer1Button, answer2Button, answer3Button]) {
 		[button setImage:nil forState:UIControlStateNormal];
-		[button setContentMode:UIViewContentModeScaleAspectFit];
+		[button.imageView setContentMode:UIViewContentModeScaleAspectFit];
 	}
-//	[answer0Button setImage:nil forState:UIControlStateNormal];
-//	[answer1Button setImage:nil forState:UIControlStateNormal];
-//	[answer2Button setImage:nil forState:UIControlStateNormal];
-//	[answer3Button setImage:nil forState:UIControlStateNormal];
 	[faceImageView setImage:nil];
 	[self loadNextQuestion];
 }

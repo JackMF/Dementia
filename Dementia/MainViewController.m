@@ -141,7 +141,7 @@
 -(void)setTestLabelValue
 {
 	[participantDetailsView setHidden:(![testManager participantName] || ![testManager participantHospitalNoOrAddress])];
-	[progressLabel setText:[NSString stringWithFormat:@"%i/%i tests completed", [testManager currentTestOrder], (int) [tests count]]];
+	[progressLabel setText:[testManager getProgress]];
 	Test *nextText = [[testManager tests]objectAtIndex:[testManager currentTestOrder]];
 	NSString *name = [nextText getFullTestName];
 	[currentTestLabel setText:name];

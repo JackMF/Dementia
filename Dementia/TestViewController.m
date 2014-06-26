@@ -12,6 +12,8 @@
 #import "MultiControlPanelViewController.h"
 #import "DebugViewController.h"
 #import "ButtonListViewController.h"
+#import "PreTestViewController.h"
+#import "PostTestViewController.h"
 #define kAnimationDuration 0.6f
 
 #define kSpeakingDurationSeconds 60.0f
@@ -45,18 +47,19 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[self makeMenuButton];
-	[self.test setScore:0];
+	[self setNavigationItems];
+	if ([self isActualTest])
+		[test setScore : 0];
 }
 
--(void)makeMenuButton
+-(void)setNavigationItems
 {
 	[self.navigationItem setHidesBackButton:YES];
-	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(showMenu)];
+	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(showMenuAlert)];
 	self.navigationItem.rightBarButtonItem = menuButton;
 }
 
--(void)showMenu
+-(void)showMenuAlert
 {
 	UIActionSheet *menuActionSheet = [[UIActionSheet alloc]
 	    initWithTitle:@"Menu"
@@ -72,15 +75,35 @@
 
 -(void)showLeavingTestAlert
 {
+	UIActionSheet *leavingTestActionSheet = [[UIActionSheet alloc]
+	    initWithTitle:@"Warning - will reset test. Continue?"
+	    delegate:self
+	    cancelButtonTitle:@"Cancel"
+	    destructiveButtonTitle:nil
+	    otherButtonTitles:
+	    @"Yes",
+	    @"No",
+	    nil];
+
+	[leavingTestActionSheet showInView:self.view];
+}
+
+-(void)leaveTest
+{
+	[test setHasStarted:NO];
+	[test setIsComplete:NO];
 	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	if (buttonIndex==0) {
-		[self showLeavingTestAlert];
-	} else {
-	}
+	if ([actionSheet.title isEqualToString:@"Menu"]) {
+		if (buttonIndex==0) {
+			if ([self isActualTest]) [self showLeavingTestAlert];
+			else [self leaveTest];
+		}
+	} else
+	if (buttonIndex==0) [self leaveTest];
 }
 
 -(void)showDebugViewController
@@ -148,8 +171,7 @@
 -(void)hasFinished
 {
 	[self.test setIsComplete:YES];
-	if (self.test)                  // If we have a test,
-		[self.test startPostTest];  // start the post test
+	[self.test startPostTest];
 }
 
 -(void)countdownTimerHasFinished
@@ -224,33 +246,17 @@
 	return -1.0;
 }
 
--(int)getScoreFromVFI:(double)vfi andDuration:(int)duration
-{
-	if (duration==kSpeakingDurationSeconds) {
-		if (vfi >= 12) return 0;
-		else if (vfi >= 10) return 2;
-		else if (vfi >= 8) return 4;
-		else if (vfi >= 6) return 6;
-		else if (vfi >= 4) return 8;
-		else if (vfi >= 2) return 10;
-		else if (vfi < 2) return 12;
-	} else if (duration==kWritingDurationSeconds) {
-		if (vfi >= 20) return 0;
-		else if (vfi >= 16.5) return 2;
-		else if (vfi >= 13.0) return 4;
-		else if (vfi >= 9.5) return 6;
-		else if (vfi >= 6.0) return 8;
-		else if (vfi >= 2.5) return 10;
-		else if (vfi < 2.5) return 12;
-	}
-	return -1;
-}
 
 
 - (void)didReceiveMemoryWarning
 {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+-(BOOL)isActualTest
+{
+	return (![self isKindOfClass:[PreTestViewController class]] && ![self isKindOfClass:[PostTestViewController class]]);
 }
 
 @end

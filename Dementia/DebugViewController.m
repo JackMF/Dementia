@@ -19,7 +19,7 @@
 {
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
-		tests = [[TestManager sharedInstance] tests];
+		testManager = [TestManager sharedInstance];
 	}
 	return self;
 }
@@ -36,6 +36,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+	tests = [testManager tests];
 	UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
 	[self.navigationItem setRightBarButtonItem:closeButton];
 	[tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
@@ -65,7 +66,7 @@
 	[cell.textLabel setFont:[UIFont boldSystemFontOfSize:25.0]];
 
 	if ([test isComplete]) {
-		NSString *detailText = [NSString stringWithFormat:@"Score %i", [test score]];
+		NSString *detailText = [NSString stringWithFormat:@"Score: %i", [test score]];
 		[cell.detailTextLabel setText:detailText];
 	} else
 		[cell.detailTextLabel setText:@""];

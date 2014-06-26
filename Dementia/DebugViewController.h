@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TestManager;
 
 @interface DebugViewController : UIViewController <UITableViewDataSource, UITabBarControllerDelegate>
 {
 	__weak IBOutlet UITableView *tableView;
 	NSArray *tests;
+	TestManager *testManager;
 }
 -(void)done;
 @end

@@ -29,9 +29,13 @@
 	__weak IBOutlet UILabel *memoryRecallLabel;
 	__weak IBOutlet UILabel *languageSpellingLabel;
 	__weak IBOutlet UILabel *fluencyLetterSLabel;
+	__weak IBOutlet UILabel *fluencyLetterSVFILabel;
+
 	__weak IBOutlet UILabel *executiveReverseLabel;
 	__weak IBOutlet UILabel *executiveAlternationLabel;
 	__weak IBOutlet UILabel *fluencyLetterTLabel;
+	__weak IBOutlet UILabel *fluencyLetterTVFILabel;
+
 	__weak IBOutlet UILabel *visuospatialDotLabel;
 	__weak IBOutlet UILabel *visuospatialCubeLabel;
 	__weak IBOutlet UILabel *visuospatialNumberLabel;

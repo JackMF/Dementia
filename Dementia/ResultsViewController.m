@@ -31,9 +31,14 @@
 	[super viewDidLoad];
 	[self addDoneButton];
 	[self setupScrollView];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
 	[self setupParticipantDetails];
 	[self setupTestScores];
 	[self setupCategoryScores];
+	[super viewWillAppear:animated];
 }
 
 -(void)setupCategoryScores
@@ -54,10 +59,24 @@
 	[languageComprehensionLabel setText:[testManager scoreForTestWithIndex:1]];
 	[memoryRecallLabel setText:[testManager scoreForTestWithIndex:2]];
 	[languageSpellingLabel setText:[testManager scoreForTestWithIndex:3]];
+
 	[fluencyLetterSLabel setText:[testManager scoreForTestWithIndex:4]];
+	Test *fluencySTest = [[testManager tests] objectAtIndex:4];
+	if ([fluencySTest vfi]) {
+		NSString *fluencySVFIText = [NSString stringWithFormat:@"%.2lf",[[fluencySTest vfi] doubleValue]];
+		[fluencyLetterSVFILabel setText:fluencySVFIText];
+	}
+
 	[executiveReverseLabel setText:[testManager scoreForTestWithIndex:5]];
 	[executiveAlternationLabel setText:[testManager scoreForTestWithIndex:6]];
+
 	[fluencyLetterTLabel setText:[testManager scoreForTestWithIndex:7]];
+	Test *fluencyTTest = [[testManager tests] objectAtIndex:7];
+	if ([fluencyTTest vfi]) {
+		NSString *fluencyTVFIText = [NSString stringWithFormat:@"%.2lf",[[fluencyTTest vfi] doubleValue]];
+		[fluencyLetterTVFILabel setText:fluencyTVFIText];
+	}
+
 	[visuospatialDotLabel setText:[testManager scoreForTestWithIndex:8]];
 	[visuospatialCubeLabel setText:[testManager scoreForTestWithIndex:9]];
 	[visuospatialNumberLabel setText:[testManager scoreForTestWithIndex:10]];
@@ -95,11 +114,6 @@
 -(void)done
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning

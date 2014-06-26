@@ -32,5 +32,6 @@
 -(NSString *)scoreForTestWithIndex:(int)index;
 -(NSString *)categoryScoreWithCategoryName:(NSString *)categoryName;
 -(NSString *)ecasScore;
+-(NSString *)getProgress;
 
 @end

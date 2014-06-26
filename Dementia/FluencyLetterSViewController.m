@@ -48,10 +48,10 @@
 
 -(void)viewDidLayoutSubviews
 {
-	[self setSeg];
+	[self setDurationControl];
 }
 
--(void)setSeg
+-(void)setDurationControl
 {
 	UIFont *font = [UIFont boldSystemFontOfSize:26.0f];
 	NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
@@ -62,7 +62,7 @@
 	int newIndex = (int) [speakingWritingSegmentedControl selectedSegmentIndex];
 	if (newIndex==0) duration=kSpeakingDurationSeconds;
 	else if (newIndex==1) duration=kWritingDurationSeconds;
-	[self setSeg];
+	[self setDurationControl];
 	[self addCountdownTimer];
 }
 
@@ -145,9 +145,9 @@
 {
 	repeatDuration = timeElapsed;
 	double vfi = [super getVFIFromNumberOfWordsProduced:numberOfWordsProduced duration:duration repeatDuration:repeatDuration];
-	[test setVfi:vfi];
-	int score = [super getScoreFromVFI:vfi andDuration:duration];
+	int score = [self getScoreFromVFI:vfi];
 	if (score!=-1) {
+		[test setVfi:[NSNumber numberWithDouble:vfi]];
 		[test addToTestScore:score];
 		[super hasFinished];
 	} else {
@@ -165,6 +165,28 @@
 	timerViewController.view = nil;
 	[timerViewController removeFromParentViewController];
 	timerViewController = nil;
+}
+
+-(int)getScoreFromVFI:(double)vfi
+{
+	if (duration==kSpeakingDurationSeconds) {
+		if (vfi >= 12) return 0;
+		else if (vfi >= 10) return 2;
+		else if (vfi >= 8) return 4;
+		else if (vfi >= 6) return 6;
+		else if (vfi >= 4) return 8;
+		else if (vfi >= 2) return 10;
+		else if (vfi < 2) return 12;
+	} else if (duration==kWritingDurationSeconds) {
+		if (vfi >= 20) return 0;
+		else if (vfi >= 16.5) return 2;
+		else if (vfi >= 13.0) return 4;
+		else if (vfi >= 9.5) return 6;
+		else if (vfi >= 6.0) return 8;
+		else if (vfi >= 2.5) return 10;
+		else if (vfi < 2.5) return 12;
+	}
+	return -1;
 }
 
 

@@ -30,6 +30,5 @@
 -(void)updateMultiControlPanelValues:(NSArray *)newValues;
 
 -(double)getVFIFromNumberOfWordsProduced:(int)numWordsProduced duration:(int)duration repeatDuration:(int)repeatDuration;
--(int)getScoreFromVFI:(double)vfi andDuration:(int)duration;
 
 @end

@@ -124,6 +124,15 @@ static TestManager *_sharedInstance;
 	return NO;
 }
 
+-(NSString *)getProgress
+{
+	int numCompletedTests = 0;
+	for (Test *test in tests) {
+		if ([test isComplete]) numCompletedTests++;
+	}
+	return [NSString stringWithFormat:@"%i/%i tests completed", numCompletedTests, (int) [tests count]];
+}
+
 -(void)endTestAndStartNextWithNavController:(UINavigationController *)navController
 {
 	currentTestOrder++;

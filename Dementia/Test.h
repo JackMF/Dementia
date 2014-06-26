@@ -36,7 +36,7 @@
 @property (nonatomic) bool isComplete;
 @property (nonatomic) TestViewController *testViewController;
 
-@property (nonatomic) double vfi;
+@property (nonatomic) NSNumber *vfi;
 
 -(void)launchWithNavigationController:(UINavigationController *)navController;
 -(void)startPreTest;

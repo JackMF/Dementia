@@ -27,8 +27,11 @@
 		// Set our post-test controller
 		postTestViewController = [[PostTestViewController alloc] initWithNibName:@"PostTestViewController" bundle:nil];
 		postTestViewController.test = self;
-		hasStarted = NO;
-		isComplete = NO;
+
+		[self setHasStarted:NO];
+		[self setIsComplete:NO];
+		[self setScore:0];
+		[self setVfi:nil];
 	}
 	return self;
 }
@@ -80,8 +83,8 @@
 
 -(void)startTest
 {
+	[self setHasStarted:YES];
 	[navigationController pushViewController:testViewController animated:YES];
-	hasStarted = YES;
 }
 
 -(void)startPostTest
