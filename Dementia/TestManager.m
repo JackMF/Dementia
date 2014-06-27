@@ -60,42 +60,52 @@ static TestManager *_sharedInstance;
 {
 	int categoryTotal = 0;
 	int maxTotal = 0;
-
 	if ([categoryName isEqualToString:@"alsSpecific"]) {
-		for (Test *test in tests) {
-			if ([[test categoryName] isEqualToString:@"Language"] ||
-			    [[test categoryName] isEqualToString:@"Verbal Fluency"] ||
-			    [[test categoryName] isEqualToString:@"Executive"]) {
-				if (![test isComplete]) return nil;
-				categoryTotal += [test score];
-				maxTotal += [test maxScore];
-			}
+		for (NSString *cat in @[@"Language",@"Verbal Fluency",@"Executive"]) {
+			NSNumber *catScore = [self scoreForCategory:cat];
+			if (!catScore) return nil;
+			categoryTotal += [catScore integerValue];
+			maxTotal += [[self maxForCategory:cat] integerValue];
 		}
 		return [NSString stringWithFormat:@"%i/%i", categoryTotal, maxTotal];
 	} else if ([categoryName isEqualToString:@"alsNonSpecific"]) {
-		for (Test *test in tests) {
-			if ([[test categoryName] isEqualToString:@"Memory"] ||
-			    [[test categoryName] isEqualToString:@"Visuospatial"]) {
-				if (![test isComplete]) return nil;
-				categoryTotal += [test score];
-				maxTotal += [test maxScore];
-			}
+		for (NSString *cat in @[@"Memory",@"Visuospatial"]) {
+			NSNumber *catScore = [self scoreForCategory:cat];
+			if (!catScore) return nil;
+			categoryTotal += [catScore integerValue];
+			maxTotal += [[self maxForCategory:cat] integerValue];
 		}
 		return [NSString stringWithFormat:@"%i/%i", categoryTotal, maxTotal];
 	}
-
-	for (Test *test in tests) {
-		if ([[test categoryName] isEqualToString:categoryName]) {
-			if (![test isComplete]) return nil;
-			categoryTotal += [test score];
-			maxTotal += [test maxScore];
-		}
-	}
+	categoryTotal = [[self scoreForCategory:categoryName] integerValue];
+	maxTotal = [[self maxForCategory:categoryName] integerValue];
 	return [NSString stringWithFormat:@"%i/%i", categoryTotal, maxTotal];
 }
 
+-(NSNumber *)scoreForCategory:(NSString *)category
+{
+	int categoryTotal = 0;
+	for (Test *test in tests) {
+		if ([[test categoryName] isEqualToString:category]) {
+			if (![test isComplete]) return nil;
+			categoryTotal += [test score];
+		}
+	}
+	return [NSNumber numberWithInt:categoryTotal];
 
--(NSString *)ecasScore
+}
+
+-(NSNumber *)maxForCategory:(NSString *)category
+{
+	int maxTotal = 0;
+	for (Test *test in tests) {
+		if ([[test categoryName] isEqualToString:category]) maxTotal += [test maxScore];
+	}
+	return [NSNumber numberWithInt:maxTotal];
+
+}
+
+-(NSString *)getEcasScoreText
 {
 	int total = 0;
 	int maxTotal = 0;
@@ -105,6 +115,16 @@ static TestManager *_sharedInstance;
 		maxTotal += [test maxScore];
 	}
 	return [NSString stringWithFormat:@"%i/%i", total, maxTotal];
+}
+
+-(NSNumber *)ecasScore
+{
+	int total = 0;
+	for (Test *test in tests) {
+		if (![test isComplete]) return nil;
+		total += [test score];
+	}
+	return [NSNumber numberWithInt:total];
 }
 
 // Returns a shared instance of the test manager
@@ -138,6 +158,40 @@ static TestManager *_sharedInstance;
 	currentTestOrder++;
 	Test *nextText = [tests objectAtIndex:currentTestOrder];
 	[nextText launchWithNavigationController:navController];
+}
+
+-(NSString *)getCSVContentForInterview
+{
+	NSMutableString *csvString = [NSMutableString new];
+	// Participant Details
+	[csvString appendString:@"Participant Details\n"];
+	[csvString appendString:@"Date, Participant Name/ID, Participant Date of Birth, Participant Hospital No. Or Address, Participant Age at Leaving Full Time Education, Patient Occupation, Patient Handedness\n"];
+	[csvString appendFormat:@"%@,%@,%@,%@,%@,%@,%@\n",
+	[self testDate], [self participantName], [self participantDateOfBirth], [self participantHospitalNoOrAddress], [self participantAgeLeavingEducation], [self participantOccupation], [self participantHandedness]];
+	[csvString appendString:@"\n \n"];
+
+	// Test Details
+	[csvString appendString:@"Test Details\n"];
+	[csvString appendString:@"Test Category, Test Name, Test Score, VFI\n"];
+	for (Test *test in tests) {
+		if ([test vfi])
+			[csvString appendFormat:@"%@,%@,%d,%.2lf\n", [test categoryName], [test testName], [test score], [[test vfi] doubleValue]];
+		else
+			[csvString appendFormat:@"%@,%@,%d\n", [test categoryName], [test testName], [test score]];
+	}
+	[csvString appendString:@"\n \n"];
+
+	// Category Details
+	[csvString appendString:@"Category Details\n"];
+	[csvString appendString:@"Category Name, Category Score\n"];
+	for (NSString *cat in @[@"Language", @"Verbal Fluency", @"Executive", @"Memory", @"Visuospatial"]) {
+		[csvString appendFormat:@"%@,%d\n", cat, [[self scoreForCategory:cat] integerValue]];
+	}
+	[csvString appendString:@"\n \n"];
+
+	// ECAS total
+	[csvString appendFormat:@"ECAS Score:, %d", [[self ecasScore] integerValue]];
+	return csvString;
 }
 
 @end

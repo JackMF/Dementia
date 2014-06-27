@@ -31,7 +31,9 @@
 +(TestManager *)sharedInstance;
 -(NSString *)scoreForTestWithIndex:(int)index;
 -(NSString *)categoryScoreWithCategoryName:(NSString *)categoryName;
--(NSString *)ecasScore;
+-(NSString *)getEcasScoreText;
 -(NSString *)getProgress;
+
+-(NSString *)getCSVContentForInterview;
 
 @end

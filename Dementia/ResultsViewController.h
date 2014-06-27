@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 @class TestManager;
 
-@interface ResultsViewController : UIViewController <UIScrollViewDelegate>
+@interface ResultsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate>
 {
 	TestManager *testManager;
 
@@ -55,5 +57,7 @@
 
 	__weak IBOutlet UILabel *ecasScoreLabel;
 }
+- (IBAction)exportButtonPRessed:(id)sender;
+-(void)mailCSVFile:(NSString *)filename;
 
 @end

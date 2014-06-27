@@ -150,6 +150,7 @@
 	[textField setTextAlignment:NSTextAlignmentRight];
 
 	[textField setTextColor:[UIColor blackColor]];
+	[textField setBackgroundColor:[UIColor whiteColor]];
 	[textField setEnabled:YES];
 
 	[textField setPlaceholder:@""];
@@ -167,15 +168,11 @@
 		textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 	if (row == 3)
 		textField.keyboardType = UIKeyboardTypeNumberPad;
-
+	if (row == 4)
+		textField.keyboardType = UIKeyboardTypeNumberPad;
 	textField.returnKeyType = UIReturnKeyNext;
 	if (row == 6)
 		textField.returnKeyType = UIReturnKeyDone;
-
-
-	textField.backgroundColor = [UIColor whiteColor];
-	textField.autocorrectionType = UITextAutocorrectionTypeNo; // no auto correction support
-	textField.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
 
 	[cell.contentView addSubview:textField];
 

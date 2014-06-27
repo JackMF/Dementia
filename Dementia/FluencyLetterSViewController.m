@@ -100,6 +100,7 @@
 	UITextField *textField = [finishedAlertView textFieldAtIndex:0];
 	[textField setDelegate:self];
 	[textField setClearButtonMode:UITextFieldViewModeAlways];
+	[textField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
 	textField.text = @"";
 	[finishedAlertView show];
 }

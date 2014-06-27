@@ -50,7 +50,7 @@
 	[visuospatialLabel setText:[testManager categoryScoreWithCategoryName:@"Visuospatial"]];
 	[alsSpecificLabel setText:[testManager categoryScoreWithCategoryName:@"alsSpecific"]];
 	[alsNonSpecificLabel setText:[testManager categoryScoreWithCategoryName:@"alsNonSpecific"]];
-	[ecasScoreLabel setText:[testManager ecasScore]];
+	[ecasScoreLabel setText:[testManager getEcasScoreText]];
 }
 
 -(void)setupTestScores
@@ -113,6 +113,59 @@
 
 -(void)done
 {
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)exportButtonPRessed:(id)sender {
+	NSString *csvContent = [testManager getCSVContentForInterview];
+
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *docDir = [paths objectAtIndex:0];
+
+	NSString *filename = [docDir stringByAppendingPathComponent:[NSString stringWithFormat:@"My Private Closet.csv"]];
+	NSError *error = NULL;
+	BOOL written = [csvContent writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:&error];
+	if (!written)
+		NSLog(@"write failed, error=%@", error);
+	else {
+		[self mailCSVFile:filename];
+	}
+}
+
+-(void)mailCSVFile:(NSString *)filename
+{
+	if ([MFMailComposeViewController canSendMail]) {
+
+		NSString *recipient = @"chriswait91@gmail.com";
+		NSArray *recipients = [NSArray arrayWithObjects:recipient, nil];
+
+		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		mailViewController.mailComposeDelegate = self;
+		[mailViewController setSubject:@"CSV Export"];
+		[mailViewController setToRecipients:recipients];
+		[mailViewController setMessageBody:@"" isHTML:NO];
+		mailViewController.navigationBar.tintColor = [UIColor blackColor];
+		NSData *myData = [NSData dataWithContentsOfFile:filename];
+
+		[mailViewController addAttachmentData:myData mimeType:@"text/csv" fileName:@"test"];
+
+		[self presentViewController:mailViewController animated:YES completion:nil];
+	}
+	//Display alert to the user
+	else {
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Can't Send Mail"
+		    message:@"Device is unable to send email in its current state."
+		    delegate:nil
+		    cancelButtonTitle:@"OK"
+		    otherButtonTitles:nil];
+
+		[alertView show];
+	}
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
+{
+	if (result == MFMailComposeResultSent) NSLog(@"CSV file sent");
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
