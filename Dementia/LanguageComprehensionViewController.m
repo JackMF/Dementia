@@ -9,7 +9,6 @@
 #import "LanguageComprehensionViewController.h"
 #import "Test.h"
 #define kImageViewAnimationDuration 0.6f
-#define kBorderSize 6
 
 @interface LanguageComprehensionViewController ()
 
@@ -92,6 +91,18 @@
 	[self resetButtons];
 }
 
+-(void)resetButtons
+{
+	for (id object in [self.view subviews]) {
+		if ([object isKindOfClass:[UIButton class]]) {
+			UIView *borderView = [self getBorderViewForButton:(UIButton *)object];
+			[self.view insertSubview:borderView belowSubview:object];
+		}
+	}
+	BOOL readyForNextQuestion = (currentQuestionOrder < [questionDicts count] && currentlySelectedButton!=nil);
+	[nextQuestionButton setHidden:!readyForNextQuestion];
+}
+
 -(NSString *)getFilenameForButton:(UIButton *)button
 {
 	for (NSDictionary *imageDict in imagesDicts) {
@@ -127,29 +138,6 @@
 		[super hasFinished];
 }
 
--(void)resetButtons
-{
-	for (id object in [self.view subviews]) {
-		if ([object isKindOfClass:[UIButton class]])
-			[self configureBorderForButton:(UIButton *)object];
-	}
-	BOOL readyForNextQuestion = (currentQuestionOrder < [questionDicts count] && currentlySelectedButton!=nil);
-	[nextQuestionButton setHidden:!readyForNextQuestion];
-}
-
--(void)configureBorderForButton:(UIButton *)button
-{
-	CGRect borderFrame = CGRectMake(button.frame.origin.x-kBorderSize, button.frame.origin.y-kBorderSize, button.frame.size.width + (kBorderSize*2), button.frame.size.height + (kBorderSize*2));
-	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
-	UIColor *selectedColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:0.7f];
-
-	if (button.selected)
-		[borderView setBackgroundColor:selectedColor];
-	else
-		[borderView setBackgroundColor:[UIColor whiteColor]];
-
-	[self.view insertSubview:borderView belowSubview:button];
-}
 
 
 - (void)didReceiveMemoryWarning

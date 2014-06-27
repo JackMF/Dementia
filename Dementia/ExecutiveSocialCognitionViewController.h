@@ -20,8 +20,11 @@
 	__weak IBOutlet UIButton *answer2Button;
 	__weak IBOutlet UIButton *answer3Button;
 	__weak IBOutlet UIImageView *faceImageView;
+	__weak IBOutlet UIButton *nextQuestionButton;
+	UIButton *currentlySelectedButton;
 }
 - (IBAction)answerButtonPressed:(id)sender;
+- (IBAction)nextButtonPressed;
 -(void)populateQuestionView;
 -(int)getIndexForSender:(id)sender;
 

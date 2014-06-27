@@ -34,20 +34,19 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-	currentQuestionOrder = 0;
-	currentStageOrder = 0;
 	for (UIButton *button in @[answer0Button, answer1Button, answer2Button, answer3Button]) {
 		[button setImage:nil forState:UIControlStateNormal];
+		[button setBackgroundColor:[UIColor whiteColor]];
+		[button setShowsTouchWhenHighlighted:NO];
+		[button setAdjustsImageWhenHighlighted:NO];
 		[button.imageView setContentMode:UIViewContentModeScaleAspectFit];
 	}
+	currentlySelectedButton.selected = NO;
+	currentlySelectedButton = nil;
+	currentQuestionOrder = 0;
+	currentStageOrder = 0;
 	[faceImageView setImage:nil];
 	[self loadNextQuestion];
-}
-
-- (void)didReceiveMemoryWarning
-{
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
 }
 
 -(void)populateQuestionView
@@ -73,18 +72,16 @@
 }
 
 -(void)loadNextQuestion {
-	CGRect originalFrame = questionView.frame;
-	CGRect leftFrame = CGRectMake(0-originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-	CGRect rightFrame = CGRectMake(self.view.frame.size.width + originalFrame.size.width, originalFrame.origin.y, originalFrame.size.width, originalFrame.size.height);
-
 	// Animate and swap questions
 	[UIView animateWithDuration:kImageViewAnimationDuration animations:^() {
-	    questionView.frame = leftFrame;     // Animate the image view off to the left
+	    questionView.alpha = 0.0f;     // Animate the image view off to the left
 	} completion:^(BOOL finished) {         // Once animation is finished
+	    currentlySelectedButton.selected = NO;
+	    currentlySelectedButton = nil;
+	    [self resetButtons];
 	    [self populateQuestionView];
-	    questionView.frame = rightFrame;     // Move the inputImageView the right
 	    [UIView animateWithDuration:kImageViewAnimationDuration animations:^() {     // Once animation is finished
-	        questionView.frame = originalFrame;     // Animate the inputImageView in from the right
+	        questionView.alpha = 1.0f;
 	        currentQuestionOrder++;                    // Increment our  image order
 		}];
 	}];
@@ -103,7 +100,39 @@
 }
 
 - (IBAction)answerButtonPressed:(id)sender {
-	int userAnswer = [self getIndexForSender:sender];
+
+	UIButton *pressedButton = (UIButton *)sender;
+
+	// Case when nothing is currently selected
+	if (!currentlySelectedButton) {
+		pressedButton.selected = YES;
+		currentlySelectedButton = pressedButton;
+		// Case when the tapped button was already selected
+	} else if(currentlySelectedButton && currentlySelectedButton == pressedButton) {
+		currentlySelectedButton.selected = NO;
+		currentlySelectedButton = nil;
+		// Case when tapping a diferent button from the currently selected one
+	} else if(currentlySelectedButton && currentlySelectedButton != pressedButton) {
+		currentlySelectedButton.selected = NO;
+		pressedButton.selected = YES;
+		currentlySelectedButton = pressedButton;
+	}
+	[self resetButtons];
+}
+
+-(void)resetButtons
+{
+	for (UIButton *button in @[answer0Button, answer1Button, answer2Button, answer3Button]) {
+		UIView *borderView = [self getBorderViewForButton:button];
+		[questionView insertSubview:borderView belowSubview:button];
+	}
+	BOOL readyForNextQuestion = (currentlySelectedButton==nil);
+	[nextQuestionButton setHidden:readyForNextQuestion];
+}
+
+- (IBAction)nextButtonPressed {
+	[nextQuestionButton setHidden:YES];
+	int userAnswer = [self getIndexForSender:currentlySelectedButton];
 	if (currentStageOrder==0) {
 		// Store the user's answer (favorite)
 		[userAnswers insertObject:[NSNumber numberWithInt:userAnswer] atIndex:currentQuestionOrder];
@@ -135,6 +164,14 @@
 		else {
 			[super hasFinished];
 		}
+
 	}
 }
+
+- (void)didReceiveMemoryWarning
+{
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
+}
+
 @end

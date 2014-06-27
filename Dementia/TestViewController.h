@@ -31,4 +31,6 @@
 
 -(double)getVFIFromNumberOfWordsProduced:(int)numWordsProduced duration:(int)duration repeatDuration:(int)repeatDuration;
 
+-(UIView *)getBorderViewForButton:(UIButton *)button;
+
 @end

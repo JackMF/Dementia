@@ -11,6 +11,7 @@
                 <outlet property="answer2Button" destination="bhu-Tq-vXY" id="zgO-YT-eyz"/>
                 <outlet property="answer3Button" destination="2L7-0Y-VQ3" id="q0P-lo-Xqx"/>
                 <outlet property="faceImageView" destination="ICC-Mq-4zu" id="TMH-xi-V0a"/>
+                <outlet property="nextQuestionButton" destination="MZ4-ug-ZB4" id="11G-UT-yS2"/>
                 <outlet property="questionView" destination="aFG-Mh-p5H" id="7xl-Tq-FCs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="54x-Kj-OOZ"/>
             </connections>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFG-Mh-p5H">
-                    <rect key="frame" x="20" y="89" width="728" height="728"/>
+                    <rect key="frame" x="20" y="168" width="728" height="728"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JS-ry-7ZL">
@@ -71,6 +72,17 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZ4-ug-ZB4">
+                    <rect key="frame" x="665" y="112" width="65" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonPressed" destination="-1" eventType="touchUpInside" id="vH7-kv-qkI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

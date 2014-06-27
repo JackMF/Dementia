@@ -19,6 +19,8 @@
 #define kSpeakingDurationSeconds 60.0f
 #define kWritingDurationSeconds 120.0f
 
+#define kBorderSize 6
+
 
 
 @interface TestViewController ()
@@ -236,7 +238,6 @@
 	        [buttonList.view setAlpha:1.0f];
 		}];
 	}];
-
 }
 
 -(double)getVFIFromNumberOfWordsProduced:(int)numWordsProduced duration:(int)duration repeatDuration:(int)repeatDuration
@@ -245,7 +246,6 @@
 		return (duration - repeatDuration) / (double)numWordsProduced;
 	return -1.0;
 }
-
 
 
 - (void)didReceiveMemoryWarning
@@ -258,5 +258,19 @@
 {
 	return (![self isKindOfClass:[PreTestViewController class]] && ![self isKindOfClass:[PostTestViewController class]]);
 }
+
+-(UIView *)getBorderViewForButton:(UIButton *)button;
+{
+	CGRect borderFrame = CGRectMake(button.frame.origin.x-kBorderSize, button.frame.origin.y-kBorderSize, button.frame.size.width + (kBorderSize*2), button.frame.size.height + (kBorderSize*2));
+	UIView *borderView = [[UIView alloc] initWithFrame:borderFrame];
+	UIColor *selectedColor = [UIColor colorWithRed:0.000 green:0.463 blue:1.000 alpha:0.7f];
+
+	if (button.selected)
+		[borderView setBackgroundColor:selectedColor];
+	else
+		[borderView setBackgroundColor:[UIColor whiteColor]];
+	return borderView;
+}
+
 
 @end
