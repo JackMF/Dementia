@@ -9,6 +9,9 @@
 #import "CountdownTimerViewController.h"
 #import "TestViewController.h"
 
+#define kSpeakingDurationSeconds 60.0f
+#define kWritingDurationSeconds 120.0f
+
 @interface CountdownTimerViewController ()
 
 @end
@@ -37,13 +40,40 @@ int secondsRemaining;
 {
 	secondsRemaining = countdownDuration;
 	[self updateCountdownLabel];
+	[self setDurationControl];
+	[super viewWillAppear:animated];
 }
 
+-(void)viewDidLayoutSubviews
+{
+	[self setDurationControl];
+	[super viewDidLayoutSubviews];
+}
+
+- (IBAction)speakingWritingValueChanged {
+	int newIndex = (int) [speakingWritingSegmentedControl selectedSegmentIndex];
+	if (newIndex==0) {
+		secondsRemaining = kSpeakingDurationSeconds;
+	} else if (newIndex==1) {
+		secondsRemaining = kWritingDurationSeconds;
+	}
+	[self setCountdownDuration:secondsRemaining];
+	[testVCDelegate setDuration:[self countdownDuration]];
+	[self setDurationControl];
+	[self updateCountdownLabel];
+}
+
+-(void)setDurationControl
+{
+	UIFont *font = [UIFont boldSystemFontOfSize:26.0f];
+	NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+	[speakingWritingSegmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
+}
 
 - (IBAction)startButtonPressed:(id)sender {
-//	if([countdownTimer isValid])
 	countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCountdownLabel) userInfo:nil repeats:YES];
 	[startButton setEnabled:NO];
+	[speakingWritingSegmentedControl setEnabled:NO];
 }
 
 - (IBAction)stopButtonPressed:(id)sender {

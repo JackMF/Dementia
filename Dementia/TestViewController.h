@@ -14,6 +14,8 @@
 
 @property (nonatomic) Test *test;
 @property (nonatomic) ControlPanelViewController *controlPanelViewController;
+@property int duration;
+
 -(void)animateElementOut:(id)element andBringBackWithValue:(id)value;
 
 -(void)hasFinished;

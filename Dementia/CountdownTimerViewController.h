@@ -11,6 +11,7 @@
 
 @interface CountdownTimerViewController : UIViewController
 {
+	__weak IBOutlet UISegmentedControl *speakingWritingSegmentedControl;
 	__weak IBOutlet UILabel *countdownLabel;
 	__weak IBOutlet UIButton *startButton;
 	__weak IBOutlet UIButton *stopButton;
@@ -22,5 +23,6 @@
 -(void)updateCountdownLabel;
 @property TestViewController *testVCDelegate;
 @property int countdownDuration;
+- (IBAction)speakingWritingValueChanged;
 
 @end

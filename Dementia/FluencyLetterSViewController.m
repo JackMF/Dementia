@@ -18,7 +18,7 @@
 @end
 
 @implementation FluencyLetterSViewController
-@synthesize test;
+@synthesize test, duration;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,26 +46,6 @@
 	[self removeTimers];
 }
 
--(void)viewDidLayoutSubviews
-{
-	[self setDurationControl];
-}
-
--(void)setDurationControl
-{
-	UIFont *font = [UIFont boldSystemFontOfSize:26.0f];
-	NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
-	[speakingWritingSegmentedControl setTitleTextAttributes:attributes forState:UIControlStateNormal];
-}
-
-- (IBAction)speakingWritingValueChanged {
-	int newIndex = (int) [speakingWritingSegmentedControl selectedSegmentIndex];
-	if (newIndex==0) duration=kSpeakingDurationSeconds;
-	else if (newIndex==1) duration=kWritingDurationSeconds;
-	[self setDurationControl];
-	[self addCountdownTimer];
-}
-
 -(void)addCountdownTimer
 {
 	if (countdownTimerViewController) {
@@ -75,7 +55,7 @@
 	}
 
 	countdownTimerViewController = [[CountdownTimerViewController alloc] initWithNibName:@"CountdownTimerViewController" bundle:nil];
-	CGRect timerFrame = CGRectMake(84.0f, 235.0f, 600.0f, 90.0f);
+	CGRect timerFrame = CGRectMake(84.0f, 195.0f, 600.0f, 143.0f);
 	[countdownTimerViewController.view setFrame:timerFrame];
 	[countdownTimerViewController setTestVCDelegate:self];
 
@@ -187,11 +167,6 @@
 		else if (vfi < 2.5) return 12;
 	}
 	return -1;
-}
-
-
--(void)viewWillDisappear:(BOOL)animated
-{
 }
 
 - (void)didReceiveMemoryWarning
