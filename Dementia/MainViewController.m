@@ -128,8 +128,10 @@
 -(void)showCurrentTest
 {
 	// Start the test, loading views on the navigation controller
-	Test *nextText = [[testManager tests] objectAtIndex:[testManager currentTestOrder]];
-	[nextText launchWithNavigationController:self.navigationController];
+	if ([testManager currentTestOrder] < [[testManager tests] count]) {
+		Test *nextText = [[testManager tests] objectAtIndex:[testManager currentTestOrder]];
+		[nextText launchWithNavigationController:self.navigationController];
+	}
 }
 
 - (IBAction)endButtonPressed {
@@ -142,11 +144,15 @@
 {
 	[participantDetailsView setHidden:(![testManager participantName] || ![testManager participantHospitalNoOrAddress])];
 	[progressLabel setText:[testManager getProgress]];
-	Test *nextText = [[testManager tests]objectAtIndex:[testManager currentTestOrder]];
-	NSString *name = [nextText getFullTestName];
-	[currentTestLabel setText:name];
+	if ([testManager currentTestOrder] < [[testManager tests] count]) {
+		Test *nextText = [[testManager tests] objectAtIndex:[testManager currentTestOrder]];
+		NSString *name = [nextText getFullTestName];
+		[currentTestLabel setText:name];
+	} else {
+		[currentTestLabel setText:@""];
+		[testButton setEnabled:NO];
+	}
 }
-
 
 - (void)didReceiveMemoryWarning
 {

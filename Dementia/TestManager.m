@@ -156,8 +156,12 @@ static TestManager *_sharedInstance;
 -(void)endTestAndStartNextWithNavController:(UINavigationController *)navController
 {
 	currentTestOrder++;
-	Test *nextText = [tests objectAtIndex:currentTestOrder];
-	[nextText launchWithNavigationController:navController];
+	if (currentTestOrder < [tests count]) {
+		Test *nextText = [tests objectAtIndex:currentTestOrder];
+		[nextText launchWithNavigationController:navController];
+	} else {
+		[navController popToRootViewControllerAnimated:YES];
+	}
 }
 
 -(NSString *)getCSVContentForInterview

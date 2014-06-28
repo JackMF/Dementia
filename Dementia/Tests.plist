@@ -12,11 +12,12 @@
 		<key>testName</key>
 		<string>Naming</string>
 		<key>preTestInstructions</key>
-		<string>In each part of this section, a picture is shown, the person has to name the object shown in the picture. No time limit is enforced for the task.
+		<string>
+In each part of this section, a picture is shown, the participant has to name the object shown in the picture.
 
-Incorrect answers are recorded and no prompt for alternative word is provided.
-
-Corrections are allowed; only the final answer is taken for scoring.</string>
+• No time limit is enforced for the task.
+• Corrections are allowed; only the final answer is taken for scoring.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Language - Naming” section is now completed.
 
@@ -101,11 +102,13 @@ The next section of the test is “Language Comprehension”</string>
 		<key>testName</key>
 		<string>Comprehension</string>
 		<key>preTestInstructions</key>
-		<string>On each screen 8 objects are shown, a question is either read by the person or to the person, depending on preference. The person has to select one of the 8 objects as an answer to the questions.
-            
-Some questions will require the repetition of an earlier item to serve as an answer; participants are not warned about this in advance but this can be clarified if queried. If no answer is provided, no picture should be selected.
+		<string>
+8 objects are shown, as well as a question. The participant has to select one of the 8 objects as an answer to the question. Use the "Next" button to advance to the next question.
 
-Self-corrections are allowed; only the final answer is taken for scoring.</string>
+• Some questions will require the repetition of an earlier item to serve as an answer; participants are not warned about this in advance but this can be clarified if queried.
+• If no answer is provided, no picture should be selected.
+• Self-corrections are allowed; only the final answer is taken for scoring.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Language - Comprehension” section is now completed.
 
@@ -241,9 +244,12 @@ The next section of the test is Memory - Recall”</string>
 		<key>testName</key>
 		<string>Immediate Recall</string>
 		<key>preTestInstructions</key>
-		<string>In this test, a story  should be read at a steady pace of 2 words per second/the story should take around 20 seconds to read out. When finished reading story aloud, say to participant “Now that’s the end of the story, what can you remember?”.
-            
-Select the parts that they remember correctly. Time for recall is unlimited, until participants say that they can remember no more. Self -corrections are allowed; only the final answer is taken for scoring.</string>
+		<string>
+The provided story should be read at a steady pace of 2 words per second. When finished reading story aloud, say to participant “Now that’s the end of the story, what can you remember?”. Select the parts that they remember correctly.
+
+• Time for recall is unlimited, until participants say that they can remember no more.
+• Self-corrections are allowed; only the final answer is taken for scoring.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Memory - Immediate Recall” section is now completed.
 
@@ -276,9 +282,15 @@ The next section of the test is “Language - Spelling”</string>
 		<key>testName</key>
 		<string>Spelling</string>
 		<key>preTestInstructions</key>
-		<string>In this test, the person is given a word and asked to spell it. If the person is using assistive technology, ask them to turn off any predictive text facility.  As the person responds with each letter, click ‘yes’ if it is the correct letter, no if it is not.
+		<string>
+The participant is given a word and asked to spell it. Tap the screen, and then select "Correct" or 'Incorrect".
 
-Unlimited time is given for spelling of each word. All words are assessed even if early words in the list are incorrect. Move on to the next word if participant is unable or unwilling to attempt spelling of one word.  Self corrections are allowed; only the final answer is taken.</string>
+• If the person is using assistive technology, ask them to turn off any predictive text facility.
+• Unlimited time is given for spelling of each word.
+• All words are assessed even if early words in the list are incorrect.
+• Move on to the next word if participant is unable or unwilling to attempt spelling of one word.
+• Self corrections are allowed; only the final answer is taken.
+</string>
 		<key>postTestMessage</key>
 		<string>The “Language - Spelling” section is now completed.
             
@@ -311,9 +323,18 @@ The next section of the test is “Fluency - S”</string>
 		<key>testName</key>
 		<string>Letter S</string>
 		<key>preTestInstructions</key>
-		<string>The person can perform this task either by speaking or writing. In part one  Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter. But not names of people or places, or numbers. If writing, say: “You will have two minutes and the letter is S.” If speaking, say “You will have one minute and the letter is S.” Tell the participant to stop when the device vibrates.
+		<string>
+The person can perform this task either by speaking or writing.
 
-In part two the person copies/repeats these words. If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.” If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin.</string>
+In Part 1, Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter, but not names of people or places, or numbers".
+• If writing, say: “You will have two minutes and the letter is S.”
+• If speaking, say “You will have one minute and the letter is S.”
+Tell the participant to stop when the timer ends.
+
+In Part 2 the person copies/repeats these words.
+• If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.”
+• If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin."
+</string>
 		<key>postTestMessage</key>
 		<string>The “Fluency S” section is now completed.
 
@@ -346,11 +367,20 @@ The next section of the test is “Reverse Digit Span”</string>
 		<key>testName</key>
 		<string>Reverse Digit Span</string>
 		<key>preTestInstructions</key>
-		<string>Numbers should be read out at a pace of 1 number per second. Say: &quot;I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice.
-            
-If I say ‘7 1 9’, what would you say?&quot; If participant cannot complete the practice trial, another practice trial is provided at the level of two digits, before moving on to test items. If a participant cannot complete a practice trial at the level of two items, the test is scored as 0 out of 12 and no further test items are attempted. Advance warning that the number sequences will increase in length is provided at the start of each line of a trial.
+		<string>
+ Say: "I am going to say some numbers and I would like you to say them back to me in reverse order. For example, if I say ‘2 3 4’, you should say ‘4 3 2’. Let’s have a practice. If I say ‘7 1 9’, what would you say?"
+ 
+• If participant cannot complete the practice trial, another practice trial is provided at the level of two digits, before moving on to test items.
+• If a participant cannot complete a practice trial at the level of two items, the test is scored as 0 out of 12 and no further test items are attempted.
+• Advance warning that the number sequences will increase in length is provided at the start of each line of a trial.
 
-In order to score a trial of a line as correct, participant must accurately recall all items in reverse order. No score is given for individual numbers correctly recalled in an incorrectly recalled sequence. If person gets at least one trial of a line correct, move on to the next line. Self-corrections are allowed; only the final answer is taken for scoring. Stop when person gets both trials of a line wrong.</string>
+• In order to score a trial of a line as correct, participant must accurately recall all items in reverse order.
+• No score is given for individual numbers correctly recalled in an incorrectly recalled sequence.
+• If person gets at least one trial of a line correct, move on to the next line.
+• Self-corrections are allowed; only the final answer is taken for scoring.
+• Stop when person gets both trials of a line wrong.
+
+</string>
 		<key>postTestMessage</key>
 		<string>The Reverse Digits” section is now completed.
 
@@ -383,7 +413,10 @@ The next section of the test is “Alteration”</string>
 		<key>testName</key>
 		<string>Alternation</string>
 		<key>preTestInstructions</key>
-		<string>text</string>
+		<string>
+Say: "I want you to alternate between numbers and letters, starting with 1-A, then 2-B, 3-C, and so on. Please continue from there, alternating between numbers and letters, in order, without skipping any until I tell you to stop".
+Tap the numbers said by the participant, then tap "Next"."
+        </string>
 		<key>postTestMessage</key>
 		<string>text</string>
 		<key>maxScore</key>
@@ -399,13 +432,22 @@ The next section of the test is “Alteration”</string>
 		<key>testName</key>
 		<string>Letter T</string>
 		<key>preTestInstructions</key>
-		<string>The person can perform this task either by speaking or writing. In part one  Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter. But not names of people or places, or numbers. If writing, say: “You will have two minutes and the letter is S.” If speaking, say “You will have one minute and the letter is S.” Tell the participant to stop when the device vibrates.
+		<string>
+The person can perform this task either by speaking or writing.
 
-In part two the person copies/repeats these words. If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.” If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin.</string>
+In Part 1, Say: “I am going to give you a letter of the alphabet and I would like you to say or write as many words as you can beginning with that letter, but not names of people or places, or numbers".
+• If writing, say: “You will have two minutes and the letter is T.”
+• If speaking, say “You will have one minute and the letter is T.”
+Tell the participant to stop when the timer ends.
+
+In Part 2 the person copies/repeats these words.
+• If writing, say: “Copy these words as fast as possible. I will time you. Ready? Begin.”
+• If speaking, say: “Read aloud these words as fast as possible. Before you do this, check that you can read them. I will time you. Ready? Begin."
+</string>
 		<key>postTestMessage</key>
 		<string>The “Fluency T” section is now completed.
 
-The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
+The next section of the test is “Visuospatial - Dot Counting.</string>
 		<key>maxScore</key>
 		<integer>12</integer>
 	</dict>
@@ -426,7 +468,9 @@ The next section of the test is “Visuospatial - Dot Counting&quot;.</string>
 			<string>dot3.png</string>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Say: "I would like you to count how many dots are in each box, but without pointing to them."
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Visuospatial - Dot Counting&quot; section is now completed.
 
@@ -451,7 +495,9 @@ The next section of the test is “Visuospatial - Cube Counting&quot;.</string>
 			<string>cube3.png</string>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Say: "How many cubes are in each structure, including the ones you may not be able to see?"
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Visuospatial - Cube Counting” section is now completed.
 
@@ -476,7 +522,9 @@ The next section of the test is “Visuospatial - Number Location&quot;</string>
 			<string>number3.png</string>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Say: "Which number corresponds to the position of the dot?"
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Visuospatial - Number Location” section is now completed.
 
@@ -509,7 +557,17 @@ The next section of the test is “Executive - Sentence Completion”</string>
 			<string>Exact</string>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Say: ‘Listen carefully to these sentences and as soon as I have finished reading them, please tell me, or write, a word that finishes the sentence as quickly as possible. For example, ‘She was so tired that she went straight to...bed’.
+
+1. He phoned up the restaurant to reserve a ...
+2. When she got up in the morning, the sun was ...
+
+
+Now say: "Now I’d like you to do that again, but this time the word you give should not make sense whatsoever in the context of the sentence. It must not be related to the word that actually completes the sentence. For example, ‘John cut his hand with the sharp...orange.'"'
+
+• If the person does not respond within 20 seconds, move onto the next question.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Executive - Sentence Completion” section is now completed.
 
@@ -572,7 +630,13 @@ The next section of the test is “Social Cognition - Part A&quot;.</string>
 			</array>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Part 1:
+Say: "You are going to see some pictures, one in each corner of a box. You have to choose which picture you like best. Either point to or say which picture you like best. Please respond as quickly as possible". Tap the participant's choice, and then tap the "Next" button.
+
+Part 2:
+Say: "You are going to see some pictures, one in each corner of a box. You have to choose which picture does the face like best. Either point to or say which picture the face likes best. Please respond as quickly as possible". Tap the participant's choice, and then tap the "Next" button.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Social Cognition - Part A” section is now completed.
 
@@ -590,7 +654,12 @@ The next section of the test is “Social Cognition - Part B&quot;.</string>
 		<key>testName</key>
 		<string>Delayed Recall</string>
 		<key>preTestInstructions</key>
-		<string>Text</string>
+		<string>
+Say: "At the beginning of this interview, I read you a short story. Tell me as much as you can remember from that story". Select the parts that they remember correctly.
+
+• Time for recall is unlimited, until participants say that they can remember no more.
+• Self-corrections are allowed; only the final answer is taken for scoring.
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Memory - Delayed Recall” section is now completed.</string>
 		<key>buttonNames</key>
@@ -654,7 +723,10 @@ The next section of the test is “Social Cognition - Part B&quot;.</string>
 			</array>
 		</array>
 		<key>preTestInstructions</key>
-		<string></string>
+		<string>
+Say: "Lets see if you can remember anything more about that story. I will ask you some questions, please tell me if they are true or false."
+Tap the screen, then select "True" or "False".
+        </string>
 		<key>postTestMessage</key>
 		<string>The “Memory - Delayed Recall” section is now completed.</string>
 		<key>maxScore</key>
